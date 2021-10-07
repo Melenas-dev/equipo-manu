@@ -1,0 +1,145 @@
+C:\Users\Juan\source\repos\Proyecto Warescape\Proyecto Warescape\bin\Debug\Proyecto Warescape.exe.config
+C:\Users\Juan\source\repos\Proyecto Warescape\Proyecto Warescape\bin\Debug\Proyecto Warescape.exe
+C:\Users\Juan\source\repos\Proyecto Warescape\Proyecto Warescape\bin\Debug\Proyecto Warescape.pdb
+C:\Users\Juan\source\repos\Proyecto Warescape\Proyecto Warescape\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Juan\source\repos\Proyecto Warescape\Proyecto Warescape\bin\Debug\Google.Protobuf.dll
+C:\Users\Juan\source\repos\Proyecto Warescape\Proyecto Warescape\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\Juan\source\repos\Proyecto Warescape\Proyecto Warescape\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\Juan\source\repos\Proyecto Warescape\Proyecto Warescape\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\Juan\source\repos\Proyecto Warescape\Proyecto Warescape\bin\Debug\MySql.Data.dll
+C:\Users\Juan\source\repos\Proyecto Warescape\Proyecto Warescape\bin\Debug\System.Buffers.dll
+C:\Users\Juan\source\repos\Proyecto Warescape\Proyecto Warescape\bin\Debug\System.Memory.dll
+C:\Users\Juan\source\repos\Proyecto Warescape\Proyecto Warescape\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Juan\source\repos\Proyecto Warescape\Proyecto Warescape\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Juan\source\repos\Proyecto Warescape\Proyecto Warescape\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\Juan\source\repos\Proyecto Warescape\Proyecto Warescape\bin\Debug\Zstandard.Net.dll
+C:\Users\Juan\source\repos\Proyecto Warescape\Proyecto Warescape\bin\Debug\Google.Protobuf.pdb
+C:\Users\Juan\source\repos\Proyecto Warescape\Proyecto Warescape\bin\Debug\Google.Protobuf.xml
+C:\Users\Juan\source\repos\Proyecto Warescape\Proyecto Warescape\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\Juan\source\repos\Proyecto Warescape\Proyecto Warescape\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\Juan\source\repos\Proyecto Warescape\Proyecto Warescape\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\Juan\source\repos\Proyecto Warescape\Proyecto Warescape\bin\Debug\MySql.Data.xml
+C:\Users\Juan\source\repos\Proyecto Warescape\Proyecto Warescape\bin\Debug\System.Buffers.xml
+C:\Users\Juan\source\repos\Proyecto Warescape\Proyecto Warescape\bin\Debug\System.Memory.xml
+C:\Users\Juan\source\repos\Proyecto Warescape\Proyecto Warescape\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Juan\source\repos\Proyecto Warescape\Proyecto Warescape\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Juan\source\repos\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto Warescape.csprojAssemblyReference.cache
+C:\Users\Juan\source\repos\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.Form1.resources
+C:\Users\Juan\source\repos\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.Properties.Resources.resources
+C:\Users\Juan\source\repos\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto Warescape.csproj.GenerateResource.cache
+C:\Users\Juan\source\repos\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto Warescape.csproj.CoreCompileInputs.cache
+C:\Users\Juan\source\repos\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto Warescape.csproj.CopyComplete
+C:\Users\Juan\source\repos\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto Warescape.exe
+C:\Users\Juan\source\repos\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto Warescape.pdb
+C:\Users\loloc\OneDrive\Escritorio\Proyecto\xd\Proyecto Warescape\Proyecto Warescape\bin\Debug\Proyecto Warescape.exe.config
+C:\Users\loloc\OneDrive\Escritorio\Proyecto\xd\Proyecto Warescape\Proyecto Warescape\bin\Debug\Proyecto Warescape.exe
+C:\Users\loloc\OneDrive\Escritorio\Proyecto\xd\Proyecto Warescape\Proyecto Warescape\bin\Debug\Proyecto Warescape.pdb
+C:\Users\loloc\OneDrive\Escritorio\Proyecto\xd\Proyecto Warescape\Proyecto Warescape\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\loloc\OneDrive\Escritorio\Proyecto\xd\Proyecto Warescape\Proyecto Warescape\bin\Debug\Google.Protobuf.dll
+C:\Users\loloc\OneDrive\Escritorio\Proyecto\xd\Proyecto Warescape\Proyecto Warescape\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\loloc\OneDrive\Escritorio\Proyecto\xd\Proyecto Warescape\Proyecto Warescape\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\loloc\OneDrive\Escritorio\Proyecto\xd\Proyecto Warescape\Proyecto Warescape\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\loloc\OneDrive\Escritorio\Proyecto\xd\Proyecto Warescape\Proyecto Warescape\bin\Debug\MySql.Data.dll
+C:\Users\loloc\OneDrive\Escritorio\Proyecto\xd\Proyecto Warescape\Proyecto Warescape\bin\Debug\System.Buffers.dll
+C:\Users\loloc\OneDrive\Escritorio\Proyecto\xd\Proyecto Warescape\Proyecto Warescape\bin\Debug\System.Memory.dll
+C:\Users\loloc\OneDrive\Escritorio\Proyecto\xd\Proyecto Warescape\Proyecto Warescape\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\loloc\OneDrive\Escritorio\Proyecto\xd\Proyecto Warescape\Proyecto Warescape\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\loloc\OneDrive\Escritorio\Proyecto\xd\Proyecto Warescape\Proyecto Warescape\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\loloc\OneDrive\Escritorio\Proyecto\xd\Proyecto Warescape\Proyecto Warescape\bin\Debug\Zstandard.Net.dll
+C:\Users\loloc\OneDrive\Escritorio\Proyecto\xd\Proyecto Warescape\Proyecto Warescape\bin\Debug\Google.Protobuf.pdb
+C:\Users\loloc\OneDrive\Escritorio\Proyecto\xd\Proyecto Warescape\Proyecto Warescape\bin\Debug\Google.Protobuf.xml
+C:\Users\loloc\OneDrive\Escritorio\Proyecto\xd\Proyecto Warescape\Proyecto Warescape\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\loloc\OneDrive\Escritorio\Proyecto\xd\Proyecto Warescape\Proyecto Warescape\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\loloc\OneDrive\Escritorio\Proyecto\xd\Proyecto Warescape\Proyecto Warescape\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\loloc\OneDrive\Escritorio\Proyecto\xd\Proyecto Warescape\Proyecto Warescape\bin\Debug\MySql.Data.xml
+C:\Users\loloc\OneDrive\Escritorio\Proyecto\xd\Proyecto Warescape\Proyecto Warescape\bin\Debug\System.Buffers.xml
+C:\Users\loloc\OneDrive\Escritorio\Proyecto\xd\Proyecto Warescape\Proyecto Warescape\bin\Debug\System.Memory.xml
+C:\Users\loloc\OneDrive\Escritorio\Proyecto\xd\Proyecto Warescape\Proyecto Warescape\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\loloc\OneDrive\Escritorio\Proyecto\xd\Proyecto Warescape\Proyecto Warescape\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\loloc\OneDrive\Escritorio\Proyecto\xd\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto Warescape.csprojAssemblyReference.cache
+C:\Users\loloc\OneDrive\Escritorio\Proyecto\xd\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.Properties.Resources.resources
+C:\Users\loloc\OneDrive\Escritorio\Proyecto\xd\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto Warescape.csproj.GenerateResource.cache
+C:\Users\loloc\OneDrive\Escritorio\Proyecto\xd\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto Warescape.csproj.CoreCompileInputs.cache
+C:\Users\loloc\OneDrive\Escritorio\Proyecto\xd\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto Warescape.csproj.CopyComplete
+C:\Users\loloc\OneDrive\Escritorio\Proyecto\xd\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto Warescape.exe
+C:\Users\loloc\OneDrive\Escritorio\Proyecto\xd\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto Warescape.pdb
+C:\Users\loloc\OneDrive\Escritorio\Proyecto\xd\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.VentanasPrincipal.resources
+C:\Users\loloc\OneDrive\Escritorio\Proyecto\xd\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.carga.resources
+C:\Users\loloc\OneDrive\Escritorio\Proyecto\xd\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.Login.resources
+C:\Users\loloc\OneDrive\Escritorio\Proyecto\xd\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.finanzas.resources
+C:\Users\loloc\OneDrive\Escritorio\Proyecto\xd\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.libros.resources
+C:\Users\manue\Desktop\Proyecto\Proyecto Warescape\Proyecto Warescape\bin\Debug\Proyecto Warescape.exe.config
+C:\Users\manue\Desktop\Proyecto\Proyecto Warescape\Proyecto Warescape\bin\Debug\Proyecto Warescape.exe
+C:\Users\manue\Desktop\Proyecto\Proyecto Warescape\Proyecto Warescape\bin\Debug\Proyecto Warescape.pdb
+C:\Users\manue\Desktop\Proyecto\Proyecto Warescape\Proyecto Warescape\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\manue\Desktop\Proyecto\Proyecto Warescape\Proyecto Warescape\bin\Debug\Google.Protobuf.dll
+C:\Users\manue\Desktop\Proyecto\Proyecto Warescape\Proyecto Warescape\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\manue\Desktop\Proyecto\Proyecto Warescape\Proyecto Warescape\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\manue\Desktop\Proyecto\Proyecto Warescape\Proyecto Warescape\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\manue\Desktop\Proyecto\Proyecto Warescape\Proyecto Warescape\bin\Debug\MySql.Data.dll
+C:\Users\manue\Desktop\Proyecto\Proyecto Warescape\Proyecto Warescape\bin\Debug\System.Buffers.dll
+C:\Users\manue\Desktop\Proyecto\Proyecto Warescape\Proyecto Warescape\bin\Debug\System.Memory.dll
+C:\Users\manue\Desktop\Proyecto\Proyecto Warescape\Proyecto Warescape\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\manue\Desktop\Proyecto\Proyecto Warescape\Proyecto Warescape\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\manue\Desktop\Proyecto\Proyecto Warescape\Proyecto Warescape\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\manue\Desktop\Proyecto\Proyecto Warescape\Proyecto Warescape\bin\Debug\Zstandard.Net.dll
+C:\Users\manue\Desktop\Proyecto\Proyecto Warescape\Proyecto Warescape\bin\Debug\Google.Protobuf.pdb
+C:\Users\manue\Desktop\Proyecto\Proyecto Warescape\Proyecto Warescape\bin\Debug\Google.Protobuf.xml
+C:\Users\manue\Desktop\Proyecto\Proyecto Warescape\Proyecto Warescape\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\manue\Desktop\Proyecto\Proyecto Warescape\Proyecto Warescape\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\manue\Desktop\Proyecto\Proyecto Warescape\Proyecto Warescape\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\manue\Desktop\Proyecto\Proyecto Warescape\Proyecto Warescape\bin\Debug\MySql.Data.xml
+C:\Users\manue\Desktop\Proyecto\Proyecto Warescape\Proyecto Warescape\bin\Debug\System.Buffers.xml
+C:\Users\manue\Desktop\Proyecto\Proyecto Warescape\Proyecto Warescape\bin\Debug\System.Memory.xml
+C:\Users\manue\Desktop\Proyecto\Proyecto Warescape\Proyecto Warescape\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\manue\Desktop\Proyecto\Proyecto Warescape\Proyecto Warescape\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\manue\Desktop\Proyecto\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto Warescape.csproj.AssemblyReference.cache
+C:\Users\manue\Desktop\Proyecto\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.carga.resources
+C:\Users\manue\Desktop\Proyecto\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.finanzas.resources
+C:\Users\manue\Desktop\Proyecto\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.Login.resources
+C:\Users\manue\Desktop\Proyecto\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.Properties.Resources.resources
+C:\Users\manue\Desktop\Proyecto\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.VentanasPrincipal.resources
+C:\Users\manue\Desktop\Proyecto\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto Warescape.csproj.GenerateResource.cache
+C:\Users\manue\Desktop\Proyecto\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto Warescape.csproj.CoreCompileInputs.cache
+C:\Users\manue\Desktop\Proyecto\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto Warescape.csproj.CopyComplete
+C:\Users\manue\Desktop\Proyecto\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto Warescape.exe
+C:\Users\manue\Desktop\Proyecto\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto Warescape.pdb
+C:\Users\manue\Desktop\Proyecto\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.ventana.resources
+C:\Users\loloc\OneDrive\Escritorio\base de datos nueva\Proyecto Warescape\Proyecto Warescape\bin\Debug\Proyecto Warescape.exe.config
+C:\Users\loloc\OneDrive\Escritorio\base de datos nueva\Proyecto Warescape\Proyecto Warescape\bin\Debug\Proyecto Warescape.exe
+C:\Users\loloc\OneDrive\Escritorio\base de datos nueva\Proyecto Warescape\Proyecto Warescape\bin\Debug\Proyecto Warescape.pdb
+C:\Users\loloc\OneDrive\Escritorio\base de datos nueva\Proyecto Warescape\Proyecto Warescape\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\loloc\OneDrive\Escritorio\base de datos nueva\Proyecto Warescape\Proyecto Warescape\bin\Debug\Google.Protobuf.dll
+C:\Users\loloc\OneDrive\Escritorio\base de datos nueva\Proyecto Warescape\Proyecto Warescape\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\loloc\OneDrive\Escritorio\base de datos nueva\Proyecto Warescape\Proyecto Warescape\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\loloc\OneDrive\Escritorio\base de datos nueva\Proyecto Warescape\Proyecto Warescape\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\loloc\OneDrive\Escritorio\base de datos nueva\Proyecto Warescape\Proyecto Warescape\bin\Debug\MySql.Data.dll
+C:\Users\loloc\OneDrive\Escritorio\base de datos nueva\Proyecto Warescape\Proyecto Warescape\bin\Debug\System.Buffers.dll
+C:\Users\loloc\OneDrive\Escritorio\base de datos nueva\Proyecto Warescape\Proyecto Warescape\bin\Debug\System.Memory.dll
+C:\Users\loloc\OneDrive\Escritorio\base de datos nueva\Proyecto Warescape\Proyecto Warescape\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\loloc\OneDrive\Escritorio\base de datos nueva\Proyecto Warescape\Proyecto Warescape\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\loloc\OneDrive\Escritorio\base de datos nueva\Proyecto Warescape\Proyecto Warescape\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\loloc\OneDrive\Escritorio\base de datos nueva\Proyecto Warescape\Proyecto Warescape\bin\Debug\Zstandard.Net.dll
+C:\Users\loloc\OneDrive\Escritorio\base de datos nueva\Proyecto Warescape\Proyecto Warescape\bin\Debug\Google.Protobuf.pdb
+C:\Users\loloc\OneDrive\Escritorio\base de datos nueva\Proyecto Warescape\Proyecto Warescape\bin\Debug\Google.Protobuf.xml
+C:\Users\loloc\OneDrive\Escritorio\base de datos nueva\Proyecto Warescape\Proyecto Warescape\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\loloc\OneDrive\Escritorio\base de datos nueva\Proyecto Warescape\Proyecto Warescape\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\loloc\OneDrive\Escritorio\base de datos nueva\Proyecto Warescape\Proyecto Warescape\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\loloc\OneDrive\Escritorio\base de datos nueva\Proyecto Warescape\Proyecto Warescape\bin\Debug\MySql.Data.xml
+C:\Users\loloc\OneDrive\Escritorio\base de datos nueva\Proyecto Warescape\Proyecto Warescape\bin\Debug\System.Buffers.xml
+C:\Users\loloc\OneDrive\Escritorio\base de datos nueva\Proyecto Warescape\Proyecto Warescape\bin\Debug\System.Memory.xml
+C:\Users\loloc\OneDrive\Escritorio\base de datos nueva\Proyecto Warescape\Proyecto Warescape\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\loloc\OneDrive\Escritorio\base de datos nueva\Proyecto Warescape\Proyecto Warescape\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\loloc\OneDrive\Escritorio\base de datos nueva\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto Warescape.csprojAssemblyReference.cache
+C:\Users\loloc\OneDrive\Escritorio\base de datos nueva\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.carga.resources
+C:\Users\loloc\OneDrive\Escritorio\base de datos nueva\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.finanzas.resources
+C:\Users\loloc\OneDrive\Escritorio\base de datos nueva\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.Login.resources
+C:\Users\loloc\OneDrive\Escritorio\base de datos nueva\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.Properties.Resources.resources
+C:\Users\loloc\OneDrive\Escritorio\base de datos nueva\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.VentanasPrincipal.resources
+C:\Users\loloc\OneDrive\Escritorio\base de datos nueva\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.ventana.resources
+C:\Users\loloc\OneDrive\Escritorio\base de datos nueva\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto Warescape.csproj.GenerateResource.cache
+C:\Users\loloc\OneDrive\Escritorio\base de datos nueva\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto Warescape.csproj.CoreCompileInputs.cache
+C:\Users\loloc\OneDrive\Escritorio\base de datos nueva\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto Warescape.csproj.CopyComplete
+C:\Users\loloc\OneDrive\Escritorio\base de datos nueva\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto Warescape.exe
+C:\Users\loloc\OneDrive\Escritorio\base de datos nueva\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto Warescape.pdb
+C:\Users\loloc\OneDrive\Escritorio\base de datos nueva\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.marketing.resources
