@@ -24,12 +24,16 @@ namespace Proyecto_Warescape
 
         private void VentanasPrincipal_Load(object sender, EventArgs e)
         {
-            MySqlCommand generos = new MySqlCommand("SELECT descripcion from generos;", con);
+            MySqlCommand generos = new MySqlCommand("SELECT * from generos;", con);
             con.Open();
             MySqlDataReader registro = generos.ExecuteReader();
             while (registro.Read())
             {
-                Cmb_genero.Items.Add(registro["descripcion"].ToString());
+                Generos gen = new Generos();
+                gen.descripcion = registro["descripcion"].ToString();
+                gen.id_genero = int.Parse(registro["id_genero"].ToString()); 
+
+                Cmb_genero.Items.Add(gen);
             }
             con.Close();
             //muestra en el combobox generos
@@ -47,25 +51,7 @@ namespace Proyecto_Warescape
                 
             }con.Close();
 
-
-
-
-
-            
-            
-
-
-
-
-
-
-
-
-
         }
-
-      
-      
 
         private void txbautor_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -79,14 +65,10 @@ namespace Proyecto_Warescape
             }
         }
 
-       
-
         private void label13_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        }
-
-      
+        }      
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -122,7 +104,7 @@ namespace Proyecto_Warescape
 
       
         
-        private void button5_Click(object sender, EventArgs e)
+        private void ingresar_libro(object sender, EventArgs e)
         {
             con.Open();
             if (txt_isbn.Text.Equals("") || txt_codigo.Text.Equals("") || txt_nombre.Text.Equals("") || txt_precio.Text.Equals("") || txt_stock.Text.Equals("") || Cmb_genero.Text.Equals("") || cmb_editorial.Text.Equals("")) 
@@ -180,9 +162,8 @@ namespace Proyecto_Warescape
                     MySqlCommand vender_consignar = new MySqlCommand("insert into vende_o_consigna values(" + valor2 + "," + int.Parse(txt_isbn.Text) + ");",con);
                     vender_consignar.ExecuteNonQuery();
                     con.Close();
-                    con.Open();
 
-
+                    /*
                     string almacenar = Cmb_genero.Text;
                     MySqlCommand comando = new MySqlCommand("Select * from generos where descripcion ='" + almacenar + "';", con);
                     MySqlDataReader leertabla = comando.ExecuteReader();
@@ -197,7 +178,20 @@ namespace Proyecto_Warescape
                     MySqlCommand ingresargenero = new MySqlCommand(ingreso2,con);
                     ingresargenero.ExecuteNonQuery();
                     con.Close();
-                    con.Open();
+                    con.Open();*/
+                   
+                    for(int i = 0; i < dgv_generos.Rows.Count - 1; i++)
+                    {
+                        int id_genero = int.Parse(dgv_generos.Rows[i].Cells[1].Value.ToString());
+                        int isbn = int.Parse(txt_isbn.Text);
+
+                        con.Open();
+                        string ingreso2 = "insert into tienen values(" + isbn + "," + id_genero + ")";
+                        MySqlCommand ingresargenero = new MySqlCommand(ingreso2, con);
+                        ingresargenero.ExecuteNonQuery();
+                        con.Close();
+                    }
+
                     actualizar_dgv_libros();
                     txt_isbn.Text = "";
                     txt_codigo.Text = "";
@@ -205,6 +199,7 @@ namespace Proyecto_Warescape
                     txt_precio.Text = "";
                     txt_stock.Text = "";
                     Cmb_genero.Text = "";
+                    dgv_generos.Rows.Clear();
                 }
             
         }
@@ -227,23 +222,21 @@ namespace Proyecto_Warescape
             }
             else
             {
-
-
-                string borrar = "DELETE FROM libros WHERE isbn =" + int.Parse(txt_isbn.Text) + ";";
-                MySqlCommand comando = new MySqlCommand(borrar, con);
-                comando.ExecuteNonQuery();
+                Services.LibrosService.eliminarLibro(con, int.Parse(txt_isbn.Text));
                 actualizar_dgv_libros();
                 txt_isbn.Text = "";
+
+                dgv_generos.Rows.Clear();
             }
             con.Close();
 
 
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void guardar_edicion(object sender, EventArgs e)
         {
             con.Open();
-            if (txt_isbn.Text.Equals("") || txt_codigo.Text.Equals("") || txt_nombre.Text.Equals("") || txt_precio.Text.Equals("") || txt_stock.Text.Equals("") || Cmb_genero.Text.Equals(""))
+            if (txt_isbn.Text.Equals("") || txt_codigo.Text.Equals("") || txt_nombre.Text.Equals("") || txt_precio.Text.Equals("") || txt_stock.Text.Equals(""))
             {
                 MessageBox.Show("Ingresar todos los parametros");
             }
@@ -252,6 +245,19 @@ namespace Proyecto_Warescape
                 string editar = "UPDATE libros SET isbn=" + int.Parse(txt_isbn.Text) + ",codigo=" + int.Parse(txt_codigo.Text) + ",precio=" + int.Parse(txt_precio.Text) + ",stock=" + int.Parse(txt_stock.Text) + ",nombre='" + txt_nombre.Text + "' Where isbn=" + int.Parse(txt_isbn.Text) + ";";
                 MySqlCommand comando = new MySqlCommand(editar, con);
                 comando.ExecuteNonQuery();
+
+                Services.LibrosService.eliminarGenerosDelLibro(con, int.Parse(txt_isbn.Text));
+
+                for (int i = 0; i < dgv_generos.Rows.Count - 1; i++)
+                {
+                    int id_genero = int.Parse(dgv_generos.Rows[i].Cells[1].Value.ToString());
+                    int isbn = int.Parse(txt_isbn.Text);
+
+                    string ingreso2 = "insert into tienen values(" + isbn + "," + id_genero + ")";
+                    MySqlCommand ingresargenero = new MySqlCommand(ingreso2, con);
+                    ingresargenero.ExecuteNonQuery();
+                }
+
                 actualizar_dgv_libros();
                 txt_isbn.Text = "";
                 txt_codigo.Text = "";
@@ -259,6 +265,8 @@ namespace Proyecto_Warescape
                 txt_precio.Text = "";
                 txt_stock.Text = "";
                 Cmb_genero.Text = "";
+                cmb_editorial.Text = "";
+                dgv_generos.Rows.Clear();
             }
             con.Close();
             
@@ -271,14 +279,40 @@ namespace Proyecto_Warescape
             int n = e.RowIndex;
             if (n != -1)
             {
+                
                 txt_isbn.Text = this.dgv_libros.CurrentRow.Cells[0].Value.ToString();
+                txt_codigo.Text = this.dgv_libros.CurrentRow.Cells[1].Value.ToString();
+                txt_precio.Text = this.dgv_libros.CurrentRow.Cells[2].Value.ToString();
+                txt_stock.Text = this.dgv_libros.CurrentRow.Cells[3].Value.ToString();
+                txt_nombre.Text = this.dgv_libros.CurrentRow.Cells[4].Value.ToString();
+                cmb_editorial.Text = this.dgv_libros.CurrentRow.Cells[6].Value.ToString();
+                txt_devoluciones.Text = this.dgv_libros.CurrentRow.Cells[5].Value.ToString();
+
+                int isbn = int.Parse(dgv_libros.CurrentRow.Cells[0].Value.ToString());
+                con.Open();
+                string query_generos = "SELECT g.id_genero, descripcion from tienen t JOIN generos g on t.id_genero = g.id_genero where isbn = " + isbn + ";";
+                MySqlCommand cmmnd_generos = new MySqlCommand(query_generos, con);
+
+                dgv_generos.Rows.Clear();
+
+                MySqlDataReader generos_del_libro = cmmnd_generos.ExecuteReader();
+                while (generos_del_libro.Read())
+                {
+                    Generos gen = new Generos();
+                    gen.descripcion = generos_del_libro["descripcion"].ToString();
+                    gen.id_genero = int.Parse(generos_del_libro["id_genero"].ToString());
+
+                    dgv_generos.Rows.Add(gen.descripcion, gen.id_genero);
+                }
+                con.Close();
+                
             }
             
         }
         public void actualizar_dgv_libros()
         {
-           
-            MySqlCommand mostrar = new MySqlCommand("Select l.*, e.nombre "+" editorial"+", g.descripcion "+"Genero"+"  from editoriales e join vende_o_consigna v on e.rut=v.rut join libros l on l.isbn=v.isbn join tienen t on l.isbn=t.isbn join generos g on g.id_genero=t.id_genero where g.id_genero=t.id_genero and e.rut=v.rut;", con);
+            MySqlCommand mostrar = new MySqlCommand("SELECT l.*, e.nombre Editorial, ( SELECT g.descripcion FROM tienen t JOIN generos g ON g.id_genero = t.id_genero " +
+                " WHERE t.isbn = l.isbn LIMIT 1 ) 'Primer genero del libro' FROM libros l JOIN vende_o_consigna v on v.isbn = l.isbn JOIN editoriales e on e.rut = v.rut", con);
             MySqlDataAdapter adaptador = new MySqlDataAdapter();
             adaptador.SelectCommand = mostrar;
             DataTable tabla = new DataTable();
@@ -373,7 +407,47 @@ namespace Proyecto_Warescape
             
         }
 
-       
+        private void txt_isbn_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgv_libros_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            if (Cmb_genero.SelectedItem == null)
+            {
+                MessageBox.Show("Debe seleccionar un genero");
+                return;
+            }
+
+            for (int i = 0; i < dgv_generos.Rows.Count - 1; i++)
+            {
+                int id_genero = int.Parse(dgv_generos.Rows[i].Cells[1].Value.ToString());
+
+                if (id_genero == (Cmb_genero.SelectedItem as Generos).id_genero)
+                {
+                    MessageBox.Show("El genero ya esta ingresado");
+                    return;
+                }
+            }
+
+            dgv_generos.Rows.Add(Cmb_genero.Text, ((Cmb_genero.SelectedItem as Generos).id_genero).ToString());
+        }
+
+        private void dgv_generos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void Cmb_genero_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
     
 }
