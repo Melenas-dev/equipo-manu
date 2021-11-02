@@ -87,6 +87,7 @@ namespace Proyecto_Warescape
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 26;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ImagenVentana_MouseDown);
             // 
             // button1
             // 
@@ -199,6 +200,7 @@ namespace Proyecto_Warescape
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "ventanas";
             this.Load += new System.EventHandler(this.ventana_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Ventana_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
