@@ -146,5 +146,11 @@ namespace Proyecto_Warescape
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            campo_contra.Text = "warescape";
+            campo_usuario.Text = "admin" ;
+        }
     }
 }

@@ -156,6 +156,11 @@ namespace Proyecto_Warescape
         {
             solo_numeros(e);
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

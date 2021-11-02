@@ -55,16 +55,13 @@ namespace Proyecto_Warescape
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            Form ir_libros = new VentanasPrincipal();
-            ir_libros.Show();
-            this.Hide();
+            AbrirFormInPanel(new VentanasPrincipal());
         }
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            Form ir_finanza = new finanzas();
-            ir_finanza.Show();
-            this.Hide();
+            AbrirFormInPanel(new finanzas()); 
+        
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -74,9 +71,25 @@ namespace Proyecto_Warescape
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Form ir_marketing = new marketing();
-            ir_marketing.Show();
-            this.Hide();
+            AbrirFormInPanel(new marketing());
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+        private void AbrirFormInPanel(object formHijo)
+        {
+            if (this.panel1.Controls.Count > 0)
+                this.panel1.Controls.RemoveAt(0);
+            Form fh = formHijo as Form;
+            fh.TopLevel = false;
+            fh.FormBorderStyle = FormBorderStyle.None;
+            fh.Dock = DockStyle.Fill;
+            this.panel1.Controls.Add(fh);
+            this.panel1.Tag = fh;
+            fh.Show();
+        }
+
     }
 }

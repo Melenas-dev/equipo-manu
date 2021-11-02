@@ -448,6 +448,16 @@ namespace Proyecto_Warescape
         {
 
         }
+
+        private void txt_devoluciones_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PanelContenedor_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
     
 }
