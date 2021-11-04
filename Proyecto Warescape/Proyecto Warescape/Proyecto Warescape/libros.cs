@@ -77,18 +77,14 @@ namespace Proyecto_Warescape
 
         private void pictureBox1_Click_1(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Maximized;
-            btnmaximizar.Visible = false;
-            btnRestaurar.Visible = true;
+            
 
 
         }
 
         private void btnMinimizar_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Normal;
-            btnRestaurar.Visible = false;
-            btnmaximizar.Visible = true;
+            
 
         }
 
@@ -96,9 +92,7 @@ namespace Proyecto_Warescape
 
         private void btnRestaurar_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Normal;
-            btnRestaurar.Visible = false;
-            btnmaximizar.Visible = true;
+            
 
         }
 
@@ -272,7 +266,7 @@ namespace Proyecto_Warescape
             
         }
 
-       
+
 
         private void dgv_libros_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -287,8 +281,9 @@ namespace Proyecto_Warescape
                 txt_nombre.Text = this.dgv_libros.CurrentRow.Cells[4].Value.ToString();
                 cmb_editorial.Text = this.dgv_libros.CurrentRow.Cells[6].Value.ToString();
                 txt_devoluciones.Text = this.dgv_libros.CurrentRow.Cells[5].Value.ToString();
-
-                int isbn = int.Parse(dgv_libros.CurrentRow.Cells[0].Value.ToString());
+                if (dgv_libros.CurrentRow.Cells[0].Value.ToString() != "")
+                {
+                    int isbn = int.Parse(dgv_libros.CurrentRow.Cells[0].Value.ToString());
                 con.Open();
                 string query_generos = "SELECT g.id_genero, descripcion from tienen t JOIN generos g on t.id_genero = g.id_genero where isbn = " + isbn + ";";
                 MySqlCommand cmmnd_generos = new MySqlCommand(query_generos, con);
@@ -305,7 +300,11 @@ namespace Proyecto_Warescape
                     dgv_generos.Rows.Add(gen.descripcion, gen.id_genero);
                 }
                 con.Close();
-                
+                }else
+                {
+                    MessageBox.Show("Ingrese una fila valida");
+                }
+
             }
             
         }
@@ -455,6 +454,21 @@ namespace Proyecto_Warescape
         }
 
         private void PanelContenedor_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void BtnCerrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnmaximizar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnRestaurar_Click_1(object sender, EventArgs e)
         {
 
         }

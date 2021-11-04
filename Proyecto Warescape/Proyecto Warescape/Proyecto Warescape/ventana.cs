@@ -118,5 +118,23 @@ namespace Proyecto_Warescape
             }
         }
 
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Login ventana_login = new Login();
+            ventana_login.Show();
+
+
+        }
+
+        private void panel7_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void BtnCerrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

@@ -161,6 +161,26 @@ namespace Proyecto_Warescape
         {
 
         }
+
+        private void BtnCerrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnmaximizar_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnRestaurar_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void BtnCerrar_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
 
