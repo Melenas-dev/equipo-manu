@@ -139,6 +139,7 @@ namespace Proyecto_Warescape
             this.txt_devoluciones.TabIndex = 21;
             this.txt_devoluciones.Text = "No obligatorio";
             this.txt_devoluciones.TextChanged += new System.EventHandler(this.txt_devoluciones_TextChanged);
+            this.txt_devoluciones.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_devoluciones_KeyPress);
             // 
             // label7
             // 

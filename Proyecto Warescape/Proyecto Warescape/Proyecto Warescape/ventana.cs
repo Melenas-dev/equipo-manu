@@ -136,5 +136,10 @@ namespace Proyecto_Warescape
         {
             Application.Exit();
         }
+
+        private void btnmaximizar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -472,6 +472,11 @@ namespace Proyecto_Warescape
         {
 
         }
+
+        private void txt_devoluciones_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            solo_numeros(e);
+        }
     }
     
 }
