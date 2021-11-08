@@ -63,6 +63,7 @@
     <Reference Include="K4os.Hash.xxHash, Version=1.0.6.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
       <HintPath>..\packages\K4os.Hash.xxHash.1.0.6\lib\net46\K4os.Hash.xxHash.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="MySql.Data, Version=8.0.27.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <HintPath>..\packages\MySql.Data.8.0.27\lib\net452\MySql.Data.dll</HintPath>
     </Reference>
@@ -122,11 +123,18 @@
     <Compile Include="editoriales.Designer.cs">
       <DependentUpon>editoriales.cs</DependentUpon>
     </Compile>
+    <Compile Include="Email.cs" />
     <Compile Include="finanzas.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="finanzas.Designer.cs">
       <DependentUpon>finanzas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEmail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEmail.Designer.cs">
+      <DependentUpon>FormEmail.cs</DependentUpon>
     </Compile>
     <Compile Include="Generos.cs" />
     <Compile Include="login.cs">
@@ -167,6 +175,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="finanzas.resx">
       <DependentUpon>finanzas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEmail.resx">
+      <DependentUpon>FormEmail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>

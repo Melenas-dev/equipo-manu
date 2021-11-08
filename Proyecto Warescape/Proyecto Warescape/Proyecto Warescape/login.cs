@@ -152,5 +152,16 @@ namespace Proyecto_Warescape
             campo_contra.Text = "warescape";
             campo_usuario.Text = "admin" ;
         }
+
+        private void btn_restaurar_Click(object sender, EventArgs e)
+        {
+            Form restaurar = new FormEmail();
+            restaurar.Show();
+        }
+
+        private void campo_contra_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

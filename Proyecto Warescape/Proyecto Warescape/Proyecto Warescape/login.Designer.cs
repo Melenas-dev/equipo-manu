@@ -35,6 +35,7 @@ namespace Proyecto_Warescape
             this.ingreso = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.btn_restaurar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,6 +47,7 @@ namespace Proyecto_Warescape
             this.campo_contra.Size = new System.Drawing.Size(126, 31);
             this.campo_contra.TabIndex = 4;
             this.campo_contra.UseSystemPasswordChar = true;
+            this.campo_contra.TextChanged += new System.EventHandler(this.campo_contra_TextChanged);
             this.campo_contra.KeyDown += new System.Windows.Forms.KeyEventHandler(this.campo_contra_KeyDown);
             // 
             // campo_usuario
@@ -90,13 +92,29 @@ namespace Proyecto_Warescape
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(78, 312);
+            this.button1.Location = new System.Drawing.Point(108, 40);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 11;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // btn_restaurar
+            // 
+            this.btn_restaurar.BackColor = System.Drawing.Color.Transparent;
+            this.btn_restaurar.FlatAppearance.BorderSize = 0;
+            this.btn_restaurar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.btn_restaurar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_restaurar.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_restaurar.ForeColor = System.Drawing.Color.Black;
+            this.btn_restaurar.Location = new System.Drawing.Point(42, 314);
+            this.btn_restaurar.Name = "btn_restaurar";
+            this.btn_restaurar.Size = new System.Drawing.Size(196, 35);
+            this.btn_restaurar.TabIndex = 17;
+            this.btn_restaurar.Text = "Restaurar contraseña";
+            this.btn_restaurar.UseVisualStyleBackColor = false;
+            this.btn_restaurar.Click += new System.EventHandler(this.btn_restaurar_Click);
             // 
             // Login
             // 
@@ -106,6 +124,7 @@ namespace Proyecto_Warescape
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(576, 377);
+            this.Controls.Add(this.btn_restaurar);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.campo_usuario);
@@ -131,6 +150,7 @@ namespace Proyecto_Warescape
         private System.Windows.Forms.Button ingreso;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_restaurar;
     }
 }
 
