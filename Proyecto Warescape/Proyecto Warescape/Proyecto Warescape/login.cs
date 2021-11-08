@@ -61,7 +61,7 @@ namespace Proyecto_Warescape
             }
 
             conexion.Open();
-            MySqlCommand comando = new MySqlCommand("Select * from usuarios where usuarios = '" + campo_usuario.Text + "'", conexion);
+            MySqlCommand comando = new MySqlCommand("Select * from usuario where usuario = '" + campo_usuario.Text + "'", conexion);
 
             MySqlDataReader reader = comando.ExecuteReader();
 

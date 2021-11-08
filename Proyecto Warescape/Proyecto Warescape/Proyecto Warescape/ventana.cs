@@ -141,5 +141,10 @@ namespace Proyecto_Warescape
         {
 
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

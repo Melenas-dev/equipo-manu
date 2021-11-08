@@ -210,3 +210,5 @@ C:\Users\manue\Documents\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\
 C:\Users\manue\Documents\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto Warescape.csproj.CopyComplete
 C:\Users\manue\Documents\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto Warescape.exe
 C:\Users\manue\Documents\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto Warescape.pdb
+C:\Users\manue\Documents\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.editoriales.resources
+C:\Users\manue\Documents\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.agregargenero.resources

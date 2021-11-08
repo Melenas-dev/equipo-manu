@@ -37,7 +37,7 @@ namespace Proyecto_Warescape
             }
             con.Close();
             //muestra en el combobox generos
-            actualizar_dgv_libros();
+            //actualizar_dgv_libros();
             con.Close();
             dgv_libros.ReadOnly = true;
             //muestra en el datagridview 
@@ -129,16 +129,7 @@ namespace Proyecto_Warescape
                     con.Close();
 
                     con.Open();
-                    if(!txt_devoluciones.Text.Equals("No obligatorio"))
-                    {
-
-
-                    }
-                    else
-                    {
-                        txt_devoluciones.Text = "0";
-                    }
-                    string ingreso = "insert into libros values(" + int.Parse(txt_isbn.Text) + "," + int.Parse(txt_codigo.Text) + "," + int.Parse(txt_precio.Text) + "," + int.Parse(txt_stock.Text) + ",'" + txt_nombre.Text + "'," + int.Parse(txt_devoluciones.Text) + ")";
+                    string ingreso = "insert into libros values(" + int.Parse(txt_isbn.Text) + "," + int.Parse(txt_codigo.Text) + "," + int.Parse(txt_precio.Text) + "," + int.Parse(txt_stock.Text) + ",'" + txt_nombre.Text + "')";
                     MySqlCommand Ingreso = new MySqlCommand(ingreso, con);
                     Ingreso.ExecuteNonQuery();
                     con.Close();
@@ -157,22 +148,7 @@ namespace Proyecto_Warescape
                     vender_consignar.ExecuteNonQuery();
                     con.Close();
 
-                    /*
-                    string almacenar = Cmb_genero.Text;
-                    MySqlCommand comando = new MySqlCommand("Select * from generos where descripcion ='" + almacenar + "';", con);
-                    MySqlDataReader leertabla = comando.ExecuteReader();
-                    string valor = "";
-                    while (leertabla.Read())
-                    {
-                        valor = leertabla["id_genero"].ToString();
-                    }
-                    con.Close();
-                    con.Open();
-                    string ingreso2 = "insert into tienen values("+ int.Parse(txt_isbn.Text) +","+ int.Parse(valor) +")";
-                    MySqlCommand ingresargenero = new MySqlCommand(ingreso2,con);
-                    ingresargenero.ExecuteNonQuery();
-                    con.Close();
-                    con.Open();*/
+                    
                    
                     for(int i = 0; i < dgv_generos.Rows.Count - 1; i++)
                     {
@@ -280,7 +256,6 @@ namespace Proyecto_Warescape
                 txt_stock.Text = this.dgv_libros.CurrentRow.Cells[3].Value.ToString();
                 txt_nombre.Text = this.dgv_libros.CurrentRow.Cells[4].Value.ToString();
                 cmb_editorial.Text = this.dgv_libros.CurrentRow.Cells[6].Value.ToString();
-                txt_devoluciones.Text = this.dgv_libros.CurrentRow.Cells[5].Value.ToString();
                 if (dgv_libros.CurrentRow.Cells[0].Value.ToString() != "")
                 {
                     int isbn = int.Parse(dgv_libros.CurrentRow.Cells[0].Value.ToString());
@@ -476,6 +451,28 @@ namespace Proyecto_Warescape
         private void txt_devoluciones_KeyPress(object sender, KeyPressEventArgs e)
         {
             solo_numeros(e);
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form editoriales = new editoriales();
+            editoriales.Show();
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            Form generos = new agregargenero();
+            generos.Show();
         }
     }
     

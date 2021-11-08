@@ -35,8 +35,6 @@ namespace Proyecto_Warescape
             this.dgv_generos = new System.Windows.Forms.DataGridView();
             this.nombre_genero = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.id_genero = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txt_devoluciones = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.cmb_editorial = new System.Windows.Forms.ComboBox();
             this.Cmb_genero = new System.Windows.Forms.ComboBox();
@@ -58,6 +56,10 @@ namespace Proyecto_Warescape
             this.BtnCerrar = new System.Windows.Forms.PictureBox();
             this.btnmaximizar = new System.Windows.Forms.PictureBox();
             this.btnRestaurar = new System.Windows.Forms.PictureBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txt_autor = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_generos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_libros)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnCerrar)).BeginInit();
@@ -73,7 +75,7 @@ namespace Proyecto_Warescape
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.ForeColor = System.Drawing.Color.Black;
-            this.button8.Location = new System.Drawing.Point(478, 229);
+            this.button8.Location = new System.Drawing.Point(718, 271);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(143, 35);
             this.button8.TabIndex = 25;
@@ -86,7 +88,7 @@ namespace Proyecto_Warescape
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F);
-            this.label9.Location = new System.Drawing.Point(623, 139);
+            this.label9.Location = new System.Drawing.Point(662, 139);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(148, 24);
             this.label9.TabIndex = 24;
@@ -99,10 +101,10 @@ namespace Proyecto_Warescape
             this.dgv_generos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nombre_genero,
             this.id_genero});
-            this.dgv_generos.Location = new System.Drawing.Point(627, 166);
+            this.dgv_generos.Location = new System.Drawing.Point(666, 166);
             this.dgv_generos.Name = "dgv_generos";
             this.dgv_generos.ReadOnly = true;
-            this.dgv_generos.Size = new System.Drawing.Size(261, 132);
+            this.dgv_generos.Size = new System.Drawing.Size(243, 98);
             this.dgv_generos.TabIndex = 23;
             this.dgv_generos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_generos_CellContentClick);
             // 
@@ -118,35 +120,12 @@ namespace Proyecto_Warescape
             this.id_genero.Name = "id_genero";
             this.id_genero.ReadOnly = true;
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(211, 214);
-            this.label8.Name = "label8";
-            this.label8.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label8.Size = new System.Drawing.Size(118, 24);
-            this.label8.TabIndex = 22;
-            this.label8.Text = "Devoluciones";
-            this.label8.UseMnemonic = false;
-            // 
-            // txt_devoluciones
-            // 
-            this.txt_devoluciones.Location = new System.Drawing.Point(219, 240);
-            this.txt_devoluciones.Name = "txt_devoluciones";
-            this.txt_devoluciones.Size = new System.Drawing.Size(110, 20);
-            this.txt_devoluciones.TabIndex = 21;
-            this.txt_devoluciones.Text = "No obligatorio";
-            this.txt_devoluciones.TextChanged += new System.EventHandler(this.txt_devoluciones_TextChanged);
-            this.txt_devoluciones.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_devoluciones_KeyPress);
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(29, 211);
+            this.label7.Location = new System.Drawing.Point(170, 214);
             this.label7.Name = "label7";
             this.label7.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label7.Size = new System.Drawing.Size(77, 24);
@@ -157,16 +136,16 @@ namespace Proyecto_Warescape
             // cmb_editorial
             // 
             this.cmb_editorial.FormattingEnabled = true;
-            this.cmb_editorial.Location = new System.Drawing.Point(30, 238);
+            this.cmb_editorial.Location = new System.Drawing.Point(171, 241);
             this.cmb_editorial.Name = "cmb_editorial";
-            this.cmb_editorial.Size = new System.Drawing.Size(145, 21);
+            this.cmb_editorial.Size = new System.Drawing.Size(137, 21);
             this.cmb_editorial.TabIndex = 19;
             // 
             // Cmb_genero
             // 
             this.Cmb_genero.DisplayMember = "descripcion";
             this.Cmb_genero.FormattingEnabled = true;
-            this.Cmb_genero.Location = new System.Drawing.Point(368, 241);
+            this.Cmb_genero.Location = new System.Drawing.Point(343, 241);
             this.Cmb_genero.Name = "Cmb_genero";
             this.Cmb_genero.Size = new System.Drawing.Size(102, 21);
             this.Cmb_genero.TabIndex = 18;
@@ -286,7 +265,7 @@ namespace Proyecto_Warescape
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(367, 214);
+            this.label6.Location = new System.Drawing.Point(342, 214);
             this.label6.Name = "label6";
             this.label6.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label6.Size = new System.Drawing.Size(68, 24);
@@ -391,6 +370,58 @@ namespace Proyecto_Warescape
             this.btnRestaurar.Visible = false;
             this.btnRestaurar.Click += new System.EventHandler(this.btnRestaurar_Click_1);
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F);
+            this.label8.Location = new System.Drawing.Point(29, 214);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(53, 24);
+            this.label8.TabIndex = 29;
+            this.label8.Text = "Autor";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
+            // 
+            // txt_autor
+            // 
+            this.txt_autor.Location = new System.Drawing.Point(33, 243);
+            this.txt_autor.Name = "txt_autor";
+            this.txt_autor.Size = new System.Drawing.Size(104, 20);
+            this.txt_autor.TabIndex = 30;
+            this.txt_autor.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Transparent;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.Black;
+            this.button2.Location = new System.Drawing.Point(933, 637);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(140, 35);
+            this.button2.TabIndex = 33;
+            this.button2.Text = "Generos";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Transparent;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.Black;
+            this.button3.Location = new System.Drawing.Point(933, 596);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(140, 35);
+            this.button3.TabIndex = 34;
+            this.button3.Text = "Editoriales";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // VentanasPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -399,6 +430,10 @@ namespace Proyecto_Warescape
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1085, 698);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.txt_autor);
             this.Controls.Add(this.BtnCerrar);
             this.Controls.Add(this.btnmaximizar);
             this.Controls.Add(this.btnRestaurar);
@@ -411,9 +446,7 @@ namespace Proyecto_Warescape
             this.Controls.Add(this.label4);
             this.Controls.Add(this.dgv_generos);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label8);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.txt_devoluciones);
             this.Controls.Add(this.txt_isbn);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txt_codigo);
@@ -463,8 +496,6 @@ namespace Proyecto_Warescape
         private System.Windows.Forms.ComboBox Cmb_genero;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox cmb_editorial;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txt_devoluciones;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DataGridView dgv_generos;
@@ -473,5 +504,9 @@ namespace Proyecto_Warescape
         private System.Windows.Forms.PictureBox BtnCerrar;
         private System.Windows.Forms.PictureBox btnmaximizar;
         private System.Windows.Forms.PictureBox btnRestaurar;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txt_autor;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }

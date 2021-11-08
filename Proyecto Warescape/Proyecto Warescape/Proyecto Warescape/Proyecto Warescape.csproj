@@ -104,11 +104,23 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="agregargenero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="agregargenero.Designer.cs">
+      <DependentUpon>agregargenero.cs</DependentUpon>
+    </Compile>
     <Compile Include="carga.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="carga.Designer.cs">
       <DependentUpon>carga.cs</DependentUpon>
+    </Compile>
+    <Compile Include="editoriales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="editoriales.Designer.cs">
+      <DependentUpon>editoriales.cs</DependentUpon>
     </Compile>
     <Compile Include="finanzas.cs">
       <SubType>Form</SubType>
@@ -144,8 +156,14 @@
     <Compile Include="ventana.Designer.cs">
       <DependentUpon>ventana.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="agregargenero.resx">
+      <DependentUpon>agregargenero.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="carga.resx">
       <DependentUpon>carga.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="editoriales.resx">
+      <DependentUpon>editoriales.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="finanzas.resx">
       <DependentUpon>finanzas.cs</DependentUpon>
