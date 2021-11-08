@@ -179,6 +179,7 @@ namespace Proyecto_Warescape
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Editoriales";
             this.Load += new System.EventHandler(this.Editoriales_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Editoriales_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_editoriales)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.BtnCerrar)).EndInit();
