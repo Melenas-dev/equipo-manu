@@ -51,6 +51,15 @@ namespace Proyecto_Warescape
                 cmb_editorial.Items.Add(leer["nombre"].ToString());
                 
             }con.Close();
+            con.Open();
+            MySqlCommand mostrar_operacion = new MySqlCommand("SELECT n_de_operacion from compras_y_consignaciones", con);
+            MySqlDataReader leer_operacion = mostrar_operacion.ExecuteReader();
+            while (leer_operacion.Read())
+            {
+                cmb_boleta.Items.Add(leer_operacion["n_de_operacion"].ToString());
+
+            }
+            con.Close();
 
         }
 
@@ -104,7 +113,7 @@ namespace Proyecto_Warescape
                 string d="";
                 while (reader_boleta.Read())
                 {
-                    c = reader_boleta["id_libro"].ToString();
+                    c = reader_boleta["n_de_operacion"].ToString();
                     if (cmb_boleta.Text.Equals(c))
                     {
                         d = "i";
@@ -153,12 +162,13 @@ namespace Proyecto_Warescape
                 {
                     if (cmb_tipo_de_operacion.Text.Equals("Compra"))
                     {
-                        con.Close();
-                        MySqlCommand ingresar_lcc = new MySqlCommand("insert into lcc(n_de_operacion, id_libro, catidad_comprada, precio_comprado) value(" + int.Parse(cmb_boleta.Text) + ", " + int.Parse(lbl_id_de_libro.Text) + "," + int.Parse(txt_cantidad.Text) + "," + int.Parse(txt_valor_del_libro.Text) + ")", con);
+                       
+                        con.Open();
+                        MySqlCommand ingresar_lcc = new MySqlCommand("insert into lcc(n_de_operacion, id_libro, cantidad_comprada, precio_comprado) value(" + int.Parse(cmb_boleta.Text) + ", " + int.Parse(lbl_id_de_libro.Text) + "," + int.Parse(txt_cantidad.Text) + "," + int.Parse(txt_valor_del_libro.Text) + ");", con);
                         ingresar_lcc.ExecuteNonQuery();
                         con.Close();
                         con.Open();
-                        MySqlCommand comparar_stock = new MySqlCommand("select stock from libros where  id= " + lbl_id_de_libro.Text + ";", con);
+                        MySqlCommand comparar_stock = new MySqlCommand("select stock from libros where  id_libro= " + lbl_id_de_libro.Text + ";", con);
                         MySqlDataReader reader_stock = comparar_stock.ExecuteReader();
                         string f = "";
                         while (reader_stock.Read())
@@ -174,12 +184,13 @@ namespace Proyecto_Warescape
                     }
                     if (cmb_tipo_de_operacion.Text.Equals("Consignacion"))
                     {
-                        con.Close();
-                        MySqlCommand ingresar_lcc = new MySqlCommand("insert into lcc(n_de_operacion, id_libro, catidad_consignada, precio_consignado) value(" + int.Parse(cmb_boleta.Text) + ", " + int.Parse(lbl_id_de_libro.Text) + "," + int.Parse(txt_cantidad.Text) + "," + int.Parse(txt_valor_del_libro.Text) + ")", con);
+                        
+                        con.Open();
+                        MySqlCommand ingresar_lcc = new MySqlCommand("insert into lcc(n_de_operacion, id_libro, cantidad_consignada, precio_consignado) value(" + int.Parse(cmb_boleta.Text) + ", " + int.Parse(lbl_id_de_libro.Text) + "," + int.Parse(txt_cantidad.Text) + "," + int.Parse(txt_valor_del_libro.Text) + ");", con);
                         ingresar_lcc.ExecuteNonQuery();
                         con.Close();
                         con.Open();
-                        MySqlCommand comparar_stock = new MySqlCommand("select stock from libros where  id= " + lbl_id_de_libro.Text + ";", con);
+                        MySqlCommand comparar_stock = new MySqlCommand("select stock from libros where  id_libro= " + lbl_id_de_libro.Text + ";", con);
                         MySqlDataReader reader_stock = comparar_stock.ExecuteReader();
                         string f = "";
                         while (reader_stock.Read())
@@ -198,16 +209,25 @@ namespace Proyecto_Warescape
                 }
                 else
                 {
+                    string id_libro_valor = "";
                     con.Close();
                     if (cmb_tipo_de_operacion.Text.Equals("Compra"))
                     {
                         con.Open();
-                        string ingreso = "insert into libros(isbn, codigo, precio, stock, nombre, autor) values(" + int.Parse(txt_isbn.Text) + "," + int.Parse(txt_codigo.Text) + "," + int.Parse(txt_precio.Text) + "," + int.Parse(txt_cantidad.Text) + ",'" + txt_nombre.Text + "','" + txt_autor.Text + "')";
+                        string ingreso = "insert into libros(isbn, codigo, precio, stock, nombre, autor) values(" + int.Parse(txt_isbn.Text) + "," + int.Parse(txt_codigo.Text) + "," + int.Parse(txt_precio.Text) + "," + int.Parse(txt_cantidad.Text) + ",'" + txt_nombre.Text + "','" + txt_autor.Text + "');";
                         MySqlCommand Ingreso = new MySqlCommand(ingreso, con);
                         Ingreso.ExecuteNonQuery();
                         con.Close();
                         con.Open();
-                        MySqlCommand ingresar_lcc = new MySqlCommand("insert into lcc(n_de_operacion, id_libro, catidad_comprada, precio_comprado) value(" + int.Parse(cmb_boleta.Text) + ", " + int.Parse(lbl_id_de_libro.Text) + "," + int.Parse(txt_cantidad.Text) + "," + int.Parse(txt_valor_del_libro.Text) + ")", con);
+                        MySqlCommand conseguir_id_libro = new MySqlCommand("select id_libro from libros where isbn=" + int.Parse(txt_isbn.Text) + " and codigo=" + int.Parse(txt_codigo.Text) + " and precio=" + int.Parse(txt_precio.Text) + " and stock=" + int.Parse(txt_cantidad.Text) + " and nombre='" + txt_nombre.Text + "' and autor ='" + txt_autor.Text + "' ;", con);
+                        MySqlDataReader reader_id_libro = conseguir_id_libro.ExecuteReader();
+                        while (reader_id_libro.Read())
+                        {
+                            id_libro_valor = reader_id_libro["id_libro"].ToString();
+                        }
+                        con.Close();
+                        con.Open();
+                        MySqlCommand ingresar_lcc = new MySqlCommand("insert into lcc(n_de_operacion, id_libro, cantidad_comprada, precio_comprado) value(" + int.Parse(cmb_boleta.Text) + ", " + int.Parse(id_libro_valor) + "," + int.Parse(txt_cantidad.Text) + "," + int.Parse(txt_valor_del_libro.Text) + ")", con);
                         ingresar_lcc.ExecuteNonQuery();
                         con.Close();
 
@@ -215,23 +235,41 @@ namespace Proyecto_Warescape
                     if (cmb_tipo_de_operacion.Text.Equals("Consignacion"))
                     {
                         con.Open();
-                        string ingreso = "insert into libros values(" + int.Parse(txt_isbn.Text) + "," + int.Parse(txt_codigo.Text) + "," + int.Parse(txt_precio.Text) + "," + int.Parse(txt_cantidad.Text) + ",'" + txt_nombre.Text + "')";
+                        string ingreso = "insert into libros(isbn, codigo, precio, stock, nombre, autor) values(" + int.Parse(txt_isbn.Text) + "," + int.Parse(txt_codigo.Text) + "," + int.Parse(txt_precio.Text) + "," + int.Parse(txt_cantidad.Text) + ",'" + txt_nombre.Text + "','" + txt_autor.Text + "');";
                         MySqlCommand Ingreso = new MySqlCommand(ingreso, con);
                         Ingreso.ExecuteNonQuery();
                         con.Close();
                         con.Open();
-                        MySqlCommand ingresar_lcc = new MySqlCommand("insert into lcc(n_de_operacion, id_libro, catidad_consignada, precio_consignado) value(" + int.Parse(cmb_boleta.Text) + ", " + int.Parse(lbl_id_de_libro.Text) + "," + int.Parse(txt_cantidad.Text) + "," + int.Parse(txt_valor_del_libro.Text) + ")", con);
+                        MySqlCommand conseguir_id_libro = new MySqlCommand("select id_libro from libros where isbn=" + int.Parse(txt_isbn.Text) + " and codigo=" + int.Parse(txt_codigo.Text) + " and precio=" + int.Parse(txt_precio.Text) + " and stock=" + int.Parse(txt_cantidad.Text) + " and nombre='" + txt_nombre.Text + "' and autor ='" + txt_autor.Text + "' ;", con);
+                        MySqlDataReader reader_id_libro = conseguir_id_libro.ExecuteReader();
+                        string id_libro_valor2 = "";
+                        while (reader_id_libro.Read())
+                        {
+                            id_libro_valor2 = reader_id_libro["id_libro"].ToString();
+                        }
+                        con.Close();
+                        con.Open();
+                        MySqlCommand ingresar_lcc = new MySqlCommand("insert into lcc(n_de_operacion, id_libro, cantidad_consignada, precio_consignado) value(" + int.Parse(cmb_boleta.Text) + ", " + int.Parse(id_libro_valor) + "," + int.Parse(txt_cantidad.Text) + "," + int.Parse(txt_valor_del_libro.Text) + ");", con);
                         ingresar_lcc.ExecuteNonQuery();
                         con.Close();
+                    }
+                    int id_libro;
+                    if (lbl_id_de_libro.Text.Equals(""))
+                    {
+                        id_libro = int.Parse(id_libro_valor);
+                    }
+                    else
+                    {
+                        id_libro = int.Parse(lbl_id_de_libro.Text);
                     }
                    
                     for(int i = 0; i < dgv_generos.Rows.Count - 1; i++)
                     {
                         int id_genero = int.Parse(dgv_generos.Rows[i].Cells[1].Value.ToString());
-                        int isbn = int.Parse(txt_isbn.Text);
+                        
 
                         con.Open();
-                        string ingreso2 = "insert into tienen values(" + isbn + "," + id_genero + ")";
+                        string ingreso2 = "insert into tienen values(" + id_libro + "," + id_genero + ")";
                         MySqlCommand ingresargenero = new MySqlCommand(ingreso2, con);
                         ingresargenero.ExecuteNonQuery();
                         con.Close();
@@ -281,18 +319,19 @@ namespace Proyecto_Warescape
         private void guardar_edicion(object sender, EventArgs e)
         {
             con.Open();
-            if (txt_isbn.Text.Equals("") || txt_codigo.Text.Equals("") || txt_nombre.Text.Equals("") || txt_precio.Text.Equals("") || txt_cantidad.Text.Equals(""))
+            if (txt_isbn.Text.Equals("") || txt_codigo.Text.Equals("") || txt_nombre.Text.Equals("") || txt_precio.Text.Equals(""))
             {
                 MessageBox.Show("Ingresar todos los parametros");
             }
             else
             {
-                string editar = "UPDATE libros SET isbn=" + int.Parse(txt_isbn.Text) + ",codigo=" + int.Parse(txt_codigo.Text) + ",precio=" + int.Parse(txt_precio.Text) + ",stock=" + int.Parse(txt_cantidad.Text) + ",nombre='" + txt_nombre.Text + "' Where isbn=" + int.Parse(txt_isbn.Text) + ";";
+                string editar = "UPDATE libros SET isbn=" + int.Parse(txt_isbn.Text) + ",codigo=" + int.Parse(txt_codigo.Text) + ",precio=" + int.Parse(txt_precio.Text) + ", nombre='" + txt_nombre.Text + "', autor='" + txt_autor.Text + "' Where id_libro=" + int.Parse(lbl_id_de_libro.Text) + ";";
+                MessageBox.Show(editar);
                 MySqlCommand comando = new MySqlCommand(editar, con);
                 comando.ExecuteNonQuery();
 
-                Services.LibrosService.eliminarGenerosDelLibro(con, int.Parse(txt_isbn.Text));
-
+                Services.LibrosService.eliminarGenerosDelLibro(con, int.Parse(txt_isbn.Text));      
+                
                 for (int i = 0; i < dgv_generos.Rows.Count - 1; i++)
                 {
                     int id_genero = int.Parse(dgv_generos.Rows[i].Cells[1].Value.ToString());
@@ -327,15 +366,15 @@ namespace Proyecto_Warescape
                 lbl_id_de_libro.Text= this.dgv_libros.CurrentRow.Cells[0].Value.ToString();
                 txt_isbn.Text = this.dgv_libros.CurrentRow.Cells[1].Value.ToString();
                 txt_codigo.Text = this.dgv_libros.CurrentRow.Cells[2].Value.ToString();
-                txt_precio.Text = this.dgv_libros.CurrentRow.Cells[3].Value.ToString();
-                txt_cantidad.Text = this.dgv_libros.CurrentRow.Cells[4].Value.ToString();
+                txt_precio.Text = this.dgv_libros.CurrentRow.Cells[3].Value.ToString();                
                 txt_nombre.Text = this.dgv_libros.CurrentRow.Cells[5].Value.ToString();
-                cmb_editorial.Text = this.dgv_libros.CurrentRow.Cells[6].Value.ToString();
+                txt_autor.Text = this.dgv_libros.CurrentRow.Cells[6].Value.ToString();
+                cmb_editorial.Text = this.dgv_libros.CurrentRow.Cells[7].Value.ToString();
                 if (dgv_libros.CurrentRow.Cells[0].Value.ToString() != "")
                 {
-                    int isbn = int.Parse(dgv_libros.CurrentRow.Cells[0].Value.ToString());
+                    int id_libro = int.Parse(dgv_libros.CurrentRow.Cells[0].Value.ToString());
                 con.Open();
-                string query_generos = "SELECT g.id_genero, descripcion from tienen t JOIN generos g on t.id_genero = g.id_genero where isbn = " + isbn + ";";
+                string query_generos = "SELECT g.id_genero, descripcion from tienen t JOIN generos g on t.id_genero = g.id_genero where id_libro = " + id_libro + ";";
                 MySqlCommand cmmnd_generos = new MySqlCommand(query_generos, con);
 
                 dgv_generos.Rows.Clear();
@@ -369,9 +408,9 @@ namespace Proyecto_Warescape
             dgv_libros.DataSource = tabla;
             
         }
-        public void solo_numeros(KeyPressEventArgs e) 
+        public void solo_numeros(KeyPressEventArgs e)
         {
-            
+
             if (Char.IsDigit(e.KeyChar))
             {
                 e.Handled = false;
@@ -389,10 +428,21 @@ namespace Proyecto_Warescape
                 e.Handled = true;
             }
         }
+        public void solo_letras(KeyPressEventArgs e)
+        {
+            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                e.Handled = true;
+                return;
 
-      
+            }
 
-        private void txt_isbn_KeyPress(object sender, KeyPressEventArgs e)
+        }
+
+
+
+
+            private void txt_isbn_KeyPress(object sender, KeyPressEventArgs e)
         {
             solo_numeros(e);
         }
@@ -424,12 +474,8 @@ namespace Proyecto_Warescape
         private void Cmb_genero_KeyPress(object sender, KeyPressEventArgs e)
         {
             solo_numeros(e);
-            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
-            {
-                e.Handled = true;
-                return;
-
-            }
+            solo_letras(e);
+           
         }
 
       
@@ -548,6 +594,32 @@ namespace Proyecto_Warescape
         {
             Form generos = new agregargenero();
             generos.Show();
+        }
+
+        private void cmb_boleta_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            solo_numeros(e);
+        }
+
+        private void cmb_tipo_de_operacion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            solo_numeros(e);
+            solo_letras(e);
+        }
+
+        private void txt_valor_del_libro_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            solo_numeros(e);
+        }
+
+        private void txt_cantidad_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmb_editorial_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
     

@@ -9,19 +9,19 @@ namespace Proyecto_Warescape.Services
 {
     class LibrosService
     {
-        public static void eliminarGenerosDelLibro(MySqlConnection con, int isbn)
+        public static void eliminarGenerosDelLibro(MySqlConnection con, int id_libro)
         {
-            string borrar_generos = "DELETE FROM tienen WHERE isbn =" + isbn + ";";
+            string borrar_generos = "DELETE FROM tienen WHERE id_libro =" + id_libro + ";";
             MySqlCommand borrador_generos = new MySqlCommand(borrar_generos, con);
             borrador_generos.ExecuteNonQuery();
         }
 
-        public static void eliminarLibro(MySqlConnection con, int isbn)
+        public static void eliminarLibro(MySqlConnection con, int id_libro)
         {
-            string borrar = "DELETE FROM libros WHERE isbn =" + isbn + ";";
+            string borrar = "DELETE FROM libros WHERE isbn =" + id_libro + ";";
             MySqlCommand comando = new MySqlCommand(borrar, con);
             comando.ExecuteNonQuery();
-            eliminarGenerosDelLibro(con, isbn);
+            eliminarGenerosDelLibro(con, id_libro);
         }
     }
 }

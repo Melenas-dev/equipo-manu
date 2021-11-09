@@ -150,6 +150,7 @@ namespace Proyecto_Warescape
             this.cmb_editorial.Name = "cmb_editorial";
             this.cmb_editorial.Size = new System.Drawing.Size(137, 21);
             this.cmb_editorial.TabIndex = 19;
+            this.cmb_editorial.SelectedIndexChanged += new System.EventHandler(this.cmb_editorial_SelectedIndexChanged);
             // 
             // Cmb_genero
             // 
@@ -243,6 +244,7 @@ namespace Proyecto_Warescape
             this.txt_cantidad.Name = "txt_cantidad";
             this.txt_cantidad.Size = new System.Drawing.Size(110, 20);
             this.txt_cantidad.TabIndex = 10;
+            this.txt_cantidad.TextChanged += new System.EventHandler(this.txt_cantidad_TextChanged);
             this.txt_cantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_stock_KeyPress);
             // 
             // txt_precio
@@ -438,6 +440,7 @@ namespace Proyecto_Warescape
             this.txt_valor_del_libro.Name = "txt_valor_del_libro";
             this.txt_valor_del_libro.Size = new System.Drawing.Size(118, 20);
             this.txt_valor_del_libro.TabIndex = 36;
+            this.txt_valor_del_libro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_valor_del_libro_KeyPress);
             // 
             // cmb_tipo_de_operacion
             // 
@@ -449,6 +452,7 @@ namespace Proyecto_Warescape
             this.cmb_tipo_de_operacion.Name = "cmb_tipo_de_operacion";
             this.cmb_tipo_de_operacion.Size = new System.Drawing.Size(153, 21);
             this.cmb_tipo_de_operacion.TabIndex = 37;
+            this.cmb_tipo_de_operacion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmb_tipo_de_operacion_KeyPress);
             // 
             // label11
             // 
@@ -490,6 +494,7 @@ namespace Proyecto_Warescape
             this.cmb_boleta.Name = "cmb_boleta";
             this.cmb_boleta.Size = new System.Drawing.Size(112, 21);
             this.cmb_boleta.TabIndex = 42;
+            this.cmb_boleta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmb_boleta_KeyPress);
             // 
             // lbl_id_de_libro
             // 
