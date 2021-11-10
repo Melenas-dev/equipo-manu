@@ -387,7 +387,7 @@ namespace Proyecto_Warescape
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F);
-            this.label8.Location = new System.Drawing.Point(40, 187);
+            this.label8.Location = new System.Drawing.Point(31, 186);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(53, 24);
             this.label8.TabIndex = 29;
@@ -481,11 +481,11 @@ namespace Proyecto_Warescape
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F);
-            this.label10.Location = new System.Drawing.Point(35, 255);
+            this.label10.Location = new System.Drawing.Point(31, 257);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(110, 24);
+            this.label10.Size = new System.Drawing.Size(139, 24);
             this.label10.TabIndex = 41;
-            this.label10.Text = "Nª de boleta";
+            this.label10.Text = "Nª de operacion";
             // 
             // cmb_boleta
             // 

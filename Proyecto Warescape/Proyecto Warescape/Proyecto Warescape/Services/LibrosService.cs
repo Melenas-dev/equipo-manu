@@ -18,7 +18,7 @@ namespace Proyecto_Warescape.Services
 
         public static void eliminarLibro(MySqlConnection con, int id_libro)
         {
-            string borrar = "DELETE FROM libros WHERE isbn =" + id_libro + ";";
+            string borrar = "DELETE FROM libros WHERE id_libro =" + id_libro + ";";
             MySqlCommand comando = new MySqlCommand(borrar, con);
             comando.ExecuteNonQuery();
             eliminarGenerosDelLibro(con, id_libro);
