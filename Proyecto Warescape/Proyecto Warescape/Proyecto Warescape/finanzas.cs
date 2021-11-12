@@ -7,11 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace Proyecto_Warescape
 {
     public partial class finanzas : Form
     {
+        MySqlConnection con = new MySqlConnection("Server=localhost; Database=warescapesrl; Uid=root; Pwd=;");
+
+
         public finanzas()
         {
             InitializeComponent();
@@ -65,6 +69,15 @@ namespace Proyecto_Warescape
 
         private void finanzas_Load(object sender, EventArgs e)
         {
+            MySqlCommand comando = new MySqlCommand("SELECT nombre from libros", con);
+            con.Open();
+            MySqlDataReader registro = comando.ExecuteReader();
+            while (registro.Read())
+            {
+                cmb_libros.Items.Add(registro["nombre"].ToString());
+
+            }
+            con.Close();
 
         }
 
@@ -77,5 +90,32 @@ namespace Proyecto_Warescape
         {
 
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+           
+            if (txt_boleta.Text.Equals("") || txt_precio.Text.Equals("") || txt_cantidad.Text.Equals("") || cmb_libros.Text.Equals(""))
+            {
+                MessageBox.Show("Ingresar todos los parametros");
+            }
+            else
+            {
+                int n = dgv_lista.Rows.Add();
+
+                dgv_lista.Rows[n].Cells[0].Value = txt_boleta.Text;
+                dgv_lista.Rows[n].Cells[1].Value = fecha_venta.Value.ToString("yyyy-MM-dd");
+                dgv_lista.Rows[n].Cells[2].Value = txt_precio.Text;
+                dgv_lista.Rows[n].Cells[3].Value = txt_cantidad.Text;
+                dgv_lista.Rows[n].Cells[4].Value = cmb_libros.SelectedItem.ToString();
+
+
+
+            }
+           
+               
+
+            }
+
+        }
     }
-}
+
