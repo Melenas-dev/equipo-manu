@@ -43,9 +43,9 @@ namespace Proyecto_Warescape
             this.label1 = new System.Windows.Forms.Label();
             this.dgv_publicidades = new System.Windows.Forms.DataGridView();
             this.txt_nombre = new System.Windows.Forms.TextBox();
-            this.txt_alcance = new System.Windows.Forms.TextBox();
-            this.txt_id = new System.Windows.Forms.TextBox();
+            this.txt_monto = new System.Windows.Forms.TextBox();
             this.txt_rut = new System.Windows.Forms.TextBox();
+            this.lbl_id_publicidad = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BtnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnmaximizar)).BeginInit();
@@ -57,6 +57,7 @@ namespace Proyecto_Warescape
             // 
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.lbl_id_publicidad);
             this.panel1.Controls.Add(this.BtnCerrar);
             this.panel1.Controls.Add(this.btnmaximizar);
             this.panel1.Controls.Add(this.btnRestaurar);
@@ -69,8 +70,7 @@ namespace Proyecto_Warescape
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.dgv_publicidades);
             this.panel1.Controls.Add(this.txt_nombre);
-            this.panel1.Controls.Add(this.txt_alcance);
-            this.panel1.Controls.Add(this.txt_id);
+            this.panel1.Controls.Add(this.txt_monto);
             this.panel1.Controls.Add(this.txt_rut);
             this.panel1.ForeColor = System.Drawing.Color.Black;
             this.panel1.Location = new System.Drawing.Point(-18, 0);
@@ -171,7 +171,7 @@ namespace Proyecto_Warescape
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F);
-            this.label4.Location = new System.Drawing.Point(656, 160);
+            this.label4.Location = new System.Drawing.Point(442, 160);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(75, 24);
             this.label4.TabIndex = 16;
@@ -182,18 +182,18 @@ namespace Proyecto_Warescape
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F);
-            this.label3.Location = new System.Drawing.Point(441, 160);
+            this.label3.Location = new System.Drawing.Point(573, 160);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(179, 24);
+            this.label3.Size = new System.Drawing.Size(61, 24);
             this.label3.TabIndex = 15;
-            this.label3.Text = "Alcance de Personas";
+            this.label3.Text = "Monto";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F);
-            this.label2.Location = new System.Drawing.Point(311, 160);
+            this.label2.Location = new System.Drawing.Point(185, 160);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(25, 24);
             this.label2.TabIndex = 14;
@@ -204,7 +204,7 @@ namespace Proyecto_Warescape
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F);
-            this.label1.Location = new System.Drawing.Point(186, 160);
+            this.label1.Location = new System.Drawing.Point(296, 160);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(38, 24);
             this.label1.TabIndex = 13;
@@ -223,35 +223,37 @@ namespace Proyecto_Warescape
             // 
             // txt_nombre
             // 
-            this.txt_nombre.Location = new System.Drawing.Point(660, 187);
+            this.txt_nombre.Location = new System.Drawing.Point(446, 187);
             this.txt_nombre.Name = "txt_nombre";
             this.txt_nombre.Size = new System.Drawing.Size(97, 20);
             this.txt_nombre.TabIndex = 11;
             // 
-            // txt_alcance
+            // txt_monto
             // 
-            this.txt_alcance.Location = new System.Drawing.Point(475, 187);
-            this.txt_alcance.Name = "txt_alcance";
-            this.txt_alcance.Size = new System.Drawing.Size(97, 20);
-            this.txt_alcance.TabIndex = 10;
-            this.txt_alcance.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_alcance_KeyPress);
-            // 
-            // txt_id
-            // 
-            this.txt_id.Location = new System.Drawing.Point(315, 187);
-            this.txt_id.Name = "txt_id";
-            this.txt_id.Size = new System.Drawing.Size(91, 20);
-            this.txt_id.TabIndex = 9;
-            this.txt_id.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_id_KeyPress);
+            this.txt_monto.Location = new System.Drawing.Point(577, 187);
+            this.txt_monto.Name = "txt_monto";
+            this.txt_monto.Size = new System.Drawing.Size(97, 20);
+            this.txt_monto.TabIndex = 10;
+            this.txt_monto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_alcance_KeyPress);
             // 
             // txt_rut
             // 
-            this.txt_rut.Location = new System.Drawing.Point(185, 187);
+            this.txt_rut.Location = new System.Drawing.Point(295, 187);
             this.txt_rut.Name = "txt_rut";
             this.txt_rut.Size = new System.Drawing.Size(91, 20);
             this.txt_rut.TabIndex = 8;
             this.txt_rut.TextChanged += new System.EventHandler(this.txt_rut_TextChanged);
             this.txt_rut.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_rut_KeyPress);
+            // 
+            // lbl_id_publicidad
+            // 
+            this.lbl_id_publicidad.AutoSize = true;
+            this.lbl_id_publicidad.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_id_publicidad.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F);
+            this.lbl_id_publicidad.Location = new System.Drawing.Point(185, 187);
+            this.lbl_id_publicidad.Name = "lbl_id_publicidad";
+            this.lbl_id_publicidad.Size = new System.Drawing.Size(0, 24);
+            this.lbl_id_publicidad.TabIndex = 23;
             // 
             // marketing
             // 
@@ -281,8 +283,7 @@ namespace Proyecto_Warescape
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dgv_publicidades;
         private System.Windows.Forms.TextBox txt_nombre;
-        private System.Windows.Forms.TextBox txt_alcance;
-        private System.Windows.Forms.TextBox txt_id;
+        private System.Windows.Forms.TextBox txt_monto;
         private System.Windows.Forms.TextBox txt_rut;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
@@ -294,5 +295,6 @@ namespace Proyecto_Warescape
         private System.Windows.Forms.PictureBox BtnCerrar;
         private System.Windows.Forms.PictureBox btnmaximizar;
         private System.Windows.Forms.PictureBox btnRestaurar;
+        private System.Windows.Forms.Label lbl_id_publicidad;
     }
 }

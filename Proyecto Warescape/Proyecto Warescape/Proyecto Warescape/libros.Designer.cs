@@ -70,6 +70,8 @@ namespace Proyecto_Warescape
             this.label14 = new System.Windows.Forms.Label();
             this.dtp_fecha = new System.Windows.Forms.DateTimePicker();
             this.label13 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label15 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_generos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_libros)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnCerrar)).BeginInit();
@@ -106,7 +108,7 @@ namespace Proyecto_Warescape
             // 
             // dgv_generos
             // 
-            this.dgv_generos.BackgroundColor = System.Drawing.Color.Aquamarine;
+            this.dgv_generos.BackgroundColor = System.Drawing.Color.Gray;
             this.dgv_generos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_generos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nombre_genero,
@@ -172,7 +174,7 @@ namespace Proyecto_Warescape
             this.dgv_libros.AllowUserToOrderColumns = true;
             this.dgv_libros.AllowUserToResizeColumns = false;
             this.dgv_libros.AllowUserToResizeRows = false;
-            this.dgv_libros.BackgroundColor = System.Drawing.Color.Aquamarine;
+            this.dgv_libros.BackgroundColor = System.Drawing.Color.DimGray;
             this.dgv_libros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_libros.Location = new System.Drawing.Point(30, 359);
             this.dgv_libros.Name = "dgv_libros";
@@ -539,14 +541,42 @@ namespace Proyecto_Warescape
             this.label13.Text = "Fecha";
             this.label13.UseMnemonic = false;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Location = new System.Drawing.Point(949, 65);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(124, 35);
+            this.button1.TabIndex = 47;
+            this.button1.Text = "Actualizar";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.Transparent;
+            this.label15.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F);
+            this.label15.Location = new System.Drawing.Point(26, 70);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(130, 24);
+            this.label15.TabIndex = 48;
+            this.label15.Text = "Ingresar Libros";
+            // 
             // VentanasPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Lavender;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackColor = System.Drawing.Color.Silver;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1085, 698);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.dtp_fecha);
             this.Controls.Add(this.label14);
@@ -645,5 +675,7 @@ namespace Proyecto_Warescape
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.DateTimePicker dtp_fecha;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label15;
     }
 }

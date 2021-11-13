@@ -50,9 +50,9 @@ namespace Proyecto_Warescape
             this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F);
             this.label1.Location = new System.Drawing.Point(176, 29);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 24);
+            this.label1.Size = new System.Drawing.Size(143, 24);
             this.label1.TabIndex = 31;
-            this.label1.Text = "Generos";
+            this.label1.Text = "Agregar generos";
             // 
             // button7
             // 

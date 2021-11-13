@@ -69,6 +69,17 @@ namespace Proyecto_Warescape
 
         private void finanzas_Load(object sender, EventArgs e)
         {
+            MySqlCommand comando_marketing = new MySqlCommand("SELECT nombre from publicidad", con);
+            con.Open();
+            MySqlDataReader registro_marketing = comando_marketing.ExecuteReader();
+            while (registro_marketing.Read())
+            {
+                cmb_publicidad.Items.Add(registro_marketing["nombre"].ToString());
+
+            }
+            con.Close();
+
+
             MySqlCommand comando = new MySqlCommand("SELECT nombre from libros", con);
             con.Open();
             MySqlDataReader registro = comando.ExecuteReader();

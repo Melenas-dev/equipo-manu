@@ -154,9 +154,9 @@ namespace Proyecto_Warescape
             this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F);
             this.label1.Location = new System.Drawing.Point(176, 28);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 24);
+            this.label1.Size = new System.Drawing.Size(164, 24);
             this.label1.TabIndex = 22;
-            this.label1.Text = "Editoriales";
+            this.label1.Text = "Agregar Editoriales";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // editoriales

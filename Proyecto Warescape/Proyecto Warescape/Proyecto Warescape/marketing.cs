@@ -35,14 +35,14 @@ namespace Proyecto_Warescape
         private void button5_Click(object sender, EventArgs e)
         {
             con.Open();
-            if (txt_rut.Text.Equals("") || txt_id.Text.Equals("") || txt_alcance.Text.Equals("") || txt_nombre.Text.Equals(""))
+            if (txt_rut.Text.Equals("") || txt_monto.Text.Equals("") || txt_nombre.Text.Equals(""))
             {
                 MessageBox.Show("Ingresar todos los parametros");
             }
 
             else
             {
-                string ingreso_publicidad = "insert into publicidades values(" + int.Parse(txt_rut.Text) + "," + int.Parse(txt_id.Text) + "," + int.Parse(txt_alcance.Text) + ",'" + txt_nombre.Text + "');";
+                string ingreso_publicidad = "insert into publicidad(rut, monto, nombre) values(" + int.Parse(txt_rut.Text) + ", " + int.Parse(txt_monto.Text) + ",'" + txt_nombre.Text + "');";
                 MySqlCommand Ingreso = new MySqlCommand(ingreso_publicidad, con);
                 Ingreso.ExecuteNonQuery();
                 con.Close();
@@ -58,7 +58,7 @@ namespace Proyecto_Warescape
         public void mostrar_publicidades()
         {
 
-            MySqlCommand mostrar = new MySqlCommand("Select id,rut,nombre,alcance_de_personas from publicidades;", con);
+            MySqlCommand mostrar = new MySqlCommand("Select id_publicidad ID,rut RUT,nombre Nombre,monto Monto from publicidad;", con);
             MySqlDataAdapter adaptador = new MySqlDataAdapter();
             adaptador.SelectCommand = mostrar;
             DataTable tabla = new DataTable();
@@ -70,21 +70,21 @@ namespace Proyecto_Warescape
         {
 
             con.Open();
-            if (txt_rut.Text.Equals("") || txt_id.Text.Equals("") || txt_alcance.Text.Equals("") || txt_nombre.Text.Equals(""))
+            if (txt_rut.Text.Equals("") || lbl_id_publicidad.Text.Equals("") || txt_monto.Text.Equals("") || txt_nombre.Text.Equals(""))
             {
                 MessageBox.Show("Ingresar todos los parametros");
             }
             else
             {
 
-                string editar = "UPDATE publicidades set rut=" + int.Parse(txt_rut.Text) + ",id="  + int.Parse(txt_id.Text) + ",alcance_de_personas=" + int.Parse(txt_alcance.Text) + ",nombre='" + txt_nombre.Text + "' where id ="+int.Parse(txt_id.Text)+";";
+                string editar = "UPDATE publicidad set rut=" + int.Parse(txt_rut.Text) + ", monto=" + float.Parse(txt_monto.Text) + ",nombre='" + txt_nombre.Text + "' where id_publicidad ="+int.Parse(lbl_id_publicidad.Text)+";";
                 MySqlCommand comando = new MySqlCommand(editar, con);
                 comando.ExecuteNonQuery();
                 mostrar_publicidades();
-                txt_id.Text = "";
+                lbl_id_publicidad.Text = "";
                 txt_rut.Text = "";
                 txt_nombre.Text = "";
-                txt_alcance.Text = "";
+                txt_monto.Text = "";
                 
             }con.Close();
 
@@ -95,25 +95,33 @@ namespace Proyecto_Warescape
             int n = e.RowIndex;
             if (n != -1)
             {
-                txt_id.Text = this.dgv_publicidades.CurrentRow.Cells[0].Value.ToString();
+                lbl_id_publicidad.Text = this.dgv_publicidades.CurrentRow.Cells[0].Value.ToString();
+                txt_monto.Text= this.dgv_publicidades.CurrentRow.Cells[3].Value.ToString();
+                txt_rut.Text= this.dgv_publicidades.CurrentRow.Cells[1].Value.ToString();
+                txt_nombre.Text= this.dgv_publicidades.CurrentRow.Cells[2].Value.ToString();
             }
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
             con.Open();
-            if (txt_id.Text.Equals("") )
+            if (lbl_id_publicidad.Text.Equals("") )
             {
-                MessageBox.Show("Ingresar el id");
+                MessageBox.Show("seleccione un marketing");
             }
             else
             {
-                string borrar = "DELETE FROM publicidades WHERE id =" + int.Parse(txt_id.Text) + ";";
+                string borrar = "DELETE FROM publicidad WHERE id_publicidad =" + int.Parse(lbl_id_publicidad.Text) + ";";
                 MySqlCommand comando = new MySqlCommand(borrar, con);
                 comando.ExecuteNonQuery();
                 mostrar_publicidades();
-                txt_id.Text = "";
+                lbl_id_publicidad.Text = "";
+                txt_rut.Text = "";
+                txt_nombre.Text = "";
+                txt_monto.Text = "";
+
             }
+            con.Close();
             
         }
         public void solo_numeros(KeyPressEventArgs e)

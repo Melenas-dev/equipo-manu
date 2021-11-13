@@ -95,26 +95,34 @@ namespace Proyecto_Warescape
 
         private void button7_Click(object sender, EventArgs e)
         {
-            if (txt_pass1.Text != txt_pass2.Text)
+            if (txt_pass1.Text.Equals("") || txt_pass2.Equals("") || txt_receptor.Text.Equals("")) 
             {
-                MessageBox.Show("Ambas contraseñas deben ser iguales.", "Ingrese nuevamente");
+                MessageBox.Show("Ingrese todo los parametros");
             }
             else
             {
-                string usuario = cmb_usuario.Text;
-                con.Open();
-                MySqlCommand eliminarusuario = new MySqlCommand("delete from usuario where usuario='" + usuario + "'", con);
-                eliminarusuario.ExecuteNonQuery();
-                con.Close();
-                con.Open();
-                MySqlCommand crearusuario = new MySqlCommand("insert into usuario values ('" + usuario + "', SHA1('" + txt_pass1.Text + "'))", con);
-                crearusuario.ExecuteNonQuery();
-                con.Close();
-                MessageBox.Show("Se ha cambiado la contraseña correctamente", "Accion realizada con exito");
-                Form login = new Login();
-                this.Hide();
+
+                    if (txt_pass1.Text != txt_pass2.Text)
+                    {
+                        MessageBox.Show("Ambas contraseñas deben ser iguales.", "Ingrese nuevamente");
+                    }
+                    else
+                    {
+                        string usuario = cmb_usuario.Text;
+                        con.Open();
+                        MySqlCommand eliminarusuario = new MySqlCommand("delete from usuario where usuario='" + usuario + "'", con);
+                        eliminarusuario.ExecuteNonQuery();
+                        con.Close();
+                        con.Open();
+                        MySqlCommand crearusuario = new MySqlCommand("insert into usuario values ('" + usuario + "', SHA1('" + txt_pass1.Text + "'))", con);
+                        crearusuario.ExecuteNonQuery();
+                        con.Close();
+                        MessageBox.Show("Se ha cambiado la contraseña correctamente", "Accion realizada con exito");
+                        Form login = new Login();
+                        this.Hide();
+                    }
             }
-        }
+    }
 
         private void button1_Click(object sender, EventArgs e)
         {

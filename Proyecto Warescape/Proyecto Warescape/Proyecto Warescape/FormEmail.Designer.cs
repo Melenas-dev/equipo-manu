@@ -51,16 +51,16 @@ namespace Proyecto_Warescape
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Franklin Gothic Medium", 10F);
-            this.label2.Location = new System.Drawing.Point(71, 55);
+            this.label2.Location = new System.Drawing.Point(24, 26);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 18);
+            this.label2.Size = new System.Drawing.Size(108, 18);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Receptor";
+            this.label2.Text = "Ingrese un gmail";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // txt_receptor
             // 
-            this.txt_receptor.Location = new System.Drawing.Point(40, 139);
+            this.txt_receptor.Location = new System.Drawing.Point(27, 84);
             this.txt_receptor.Name = "txt_receptor";
             this.txt_receptor.Size = new System.Drawing.Size(138, 20);
             this.txt_receptor.TabIndex = 4;
@@ -160,7 +160,7 @@ namespace Proyecto_Warescape
             this.pnl_cambiar_pass.Controls.Add(this.label4);
             this.pnl_cambiar_pass.Controls.Add(this.cmb_usuario);
             this.pnl_cambiar_pass.Controls.Add(this.txt_pass1);
-            this.pnl_cambiar_pass.Location = new System.Drawing.Point(-3, -2);
+            this.pnl_cambiar_pass.Location = new System.Drawing.Point(0, -2);
             this.pnl_cambiar_pass.Name = "pnl_cambiar_pass";
             this.pnl_cambiar_pass.Size = new System.Drawing.Size(413, 299);
             this.pnl_cambiar_pass.TabIndex = 9;
@@ -172,7 +172,7 @@ namespace Proyecto_Warescape
             this.BtnCerrar.BackColor = System.Drawing.Color.Transparent;
             this.BtnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("BtnCerrar.Image")));
-            this.BtnCerrar.Location = new System.Drawing.Point(369, -2);
+            this.BtnCerrar.Location = new System.Drawing.Point(372, -2);
             this.BtnCerrar.Name = "BtnCerrar";
             this.BtnCerrar.Size = new System.Drawing.Size(41, 29);
             this.BtnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -185,7 +185,7 @@ namespace Proyecto_Warescape
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(411, 301);
+            this.ClientSize = new System.Drawing.Size(414, 296);
             this.Controls.Add(this.BtnCerrar);
             this.Controls.Add(this.pnl_cambiar_pass);
             this.Controls.Add(this.btn_enviar);
