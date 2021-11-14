@@ -69,23 +69,31 @@ namespace Proyecto_Warescape
 
         private void finanzas_Load(object sender, EventArgs e)
         {
-            MySqlCommand comando_marketing = new MySqlCommand("SELECT nombre from publicidad", con);
+            MySqlCommand comando_marketing = new MySqlCommand("SELECT nombre,id_publicidad from publicidad", con);
             con.Open();
             MySqlDataReader registro_marketing = comando_marketing.ExecuteReader();
             while (registro_marketing.Read())
             {
-                cmb_publicidad.Items.Add(registro_marketing["nombre"].ToString());
+             string nombre = registro_marketing["nombre"].ToString();
+                string id_de_publicidad = registro_marketing["id_publicidad"].ToString();
+                cmb_publicidad.Items.Add(nombre + "-" + id_de_publicidad);
+
 
             }
             con.Close();
 
 
-            MySqlCommand comando = new MySqlCommand("SELECT nombre from libros", con);
+            MySqlCommand comando = new MySqlCommand("SELECT nombre,id_libro from libros", con);
             con.Open();
             MySqlDataReader registro = comando.ExecuteReader();
             while (registro.Read())
             {
-                cmb_libros.Items.Add(registro["nombre"].ToString());
+              string nombre =registro["nombre"].ToString();
+                string id_libro = registro["id_libro"].ToString();
+                cmb_libros.Items.Add(nombre + "-" + id_libro);
+                
+
+
 
             }
             con.Close();
@@ -141,8 +149,149 @@ namespace Proyecto_Warescape
             }
             else
             {
+                for(int i=0; i<dgv_lista.Rows.Count - 1; i++)
+                {
+                    int n_de_boleta = int.Parse(dgv_lista.Rows[i].Cells[0].Value.ToString());
+                    DateTime fecha = new DateTime(DateTime.Parse(dgv_lista.Rows[i].Cells[1].Value));
+                   
+
+
+
+
+
+                    float precio = int.Parse(dgv_lista.Rows[i].Cells[2].Value.ToString());
+                    int cantidad_comprada = int.Parse(dgv_lista.Rows[i].Cells[3].Value.ToString());
+                    string libro = dgv_lista.Rows[i].Cells[4].Value.ToString();
+                    string viene="";
+                    string id_publi = "";
+                    MessageBox.Show(fecha);
+                    
+                    
+                    if (!dgv_lista.Rows[i].Cells[5].Value.ToString().Equals(""))
+                    {
+                        viene = Convert.ToString(dgv_lista.Rows[i].Cells[5].Value);
+                         id_publi = dgv_lista.Rows[i].Cells[5].Value.ToString().Split('-').Last();
+
+                    }
+                   
+                   
+                    string id_libro = dgv_lista.Rows[i].Cells[4].Value.ToString().Split('-').Last();  
+
+
+
+
+
+
+                    con.Open();
+                    string verificar_boleta = "SELECT n_de_boleta from ventas where n_de_boleta =" + n_de_boleta + ";";
+                    MySqlCommand comando = new MySqlCommand(verificar_boleta, con);
+                    MySqlDataReader reador = comando.ExecuteReader();
+                    string comparar = "";
+
+                    while (reador.Read())
+                    {
+                        string a = reador["n_de_boleta"].ToString();
+                        if (a.Equals(n_de_boleta.ToString()))
+                        {
+                            comparar = "son iguales";
+
+
+                        }
+
+                    }
+                    con.Close();
+
+                    if(comparar.Equals("son iguales"))
+                    {
+
+                        con.Open();
+
+                        string ingresar_generan = "INSERT INTO genera values(" + n_de_boleta + ","+int.Parse(id_libro)+","+cantidad_comprada+","+precio+")";
+                        MySqlCommand query_genera = new MySqlCommand(ingresar_generan, con);
+                        query_genera.ExecuteNonQuery();
+                        con.Close();
+                        con.Open();
+                        if (!viene.Equals(""))
+                        {
+                            string insertar_publicidad = "INSERT INTO se_registran values(" + int.Parse(id_publi) + "," + n_de_boleta + ");";
+                            MySqlCommand query_se_registran = new MySqlCommand(insertar_publicidad, con);
+                            query_se_registran.ExecuteNonQuery();
+                            
+
+                            
+                        }con.Close();
+                        con.Open();
+                        string extraer_monto = "SELECT monto from ventas where =" + n_de_boleta + "; ";
+                        MySqlCommand query_extraer = new MySqlCommand(extraer_monto, con);
+                        MySqlDataReader monto = query_extraer.ExecuteReader();
+                        con.Close();
+                        string b = "";
+
+                        while (monto.Read())
+                        {
+                             b = monto["monto"].ToString();
+
+                        }
+                        con.Open();
+                        float cuenta = precio + float.Parse(b);
+                        string monto_cambiar = "UPDATE from ventas set monto =" + cuenta + " where n_de_boleta =" + n_de_boleta + ";";
+
+                        MySqlCommand cambiar_monto = new MySqlCommand(monto_cambiar, con);
+                        cambiar_monto.ExecuteNonQuery();
+                        con.Close();
+                    }
+                    else
+                    {
+                        con.Open();
+                        string ingresar_venta = "INSERT INTO ventas values("+n_de_boleta+","+ dgv_lista.Rows[i].Cells[1].Value.ToString() +","+precio+");";
+                        MySqlCommand query_ingersar_venta = new MySqlCommand(ingresar_venta, con);
+                        query_ingersar_venta.ExecuteNonQuery();
+                        con.Close();
+                        con.Open();
+                        string ingresar_generan = "INSERT INTO genera values(" + n_de_boleta + "," + int.Parse(id_libro) + "," + cantidad_comprada + "," + precio + ")";
+                        MySqlCommand query_genera = new MySqlCommand(ingresar_generan, con);
+                        query_genera.ExecuteNonQuery();
+                        con.Close();
+                        con.Open();
+                        if (!viene.Equals(""))
+                        {
+                            string insertar_publicidad = "INSERT INTO se_registran values(" + int.Parse(id_publi) + "," + n_de_boleta + ");";
+                            MySqlCommand query_se_registran = new MySqlCommand(insertar_publicidad, con);
+                            query_se_registran.ExecuteNonQuery();
+
+                        }
+                        con.Close();
+
+                    }
+
+
+
+
+
+                    string ingreso = "INSERT INTO ventas values (" + n_de_boleta + "," + fecha + "  )";
+
+                    con.Close();
+
+
+
+
+
+                }
+
+
+
+
+
 
             }
+
+
+
+
+
+
+
+
         }
 
         private void dgv_lista_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -187,7 +336,7 @@ namespace Proyecto_Warescape
 
         private void txt_boleta_KeyPress(object sender, KeyPressEventArgs e)
         {
-            solo_letras(e);
+            solo_numeros(e);
         }
 
         private void txt_precio_KeyPress(object sender, KeyPressEventArgs e)
