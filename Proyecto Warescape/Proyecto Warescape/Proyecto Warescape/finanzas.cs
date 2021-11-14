@@ -130,7 +130,7 @@ namespace Proyecto_Warescape
             cmb_libros.Text = "";
             cmb_publicidad.Text = "";
 
-
+           
         }
 
         private void Registrar_ventra_Click(object sender, EventArgs e)
@@ -153,6 +153,51 @@ namespace Proyecto_Warescape
                 dgv_lista.Rows.RemoveAt(n);
             }
 
+        }
+        public void solo_numeros(KeyPressEventArgs e)
+        {
+
+            if (Char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+        public void solo_letras(KeyPressEventArgs e)
+        {
+            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                e.Handled = true;
+                return;
+
+            }
+
+        }
+
+        private void txt_boleta_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            solo_letras(e);
+        }
+
+        private void txt_precio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            solo_numeros(e);
+        }
+
+        private void txt_cantidad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            solo_numeros(e);
         }
     }
     }

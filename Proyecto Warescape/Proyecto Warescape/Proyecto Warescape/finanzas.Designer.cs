@@ -75,6 +75,7 @@ namespace Proyecto_Warescape
             this.txt_boleta.Name = "txt_boleta";
             this.txt_boleta.Size = new System.Drawing.Size(91, 20);
             this.txt_boleta.TabIndex = 9;
+            this.txt_boleta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_boleta_KeyPress);
             // 
             // txt_precio
             // 
@@ -82,6 +83,7 @@ namespace Proyecto_Warescape
             this.txt_precio.Name = "txt_precio";
             this.txt_precio.Size = new System.Drawing.Size(91, 20);
             this.txt_precio.TabIndex = 10;
+            this.txt_precio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_precio_KeyPress);
             // 
             // txt_cantidad
             // 
@@ -89,6 +91,7 @@ namespace Proyecto_Warescape
             this.txt_cantidad.Name = "txt_cantidad";
             this.txt_cantidad.Size = new System.Drawing.Size(119, 20);
             this.txt_cantidad.TabIndex = 12;
+            this.txt_cantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_cantidad_KeyPress);
             // 
             // label1
             // 
