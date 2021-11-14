@@ -348,6 +348,7 @@ namespace Proyecto_Warescape
                     cmb_boleta.Text = "";
                     cmb_tipo_de_operacion.Text = "";
                     cmb_editorial.Text = "";
+                    lbl_id_de_libro.Text = "";
                     dgv_generos.Rows.Clear();
                 }
             }
@@ -665,8 +666,31 @@ namespace Proyecto_Warescape
             txt_valor_del_libro.Text = "";
             cmb_boleta.Text = "";
             cmb_tipo_de_operacion.Text = "";
+            lbl_id_de_libro.Text = "";
             dgv_generos.Rows.Clear();
 
+        }
+
+        private void Cmb_genero_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (Cmb_genero.SelectedItem == null)
+            {
+                MessageBox.Show("Debe seleccionar un genero");
+                return;
+            }
+
+            for (int i = 0; i < dgv_generos.Rows.Count - 1; i++)
+            {
+                int id_genero = int.Parse(dgv_generos.Rows[i].Cells[1].Value.ToString());
+
+                if (id_genero == (Cmb_genero.SelectedItem as Generos).id_genero)
+                {
+                    MessageBox.Show("El genero ya esta ingresado");
+                    return;
+                }
+            }
+
+            dgv_generos.Rows.Add(Cmb_genero.Text, ((Cmb_genero.SelectedItem as Generos).id_genero).ToString());
         }
     }
     

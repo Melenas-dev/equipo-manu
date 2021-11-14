@@ -165,6 +165,7 @@ namespace Proyecto_Warescape
             this.Cmb_genero.Tag = "";
             this.Cmb_genero.ValueMember = "id_genero";
             this.Cmb_genero.SelectedIndexChanged += new System.EventHandler(this.Cmb_genero_SelectedIndexChanged);
+            this.Cmb_genero.SelectedValueChanged += new System.EventHandler(this.Cmb_genero_SelectedValueChanged);
             this.Cmb_genero.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Cmb_genero_KeyPress);
             // 
             // dgv_libros

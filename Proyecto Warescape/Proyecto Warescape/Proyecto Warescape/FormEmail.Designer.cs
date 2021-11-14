@@ -165,6 +165,7 @@ namespace Proyecto_Warescape
             this.pnl_cambiar_pass.Size = new System.Drawing.Size(413, 299);
             this.pnl_cambiar_pass.TabIndex = 9;
             this.pnl_cambiar_pass.Visible = false;
+            this.pnl_cambiar_pass.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_cambiar_pass_Paint_1);
             // 
             // BtnCerrar
             // 

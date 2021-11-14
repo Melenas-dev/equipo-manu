@@ -97,6 +97,7 @@ namespace Proyecto_Warescape
         {
             if (txt_pass1.Text.Equals("") || txt_pass2.Equals("") || txt_receptor.Text.Equals("")) 
             {
+                
                 MessageBox.Show("Ingrese todo los parametros");
             }
             else
@@ -239,6 +240,11 @@ namespace Proyecto_Warescape
         private void BtnCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void pnl_cambiar_pass_Paint_1(object sender, PaintEventArgs e)
+        {
+            int a = 0;
         }
     }
 }

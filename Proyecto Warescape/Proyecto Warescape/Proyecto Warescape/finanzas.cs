@@ -118,15 +118,42 @@ namespace Proyecto_Warescape
                 dgv_lista.Rows[n].Cells[2].Value = txt_precio.Text;
                 dgv_lista.Rows[n].Cells[3].Value = txt_cantidad.Text;
                 dgv_lista.Rows[n].Cells[4].Value = cmb_libros.SelectedItem.ToString();
-
-
+                if (!cmb_publicidad.Text.Equals("")) 
+                { 
+                dgv_lista.Rows[n].Cells[5].Value = cmb_publicidad.SelectedItem.ToString();
+                }
 
             }
-           
-               
+            txt_boleta.Text = "";
+            txt_precio.Text = "";
+            txt_cantidad.Text = "";
+            cmb_libros.Text = "";
+            cmb_publicidad.Text = "";
 
+
+        }
+
+        private void Registrar_ventra_Click(object sender, EventArgs e)
+        {
+            if (dgv_lista.Rows.Count == 0)
+            {
+                MessageBox.Show("Agrege una venta");
+            }
+            else
+            {
+
+            }
+        }
+
+        private void dgv_lista_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int n = e.RowIndex;
+            if (n != -1)
+            {
+                dgv_lista.Rows.RemoveAt(n);
             }
 
         }
+    }
     }
 

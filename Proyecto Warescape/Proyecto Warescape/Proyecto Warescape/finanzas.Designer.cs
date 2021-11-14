@@ -50,6 +50,8 @@ namespace Proyecto_Warescape
             this.label5 = new System.Windows.Forms.Label();
             this.cmb_publicidad = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.vienepor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Registrar_ventra = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.BtnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_lista)).BeginInit();
             this.SuspendLayout();
@@ -59,7 +61,7 @@ namespace Proyecto_Warescape
             this.BtnCerrar.BackColor = System.Drawing.Color.Transparent;
             this.BtnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("BtnCerrar.Image")));
-            this.BtnCerrar.Location = new System.Drawing.Point(1258, 6);
+            this.BtnCerrar.Location = new System.Drawing.Point(1031, 12);
             this.BtnCerrar.Name = "BtnCerrar";
             this.BtnCerrar.Size = new System.Drawing.Size(42, 30);
             this.BtnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -69,21 +71,21 @@ namespace Proyecto_Warescape
             // 
             // txt_boleta
             // 
-            this.txt_boleta.Location = new System.Drawing.Point(8, 166);
+            this.txt_boleta.Location = new System.Drawing.Point(22, 109);
             this.txt_boleta.Name = "txt_boleta";
             this.txt_boleta.Size = new System.Drawing.Size(91, 20);
             this.txt_boleta.TabIndex = 9;
             // 
             // txt_precio
             // 
-            this.txt_precio.Location = new System.Drawing.Point(318, 169);
+            this.txt_precio.Location = new System.Drawing.Point(22, 180);
             this.txt_precio.Name = "txt_precio";
             this.txt_precio.Size = new System.Drawing.Size(91, 20);
             this.txt_precio.TabIndex = 10;
             // 
             // txt_cantidad
             // 
-            this.txt_cantidad.Location = new System.Drawing.Point(453, 169);
+            this.txt_cantidad.Location = new System.Drawing.Point(157, 180);
             this.txt_cantidad.Name = "txt_cantidad";
             this.txt_cantidad.Size = new System.Drawing.Size(119, 20);
             this.txt_cantidad.TabIndex = 12;
@@ -93,7 +95,7 @@ namespace Proyecto_Warescape
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F);
-            this.label1.Location = new System.Drawing.Point(4, 139);
+            this.label1.Location = new System.Drawing.Point(18, 82);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(114, 24);
             this.label1.TabIndex = 14;
@@ -104,7 +106,7 @@ namespace Proyecto_Warescape
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F);
-            this.label2.Location = new System.Drawing.Point(158, 139);
+            this.label2.Location = new System.Drawing.Point(153, 82);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(133, 24);
             this.label2.TabIndex = 15;
@@ -115,7 +117,7 @@ namespace Proyecto_Warescape
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F);
-            this.label3.Location = new System.Drawing.Point(327, 139);
+            this.label3.Location = new System.Drawing.Point(31, 150);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(61, 24);
             this.label3.TabIndex = 16;
@@ -126,7 +128,7 @@ namespace Proyecto_Warescape
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F);
-            this.label4.Location = new System.Drawing.Point(430, 139);
+            this.label4.Location = new System.Drawing.Point(134, 150);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(171, 24);
             this.label4.TabIndex = 17;
@@ -142,11 +144,13 @@ namespace Proyecto_Warescape
             this.fecha,
             this.precio,
             this.cantidad,
-            this.libro});
-            this.dgv_lista.Location = new System.Drawing.Point(897, 82);
+            this.libro,
+            this.vienepor});
+            this.dgv_lista.Location = new System.Drawing.Point(320, 82);
             this.dgv_lista.Name = "dgv_lista";
-            this.dgv_lista.Size = new System.Drawing.Size(218, 173);
+            this.dgv_lista.Size = new System.Drawing.Size(643, 173);
             this.dgv_lista.TabIndex = 18;
+            this.dgv_lista.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_lista_CellDoubleClick);
             // 
             // n_de_boleta
             // 
@@ -181,7 +185,7 @@ namespace Proyecto_Warescape
             this.btn_Agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Agregar.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Agregar.ForeColor = System.Drawing.Color.Black;
-            this.btn_Agregar.Location = new System.Drawing.Point(200, 277);
+            this.btn_Agregar.Location = new System.Drawing.Point(20, 302);
             this.btn_Agregar.Name = "btn_Agregar";
             this.btn_Agregar.Size = new System.Drawing.Size(124, 35);
             this.btn_Agregar.TabIndex = 19;
@@ -193,7 +197,7 @@ namespace Proyecto_Warescape
             // 
             this.fecha_venta.CustomFormat = "yyyy-MM-dd";
             this.fecha_venta.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.fecha_venta.Location = new System.Drawing.Point(171, 166);
+            this.fecha_venta.Location = new System.Drawing.Point(157, 109);
             this.fecha_venta.Name = "fecha_venta";
             this.fecha_venta.Size = new System.Drawing.Size(99, 20);
             this.fecha_venta.TabIndex = 47;
@@ -201,7 +205,7 @@ namespace Proyecto_Warescape
             // cmb_libros
             // 
             this.cmb_libros.FormattingEnabled = true;
-            this.cmb_libros.Location = new System.Drawing.Point(616, 169);
+            this.cmb_libros.Location = new System.Drawing.Point(20, 245);
             this.cmb_libros.Name = "cmb_libros";
             this.cmb_libros.Size = new System.Drawing.Size(114, 21);
             this.cmb_libros.TabIndex = 48;
@@ -211,7 +215,7 @@ namespace Proyecto_Warescape
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F);
-            this.label5.Location = new System.Drawing.Point(622, 139);
+            this.label5.Location = new System.Drawing.Point(26, 215);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(46, 24);
             this.label5.TabIndex = 49;
@@ -220,7 +224,7 @@ namespace Proyecto_Warescape
             // cmb_publicidad
             // 
             this.cmb_publicidad.FormattingEnabled = true;
-            this.cmb_publicidad.Location = new System.Drawing.Point(753, 169);
+            this.cmb_publicidad.Location = new System.Drawing.Point(155, 245);
             this.cmb_publicidad.Name = "cmb_publicidad";
             this.cmb_publicidad.Size = new System.Drawing.Size(121, 21);
             this.cmb_publicidad.TabIndex = 50;
@@ -230,11 +234,32 @@ namespace Proyecto_Warescape
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F);
-            this.label6.Location = new System.Drawing.Point(749, 139);
+            this.label6.Location = new System.Drawing.Point(153, 215);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(86, 24);
             this.label6.TabIndex = 51;
             this.label6.Text = "Viene por";
+            // 
+            // vienepor
+            // 
+            this.vienepor.HeaderText = "Viene Por";
+            this.vienepor.Name = "vienepor";
+            // 
+            // Registrar_ventra
+            // 
+            this.Registrar_ventra.BackColor = System.Drawing.Color.Transparent;
+            this.Registrar_ventra.FlatAppearance.BorderSize = 0;
+            this.Registrar_ventra.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.Registrar_ventra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Registrar_ventra.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Registrar_ventra.ForeColor = System.Drawing.Color.Black;
+            this.Registrar_ventra.Location = new System.Drawing.Point(320, 302);
+            this.Registrar_ventra.Name = "Registrar_ventra";
+            this.Registrar_ventra.Size = new System.Drawing.Size(171, 35);
+            this.Registrar_ventra.TabIndex = 52;
+            this.Registrar_ventra.Text = "Registrar ventra";
+            this.Registrar_ventra.UseVisualStyleBackColor = false;
+            this.Registrar_ventra.Click += new System.EventHandler(this.Registrar_ventra_Click);
             // 
             // finanzas
             // 
@@ -242,7 +267,8 @@ namespace Proyecto_Warescape
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1336, 797);
+            this.ClientSize = new System.Drawing.Size(1085, 698);
+            this.Controls.Add(this.Registrar_ventra);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.cmb_publicidad);
             this.Controls.Add(this.label5);
@@ -292,5 +318,7 @@ namespace Proyecto_Warescape
         private System.Windows.Forms.DataGridViewTextBoxColumn libro;
         private System.Windows.Forms.ComboBox cmb_publicidad;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn vienepor;
+        private System.Windows.Forms.Button Registrar_ventra;
     }
 }
