@@ -134,7 +134,7 @@ namespace Proyecto_Warescape
                     while (reador.Read())
                     {
                         valor2 = reador["id_ed"].ToString();
-
+                        
                     }
                     con.Close();
                     con.Open();
@@ -295,9 +295,25 @@ namespace Proyecto_Warescape
             }
             else
             {
-                Services.LibrosService.eliminarLibro(con, int.Parse(lbl_id_de_libro.Text));
-                actualizar_dgv_libros();
-                dgv_generos.Rows.Clear();
+                DialogResult resul = MessageBox.Show("Seguro que quiere eliminar el libro?", "Eliminar Registro", MessageBoxButtons.YesNo);
+                if (resul == DialogResult.Yes)
+                {
+                    Services.LibrosService.eliminarLibro(con, int.Parse(lbl_id_de_libro.Text));
+                    actualizar_dgv_libros();
+                    txt_isbn.Text = "";
+                    txt_codigo.Text = "";
+                    txt_nombre.Text = "";
+                    txt_autor.Text = "";
+                    txt_precio.Text = "";
+                    txt_cantidad.Text = "";
+                    Cmb_genero.Text = "";
+                    txt_valor_del_libro.Text = "";
+                    cmb_boleta.Text = "";
+                    cmb_tipo_de_operacion.Text = "";
+                    cmb_editorial.Text = "";
+                    lbl_id_de_libro.Text = "";
+                    dgv_generos.Rows.Clear();
+                }
             }
             con.Close();
 
@@ -342,6 +358,7 @@ namespace Proyecto_Warescape
                     txt_codigo.Text = "";
                     txt_nombre.Text = "";
                     txt_precio.Text = "";
+                    txt_autor.Text = "";
                     txt_cantidad.Text = "";
                     Cmb_genero.Text = "";
                     txt_valor_del_libro.Text = "";
@@ -660,6 +677,7 @@ namespace Proyecto_Warescape
             txt_codigo.Text = "";
             txt_nombre.Text = "";
             txt_precio.Text = "";
+            txt_autor.Text = "";
             txt_cantidad.Text = "";
             Cmb_genero.Text = "";
             cmb_editorial.Text = "";

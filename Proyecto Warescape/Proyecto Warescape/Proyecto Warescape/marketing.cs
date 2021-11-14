@@ -111,14 +111,18 @@ namespace Proyecto_Warescape
             }
             else
             {
-                string borrar = "DELETE FROM publicidad WHERE id_publicidad =" + int.Parse(lbl_id_publicidad.Text) + ";";
-                MySqlCommand comando = new MySqlCommand(borrar, con);
-                comando.ExecuteNonQuery();
-                mostrar_publicidades();
-                lbl_id_publicidad.Text = "";
-                txt_rut.Text = "";
-                txt_nombre.Text = "";
-                txt_monto.Text = "";
+                DialogResult resul = MessageBox.Show("Seguro que quiere eliminar la marketing?", "Eliminar Registro", MessageBoxButtons.YesNo);
+                if (resul == DialogResult.Yes)
+                {
+                    string borrar = "DELETE FROM publicidad WHERE id_publicidad =" + int.Parse(lbl_id_publicidad.Text) + ";";
+                    MySqlCommand comando = new MySqlCommand(borrar, con);
+                    comando.ExecuteNonQuery();
+                    mostrar_publicidades();
+                    lbl_id_publicidad.Text = "";
+                    txt_rut.Text = "";
+                    txt_nombre.Text = "";
+                    txt_monto.Text = "";
+                }
 
             }
             con.Close();

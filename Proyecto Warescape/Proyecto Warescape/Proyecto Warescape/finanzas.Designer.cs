@@ -44,16 +44,20 @@ namespace Proyecto_Warescape
             this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.libro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vienepor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_Agregar = new System.Windows.Forms.Button();
             this.fecha_venta = new System.Windows.Forms.DateTimePicker();
             this.cmb_libros = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.cmb_publicidad = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.vienepor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Registrar_ventra = new System.Windows.Forms.Button();
+            this.dgv_ventas = new System.Windows.Forms.DataGridView();
+            this.Borrar = new System.Windows.Forms.Button();
+            this.lbl_n_de_boleta = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.BtnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_lista)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_ventas)).BeginInit();
             this.SuspendLayout();
             // 
             // BtnCerrar
@@ -151,6 +155,7 @@ namespace Proyecto_Warescape
             this.vienepor});
             this.dgv_lista.Location = new System.Drawing.Point(320, 82);
             this.dgv_lista.Name = "dgv_lista";
+            this.dgv_lista.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_lista.Size = new System.Drawing.Size(643, 173);
             this.dgv_lista.TabIndex = 18;
             this.dgv_lista.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_lista_CellDoubleClick);
@@ -179,6 +184,11 @@ namespace Proyecto_Warescape
             // 
             this.libro.HeaderText = "libro";
             this.libro.Name = "libro";
+            // 
+            // vienepor
+            // 
+            this.vienepor.HeaderText = "Viene Por";
+            this.vienepor.Name = "vienepor";
             // 
             // btn_Agregar
             // 
@@ -243,11 +253,6 @@ namespace Proyecto_Warescape
             this.label6.TabIndex = 51;
             this.label6.Text = "Viene por";
             // 
-            // vienepor
-            // 
-            this.vienepor.HeaderText = "Viene Por";
-            this.vienepor.Name = "vienepor";
-            // 
             // Registrar_ventra
             // 
             this.Registrar_ventra.BackColor = System.Drawing.Color.Transparent;
@@ -264,6 +269,42 @@ namespace Proyecto_Warescape
             this.Registrar_ventra.UseVisualStyleBackColor = false;
             this.Registrar_ventra.Click += new System.EventHandler(this.Registrar_ventra_Click);
             // 
+            // dgv_ventas
+            // 
+            this.dgv_ventas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_ventas.Location = new System.Drawing.Point(22, 362);
+            this.dgv_ventas.Name = "dgv_ventas";
+            this.dgv_ventas.ReadOnly = true;
+            this.dgv_ventas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_ventas.Size = new System.Drawing.Size(779, 324);
+            this.dgv_ventas.TabIndex = 53;
+            this.dgv_ventas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_ventas_CellClick);
+            // 
+            // Borrar
+            // 
+            this.Borrar.BackColor = System.Drawing.Color.Transparent;
+            this.Borrar.FlatAppearance.BorderSize = 0;
+            this.Borrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.Borrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Borrar.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Borrar.ForeColor = System.Drawing.Color.Black;
+            this.Borrar.Location = new System.Drawing.Point(535, 302);
+            this.Borrar.Name = "Borrar";
+            this.Borrar.Size = new System.Drawing.Size(136, 35);
+            this.Borrar.TabIndex = 54;
+            this.Borrar.Text = "Borrar venta";
+            this.Borrar.UseVisualStyleBackColor = false;
+            this.Borrar.Click += new System.EventHandler(this.Borrar_Click);
+            // 
+            // lbl_n_de_boleta
+            // 
+            this.lbl_n_de_boleta.AutoSize = true;
+            this.lbl_n_de_boleta.Location = new System.Drawing.Point(37, 29);
+            this.lbl_n_de_boleta.Name = "lbl_n_de_boleta";
+            this.lbl_n_de_boleta.Size = new System.Drawing.Size(0, 13);
+            this.lbl_n_de_boleta.TabIndex = 55;
+            this.lbl_n_de_boleta.Visible = false;
+            // 
             // finanzas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -271,6 +312,9 @@ namespace Proyecto_Warescape
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1085, 698);
+            this.Controls.Add(this.lbl_n_de_boleta);
+            this.Controls.Add(this.Borrar);
+            this.Controls.Add(this.dgv_ventas);
             this.Controls.Add(this.Registrar_ventra);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.cmb_publicidad);
@@ -295,6 +339,7 @@ namespace Proyecto_Warescape
             this.Load += new System.EventHandler(this.finanzas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.BtnCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_lista)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_ventas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -323,5 +368,8 @@ namespace Proyecto_Warescape
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridViewTextBoxColumn vienepor;
         private System.Windows.Forms.Button Registrar_ventra;
+        private System.Windows.Forms.DataGridView dgv_ventas;
+        private System.Windows.Forms.Button Borrar;
+        private System.Windows.Forms.Label lbl_n_de_boleta;
     }
 }

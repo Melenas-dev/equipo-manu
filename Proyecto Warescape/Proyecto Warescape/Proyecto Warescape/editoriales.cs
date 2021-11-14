@@ -94,13 +94,23 @@ namespace Proyecto_Warescape
 
         private void button7_Click(object sender, EventArgs e)
         {
-            con.Open();
-            MySqlCommand borrar = new MySqlCommand("DELETE from editoriales where rut="+int.Parse(txt_rut.Text)+"",con);
-            borrar.ExecuteNonQuery();
-            actualizar_editoriales();
-            con.Close();
-            txt_nombre.Text = "";
-            txt_rut.Text = "";
+            if (!txt_rut.Text.Equals("")) {
+                DialogResult resul = MessageBox.Show("Seguro que quiere eliminar la editorial?", "Eliminar Registro", MessageBoxButtons.YesNo);
+                if (resul == DialogResult.Yes)
+                {
+                    con.Open();
+                    MySqlCommand borrar = new MySqlCommand("DELETE from editoriales where rut=" + int.Parse(txt_rut.Text) + "", con);
+                    borrar.ExecuteNonQuery();
+                    actualizar_editoriales();
+                    con.Close();
+                    txt_nombre.Text = "";
+                    txt_rut.Text = "";
+                }
+            }
+            else
+            {
+                MessageBox.Show("Seleccione una editorial");
+            }
         }
 
         private void txt_rut_KeyPress(object sender, KeyPressEventArgs e)

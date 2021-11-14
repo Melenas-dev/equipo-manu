@@ -30,7 +30,6 @@ namespace Proyecto_Warescape
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VentanasPrincipal));
-            this.button8 = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.dgv_generos = new System.Windows.Forms.DataGridView();
             this.nombre_genero = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -72,28 +71,13 @@ namespace Proyecto_Warescape
             this.label13 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label15 = new System.Windows.Forms.Label();
+            this.button8 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_generos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_libros)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnmaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).BeginInit();
             this.SuspendLayout();
-            // 
-            // button8
-            // 
-            this.button8.BackColor = System.Drawing.Color.Transparent;
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.ForeColor = System.Drawing.Color.Black;
-            this.button8.Location = new System.Drawing.Point(705, 270);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(143, 35);
-            this.button8.TabIndex = 25;
-            this.button8.Text = "Agregar género";
-            this.button8.UseVisualStyleBackColor = false;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // label9
             // 
@@ -116,6 +100,7 @@ namespace Proyecto_Warescape
             this.dgv_generos.Location = new System.Drawing.Point(666, 166);
             this.dgv_generos.Name = "dgv_generos";
             this.dgv_generos.ReadOnly = true;
+            this.dgv_generos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_generos.Size = new System.Drawing.Size(243, 98);
             this.dgv_generos.TabIndex = 23;
             this.dgv_generos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_generos_CellContentClick);
@@ -569,6 +554,22 @@ namespace Proyecto_Warescape
             this.label15.TabIndex = 48;
             this.label15.Text = "Ingresar Libros";
             // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.Color.Transparent;
+            this.button8.FlatAppearance.BorderSize = 0;
+            this.button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.ForeColor = System.Drawing.Color.Black;
+            this.button8.Location = new System.Drawing.Point(705, 270);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(143, 35);
+            this.button8.TabIndex = 25;
+            this.button8.Text = "Agregar género";
+            this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
             // VentanasPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -654,7 +655,6 @@ namespace Proyecto_Warescape
         private System.Windows.Forms.ComboBox Cmb_genero;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox cmb_editorial;
-        private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DataGridView dgv_generos;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre_genero;
@@ -678,5 +678,6 @@ namespace Proyecto_Warescape
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Button button8;
     }
 }

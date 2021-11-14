@@ -81,13 +81,22 @@ namespace Proyecto_Warescape
 
         private void button7_Click(object sender, EventArgs e)
         {
-            con.Open();
-            MySqlCommand borrar = new MySqlCommand("DELETE from generos where descripcion= '" + txt_nombre.Text + "'  ", con);
-            borrar.ExecuteNonQuery();
-            actualizar_generos();
-            con.Close();
-            txt_nombre.Text = "";
-            
+            if (!txt_nombre.Text.Equals("")) {
+                DialogResult resul = MessageBox.Show("Seguro que quiere eliminar el genero?", "Eliminar Registro", MessageBoxButtons.YesNo);
+                if (resul == DialogResult.Yes)
+                {
+                    con.Open();
+                    MySqlCommand borrar = new MySqlCommand("DELETE from generos where descripcion= '" + txt_nombre.Text + "'  ", con);
+                    borrar.ExecuteNonQuery();
+                    actualizar_generos();
+                    con.Close();
+                    txt_nombre.Text = "";
+                }
+            }
+            else
+            {
+                MessageBox.Show("Seleccione un genero");
+            }
         }
 
         private void dgv_generos_CellClick(object sender, DataGridViewCellEventArgs e)
