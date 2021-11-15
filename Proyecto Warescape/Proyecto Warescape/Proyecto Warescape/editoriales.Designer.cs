@@ -55,22 +55,23 @@ namespace Proyecto_Warescape
             // 
             // dgv_editoriales
             // 
-            this.dgv_editoriales.BackgroundColor = System.Drawing.Color.Aquamarine;
+            this.dgv_editoriales.BackgroundColor = System.Drawing.Color.LightGray;
             this.dgv_editoriales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_editoriales.Location = new System.Drawing.Point(180, 54);
             this.dgv_editoriales.Name = "dgv_editoriales";
             this.dgv_editoriales.Size = new System.Drawing.Size(491, 339);
             this.dgv_editoriales.TabIndex = 5;
             this.dgv_editoriales.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_editoriales_CellClick);
+            this.dgv_editoriales.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_editoriales_CellContentClick);
             // 
             // btn_guardar_editorial
             // 
             this.btn_guardar_editorial.BackColor = System.Drawing.Color.Transparent;
             this.btn_guardar_editorial.FlatAppearance.BorderSize = 0;
-            this.btn_guardar_editorial.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.btn_guardar_editorial.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.btn_guardar_editorial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_guardar_editorial.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_guardar_editorial.ForeColor = System.Drawing.Color.Black;
+            this.btn_guardar_editorial.ForeColor = System.Drawing.Color.White;
             this.btn_guardar_editorial.Location = new System.Drawing.Point(12, 198);
             this.btn_guardar_editorial.Name = "btn_guardar_editorial";
             this.btn_guardar_editorial.Size = new System.Drawing.Size(163, 35);
@@ -91,6 +92,7 @@ namespace Proyecto_Warescape
             this.Nombre.AutoSize = true;
             this.Nombre.BackColor = System.Drawing.Color.Transparent;
             this.Nombre.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F);
+            this.Nombre.ForeColor = System.Drawing.Color.White;
             this.Nombre.Location = new System.Drawing.Point(12, 54);
             this.Nombre.Name = "Nombre";
             this.Nombre.Size = new System.Drawing.Size(75, 24);
@@ -102,6 +104,7 @@ namespace Proyecto_Warescape
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F);
+            this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(12, 114);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(38, 24);
@@ -123,7 +126,7 @@ namespace Proyecto_Warescape
             this.BtnCerrar.BackColor = System.Drawing.Color.Transparent;
             this.BtnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("BtnCerrar.Image")));
-            this.BtnCerrar.Location = new System.Drawing.Point(653, 0);
+            this.BtnCerrar.Location = new System.Drawing.Point(650, 3);
             this.BtnCerrar.Name = "BtnCerrar";
             this.BtnCerrar.Size = new System.Drawing.Size(40, 27);
             this.BtnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -135,10 +138,10 @@ namespace Proyecto_Warescape
             // 
             this.button7.BackColor = System.Drawing.Color.Transparent;
             this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.Color.Black;
+            this.button7.ForeColor = System.Drawing.Color.White;
             this.button7.Location = new System.Drawing.Point(12, 248);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(162, 35);
@@ -152,6 +155,7 @@ namespace Proyecto_Warescape
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F);
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(176, 28);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(164, 24);
@@ -163,7 +167,7 @@ namespace Proyecto_Warescape
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackColor = System.Drawing.Color.DarkGray;
             this.ClientSize = new System.Drawing.Size(692, 420);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button7);

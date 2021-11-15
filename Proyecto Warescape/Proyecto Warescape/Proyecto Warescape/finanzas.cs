@@ -392,6 +392,11 @@ namespace Proyecto_Warescape
 
             }
         }
+
+        private void btnmaximizar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
     }
 

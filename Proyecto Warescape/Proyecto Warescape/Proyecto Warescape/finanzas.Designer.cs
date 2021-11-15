@@ -55,9 +55,17 @@ namespace Proyecto_Warescape
             this.dgv_ventas = new System.Windows.Forms.DataGridView();
             this.Borrar = new System.Windows.Forms.Button();
             this.lbl_n_de_boleta = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.btnmaximizar = new System.Windows.Forms.PictureBox();
+            this.btnRestaurar = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.BtnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_lista)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ventas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnmaximizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // BtnCerrar
@@ -65,7 +73,7 @@ namespace Proyecto_Warescape
             this.BtnCerrar.BackColor = System.Drawing.Color.Transparent;
             this.BtnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("BtnCerrar.Image")));
-            this.BtnCerrar.Location = new System.Drawing.Point(1031, 12);
+            this.BtnCerrar.Location = new System.Drawing.Point(943, 3);
             this.BtnCerrar.Name = "BtnCerrar";
             this.BtnCerrar.Size = new System.Drawing.Size(42, 30);
             this.BtnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -75,7 +83,7 @@ namespace Proyecto_Warescape
             // 
             // txt_boleta
             // 
-            this.txt_boleta.Location = new System.Drawing.Point(22, 109);
+            this.txt_boleta.Location = new System.Drawing.Point(24, 100);
             this.txt_boleta.Name = "txt_boleta";
             this.txt_boleta.Size = new System.Drawing.Size(91, 20);
             this.txt_boleta.TabIndex = 9;
@@ -83,7 +91,7 @@ namespace Proyecto_Warescape
             // 
             // txt_precio
             // 
-            this.txt_precio.Location = new System.Drawing.Point(22, 180);
+            this.txt_precio.Location = new System.Drawing.Point(24, 171);
             this.txt_precio.Name = "txt_precio";
             this.txt_precio.Size = new System.Drawing.Size(91, 20);
             this.txt_precio.TabIndex = 10;
@@ -91,7 +99,7 @@ namespace Proyecto_Warescape
             // 
             // txt_cantidad
             // 
-            this.txt_cantidad.Location = new System.Drawing.Point(157, 180);
+            this.txt_cantidad.Location = new System.Drawing.Point(159, 171);
             this.txt_cantidad.Name = "txt_cantidad";
             this.txt_cantidad.Size = new System.Drawing.Size(119, 20);
             this.txt_cantidad.TabIndex = 12;
@@ -102,7 +110,8 @@ namespace Proyecto_Warescape
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F);
-            this.label1.Location = new System.Drawing.Point(18, 82);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(20, 73);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(114, 24);
             this.label1.TabIndex = 14;
@@ -113,7 +122,8 @@ namespace Proyecto_Warescape
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F);
-            this.label2.Location = new System.Drawing.Point(153, 82);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(155, 73);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(133, 24);
             this.label2.TabIndex = 15;
@@ -124,7 +134,8 @@ namespace Proyecto_Warescape
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F);
-            this.label3.Location = new System.Drawing.Point(31, 150);
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(33, 141);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(61, 24);
             this.label3.TabIndex = 16;
@@ -135,7 +146,8 @@ namespace Proyecto_Warescape
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F);
-            this.label4.Location = new System.Drawing.Point(134, 150);
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(136, 141);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(171, 24);
             this.label4.TabIndex = 17;
@@ -144,7 +156,7 @@ namespace Proyecto_Warescape
             // 
             // dgv_lista
             // 
-            this.dgv_lista.BackgroundColor = System.Drawing.Color.Aquamarine;
+            this.dgv_lista.BackgroundColor = System.Drawing.Color.LightGray;
             this.dgv_lista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_lista.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.n_de_boleta,
@@ -153,7 +165,7 @@ namespace Proyecto_Warescape
             this.cantidad,
             this.libro,
             this.vienepor});
-            this.dgv_lista.Location = new System.Drawing.Point(320, 82);
+            this.dgv_lista.Location = new System.Drawing.Point(322, 73);
             this.dgv_lista.Name = "dgv_lista";
             this.dgv_lista.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_lista.Size = new System.Drawing.Size(643, 173);
@@ -194,11 +206,11 @@ namespace Proyecto_Warescape
             // 
             this.btn_Agregar.BackColor = System.Drawing.Color.Transparent;
             this.btn_Agregar.FlatAppearance.BorderSize = 0;
-            this.btn_Agregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.btn_Agregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.btn_Agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Agregar.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Agregar.ForeColor = System.Drawing.Color.Black;
-            this.btn_Agregar.Location = new System.Drawing.Point(20, 302);
+            this.btn_Agregar.ForeColor = System.Drawing.Color.White;
+            this.btn_Agregar.Location = new System.Drawing.Point(93, 292);
             this.btn_Agregar.Name = "btn_Agregar";
             this.btn_Agregar.Size = new System.Drawing.Size(124, 35);
             this.btn_Agregar.TabIndex = 19;
@@ -210,7 +222,7 @@ namespace Proyecto_Warescape
             // 
             this.fecha_venta.CustomFormat = "yyyy-MM-dd";
             this.fecha_venta.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.fecha_venta.Location = new System.Drawing.Point(157, 109);
+            this.fecha_venta.Location = new System.Drawing.Point(159, 100);
             this.fecha_venta.Name = "fecha_venta";
             this.fecha_venta.Size = new System.Drawing.Size(99, 20);
             this.fecha_venta.TabIndex = 47;
@@ -218,7 +230,7 @@ namespace Proyecto_Warescape
             // cmb_libros
             // 
             this.cmb_libros.FormattingEnabled = true;
-            this.cmb_libros.Location = new System.Drawing.Point(20, 245);
+            this.cmb_libros.Location = new System.Drawing.Point(22, 236);
             this.cmb_libros.Name = "cmb_libros";
             this.cmb_libros.Size = new System.Drawing.Size(114, 21);
             this.cmb_libros.TabIndex = 48;
@@ -228,7 +240,8 @@ namespace Proyecto_Warescape
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F);
-            this.label5.Location = new System.Drawing.Point(26, 215);
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(28, 206);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(46, 24);
             this.label5.TabIndex = 49;
@@ -237,7 +250,7 @@ namespace Proyecto_Warescape
             // cmb_publicidad
             // 
             this.cmb_publicidad.FormattingEnabled = true;
-            this.cmb_publicidad.Location = new System.Drawing.Point(155, 245);
+            this.cmb_publicidad.Location = new System.Drawing.Point(157, 236);
             this.cmb_publicidad.Name = "cmb_publicidad";
             this.cmb_publicidad.Size = new System.Drawing.Size(121, 21);
             this.cmb_publicidad.TabIndex = 50;
@@ -247,7 +260,8 @@ namespace Proyecto_Warescape
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F);
-            this.label6.Location = new System.Drawing.Point(153, 215);
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(155, 206);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(86, 24);
             this.label6.TabIndex = 51;
@@ -257,11 +271,11 @@ namespace Proyecto_Warescape
             // 
             this.Registrar_ventra.BackColor = System.Drawing.Color.Transparent;
             this.Registrar_ventra.FlatAppearance.BorderSize = 0;
-            this.Registrar_ventra.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.Registrar_ventra.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.Registrar_ventra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Registrar_ventra.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Registrar_ventra.ForeColor = System.Drawing.Color.Black;
-            this.Registrar_ventra.Location = new System.Drawing.Point(320, 302);
+            this.Registrar_ventra.ForeColor = System.Drawing.Color.White;
+            this.Registrar_ventra.Location = new System.Drawing.Point(577, 292);
             this.Registrar_ventra.Name = "Registrar_ventra";
             this.Registrar_ventra.Size = new System.Drawing.Size(171, 35);
             this.Registrar_ventra.TabIndex = 52;
@@ -271,8 +285,9 @@ namespace Proyecto_Warescape
             // 
             // dgv_ventas
             // 
+            this.dgv_ventas.BackgroundColor = System.Drawing.Color.LightGray;
             this.dgv_ventas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_ventas.Location = new System.Drawing.Point(22, 362);
+            this.dgv_ventas.Location = new System.Drawing.Point(102, 353);
             this.dgv_ventas.Name = "dgv_ventas";
             this.dgv_ventas.ReadOnly = true;
             this.dgv_ventas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -284,11 +299,11 @@ namespace Proyecto_Warescape
             // 
             this.Borrar.BackColor = System.Drawing.Color.Transparent;
             this.Borrar.FlatAppearance.BorderSize = 0;
-            this.Borrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.Borrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.Borrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Borrar.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Borrar.ForeColor = System.Drawing.Color.Black;
-            this.Borrar.Location = new System.Drawing.Point(535, 302);
+            this.Borrar.ForeColor = System.Drawing.Color.White;
+            this.Borrar.Location = new System.Drawing.Point(745, 292);
             this.Borrar.Name = "Borrar";
             this.Borrar.Size = new System.Drawing.Size(136, 35);
             this.Borrar.TabIndex = 54;
@@ -305,13 +320,69 @@ namespace Proyecto_Warescape
             this.lbl_n_de_boleta.TabIndex = 55;
             this.lbl_n_de_boleta.Visible = false;
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(847, 3);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(42, 30);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 59;
+            this.pictureBox4.TabStop = false;
+            // 
+            // btnmaximizar
+            // 
+            this.btnmaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnmaximizar.BackColor = System.Drawing.Color.Transparent;
+            this.btnmaximizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnmaximizar.Image = ((System.Drawing.Image)(resources.GetObject("btnmaximizar.Image")));
+            this.btnmaximizar.Location = new System.Drawing.Point(895, 3);
+            this.btnmaximizar.Name = "btnmaximizar";
+            this.btnmaximizar.Size = new System.Drawing.Size(42, 30);
+            this.btnmaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnmaximizar.TabIndex = 57;
+            this.btnmaximizar.TabStop = false;
+            this.btnmaximizar.Click += new System.EventHandler(this.btnmaximizar_Click);
+            // 
+            // btnRestaurar
+            // 
+            this.btnRestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRestaurar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRestaurar.Image = ((System.Drawing.Image)(resources.GetObject("btnRestaurar.Image")));
+            this.btnRestaurar.Location = new System.Drawing.Point(847, 3);
+            this.btnRestaurar.Name = "btnRestaurar";
+            this.btnRestaurar.Size = new System.Drawing.Size(42, 30);
+            this.btnRestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnRestaurar.TabIndex = 58;
+            this.btnRestaurar.TabStop = false;
+            this.btnRestaurar.Visible = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(895, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(42, 30);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 60;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Visible = false;
+            // 
             // finanzas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackColor = System.Drawing.Color.DarkGray;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1085, 698);
+            this.ClientSize = new System.Drawing.Size(988, 698);
+            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.btnmaximizar);
+            this.Controls.Add(this.btnRestaurar);
             this.Controls.Add(this.lbl_n_de_boleta);
             this.Controls.Add(this.Borrar);
             this.Controls.Add(this.dgv_ventas);
@@ -331,6 +402,7 @@ namespace Proyecto_Warescape
             this.Controls.Add(this.txt_precio);
             this.Controls.Add(this.txt_boleta);
             this.Controls.Add(this.BtnCerrar);
+            this.Controls.Add(this.pictureBox1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "finanzas";
@@ -340,6 +412,10 @@ namespace Proyecto_Warescape
             ((System.ComponentModel.ISupportInitialize)(this.BtnCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_lista)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ventas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnmaximizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -371,5 +447,9 @@ namespace Proyecto_Warescape
         private System.Windows.Forms.DataGridView dgv_ventas;
         private System.Windows.Forms.Button Borrar;
         private System.Windows.Forms.Label lbl_n_de_boleta;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox btnmaximizar;
+        private System.Windows.Forms.PictureBox btnRestaurar;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

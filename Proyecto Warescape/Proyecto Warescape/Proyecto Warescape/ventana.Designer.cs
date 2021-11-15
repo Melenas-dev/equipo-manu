@@ -31,9 +31,6 @@ namespace Proyecto_Warescape
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ventana));
             this.panel5 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -46,54 +43,34 @@ namespace Proyecto_Warescape
             this.btnRestaurar = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BtnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnmaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.panel5.Location = new System.Drawing.Point(0, 410);
+            this.panel5.BackColor = System.Drawing.Color.Silver;
+            this.panel5.Location = new System.Drawing.Point(0, 401);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(21, 35);
+            this.panel5.Size = new System.Drawing.Size(13, 53);
             this.panel5.TabIndex = 24;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.panel4.Location = new System.Drawing.Point(-3, 318);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(22, 35);
-            this.panel4.TabIndex = 21;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.panel3.Location = new System.Drawing.Point(-3, 217);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(24, 31);
-            this.panel3.TabIndex = 18;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.panel2.Location = new System.Drawing.Point(-3, 124);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(22, 31);
-            this.panel2.TabIndex = 15;
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-3, -1);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(223, 98);
+            this.pictureBox1.Size = new System.Drawing.Size(182, 85);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 26;
             this.pictureBox1.TabStop = false;
@@ -104,15 +81,15 @@ namespace Proyecto_Warescape
             // 
             this.button1.BackColor = System.Drawing.Color.Transparent;
             this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button1.Location = new System.Drawing.Point(19, 124);
+            this.button1.Location = new System.Drawing.Point(12, 114);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(201, 31);
+            this.button1.Size = new System.Drawing.Size(198, 53);
             this.button1.TabIndex = 27;
             this.button1.Text = "           Libros";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -123,15 +100,15 @@ namespace Proyecto_Warescape
             // 
             this.button2.BackColor = System.Drawing.Color.Transparent;
             this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.Black;
+            this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(19, 217);
+            this.button2.Location = new System.Drawing.Point(3, 207);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(201, 31);
+            this.button2.Size = new System.Drawing.Size(207, 53);
             this.button2.TabIndex = 28;
             this.button2.Text = "Finanza";
             this.button2.UseVisualStyleBackColor = false;
@@ -141,15 +118,15 @@ namespace Proyecto_Warescape
             // 
             this.button3.BackColor = System.Drawing.Color.Transparent;
             this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.Black;
+            this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(19, 318);
+            this.button3.Location = new System.Drawing.Point(3, 309);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(201, 35);
+            this.button3.Size = new System.Drawing.Size(207, 53);
             this.button3.TabIndex = 29;
             this.button3.Text = "Graficas";
             this.button3.UseVisualStyleBackColor = false;
@@ -159,13 +136,15 @@ namespace Proyecto_Warescape
             // 
             this.button4.BackColor = System.Drawing.Color.Transparent;
             this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.Black;
-            this.button4.Location = new System.Drawing.Point(19, 410);
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.Location = new System.Drawing.Point(12, 401);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(201, 35);
+            this.button4.Size = new System.Drawing.Size(198, 53);
             this.button4.TabIndex = 30;
             this.button4.Text = "    Marketing";
             this.button4.UseVisualStyleBackColor = false;
@@ -173,7 +152,7 @@ namespace Proyecto_Warescape
             // 
             // panel1
             // 
-            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.BackColor = System.Drawing.Color.LightGray;
             this.panel1.Controls.Add(this.panel7);
             this.panel1.Location = new System.Drawing.Point(216, -1);
             this.panel1.Name = "panel1";
@@ -184,12 +163,13 @@ namespace Proyecto_Warescape
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.Transparent;
-            this.panel7.Controls.Add(this.BtnCerrar);
+            this.panel7.Controls.Add(this.pictureBox4);
             this.panel7.Controls.Add(this.btnmaximizar);
+            this.panel7.Controls.Add(this.BtnCerrar);
             this.panel7.Controls.Add(this.btnRestaurar);
             this.panel7.Location = new System.Drawing.Point(3, 0);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1082, 35);
+            this.panel7.Size = new System.Drawing.Size(1082, 44);
             this.panel7.TabIndex = 0;
             this.panel7.Paint += new System.Windows.Forms.PaintEventHandler(this.panel7_Paint);
             // 
@@ -199,9 +179,9 @@ namespace Proyecto_Warescape
             this.BtnCerrar.BackColor = System.Drawing.Color.Transparent;
             this.BtnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("BtnCerrar.Image")));
-            this.BtnCerrar.Location = new System.Drawing.Point(1037, 2);
+            this.BtnCerrar.Location = new System.Drawing.Point(1031, 8);
             this.BtnCerrar.Name = "BtnCerrar";
-            this.BtnCerrar.Size = new System.Drawing.Size(42, 30);
+            this.BtnCerrar.Size = new System.Drawing.Size(42, 27);
             this.BtnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.BtnCerrar.TabIndex = 4;
             this.BtnCerrar.TabStop = false;
@@ -213,9 +193,9 @@ namespace Proyecto_Warescape
             this.btnmaximizar.BackColor = System.Drawing.Color.Transparent;
             this.btnmaximizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnmaximizar.Image = ((System.Drawing.Image)(resources.GetObject("btnmaximizar.Image")));
-            this.btnmaximizar.Location = new System.Drawing.Point(992, 2);
+            this.btnmaximizar.Location = new System.Drawing.Point(983, 8);
             this.btnmaximizar.Name = "btnmaximizar";
-            this.btnmaximizar.Size = new System.Drawing.Size(42, 30);
+            this.btnmaximizar.Size = new System.Drawing.Size(42, 27);
             this.btnmaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnmaximizar.TabIndex = 5;
             this.btnmaximizar.TabStop = false;
@@ -226,13 +206,14 @@ namespace Proyecto_Warescape
             this.btnRestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRestaurar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRestaurar.Image = ((System.Drawing.Image)(resources.GetObject("btnRestaurar.Image")));
-            this.btnRestaurar.Location = new System.Drawing.Point(992, 2);
+            this.btnRestaurar.Location = new System.Drawing.Point(983, 8);
             this.btnRestaurar.Name = "btnRestaurar";
-            this.btnRestaurar.Size = new System.Drawing.Size(42, 30);
+            this.btnRestaurar.Size = new System.Drawing.Size(42, 27);
             this.btnRestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnRestaurar.TabIndex = 6;
             this.btnRestaurar.TabStop = false;
             this.btnRestaurar.Visible = false;
+            this.btnRestaurar.Click += new System.EventHandler(this.btnRestaurar_Click);
             // 
             // panel6
             // 
@@ -252,7 +233,7 @@ namespace Proyecto_Warescape
             this.button5.ForeColor = System.Drawing.Color.Black;
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(19, 653);
+            this.button5.Location = new System.Drawing.Point(12, 653);
             this.button5.Name = "button5";
             this.button5.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.button5.Size = new System.Drawing.Size(175, 35);
@@ -262,13 +243,53 @@ namespace Proyecto_Warescape
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Silver;
+            this.panel2.Location = new System.Drawing.Point(0, 309);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(13, 53);
+            this.panel2.TabIndex = 25;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Silver;
+            this.panel3.Location = new System.Drawing.Point(0, 207);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(13, 53);
+            this.panel3.TabIndex = 34;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.Silver;
+            this.panel4.Location = new System.Drawing.Point(0, 114);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(13, 53);
+            this.panel4.TabIndex = 25;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(935, 8);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(42, 27);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 7;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click_1);
+            // 
             // ventana
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Aquamarine;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackColor = System.Drawing.Color.DimGray;
             this.ClientSize = new System.Drawing.Size(1300, 700);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel1);
@@ -278,9 +299,6 @@ namespace Proyecto_Warescape
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel5);
-            this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ventana";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
@@ -293,15 +311,13 @@ namespace Proyecto_Warescape
             ((System.ComponentModel.ISupportInitialize)(this.BtnCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnmaximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
@@ -314,5 +330,9 @@ namespace Proyecto_Warescape
         private System.Windows.Forms.PictureBox BtnCerrar;
         private System.Windows.Forms.PictureBox btnmaximizar;
         private System.Windows.Forms.PictureBox btnRestaurar;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.PictureBox pictureBox4;
     }
 }

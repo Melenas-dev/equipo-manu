@@ -252,3 +252,39 @@ C:\Users\loloc\OneDrive\Documentos\GitHub\equipo-manu\Proyecto Warescape\Proyect
 C:\Users\loloc\OneDrive\Documentos\GitHub\equipo-manu\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto Warescape.csproj.CopyComplete
 C:\Users\loloc\OneDrive\Documentos\GitHub\equipo-manu\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto Warescape.exe
 C:\Users\loloc\OneDrive\Documentos\GitHub\equipo-manu\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto Warescape.pdb
+C:\Users\Franc\OneDrive\Documentos\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto Warescape.csproj.AssemblyReference.cache
+C:\Users\Franc\OneDrive\Documentos\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.agregargenero.resources
+C:\Users\Franc\OneDrive\Documentos\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.carga.resources
+C:\Users\Franc\OneDrive\Documentos\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.editoriales.resources
+C:\Users\Franc\OneDrive\Documentos\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.finanzas.resources
+C:\Users\Franc\OneDrive\Documentos\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.FormEmail.resources
+C:\Users\Franc\OneDrive\Documentos\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.Login.resources
+C:\Users\Franc\OneDrive\Documentos\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.marketing.resources
+C:\Users\Franc\OneDrive\Documentos\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.Properties.Resources.resources
+C:\Users\Franc\OneDrive\Documentos\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.VentanasPrincipal.resources
+C:\Users\Franc\OneDrive\Documentos\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.ventana.resources
+C:\Users\Franc\OneDrive\Documentos\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto Warescape.csproj.GenerateResource.cache
+C:\Users\Franc\OneDrive\Documentos\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto Warescape.csproj.CoreCompileInputs.cache
+C:\Users\Franc\OneDrive\Documentos\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto Warescape.exe
+C:\Users\Franc\OneDrive\Documentos\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto Warescape.pdb
+C:\Users\Franc\OneDrive\Documentos\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\bin\Debug\Proyecto Warescape.exe.config
+C:\Users\Franc\OneDrive\Documentos\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\bin\Debug\Proyecto Warescape.exe
+C:\Users\Franc\OneDrive\Documentos\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\bin\Debug\Proyecto Warescape.pdb
+C:\Users\Franc\OneDrive\Documentos\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\Franc\OneDrive\Documentos\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\Franc\OneDrive\Documentos\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\bin\Debug\MySql.Data.dll
+C:\Users\Franc\OneDrive\Documentos\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\bin\Debug\System.Buffers.dll
+C:\Users\Franc\OneDrive\Documentos\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\bin\Debug\System.Memory.dll
+C:\Users\Franc\OneDrive\Documentos\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Franc\OneDrive\Documentos\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Franc\OneDrive\Documentos\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\Franc\OneDrive\Documentos\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\bin\Debug\ZstdNet.dll
+C:\Users\Franc\OneDrive\Documentos\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\bin\Debug\Google.Protobuf.xml
+C:\Users\Franc\OneDrive\Documentos\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\Franc\OneDrive\Documentos\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\Franc\OneDrive\Documentos\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\Franc\OneDrive\Documentos\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\bin\Debug\MySql.Data.xml
+C:\Users\Franc\OneDrive\Documentos\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\bin\Debug\System.Memory.xml
+C:\Users\Franc\OneDrive\Documentos\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Franc\OneDrive\Documentos\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Franc\OneDrive\Documentos\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto Warescape.csproj.CopyComplete

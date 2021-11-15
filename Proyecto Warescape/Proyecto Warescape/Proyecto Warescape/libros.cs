@@ -710,6 +710,11 @@ namespace Proyecto_Warescape
 
             dgv_generos.Rows.Add(Cmb_genero.Text, ((Cmb_genero.SelectedItem as Generos).id_genero).ToString());
         }
+
+        private void label15_Click(object sender, EventArgs e)
+        {
+
+        }
     }
     
 }

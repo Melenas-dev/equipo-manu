@@ -246,5 +246,15 @@ namespace Proyecto_Warescape
         {
             int a = 0;
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_pass1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

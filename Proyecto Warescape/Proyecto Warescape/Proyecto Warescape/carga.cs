@@ -51,5 +51,20 @@ namespace Proyecto_Warescape
         {
 
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblporcentaje_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

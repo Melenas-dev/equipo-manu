@@ -146,5 +146,30 @@ namespace Proyecto_Warescape
         {
 
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnRestaurar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox4_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

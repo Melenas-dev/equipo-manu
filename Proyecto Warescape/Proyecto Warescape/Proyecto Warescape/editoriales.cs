@@ -154,5 +154,10 @@ namespace Proyecto_Warescape
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
         }
+
+        private void dgv_editoriales_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
