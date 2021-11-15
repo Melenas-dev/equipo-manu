@@ -131,6 +131,12 @@
       <DependentUpon>editoriales.cs</DependentUpon>
     </Compile>
     <Compile Include="Email.cs" />
+    <Compile Include="estadisticas_mensuales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="estadisticas_mensuales.Designer.cs">
+      <DependentUpon>estadisticas_mensuales.cs</DependentUpon>
+    </Compile>
     <Compile Include="finanzas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -189,6 +195,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="editoriales.resx">
       <DependentUpon>editoriales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="estadisticas_mensuales.resx">
+      <DependentUpon>estadisticas_mensuales.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="finanzas.resx">
       <DependentUpon>finanzas.cs</DependentUpon>

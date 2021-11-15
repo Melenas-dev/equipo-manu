@@ -59,6 +59,7 @@ namespace Proyecto_Warescape
             this.btnRestaurar = new System.Windows.Forms.PictureBox();
             this.BtnCerrar = new System.Windows.Forms.PictureBox();
             this.btn_control_caja = new System.Windows.Forms.Button();
+            this.btn_estadisticas = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_lista)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ventas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -377,6 +378,22 @@ namespace Proyecto_Warescape
             this.btn_control_caja.UseVisualStyleBackColor = false;
             this.btn_control_caja.Click += new System.EventHandler(this.button1_Click_2);
             // 
+            // btn_estadisticas
+            // 
+            this.btn_estadisticas.BackColor = System.Drawing.Color.Transparent;
+            this.btn_estadisticas.FlatAppearance.BorderSize = 0;
+            this.btn_estadisticas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btn_estadisticas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_estadisticas.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_estadisticas.ForeColor = System.Drawing.Color.White;
+            this.btn_estadisticas.Location = new System.Drawing.Point(22, 17);
+            this.btn_estadisticas.Name = "btn_estadisticas";
+            this.btn_estadisticas.Size = new System.Drawing.Size(219, 35);
+            this.btn_estadisticas.TabIndex = 62;
+            this.btn_estadisticas.Text = "Estadisticas mensuales";
+            this.btn_estadisticas.UseVisualStyleBackColor = false;
+            this.btn_estadisticas.Click += new System.EventHandler(this.btn_estadisticas_Click);
+            // 
             // finanzas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -384,6 +401,7 @@ namespace Proyecto_Warescape
             this.BackColor = System.Drawing.Color.DarkGray;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1085, 698);
+            this.Controls.Add(this.btn_estadisticas);
             this.Controls.Add(this.btn_control_caja);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.btnmaximizar);
@@ -454,5 +472,6 @@ namespace Proyecto_Warescape
         private System.Windows.Forms.PictureBox btnmaximizar;
         private System.Windows.Forms.PictureBox btnRestaurar;
         private System.Windows.Forms.Button btn_control_caja;
+        private System.Windows.Forms.Button btn_estadisticas;
     }
 }

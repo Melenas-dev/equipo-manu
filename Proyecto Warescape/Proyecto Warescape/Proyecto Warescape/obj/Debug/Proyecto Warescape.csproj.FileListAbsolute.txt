@@ -327,3 +327,6 @@ C:\Users\ezequ\OneDrive\Documentos\GitHub\Warescape\Proyecto Warescape\Proyecto 
 C:\Users\manue\Documents\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.control_de_caja.resources
 C:\Users\Franc\OneDrive\Documentos\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.control_de_caja.resources
 C:\Users\Franc\OneDrive\Documentos\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.graficas.resources
+C:\Users\Juan\Documents\equipo-manu\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.control_de_caja.resources
+C:\Users\Juan\Documents\equipo-manu\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.estadisticas_mensuales.resources
+C:\Users\Juan\Documents\equipo-manu\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.graficas.resources

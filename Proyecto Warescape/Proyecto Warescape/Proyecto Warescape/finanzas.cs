@@ -419,6 +419,15 @@ namespace Proyecto_Warescape
         {
             WindowState = FormWindowState.Minimized;
         }
+
+        private void btn_estadisticas_Click(object sender, EventArgs e)
+        {
+            finanzas finanzas = new finanzas();
+            finanzas.Hide();
+
+            estadisticas_mensuales estadisticas_Mensuales = new estadisticas_mensuales();
+            estadisticas_Mensuales.Show();
+        }
     }
     }
 
