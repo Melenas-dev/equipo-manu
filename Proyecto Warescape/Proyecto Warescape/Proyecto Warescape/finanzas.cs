@@ -286,11 +286,17 @@ namespace Proyecto_Warescape
 
         private void dgv_lista_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            int n = e.RowIndex;
-            if (n != -1)
-            {
-                dgv_lista.Rows.RemoveAt(n);
-            }
+
+           
+            
+                int n = e.RowIndex;
+                if (n != -1 && n !=0)
+                {
+                    dgv_lista.Rows.RemoveAt(n);
+                }
+
+            
+            
 
         }
         public void solo_numeros(KeyPressEventArgs e)
