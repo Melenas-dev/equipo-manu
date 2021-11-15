@@ -715,6 +715,16 @@ namespace Proyecto_Warescape
         {
 
         }
+
+        private void pictureBox1_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_nombre_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
     
 }

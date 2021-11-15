@@ -117,6 +117,12 @@
     <Compile Include="carga.Designer.cs">
       <DependentUpon>carga.cs</DependentUpon>
     </Compile>
+    <Compile Include="control_de_caja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="control_de_caja.Designer.cs">
+      <DependentUpon>control_de_caja.cs</DependentUpon>
+    </Compile>
     <Compile Include="editoriales.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,6 +176,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="carga.resx">
       <DependentUpon>carga.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="control_de_caja.resx">
+      <DependentUpon>control_de_caja.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="editoriales.resx">
       <DependentUpon>editoriales.cs</DependentUpon>

@@ -397,6 +397,12 @@ namespace Proyecto_Warescape
         {
 
         }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+            Form caja = new control_de_caja();
+            caja.Show();
+        }
     }
     }
 

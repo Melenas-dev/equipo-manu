@@ -229,6 +229,7 @@ namespace Proyecto_Warescape
             this.txt_nombre.Name = "txt_nombre";
             this.txt_nombre.Size = new System.Drawing.Size(104, 20);
             this.txt_nombre.TabIndex = 11;
+            this.txt_nombre.TextChanged += new System.EventHandler(this.txt_nombre_TextChanged);
             // 
             // txt_cantidad
             // 
@@ -600,6 +601,7 @@ namespace Proyecto_Warescape
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 49;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_2);
             // 
             // VentanasPrincipal
             // 

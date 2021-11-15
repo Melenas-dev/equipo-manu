@@ -117,16 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="BtnCerrar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAC0AAAAdCAIAAACxAnJgAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAACJSURBVFhH7ZJLCoAwDES9Rr1k77+qwcTilAo2EbUwb1Hy
-        WcyDZkmvs+5Yc/CBRxd6IPRA6IHM7FFKyTlbc0KGsrJmEI+H5jUq3eF9nP/SpAYlBP991Oxa2MJF6E7V
-        IC4hzO+hEvLWwhYuZr7TbmpQxeNxlacq1gwSutMHoQdCD4QeCD2Qf3iktAFlTtSRcpJjRQAAAABJRU5E
-        rkJggg==
-</value>
-  </data>
   <metadata name="n_de_boleta.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -145,6 +135,7 @@
   <metadata name="vienepor.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="pictureBox4.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAC0AAAAdCAIAAACxAnJgAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
@@ -165,6 +156,14 @@
         xAAADsQBlSsOGwAAAGVJREFUWEft0DsOwCAMBNFcw/c/aBLFLhiJFN58RLGvAkwxsMUa3EHuIHeQO0jv
         2G/UuOlRR60Gv3Zcz57IUd7pEjtqNXAHuYPOw1T7ppf/QyZ2TNVYonR8wR3kDnIHuYPW6Ig4AMme9633
         lfRFAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="BtnCerrar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAC0AAAAdCAIAAACxAnJgAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        xAAADsQBlSsOGwAAAIlJREFUWEftkksKgDAMRL1GvWTvv6rBxOKUCjYRtTBvUfJZzINmSa+z7lhz8IFH
+        F3og9EDogczsUUrJOVtzQoaysmYQj4fmNSrd4X2c/9KkBiUE/33U7FrYwkXoTtUgLiHM76ES8tbCFi5m
+        vtNualDF43GVpyrWDBK60wehB0IPhB4IPZB/eKS0AWVO1JFykmNFAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

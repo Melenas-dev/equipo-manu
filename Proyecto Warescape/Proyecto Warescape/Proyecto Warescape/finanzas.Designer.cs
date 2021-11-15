@@ -30,7 +30,6 @@ namespace Proyecto_Warescape
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(finanzas));
-            this.BtnCerrar = new System.Windows.Forms.PictureBox();
             this.txt_boleta = new System.Windows.Forms.TextBox();
             this.txt_precio = new System.Windows.Forms.TextBox();
             this.txt_cantidad = new System.Windows.Forms.TextBox();
@@ -58,28 +57,17 @@ namespace Proyecto_Warescape
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.btnmaximizar = new System.Windows.Forms.PictureBox();
             this.btnRestaurar = new System.Windows.Forms.PictureBox();
+            this.BtnCerrar = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.BtnCerrar)).BeginInit();
+            this.btn_control_caja = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_lista)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ventas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnmaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BtnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // BtnCerrar
-            // 
-            this.BtnCerrar.BackColor = System.Drawing.Color.Transparent;
-            this.BtnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("BtnCerrar.Image")));
-            this.BtnCerrar.Location = new System.Drawing.Point(943, 3);
-            this.BtnCerrar.Name = "BtnCerrar";
-            this.BtnCerrar.Size = new System.Drawing.Size(42, 30);
-            this.BtnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.BtnCerrar.TabIndex = 1;
-            this.BtnCerrar.TabStop = false;
-            this.BtnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
             // 
             // txt_boleta
             // 
@@ -287,7 +275,7 @@ namespace Proyecto_Warescape
             // 
             this.dgv_ventas.BackgroundColor = System.Drawing.Color.LightGray;
             this.dgv_ventas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_ventas.Location = new System.Drawing.Point(102, 353);
+            this.dgv_ventas.Location = new System.Drawing.Point(12, 362);
             this.dgv_ventas.Name = "dgv_ventas";
             this.dgv_ventas.ReadOnly = true;
             this.dgv_ventas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -360,6 +348,19 @@ namespace Proyecto_Warescape
             this.btnRestaurar.TabStop = false;
             this.btnRestaurar.Visible = false;
             // 
+            // BtnCerrar
+            // 
+            this.BtnCerrar.BackColor = System.Drawing.Color.Transparent;
+            this.BtnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("BtnCerrar.Image")));
+            this.BtnCerrar.Location = new System.Drawing.Point(943, 3);
+            this.BtnCerrar.Name = "BtnCerrar";
+            this.BtnCerrar.Size = new System.Drawing.Size(42, 30);
+            this.BtnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.BtnCerrar.TabIndex = 1;
+            this.BtnCerrar.TabStop = false;
+            this.BtnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -373,6 +374,22 @@ namespace Proyecto_Warescape
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Visible = false;
             // 
+            // btn_control_caja
+            // 
+            this.btn_control_caja.BackColor = System.Drawing.Color.Transparent;
+            this.btn_control_caja.FlatAppearance.BorderSize = 0;
+            this.btn_control_caja.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btn_control_caja.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_control_caja.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_control_caja.ForeColor = System.Drawing.Color.White;
+            this.btn_control_caja.Location = new System.Drawing.Point(805, 651);
+            this.btn_control_caja.Name = "btn_control_caja";
+            this.btn_control_caja.Size = new System.Drawing.Size(171, 35);
+            this.btn_control_caja.TabIndex = 61;
+            this.btn_control_caja.Text = "Control de caja";
+            this.btn_control_caja.UseVisualStyleBackColor = false;
+            this.btn_control_caja.Click += new System.EventHandler(this.button1_Click_2);
+            // 
             // finanzas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -380,6 +397,7 @@ namespace Proyecto_Warescape
             this.BackColor = System.Drawing.Color.DarkGray;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(988, 698);
+            this.Controls.Add(this.btn_control_caja);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.btnmaximizar);
             this.Controls.Add(this.btnRestaurar);
@@ -409,12 +427,12 @@ namespace Proyecto_Warescape
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "finanzas";
             this.Load += new System.EventHandler(this.finanzas_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.BtnCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_lista)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ventas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnmaximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BtnCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -451,5 +469,6 @@ namespace Proyecto_Warescape
         private System.Windows.Forms.PictureBox btnmaximizar;
         private System.Windows.Forms.PictureBox btnRestaurar;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btn_control_caja;
     }
 }

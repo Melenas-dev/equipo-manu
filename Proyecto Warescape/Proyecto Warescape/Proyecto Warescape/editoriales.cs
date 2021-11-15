@@ -159,5 +159,10 @@ namespace Proyecto_Warescape
         {
 
         }
+
+        private void Nombre_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
