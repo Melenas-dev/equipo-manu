@@ -77,7 +77,7 @@ namespace Proyecto_Warescape
             else
             {
 
-                string editar = "UPDATE publicidad set rut=" + int.Parse(txt_rut.Text) + ", monto=" + float.Parse(txt_monto.Text) + ",nombre='" + txt_nombre.Text + "' where id_publicidad ="+int.Parse(lbl_id_publicidad.Text)+";";
+                string editar = "UPDATE publicidad set rut=" + int.Parse(txt_rut.Text) + ", monto=" + float.Parse(txt_monto.Text) + ",nombre='" + txt_nombre.Text + "' where id_publicidad =" + int.Parse(lbl_id_publicidad.Text) + ";";
                 MySqlCommand comando = new MySqlCommand(editar, con);
                 comando.ExecuteNonQuery();
                 mostrar_publicidades();
@@ -85,8 +85,9 @@ namespace Proyecto_Warescape
                 txt_rut.Text = "";
                 txt_nombre.Text = "";
                 txt_monto.Text = "";
-                
-            }con.Close();
+
+            }
+            con.Close();
 
         }
 
@@ -96,16 +97,16 @@ namespace Proyecto_Warescape
             if (n != -1)
             {
                 lbl_id_publicidad.Text = this.dgv_publicidades.CurrentRow.Cells[0].Value.ToString();
-                txt_monto.Text= this.dgv_publicidades.CurrentRow.Cells[3].Value.ToString();
-                txt_rut.Text= this.dgv_publicidades.CurrentRow.Cells[1].Value.ToString();
-                txt_nombre.Text= this.dgv_publicidades.CurrentRow.Cells[2].Value.ToString();
+                txt_monto.Text = this.dgv_publicidades.CurrentRow.Cells[3].Value.ToString();
+                txt_rut.Text = this.dgv_publicidades.CurrentRow.Cells[1].Value.ToString();
+                txt_nombre.Text = this.dgv_publicidades.CurrentRow.Cells[2].Value.ToString();
             }
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
             con.Open();
-            if (lbl_id_publicidad.Text.Equals("") )
+            if (lbl_id_publicidad.Text.Equals(""))
             {
                 MessageBox.Show("seleccione un marketing");
             }
@@ -126,7 +127,7 @@ namespace Proyecto_Warescape
 
             }
             con.Close();
-            
+
         }
         public void solo_numeros(KeyPressEventArgs e)
         {
@@ -181,12 +182,12 @@ namespace Proyecto_Warescape
 
         private void btnmaximizar_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void btnRestaurar_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void BtnCerrar_Click_1(object sender, EventArgs e)
@@ -211,6 +212,26 @@ namespace Proyecto_Warescape
 
         private void label3_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void btnRestaurar_Click_1(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Normal;
+            btnRestaurar.Visible = false;
+            btnmaximizar.Visible = true;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnmaximizar_Click_1(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Maximized;
+            btnmaximizar.Visible = false;
+            btnRestaurar.Visible = true;
 
         }
     }

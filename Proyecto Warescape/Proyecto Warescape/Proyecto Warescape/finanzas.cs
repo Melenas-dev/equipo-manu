@@ -395,13 +395,29 @@ namespace Proyecto_Warescape
 
         private void btnmaximizar_Click(object sender, EventArgs e)
         {
-
+            WindowState = FormWindowState.Maximized;
+            btnmaximizar.Visible = false;
+            btnRestaurar.Visible = true;
         }
 
         private void button1_Click_2(object sender, EventArgs e)
         {
             Form caja = new control_de_caja();
             caja.Show();
+        }
+
+        private void btnRestaurar_Click(object sender, EventArgs e)
+        {
+    
+            WindowState = FormWindowState.Normal;
+            btnRestaurar.Visible = false;
+            btnmaximizar.Visible = true;
+
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
         }
     }
     }

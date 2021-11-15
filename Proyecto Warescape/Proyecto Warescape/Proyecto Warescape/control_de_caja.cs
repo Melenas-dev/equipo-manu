@@ -116,5 +116,29 @@ namespace Proyecto_Warescape
                 e.Handled = true;
             }
         }
+
+        private void control_de_caja_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnmaximizar_Click_1(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Maximized;
+            btnmaximizar.Visible = false;
+            btnRestaurar.Visible = true;
+        }
+
+        private void btnRestaurar_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Normal;
+            btnRestaurar.Visible = false;
+            btnmaximizar.Visible = true;
+        }
+
+        private void BtnCerrar_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

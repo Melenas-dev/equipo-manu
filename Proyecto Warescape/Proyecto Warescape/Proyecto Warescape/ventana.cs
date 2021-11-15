@@ -66,7 +66,7 @@ namespace Proyecto_Warescape
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            AbrirFormInPanel(new graficas());
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -139,7 +139,9 @@ namespace Proyecto_Warescape
 
         private void btnmaximizar_Click(object sender, EventArgs e)
         {
-
+            WindowState = FormWindowState.Maximized;
+            btnmaximizar.Visible = false;
+            btnRestaurar.Visible = true;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -164,10 +166,28 @@ namespace Proyecto_Warescape
 
         private void btnRestaurar_Click(object sender, EventArgs e)
         {
-
+            WindowState = FormWindowState.Normal;
+            btnRestaurar.Visible = false; 
+            btnmaximizar.Visible = true;
         }
 
         private void pictureBox4_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button6_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click_1(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+            
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
         }
