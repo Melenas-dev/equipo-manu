@@ -161,11 +161,11 @@ namespace Proyecto_Warescape
                     string viene="";
                     string id_publi = "";
                     
-                    if (!dgv_lista.Rows[i].Cells[5].Value.ToString().Equals(""))
+                    if (dgv_lista.Rows[i].Cells[5].Value == DBNull.Value)
                     {
                         viene = Convert.ToString(dgv_lista.Rows[i].Cells[5].Value);
                          id_publi = dgv_lista.Rows[i].Cells[5].Value.ToString().Split('-').Last();
-
+                        
                     }
                    
                    
@@ -200,7 +200,7 @@ namespace Proyecto_Warescape
 
                         con.Open();
 
-                        string ingresar_generan = "INSERT INTO genera values(" + n_de_boleta + ","+int.Parse(id_libro)+","+cantidad_comprada+","+precio+")";
+                        string ingresar_generan = "INSERT INTO generan values(" + n_de_boleta + ","+int.Parse(id_libro)+","+cantidad_comprada+","+precio+")";
                         MySqlCommand query_genera = new MySqlCommand(ingresar_generan, con);
                         query_genera.ExecuteNonQuery();
                         con.Close();
