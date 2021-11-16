@@ -118,5 +118,40 @@ namespace Proyecto_Warescape
         {
 
         }
+
+        private void cmb_editoriales_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmb_año_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl_promedio_total_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl_titulo_promedio_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

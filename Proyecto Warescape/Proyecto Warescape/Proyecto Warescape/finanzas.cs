@@ -468,6 +468,61 @@ namespace Proyecto_Warescape
         {
             e.Handled = true;
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmb_libros_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void fecha_venta_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_cantidad_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_precio_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_boleta_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
     }
     }
 

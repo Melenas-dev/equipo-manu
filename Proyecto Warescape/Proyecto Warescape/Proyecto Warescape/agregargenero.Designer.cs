@@ -48,6 +48,7 @@ namespace Proyecto_Warescape
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F);
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(176, 29);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(143, 24);
@@ -57,7 +58,7 @@ namespace Proyecto_Warescape
             // button7
             // 
             this.button7.BackColor = System.Drawing.Color.Transparent;
-            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -115,7 +116,7 @@ namespace Proyecto_Warescape
             // btn_guardar_editorial
             // 
             this.btn_guardar_editorial.BackColor = System.Drawing.Color.Transparent;
-            this.btn_guardar_editorial.FlatAppearance.BorderSize = 0;
+            this.btn_guardar_editorial.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btn_guardar_editorial.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.btn_guardar_editorial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_guardar_editorial.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

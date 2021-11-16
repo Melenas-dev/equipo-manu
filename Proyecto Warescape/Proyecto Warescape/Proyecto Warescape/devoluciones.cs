@@ -180,5 +180,35 @@ namespace Proyecto_Warescape
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_cantidad_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmb_libros_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Nombre_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

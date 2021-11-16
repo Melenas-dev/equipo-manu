@@ -140,5 +140,20 @@ namespace Proyecto_Warescape
         {
             this.Close();
         }
+
+        private void mzButtonWindows1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label2_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void leabemes_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

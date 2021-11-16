@@ -794,6 +794,26 @@ namespace Proyecto_Warescape
                 }
             }
         }
+
+        private void mzButtonWindows1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label17_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
     }
     
 }
