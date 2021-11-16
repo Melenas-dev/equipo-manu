@@ -142,6 +142,7 @@ namespace Proyecto_Warescape
             this.cmb_editorial.Size = new System.Drawing.Size(137, 21);
             this.cmb_editorial.TabIndex = 19;
             this.cmb_editorial.SelectedIndexChanged += new System.EventHandler(this.cmb_editorial_SelectedIndexChanged);
+            this.cmb_editorial.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmb_editorial_KeyPress);
             // 
             // Cmb_genero
             // 

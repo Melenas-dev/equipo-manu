@@ -729,6 +729,11 @@ namespace Proyecto_Warescape
         {
 
         }
+
+        private void cmb_editorial_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
     }
     
 }

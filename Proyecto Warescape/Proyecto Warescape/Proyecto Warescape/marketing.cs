@@ -39,7 +39,10 @@ namespace Proyecto_Warescape
             {
                 MessageBox.Show("Ingresar todos los parametros");
             }
-
+            if (txt_rut.Text.Contains(" ") || txt_monto.Text.Contains(" "))
+            {
+                MessageBox.Show("Ingresar parametro valido");
+            }
             else
             {
                 string ingreso_publicidad = "insert into publicidad(rut, monto, nombre) values(" + int.Parse(txt_rut.Text) + ", " + int.Parse(txt_monto.Text) + ",'" + txt_nombre.Text + "');";
@@ -232,6 +235,21 @@ namespace Proyecto_Warescape
             WindowState = FormWindowState.Maximized;
             btnmaximizar.Visible = false;
             btnRestaurar.Visible = true;
+
+        }
+
+        private void txt_nombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            
+        }
+        public void solo_letras(KeyPressEventArgs e)
+        {
+            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                e.Handled = true;
+                return;
+
+            }
 
         }
     }

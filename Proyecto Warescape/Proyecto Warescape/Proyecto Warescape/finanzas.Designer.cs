@@ -221,6 +221,7 @@ namespace Proyecto_Warescape
             this.cmb_libros.Name = "cmb_libros";
             this.cmb_libros.Size = new System.Drawing.Size(114, 21);
             this.cmb_libros.TabIndex = 48;
+            this.cmb_libros.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmb_libros_KeyPress);
             // 
             // label5
             // 
@@ -241,6 +242,8 @@ namespace Proyecto_Warescape
             this.cmb_publicidad.Name = "cmb_publicidad";
             this.cmb_publicidad.Size = new System.Drawing.Size(121, 21);
             this.cmb_publicidad.TabIndex = 50;
+            this.cmb_publicidad.SelectedIndexChanged += new System.EventHandler(this.cmb_publicidad_SelectedIndexChanged);
+            this.cmb_publicidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmb_publicidad_KeyPress);
             // 
             // label6
             // 

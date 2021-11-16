@@ -434,6 +434,21 @@ namespace Proyecto_Warescape
             estadisticas_mensuales estadisticas_Mensuales = new estadisticas_mensuales();
             estadisticas_Mensuales.Show();
         }
+
+        private void cmb_libros_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void cmb_publicidad_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmb_publicidad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
     }
     }
 
