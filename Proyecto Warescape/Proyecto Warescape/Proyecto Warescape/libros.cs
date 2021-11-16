@@ -100,8 +100,11 @@ namespace Proyecto_Warescape
         
         private void ingresar_libro(object sender, EventArgs e)
         {
-            
-           
+            txt_precio.Text = txt_precio.Text.Replace(" ", string.Empty);
+            txt_isbn.Text = txt_isbn.Text.Replace(" ", string.Empty);
+            txt_codigo.Text = txt_codigo.Text.Replace(" ", string.Empty);
+            txt_cantidad.Text = txt_cantidad.Text.Replace(" ", string.Empty); 
+            txt_valor_del_libro.Text = txt_valor_del_libro.Text.Replace(" ", string.Empty);
             if (txt_isbn.Text.Equals("") || txt_codigo.Text.Equals("") || txt_nombre.Text.Equals("") || txt_precio.Text.Equals("") || txt_cantidad.Text.Equals("") || Cmb_genero.Text.Equals("") || cmb_editorial.Text.Equals("") || cmb_boleta.Text.Equals("") ||cmb_tipo_de_operacion.Text.Equals("") || txt_valor_del_libro.Text.Equals("") || txt_autor.Text.Equals("")) 
             {
                 MessageBox.Show("Ingresar todos los parametros");
@@ -224,10 +227,18 @@ namespace Proyecto_Warescape
                 {
                     string id_libro_valor="";
                     con.Close();
-                    if (cmb_tipo_de_operacion.Text.Equals("Compra"))
+                    if (txt_isbn.Text.Trim().Equals("") || txt_codigo.Text.Trim().Equals("") || txt_precio.Text.Trim().Equals("") || txt_cantidad.Text.Trim().Equals("") || txt_nombre.Text.Trim().Equals("") || txt_autor.Text.Trim().Equals(""))
+                    {
+                        MessageBox.Show("parametro no permitido");
+
+                    }
+                    else
+                    {
+
+                        if (cmb_tipo_de_operacion.Text.Equals("Compra"))
                     {
                         con.Open();
-                        string ingreso1 = "insert into libros(isbn, codigo, precio, stock, nombre, autor) values(" + int.Parse(txt_isbn.Text) + "," + int.Parse(txt_codigo.Text) + "," + decimal.Parse(txt_precio.Text) + "," + int.Parse(txt_cantidad.Text) + ",'" + txt_nombre.Text + "','" + txt_autor.Text + "');";
+                        string ingreso1 = "insert into libros(isbn, codigo, precio, stock, nombre, autor) values(" + int.Parse(txt_isbn.Text.Trim()) + "," + int.Parse(txt_codigo.Text.Trim()) + "," + decimal.Parse(txt_precio.Text.Trim()) + "," + int.Parse(txt_cantidad.Text.Trim()) + ",'" + txt_nombre.Text.Trim() + "','" + txt_autor.Text.Trim() + "');";
                         MySqlCommand Ingreso = new MySqlCommand(ingreso1, con);
                         Ingreso.ExecuteNonQuery();
                         id_libro_valor = Ingreso.LastInsertedId.ToString();
@@ -250,7 +261,8 @@ namespace Proyecto_Warescape
                         MySqlCommand ingresar_lcc = new MySqlCommand("insert into lcc(n_de_operacion, id_libro, cantidad_consignada, precio_consignado) value(" + float.Parse(cmb_boleta.Text) + ", " + int.Parse(id_libro_valor) + "," + int.Parse(txt_cantidad.Text) + "," + int.Parse(txt_valor_del_libro.Text) + ");", con);
                         ingresar_lcc.ExecuteNonQuery();
                         con.Close();
-                    }
+                        }
+                    
                     int id_libro;
                     if (lbl_id_de_libro.Text.Equals(""))
                     {
@@ -271,6 +283,7 @@ namespace Proyecto_Warescape
                         MySqlCommand ingresargenero = new MySqlCommand(ingreso2, con);
                         ingresargenero.ExecuteNonQuery();
                         con.Close();
+                    }
                     }
 
                     actualizar_dgv_libros();
@@ -336,6 +349,13 @@ namespace Proyecto_Warescape
         private void guardar_edicion(object sender, EventArgs e)
         {
             con.Open();
+
+            txt_precio.Text = txt_precio.Text.Replace(" ", string.Empty);
+            txt_isbn.Text = txt_isbn.Text.Replace(" ", string.Empty);
+            txt_codigo.Text = txt_codigo.Text.Replace(" ", string.Empty);
+            txt_cantidad.Text = txt_cantidad.Text.Replace(" ", string.Empty);
+            txt_valor_del_libro.Text = txt_valor_del_libro.Text.Replace(" ", string.Empty);
+
             if (txt_isbn.Text.Equals("") || txt_codigo.Text.Equals("") || txt_nombre.Text.Equals("") || txt_precio.Text.Equals(""))
             {
                 MessageBox.Show("Ingresar todos los parametros");
@@ -474,21 +494,25 @@ namespace Proyecto_Warescape
 
             private void txt_isbn_KeyPress(object sender, KeyPressEventArgs e)
         {
+            
             solo_numeros(e);
         }
 
         private void txt_codigo_KeyPress(object sender, KeyPressEventArgs e)
         {
+            
             solo_numeros(e);
         }
 
         private void txt_precio_KeyPress(object sender, KeyPressEventArgs e)
         {
+            
             solo_numeros(e);
         }
 
         private void txt_stock_KeyPress(object sender, KeyPressEventArgs e)
         {
+            
             solo_numeros(e);
         }
 
@@ -503,6 +527,10 @@ namespace Proyecto_Warescape
 
         private void Cmb_genero_KeyPress(object sender, KeyPressEventArgs e)
         {
+            if(char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
             solo_numeros(e);
             solo_letras(e);
            
@@ -643,6 +671,7 @@ namespace Proyecto_Warescape
 
         private void txt_valor_del_libro_KeyPress(object sender, KeyPressEventArgs e)
         {
+            
             solo_numeros(e);
         }
 
@@ -716,7 +745,7 @@ namespace Proyecto_Warescape
 
             for (int i = 0; i < dgv_generos.Rows.Count - 1; i++)
             {
-                int id_genero = int.Parse(dgv_generos.Rows[i].Cells[1].Value.ToString());
+                int id_genero = int.Parse(dgv_generos.Rows[i].Cells[1].Value.ToString().Trim());
 
                 if (id_genero == (Cmb_genero.SelectedItem as Generos).id_genero)
                 {
@@ -752,6 +781,15 @@ namespace Proyecto_Warescape
         {
             Form devoluciones1 = new devoluciones();
             devoluciones1.Show();
+        }
+
+        private void btn_ingresar_consignacion_Click(object sender, EventArgs e)
+        {
+            txt_precio.Text = txt_precio.Text.Replace(" ", string.Empty);
+            txt_isbn.Text = txt_isbn.Text.Replace(" ", string.Empty);
+            txt_codigo.Text = txt_codigo.Text.Replace(" ", string.Empty);
+            txt_cantidad.Text = txt_cantidad.Text.Replace(" ", string.Empty);
+            txt_valor_del_libro.Text = txt_valor_del_libro.Text.Replace(" ", string.Empty);
         }
     }
     

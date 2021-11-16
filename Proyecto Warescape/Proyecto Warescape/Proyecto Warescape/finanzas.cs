@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.Text.RegularExpressions;
+using System.Linq;
 
 namespace Proyecto_Warescape
 {
@@ -114,7 +116,10 @@ namespace Proyecto_Warescape
 
         private void button5_Click(object sender, EventArgs e)
         {
-           
+            
+            txt_boleta.Text = txt_boleta.Text.Replace(" ", string.Empty);
+            txt_cantidad.Text = txt_cantidad.Text.Replace(" ", string.Empty);
+            txt_precio.Text = txt_precio.Text.Replace(" ", string.Empty);
             if (txt_boleta.Text.Equals("") || txt_precio.Text.Equals("") || txt_cantidad.Text.Equals("") || cmb_libros.Text.Equals(""))
             {
                 MessageBox.Show("Ingresar todos los parametros");
@@ -145,19 +150,25 @@ namespace Proyecto_Warescape
 
         private void Registrar_ventra_Click(object sender, EventArgs e)
         {
+            
+
             if (dgv_lista.Rows.Count == 1)
             {
                 MessageBox.Show("Agrege una venta");
             }
             else
             {
-                for(int i=0; i<dgv_lista.Rows.Count - 1; i++)
+                for (int i = 0; i < dgv_lista.Rows.Count - 1; i++)
                 {
-                    if (dgv_lista.Rows[i].Cells[0].Value.ToString().Trim().Equals(""))
+
+
+
+                    if (dgv_lista.Rows[i].Cells[0].Value.ToString().Trim().Equals("") || dgv_lista.Rows[i].Cells[2].Value.ToString().Trim().Equals("") || dgv_lista.Rows[i].Cells[3].Value.ToString().Trim().Equals(""))
                     {
                         MessageBox.Show("Tienes que ingresar numeros en campo");
                         break;
                     }
+                    
                     int n_de_boleta = int.Parse(dgv_lista.Rows[i].Cells[0].Value.ToString().Trim());
                     string fecha = dgv_lista.Rows[i].Cells[1].Value.ToString();
                     float precio = int.Parse(dgv_lista.Rows[i].Cells[2].Value.ToString().Trim());
@@ -337,16 +348,18 @@ namespace Proyecto_Warescape
 
         private void txt_boleta_KeyPress(object sender, KeyPressEventArgs e)
         {
+            
             solo_numeros(e);
         }
 
         private void txt_precio_KeyPress(object sender, KeyPressEventArgs e)
         {
+            
             solo_numeros(e);
         }
-
         private void txt_cantidad_KeyPress(object sender, KeyPressEventArgs e)
         {
+            
             solo_numeros(e);
         }
 

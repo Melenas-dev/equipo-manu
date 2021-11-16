@@ -375,3 +375,4 @@ C:\Users\manue\Documents\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\
 C:\Users\manue\Documents\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.graficas.resources
 C:\Users\manue\Documents\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.devoluciones.resources
 C:\Users\Juan\Documents\equipo-manu\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.devoluciones.resources
+C:\Users\ezequ\OneDrive\Documentos\were\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.devoluciones.resources

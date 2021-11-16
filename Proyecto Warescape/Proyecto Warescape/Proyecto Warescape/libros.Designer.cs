@@ -150,7 +150,7 @@ namespace Proyecto_Warescape
             // 
             this.Cmb_genero.DisplayMember = "descripcion";
             this.Cmb_genero.FormattingEnabled = true;
-            this.Cmb_genero.Location = new System.Drawing.Point(493, 186);
+            this.Cmb_genero.Location = new System.Drawing.Point(491, 186);
             this.Cmb_genero.Name = "Cmb_genero";
             this.Cmb_genero.Size = new System.Drawing.Size(137, 21);
             this.Cmb_genero.TabIndex = 18;
@@ -236,7 +236,7 @@ namespace Proyecto_Warescape
             // 
             // txt_cantidad
             // 
-            this.txt_cantidad.Location = new System.Drawing.Point(493, 282);
+            this.txt_cantidad.Location = new System.Drawing.Point(493, 287);
             this.txt_cantidad.Name = "txt_cantidad";
             this.txt_cantidad.Size = new System.Drawing.Size(135, 20);
             this.txt_cantidad.TabIndex = 10;
@@ -300,7 +300,7 @@ namespace Proyecto_Warescape
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F);
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(487, 251);
+            this.label4.Location = new System.Drawing.Point(489, 257);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(82, 24);
             this.label4.TabIndex = 3;
@@ -632,6 +632,7 @@ namespace Proyecto_Warescape
             this.btn_ingresar_consignacion.TabIndex = 53;
             this.btn_ingresar_consignacion.Text = "Ingresar consignacion";
             this.btn_ingresar_consignacion.UseVisualStyleBackColor = false;
+            this.btn_ingresar_consignacion.Click += new System.EventHandler(this.btn_ingresar_consignacion_Click);
             // 
             // VentanasPrincipal
             // 
