@@ -371,3 +371,6 @@ C:\Users\ezequ\OneDrive\Documentos\were\Proyecto Warescape\Proyecto Warescape\Pr
 C:\Users\ezequ\OneDrive\Documentos\were\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto Warescape.csproj.CoreCompileInputs.cache
 C:\Users\ezequ\OneDrive\Documentos\were\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto Warescape.exe
 C:\Users\ezequ\OneDrive\Documentos\were\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto Warescape.pdb
+C:\Users\manue\Documents\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.estadisticas_mensuales.resources
+C:\Users\manue\Documents\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.graficas.resources
+C:\Users\manue\Documents\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.devoluciones.resources

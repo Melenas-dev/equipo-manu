@@ -42,7 +42,7 @@ namespace Proyecto_Warescape
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            chartpublicidades.Series["Publicitado"].Points.Clear();
             // select id_publicidad,count(id_publicidad) from se_registran group by id_publicidad;
 
             con.Open();

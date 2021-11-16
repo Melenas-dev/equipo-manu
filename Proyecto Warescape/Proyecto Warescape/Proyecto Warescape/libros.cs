@@ -100,14 +100,15 @@ namespace Proyecto_Warescape
         
         private void ingresar_libro(object sender, EventArgs e)
         {
-            lbl_id_de_libro.Text = "";
-            con.Open();
+            
+           
             if (txt_isbn.Text.Equals("") || txt_codigo.Text.Equals("") || txt_nombre.Text.Equals("") || txt_precio.Text.Equals("") || txt_cantidad.Text.Equals("") || Cmb_genero.Text.Equals("") || cmb_editorial.Text.Equals("") || cmb_boleta.Text.Equals("") ||cmb_tipo_de_operacion.Text.Equals("") || txt_valor_del_libro.Text.Equals("") || txt_autor.Text.Equals("")) 
             {
                 MessageBox.Show("Ingresar todos los parametros");
             }
             else
             {
+                con.Open();
                 MySqlCommand comparar_boleta = new MySqlCommand("select n_de_operacion from compras_y_consignaciones where n_de_operacion="+int.Parse(cmb_boleta.Text)+";", con);
                 MySqlDataReader reader_boleta = comparar_boleta.ExecuteReader();
                 string c = "";
@@ -205,7 +206,18 @@ namespace Proyecto_Warescape
                         ingresar_stock.ExecuteNonQuery();
                         con.Close();
                     }
-
+                    actualizar_dgv_libros();
+                    txt_isbn.Text = "";
+                    txt_codigo.Text = "";
+                    txt_nombre.Text = "";
+                    txt_precio.Text = "";
+                    txt_cantidad.Text = "";
+                    Cmb_genero.Text = "";
+                    txt_valor_del_libro.Text = "";
+                    cmb_boleta.Text = "";
+                    cmb_tipo_de_operacion.Text = "";
+                    cmb_editorial.Text = "";
+                    dgv_generos.Rows.Clear();
 
                 }
                 else
@@ -288,13 +300,14 @@ namespace Proyecto_Warescape
 
         private void button7_Click(object sender, EventArgs e)
         {
-            con.Open();          
+                      
             if (lbl_id_de_libro.Text.Equals(""))
             {
                 MessageBox.Show("Selecione un libro para borrar");
             }
             else
             {
+                con.Open();
                 DialogResult resul = MessageBox.Show("Seguro que quiere eliminar el libro?", "Eliminar Registro", MessageBoxButtons.YesNo);
                 if (resul == DialogResult.Yes)
                 {
@@ -733,6 +746,12 @@ namespace Proyecto_Warescape
         private void cmb_editorial_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = true;
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            Form devoluciones1 = new devoluciones();
+            devoluciones1.Show();
         }
     }
     

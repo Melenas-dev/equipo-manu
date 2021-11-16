@@ -124,6 +124,13 @@
     <value>True</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAC0AAAAdCAIAAACxAnJgAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        xAAADsQBlSsOGwAAAEFJREFUWEft0aENwDAQBMG08f0XmpCALLEUZksz+MBKd80edJSO0lE6SkfpqJM7
+        7qV39JNfSkfpKB2lo3SUjq+ZB6eBmVcUuoE9AAAAAElFTkSuQmCC
+</value>
+  </data>
   <data name="BtnCerrar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAC0AAAAdCAIAAACxAnJgAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
@@ -145,13 +152,6 @@
         xAAADsQBlSsOGwAAAGVJREFUWEft0DsOwCAMBNFcw/c/aBLFLhiJFN58RLGvAkwxsMUa3EHuIHeQO0jv
         2G/UuOlRR60Gv3Zcz57IUd7pEjtqNXAHuYPOw1T7ppf/QyZ2TNVYonR8wR3kDnIHuYPW6Ig4AMme9633
         lfRFAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAC0AAAAdCAIAAACxAnJgAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        xAAADsQBlSsOGwAAAEFJREFUWEft0aENwDAQBMG08f0XmpCALLEUZksz+MBKd80edJSO0lE6SkfpqJM7
-        7qV39JNfSkfpKB2lo3SUjq+ZB6eBmVcUuoE9AAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

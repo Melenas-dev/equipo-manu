@@ -33,14 +33,14 @@ namespace Proyecto_Warescape
             this.label1 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.BtnCerrar = new System.Windows.Forms.PictureBox();
             this.Nombre = new System.Windows.Forms.Label();
             this.txt_nombre = new System.Windows.Forms.TextBox();
             this.btn_guardar_editorial = new System.Windows.Forms.Button();
             this.dgv_generos = new System.Windows.Forms.DataGridView();
+            this.BtnCerrar = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.BtnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_generos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BtnCerrar)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -78,20 +78,6 @@ namespace Proyecto_Warescape
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(693, 27);
             this.panel1.TabIndex = 30;
-            // 
-            // BtnCerrar
-            // 
-            this.BtnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnCerrar.BackColor = System.Drawing.Color.Transparent;
-            this.BtnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("BtnCerrar.Image")));
-            this.BtnCerrar.Location = new System.Drawing.Point(650, 3);
-            this.BtnCerrar.Name = "BtnCerrar";
-            this.BtnCerrar.Size = new System.Drawing.Size(40, 27);
-            this.BtnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.BtnCerrar.TabIndex = 27;
-            this.BtnCerrar.TabStop = false;
-            this.BtnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
             // 
             // Nombre
             // 
@@ -137,6 +123,20 @@ namespace Proyecto_Warescape
             this.dgv_generos.TabIndex = 27;
             this.dgv_generos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_generos_CellClick);
             // 
+            // BtnCerrar
+            // 
+            this.BtnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnCerrar.BackColor = System.Drawing.Color.Transparent;
+            this.BtnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("BtnCerrar.Image")));
+            this.BtnCerrar.Location = new System.Drawing.Point(650, 3);
+            this.BtnCerrar.Name = "BtnCerrar";
+            this.BtnCerrar.Size = new System.Drawing.Size(40, 27);
+            this.BtnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.BtnCerrar.TabIndex = 27;
+            this.BtnCerrar.TabStop = false;
+            this.BtnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
+            // 
             // agregargenero
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -157,8 +157,8 @@ namespace Proyecto_Warescape
             this.Text = "agregargenero";
             this.Load += new System.EventHandler(this.agregargenero_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.BtnCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_generos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BtnCerrar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

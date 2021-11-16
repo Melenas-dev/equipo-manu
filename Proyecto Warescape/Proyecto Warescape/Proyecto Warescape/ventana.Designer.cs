@@ -38,6 +38,7 @@ namespace Proyecto_Warescape
             this.button4 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.btnminimizar = new System.Windows.Forms.PictureBox();
             this.btnmaximizar = new System.Windows.Forms.PictureBox();
             this.BtnCerrar = new System.Windows.Forms.PictureBox();
             this.btnRestaurar = new System.Windows.Forms.PictureBox();
@@ -46,14 +47,13 @@ namespace Proyecto_Warescape
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.btnminimizar = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnminimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnmaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnminimizar)).BeginInit();
             this.SuspendLayout();
             // 
             // panel5
@@ -197,6 +197,20 @@ namespace Proyecto_Warescape
             this.panel7.TabIndex = 0;
             this.panel7.Paint += new System.Windows.Forms.PaintEventHandler(this.panel7_Paint);
             // 
+            // btnminimizar
+            // 
+            this.btnminimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnminimizar.BackColor = System.Drawing.Color.Transparent;
+            this.btnminimizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnminimizar.Image = ((System.Drawing.Image)(resources.GetObject("btnminimizar.Image")));
+            this.btnminimizar.Location = new System.Drawing.Point(941, 3);
+            this.btnminimizar.Name = "btnminimizar";
+            this.btnminimizar.Size = new System.Drawing.Size(42, 27);
+            this.btnminimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnminimizar.TabIndex = 8;
+            this.btnminimizar.TabStop = false;
+            this.btnminimizar.Click += new System.EventHandler(this.pictureBox2_Click_1);
+            // 
             // btnmaximizar
             // 
             this.btnmaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -307,20 +321,6 @@ namespace Proyecto_Warescape
             this.panel4.Size = new System.Drawing.Size(13, 53);
             this.panel4.TabIndex = 25;
             // 
-            // btnminimizar
-            // 
-            this.btnminimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnminimizar.BackColor = System.Drawing.Color.Transparent;
-            this.btnminimizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnminimizar.Image = ((System.Drawing.Image)(resources.GetObject("btnminimizar.Image")));
-            this.btnminimizar.Location = new System.Drawing.Point(941, 3);
-            this.btnminimizar.Name = "btnminimizar";
-            this.btnminimizar.Size = new System.Drawing.Size(42, 27);
-            this.btnminimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnminimizar.TabIndex = 8;
-            this.btnminimizar.TabStop = false;
-            this.btnminimizar.Click += new System.EventHandler(this.pictureBox2_Click_1);
-            // 
             // ventana
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -348,10 +348,10 @@ namespace Proyecto_Warescape
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnminimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnmaximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnminimizar)).EndInit();
             this.ResumeLayout(false);
 
         }

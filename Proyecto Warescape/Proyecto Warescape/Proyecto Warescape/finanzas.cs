@@ -153,23 +153,28 @@ namespace Proyecto_Warescape
             {
                 for(int i=0; i<dgv_lista.Rows.Count - 1; i++)
                 {
-                    int n_de_boleta = int.Parse(dgv_lista.Rows[i].Cells[0].Value.ToString());
+                    if (dgv_lista.Rows[i].Cells[0].Value.ToString().Trim().Equals(""))
+                    {
+                        MessageBox.Show("Tienes que ingresar numeros en campo");
+                        break;
+                    }
+                    int n_de_boleta = int.Parse(dgv_lista.Rows[i].Cells[0].Value.ToString().Trim());
                     string fecha = dgv_lista.Rows[i].Cells[1].Value.ToString();
-                    float precio = int.Parse(dgv_lista.Rows[i].Cells[2].Value.ToString());
-                    int cantidad_comprada = int.Parse(dgv_lista.Rows[i].Cells[3].Value.ToString());
-                    string libro = dgv_lista.Rows[i].Cells[4].Value.ToString();
+                    float precio = int.Parse(dgv_lista.Rows[i].Cells[2].Value.ToString().Trim());
+                    int cantidad_comprada = int.Parse(dgv_lista.Rows[i].Cells[3].Value.ToString().Trim());
+                    string libro = dgv_lista.Rows[i].Cells[4].Value.ToString().Trim();
                     string viene="";
                     string id_publi = "";
                     
-                    if (dgv_lista.Rows[i].Cells[5].Value == DBNull.Value)
+                    if (dgv_lista.Rows[i].Cells[5].Value != DBNull.Value)
                     {
-                        viene = Convert.ToString(dgv_lista.Rows[i].Cells[5].Value);
-                         id_publi = dgv_lista.Rows[i].Cells[5].Value.ToString().Split('-').Last();
+                        viene = Convert.ToString(dgv_lista.Rows[i].Cells[5].Value).Trim();
+                         id_publi = dgv_lista.Rows[i].Cells[5].Value.ToString().Split('-').Last().Trim();
                         
                     }
                    
                    
-                    string id_libro = dgv_lista.Rows[i].Cells[4].Value.ToString().Split('-').Last();  
+                    string id_libro = dgv_lista.Rows[i].Cells[4].Value.ToString().Split('-').Last().Trim();  
 
 
 
