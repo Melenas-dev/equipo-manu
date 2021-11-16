@@ -249,6 +249,8 @@ namespace Proyecto_Warescape
                         MySqlCommand cambiar_monto = new MySqlCommand(monto_cambiar, con);
                         cambiar_monto.ExecuteNonQuery();
                         con.Close();
+
+
                     }
                     else
                     {

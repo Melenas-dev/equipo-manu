@@ -40,7 +40,7 @@ namespace Proyecto_Warescape.Services
             con.Close();
         }
 
-        public static void actualizar_stock(MySqlConnection con,int id_libro, int cantidad)
+        public static void actualizar_stock_agregar(MySqlConnection con,int id_libro, int cantidad)
         {
             con.Open();
             MySqlCommand comparar_stock = new MySqlCommand("select stock from libros where  id_libro= " + id_libro + ";", con);
@@ -57,6 +57,22 @@ namespace Proyecto_Warescape.Services
             ingresar_stock.ExecuteNonQuery();
             con.Close();
         }
-
+        public static void actualizar_stock_quitar(MySqlConnection con, int id_libro, int cantidad)
+        {
+            con.Open();
+            MySqlCommand comparar_stock = new MySqlCommand("select stock from libros where  id_libro= " + id_libro + ";", con);
+            MySqlDataReader reader_stock = comparar_stock.ExecuteReader();
+            string f = "";
+            while (reader_stock.Read())
+            {
+                f = reader_stock["stock"].ToString();
+            }
+            con.Close();
+            con.Open();
+            int stock_atualizar = int.Parse(f) + cantidad;
+            MySqlCommand ingresar_stock = new MySqlCommand("UPDATE libros SET stock=" + stock_atualizar + " where id_libro=" + id_libro + "  ", con);
+            ingresar_stock.ExecuteNonQuery();
+            con.Close();
+        }
     }
 }
