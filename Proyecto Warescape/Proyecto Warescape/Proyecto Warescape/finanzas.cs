@@ -250,7 +250,7 @@ namespace Proyecto_Warescape
                         cambiar_monto.ExecuteNonQuery();
                         con.Close();
 
-
+                        Services.LibrosService.actualizar_stock_quitar(con,int.Parse(id_libro),cantidad_comprada);
                     }
                     else
                     {

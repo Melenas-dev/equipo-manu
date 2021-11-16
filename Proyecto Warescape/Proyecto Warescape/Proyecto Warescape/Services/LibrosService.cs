@@ -57,6 +57,7 @@ namespace Proyecto_Warescape.Services
             ingresar_stock.ExecuteNonQuery();
             con.Close();
         }
+
         public static void actualizar_stock_quitar(MySqlConnection con, int id_libro, int cantidad)
         {
             con.Open();
@@ -69,7 +70,7 @@ namespace Proyecto_Warescape.Services
             }
             con.Close();
             con.Open();
-            int stock_atualizar = int.Parse(f) + cantidad;
+            int stock_atualizar = int.Parse(f) - cantidad;
             MySqlCommand ingresar_stock = new MySqlCommand("UPDATE libros SET stock=" + stock_atualizar + " where id_libro=" + id_libro + "  ", con);
             ingresar_stock.ExecuteNonQuery();
             con.Close();

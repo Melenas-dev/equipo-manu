@@ -772,13 +772,13 @@ namespace Proyecto_Warescape
                     if (cmb_tipo_de_operacion.Text.Equals("Compra"))
                     {
                         Services.LibrosService.agregar_lcc_compra(con, int.Parse(cmb_boleta.Text), int.Parse(lbl_id_de_libro.Text), int.Parse(txt_cantidad.Text), int.Parse(txt_valor_del_libro.Text));
-                        Services.LibrosService.actualizar_stock(con, int.Parse(lbl_id_de_libro.Text), int.Parse(txt_cantidad.Text));
+                        Services.LibrosService.actualizar_stock_agregar(con, int.Parse(lbl_id_de_libro.Text), int.Parse(txt_cantidad.Text));
 
                     }
                     if (cmb_tipo_de_operacion.Text.Equals("Consignacion"))
                     {
                         Services.LibrosService.agregar_lcc_consignacion(con, int.Parse(cmb_boleta.Text), int.Parse(lbl_id_de_libro.Text), int.Parse(txt_cantidad.Text), int.Parse(txt_valor_del_libro.Text));
-                        Services.LibrosService.actualizar_stock(con, int.Parse(lbl_id_de_libro.Text), int.Parse(txt_cantidad.Text));
+                        Services.LibrosService.actualizar_stock_agregar(con, int.Parse(lbl_id_de_libro.Text), int.Parse(txt_cantidad.Text));
 
                     }
                     actualizar_dgv_libros();
