@@ -69,18 +69,10 @@ namespace Proyecto_Warescape
             this.button1 = new System.Windows.Forms.Button();
             this.label15 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.BtnCerrar = new System.Windows.Forms.PictureBox();
-            this.btnmaximizar = new System.Windows.Forms.PictureBox();
-            this.btnRestaurar = new System.Windows.Forms.PictureBox();
             this.label17 = new System.Windows.Forms.Label();
             this.btn_ingresar_consignacion = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_generos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_libros)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BtnCerrar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnmaximizar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).BeginInit();
             this.SuspendLayout();
             // 
             // label9
@@ -513,7 +505,7 @@ namespace Proyecto_Warescape
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(933, 70);
+            this.button1.Location = new System.Drawing.Point(949, 41);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(124, 35);
             this.button1.TabIndex = 47;
@@ -549,62 +541,6 @@ namespace Proyecto_Warescape
             this.button4.Text = "Devoluciones";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click_1);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(945, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(42, 30);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 49;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_2);
-            // 
-            // BtnCerrar
-            // 
-            this.BtnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnCerrar.BackColor = System.Drawing.Color.Transparent;
-            this.BtnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("BtnCerrar.Image")));
-            this.BtnCerrar.Location = new System.Drawing.Point(1041, 2);
-            this.BtnCerrar.Name = "BtnCerrar";
-            this.BtnCerrar.Size = new System.Drawing.Size(42, 30);
-            this.BtnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.BtnCerrar.TabIndex = 26;
-            this.BtnCerrar.TabStop = false;
-            this.BtnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
-            // 
-            // btnmaximizar
-            // 
-            this.btnmaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnmaximizar.BackColor = System.Drawing.Color.Transparent;
-            this.btnmaximizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnmaximizar.Image = ((System.Drawing.Image)(resources.GetObject("btnmaximizar.Image")));
-            this.btnmaximizar.Location = new System.Drawing.Point(993, 2);
-            this.btnmaximizar.Name = "btnmaximizar";
-            this.btnmaximizar.Size = new System.Drawing.Size(42, 30);
-            this.btnmaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnmaximizar.TabIndex = 27;
-            this.btnmaximizar.TabStop = false;
-            this.btnmaximizar.Click += new System.EventHandler(this.btnmaximizar_Click);
-            // 
-            // btnRestaurar
-            // 
-            this.btnRestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRestaurar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRestaurar.Image = ((System.Drawing.Image)(resources.GetObject("btnRestaurar.Image")));
-            this.btnRestaurar.Location = new System.Drawing.Point(993, 2);
-            this.btnRestaurar.Name = "btnRestaurar";
-            this.btnRestaurar.Size = new System.Drawing.Size(42, 30);
-            this.btnRestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnRestaurar.TabIndex = 28;
-            this.btnRestaurar.TabStop = false;
-            this.btnRestaurar.Visible = false;
-            this.btnRestaurar.Click += new System.EventHandler(this.btnRestaurar_Click_1);
             // 
             // label17
             // 
@@ -644,7 +580,6 @@ namespace Proyecto_Warescape
             this.Controls.Add(this.btn_ingresar_consignacion);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label13);
@@ -661,9 +596,6 @@ namespace Proyecto_Warescape
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txt_autor);
-            this.Controls.Add(this.BtnCerrar);
-            this.Controls.Add(this.btnmaximizar);
-            this.Controls.Add(this.btnRestaurar);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
@@ -695,10 +627,6 @@ namespace Proyecto_Warescape
             this.Load += new System.EventHandler(this.VentanasPrincipal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_generos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_libros)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BtnCerrar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnmaximizar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -727,9 +655,6 @@ namespace Proyecto_Warescape
         private System.Windows.Forms.DataGridView dgv_generos;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre_genero;
         private System.Windows.Forms.DataGridViewTextBoxColumn id_genero;
-        private System.Windows.Forms.PictureBox BtnCerrar;
-        private System.Windows.Forms.PictureBox btnmaximizar;
-        private System.Windows.Forms.PictureBox btnRestaurar;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txt_autor;
         private System.Windows.Forms.Button button2;
@@ -746,7 +671,6 @@ namespace Proyecto_Warescape
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Button btn_ingresar_consignacion;

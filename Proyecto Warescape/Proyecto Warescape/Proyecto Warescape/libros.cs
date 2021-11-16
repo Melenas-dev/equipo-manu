@@ -543,16 +543,12 @@ namespace Proyecto_Warescape
 
         private void btnmaximizar_Click(object sender, EventArgs e)
         {
-            WindowState = FormWindowState.Maximized;
-            btnmaximizar.Visible = false;
-            btnRestaurar.Visible = true;
+            
         }
 
         private void btnRestaurar_Click_1(object sender, EventArgs e)
         {
-            WindowState = FormWindowState.Normal;
-            btnRestaurar.Visible = false;
-            btnmaximizar.Visible = true;
+            
         }
 
         private void txt_devoluciones_KeyPress(object sender, KeyPressEventArgs e)

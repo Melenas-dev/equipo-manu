@@ -134,7 +134,10 @@ namespace Proyecto_Warescape
                     con.Close();
                     Services.LibrosService.actualizar_stock_agregar(con, int.Parse(lbl_id_libro.Text), int.Parse(lbl_cantidad.Text));
                     actualizar_devoluciones();
-
+                    lbl_cantidad.Text = "";
+                    lbl_id_devoluciones.Text = "";
+                    lbl_id_libro.Text = "";
+                    lbl_nombre.Text = "";
                 }
             }
         }

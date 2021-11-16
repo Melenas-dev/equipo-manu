@@ -172,13 +172,14 @@ namespace Proyecto_Warescape
                     int n_de_boleta = int.Parse(dgv_lista.Rows[i].Cells[0].Value.ToString().Trim());
                     string fecha = dgv_lista.Rows[i].Cells[1].Value.ToString();
                     float precio = int.Parse(dgv_lista.Rows[i].Cells[2].Value.ToString().Trim());
-                    int cantidad_comprada = int.Parse(dgv_lista.Rows[i].Cells[3].Value.ToString().Trim());
+                    int cantidad_vendida = int.Parse(dgv_lista.Rows[i].Cells[3].Value.ToString().Trim());
                     string libro = dgv_lista.Rows[i].Cells[4].Value.ToString().Trim();
                     string viene="";
                     string id_publi = "";
                     
-                    if (dgv_lista.Rows[i].Cells[5].Value != DBNull.Value)
+                    if (dgv_lista.Rows[i].Cells[5].Value != null)
                     {
+
                         viene = Convert.ToString(dgv_lista.Rows[i].Cells[5].Value).Trim();
                          id_publi = dgv_lista.Rows[i].Cells[5].Value.ToString().Split('-').Last().Trim();
                         
@@ -216,7 +217,7 @@ namespace Proyecto_Warescape
 
                         con.Open();
 
-                        string ingresar_generan = "INSERT INTO generan values(" + n_de_boleta + ","+int.Parse(id_libro)+","+cantidad_comprada+","+precio+")";
+                        string ingresar_generan = "INSERT INTO generan values(" + n_de_boleta + ","+int.Parse(id_libro)+","+cantidad_vendida+","+precio+")";
                         MySqlCommand query_genera = new MySqlCommand(ingresar_generan, con);
                         query_genera.ExecuteNonQuery();
                         con.Close();
@@ -231,10 +232,10 @@ namespace Proyecto_Warescape
                             
                         }con.Close();
                         con.Open();
-                        string extraer_monto = "SELECT monto from ventas where =" + n_de_boleta + "; ";
+                        string extraer_monto = "SELECT monto from ventas where  n_de_boleta=" + n_de_boleta.ToString() + "; ";
                         MySqlCommand query_extraer = new MySqlCommand(extraer_monto, con);
                         MySqlDataReader monto = query_extraer.ExecuteReader();
-                        con.Close();
+                        
                         string b = "";
 
                         while (monto.Read())
@@ -242,25 +243,28 @@ namespace Proyecto_Warescape
                              b = monto["monto"].ToString();
 
                         }
+                        con.Close();
                         con.Open();
+                        precio = precio * cantidad_vendida;
                         float cuenta = precio + float.Parse(b);
-                        string monto_cambiar = "UPDATE from ventas set monto =" + cuenta + " where n_de_boleta =" + n_de_boleta + ";";
+                        string monto_cambiar = "UPDATE ventas set monto =" + cuenta + " where n_de_boleta =" + n_de_boleta + ";";
 
                         MySqlCommand cambiar_monto = new MySqlCommand(monto_cambiar, con);
                         cambiar_monto.ExecuteNonQuery();
                         con.Close();
 
-                        Services.LibrosService.actualizar_stock_quitar(con,int.Parse(id_libro),cantidad_comprada);
+                        Services.LibrosService.actualizar_stock_quitar(con,int.Parse(id_libro),cantidad_vendida);
                     }
                     else
                     {
                         con.Open();
-                        string ingresar_venta = "INSERT INTO ventas values("+n_de_boleta+ ",'" + fecha + "'," + precio+");";
+                        float monto = precio * cantidad_vendida;
+                        string ingresar_venta = "INSERT INTO ventas values("+n_de_boleta+ ",'" + fecha + "'," + monto+");";
                         MySqlCommand query_ingersar_venta = new MySqlCommand(ingresar_venta, con);
                         query_ingersar_venta.ExecuteNonQuery();
                         con.Close();
                         con.Open();
-                        string ingresar_generan = "INSERT INTO generan values(" + n_de_boleta + "," + int.Parse(id_libro) + "," + cantidad_comprada + "," + precio + ")";
+                        string ingresar_generan = "INSERT INTO generan values(" + n_de_boleta + "," + int.Parse(id_libro) + "," + cantidad_vendida+ "," + precio + ")";
                         MySqlCommand query_genera = new MySqlCommand(ingresar_generan, con);
                         query_genera.ExecuteNonQuery();
                         con.Close();
@@ -371,7 +375,7 @@ namespace Proyecto_Warescape
         }
         public void actualizar_ventas()
         {
-            string Mostrar_ventas = "select v.n_de_boleta 'N de boleta         ', v.fecha_de_venta 'Fecha', v.monto 'Monto', g.precio 'Precio', g.cantidad_comprada 'Cantidad comprada', l.nombre 'Nombre' from ventas v join generan g on v.n_de_boleta=g.n_de_boleta join libros l on l.id_libro=g.id_libro;";
+            string Mostrar_ventas = "select v.n_de_boleta 'N de boleta         ', v.fecha_de_venta 'Fecha', v.monto 'Monto', g.precio 'Precio', g.cantidad_vendida 'Cantidad comprada', l.nombre 'Nombre' from ventas v join generan g on v.n_de_boleta=g.n_de_boleta join libros l on l.id_libro=g.id_libro;";
             MySqlCommand mostrar = new MySqlCommand(Mostrar_ventas, con);
             MySqlDataAdapter adaptador = new MySqlDataAdapter();
             adaptador.SelectCommand = mostrar;
@@ -421,9 +425,7 @@ namespace Proyecto_Warescape
 
         private void btnmaximizar_Click(object sender, EventArgs e)
         {
-            WindowState = FormWindowState.Maximized;
-            btnmaximizar.Visible = false;
-            btnRestaurar.Visible = true;
+            
         }
 
         private void button1_Click_2(object sender, EventArgs e)
@@ -435,9 +437,6 @@ namespace Proyecto_Warescape
         private void btnRestaurar_Click(object sender, EventArgs e)
         {
     
-            WindowState = FormWindowState.Normal;
-            btnRestaurar.Visible = false;
-            btnmaximizar.Visible = true;
 
         }
 

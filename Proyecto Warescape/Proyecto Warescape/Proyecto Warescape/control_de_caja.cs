@@ -73,7 +73,7 @@ namespace Proyecto_Warescape
             else
             {
                 DataTable tabla = new DataTable();
-                string comand = "select * from ventas where year(fecha_de_venta)=" + tb_año.Text + " and month(fecha_de_venta)=" + cmb_mes.SelectedItem.ToString() + "; ";
+                string comand = "select v.n_de_boleta 'N de boleta         ', v.fecha_de_venta 'Fecha', v.monto 'Monto', g.precio 'Precio', g.cantidad_vendida 'Cantidad comprada', l.nombre 'Nombre' from ventas v join generan g on v.n_de_boleta=g.n_de_boleta join libros l on l.id_libro=g.id_libro where year(fecha_de_venta)=" + tb_año.Text + " and month(fecha_de_venta)=" + cmb_mes.SelectedItem.ToString() + "; ";
                 con.Open();
                 MySqlDataAdapter comando_ventas = new MySqlDataAdapter(comand, con);
                 comando_ventas.Fill(tabla);
@@ -138,7 +138,7 @@ namespace Proyecto_Warescape
 
         private void BtnCerrar_Click_1(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
         }
     }
 }

@@ -29,14 +29,9 @@ namespace Proyecto_Warescape
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(marketing));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbl5 = new System.Windows.Forms.Label();
             this.lbl_id_publicidad = new System.Windows.Forms.Label();
-            this.BtnCerrar = new System.Windows.Forms.PictureBox();
-            this.btnmaximizar = new System.Windows.Forms.PictureBox();
-            this.btnRestaurar = new System.Windows.Forms.PictureBox();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -49,10 +44,6 @@ namespace Proyecto_Warescape
             this.txt_monto = new System.Windows.Forms.TextBox();
             this.txt_rut = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BtnCerrar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnmaximizar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_publicidades)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,12 +51,8 @@ namespace Proyecto_Warescape
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkGray;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.lbl5);
             this.panel1.Controls.Add(this.lbl_id_publicidad);
-            this.panel1.Controls.Add(this.BtnCerrar);
-            this.panel1.Controls.Add(this.btnmaximizar);
-            this.panel1.Controls.Add(this.btnRestaurar);
             this.panel1.Controls.Add(this.button7);
             this.panel1.Controls.Add(this.button6);
             this.panel1.Controls.Add(this.button5);
@@ -82,20 +69,6 @@ namespace Proyecto_Warescape
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1104, 698);
             this.panel1.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(963, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(42, 30);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 25;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // lbl5
             // 
@@ -119,48 +92,6 @@ namespace Proyecto_Warescape
             this.lbl_id_publicidad.Name = "lbl_id_publicidad";
             this.lbl_id_publicidad.Size = new System.Drawing.Size(0, 24);
             this.lbl_id_publicidad.TabIndex = 23;
-            // 
-            // BtnCerrar
-            // 
-            this.BtnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnCerrar.BackColor = System.Drawing.Color.Transparent;
-            this.BtnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("BtnCerrar.Image")));
-            this.BtnCerrar.Location = new System.Drawing.Point(1059, 3);
-            this.BtnCerrar.Name = "BtnCerrar";
-            this.BtnCerrar.Size = new System.Drawing.Size(42, 30);
-            this.BtnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.BtnCerrar.TabIndex = 20;
-            this.BtnCerrar.TabStop = false;
-            this.BtnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click_1);
-            // 
-            // btnmaximizar
-            // 
-            this.btnmaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnmaximizar.BackColor = System.Drawing.Color.Transparent;
-            this.btnmaximizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnmaximizar.Image = ((System.Drawing.Image)(resources.GetObject("btnmaximizar.Image")));
-            this.btnmaximizar.Location = new System.Drawing.Point(1011, 3);
-            this.btnmaximizar.Name = "btnmaximizar";
-            this.btnmaximizar.Size = new System.Drawing.Size(42, 30);
-            this.btnmaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnmaximizar.TabIndex = 21;
-            this.btnmaximizar.TabStop = false;
-            this.btnmaximizar.Click += new System.EventHandler(this.btnmaximizar_Click_1);
-            // 
-            // btnRestaurar
-            // 
-            this.btnRestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRestaurar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRestaurar.Image = ((System.Drawing.Image)(resources.GetObject("btnRestaurar.Image")));
-            this.btnRestaurar.Location = new System.Drawing.Point(1011, 3);
-            this.btnRestaurar.Name = "btnRestaurar";
-            this.btnRestaurar.Size = new System.Drawing.Size(42, 30);
-            this.btnRestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnRestaurar.TabIndex = 22;
-            this.btnRestaurar.TabStop = false;
-            this.btnRestaurar.Visible = false;
-            this.btnRestaurar.Click += new System.EventHandler(this.btnRestaurar_Click_1);
             // 
             // button7
             // 
@@ -297,7 +228,7 @@ namespace Proyecto_Warescape
             this.txt_rut.Name = "txt_rut";
             this.txt_rut.Size = new System.Drawing.Size(91, 20);
             this.txt_rut.TabIndex = 8;
-            this.txt_rut.TextChanged += new System.EventHandler(this.txt_rut_TextChanged);
+           
             this.txt_rut.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_rut_KeyPress);
             // 
             // marketing
@@ -315,10 +246,6 @@ namespace Proyecto_Warescape
             this.Load += new System.EventHandler(this.marketing_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BtnCerrar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnmaximizar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_publicidades)).EndInit();
             this.ResumeLayout(false);
 
@@ -339,10 +266,6 @@ namespace Proyecto_Warescape
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Label lbl5;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox BtnCerrar;
-        private System.Windows.Forms.PictureBox btnmaximizar;
-        private System.Windows.Forms.PictureBox btnRestaurar;
         private System.Windows.Forms.Label lbl_id_publicidad;
     }
 }

@@ -37,7 +37,7 @@ namespace Proyecto_Warescape
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
+            this.pnl_cerrar = new System.Windows.Forms.Panel();
             this.btnminimizar = new System.Windows.Forms.PictureBox();
             this.btnmaximizar = new System.Windows.Forms.PictureBox();
             this.BtnCerrar = new System.Windows.Forms.PictureBox();
@@ -48,8 +48,7 @@ namespace Proyecto_Warescape
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel1.SuspendLayout();
-            this.panel7.SuspendLayout();
+            this.pnl_cerrar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnminimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnmaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnCerrar)).BeginInit();
@@ -98,7 +97,7 @@ namespace Proyecto_Warescape
             this.button1.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button1.Location = new System.Drawing.Point(12, 114);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(198, 53);
+            this.button1.Size = new System.Drawing.Size(207, 53);
             this.button1.TabIndex = 27;
             this.button1.Text = "           Libros";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -162,7 +161,7 @@ namespace Proyecto_Warescape
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button4.Location = new System.Drawing.Point(12, 401);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(198, 53);
+            this.button4.Size = new System.Drawing.Size(207, 53);
             this.button4.TabIndex = 30;
             this.button4.Text = "    Marketing";
             this.button4.UseVisualStyleBackColor = false;
@@ -174,29 +173,28 @@ namespace Proyecto_Warescape
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.LightGray;
-            this.panel1.Controls.Add(this.panel7);
-            this.panel1.Location = new System.Drawing.Point(216, -1);
+            this.panel1.Location = new System.Drawing.Point(216, 30);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1085, 698);
+            this.panel1.Size = new System.Drawing.Size(1084, 714);
             this.panel1.TabIndex = 31;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // panel7
+            // pnl_cerrar
             // 
-            this.panel7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.pnl_cerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel7.BackColor = System.Drawing.Color.Transparent;
-            this.panel7.Controls.Add(this.btnminimizar);
-            this.panel7.Controls.Add(this.btnmaximizar);
-            this.panel7.Controls.Add(this.BtnCerrar);
-            this.panel7.Controls.Add(this.btnRestaurar);
-            this.panel7.Location = new System.Drawing.Point(3, 0);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1082, 44);
-            this.panel7.TabIndex = 0;
-            this.panel7.Paint += new System.Windows.Forms.PaintEventHandler(this.panel7_Paint);
-            this.panel7.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel7_MouseDown);
+            this.pnl_cerrar.BackColor = System.Drawing.Color.LightGray;
+            this.pnl_cerrar.Controls.Add(this.btnminimizar);
+            this.pnl_cerrar.Controls.Add(this.btnmaximizar);
+            this.pnl_cerrar.Controls.Add(this.BtnCerrar);
+            this.pnl_cerrar.Controls.Add(this.btnRestaurar);
+            this.pnl_cerrar.Location = new System.Drawing.Point(216, -1);
+            this.pnl_cerrar.Name = "pnl_cerrar";
+            this.pnl_cerrar.Size = new System.Drawing.Size(1084, 34);
+            this.pnl_cerrar.TabIndex = 0;
+            this.pnl_cerrar.Paint += new System.Windows.Forms.PaintEventHandler(this.panel7_Paint);
+            this.pnl_cerrar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel7_MouseDown);
             // 
             // btnminimizar
             // 
@@ -204,7 +202,7 @@ namespace Proyecto_Warescape
             this.btnminimizar.BackColor = System.Drawing.Color.Transparent;
             this.btnminimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnminimizar.Image = ((System.Drawing.Image)(resources.GetObject("btnminimizar.Image")));
-            this.btnminimizar.Location = new System.Drawing.Point(941, 3);
+            this.btnminimizar.Location = new System.Drawing.Point(943, 3);
             this.btnminimizar.Name = "btnminimizar";
             this.btnminimizar.Size = new System.Drawing.Size(42, 27);
             this.btnminimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -218,7 +216,7 @@ namespace Proyecto_Warescape
             this.btnmaximizar.BackColor = System.Drawing.Color.Transparent;
             this.btnmaximizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnmaximizar.Image = ((System.Drawing.Image)(resources.GetObject("btnmaximizar.Image")));
-            this.btnmaximizar.Location = new System.Drawing.Point(989, 3);
+            this.btnmaximizar.Location = new System.Drawing.Point(991, 3);
             this.btnmaximizar.Name = "btnmaximizar";
             this.btnmaximizar.Size = new System.Drawing.Size(42, 27);
             this.btnmaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -232,7 +230,7 @@ namespace Proyecto_Warescape
             this.BtnCerrar.BackColor = System.Drawing.Color.Transparent;
             this.BtnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("BtnCerrar.Image")));
-            this.BtnCerrar.Location = new System.Drawing.Point(1037, 3);
+            this.BtnCerrar.Location = new System.Drawing.Point(1039, 3);
             this.BtnCerrar.Name = "BtnCerrar";
             this.BtnCerrar.Size = new System.Drawing.Size(42, 27);
             this.BtnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -245,7 +243,7 @@ namespace Proyecto_Warescape
             this.btnRestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRestaurar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRestaurar.Image = ((System.Drawing.Image)(resources.GetObject("btnRestaurar.Image")));
-            this.btnRestaurar.Location = new System.Drawing.Point(989, 3);
+            this.btnRestaurar.Location = new System.Drawing.Point(991, 3);
             this.btnRestaurar.Name = "btnRestaurar";
             this.btnRestaurar.Size = new System.Drawing.Size(42, 27);
             this.btnRestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -262,7 +260,7 @@ namespace Proyecto_Warescape
             this.panel6.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel6.Location = new System.Drawing.Point(210, -1);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(10, 714);
+            this.panel6.Size = new System.Drawing.Size(10, 758);
             this.panel6.TabIndex = 0;
             // 
             // button5
@@ -278,10 +276,10 @@ namespace Proyecto_Warescape
             this.button5.ForeColor = System.Drawing.Color.White;
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(12, 653);
+            this.button5.Location = new System.Drawing.Point(0, 651);
             this.button5.Name = "button5";
             this.button5.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.button5.Size = new System.Drawing.Size(175, 35);
+            this.button5.Size = new System.Drawing.Size(207, 53);
             this.button5.TabIndex = 32;
             this.button5.Text = "Cerrar sesion";
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -327,13 +325,14 @@ namespace Proyecto_Warescape
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
-            this.ClientSize = new System.Drawing.Size(1300, 700);
+            this.ClientSize = new System.Drawing.Size(1300, 744);
+            this.Controls.Add(this.pnl_cerrar);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.panel6);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -342,13 +341,12 @@ namespace Proyecto_Warescape
             this.Controls.Add(this.panel5);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ventana";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ventanas";
             this.Load += new System.EventHandler(this.ventana_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Ventana_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel7.ResumeLayout(false);
+            this.pnl_cerrar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnminimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnmaximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnCerrar)).EndInit();
@@ -367,7 +365,7 @@ namespace Proyecto_Warescape
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel pnl_cerrar;
         private System.Windows.Forms.PictureBox BtnCerrar;
         private System.Windows.Forms.PictureBox btnmaximizar;
         private System.Windows.Forms.PictureBox btnRestaurar;

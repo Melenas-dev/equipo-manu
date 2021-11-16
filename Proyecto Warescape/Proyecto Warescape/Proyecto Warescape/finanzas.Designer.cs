@@ -29,7 +29,6 @@ namespace Proyecto_Warescape
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(finanzas));
             this.txt_boleta = new System.Windows.Forms.TextBox();
             this.txt_precio = new System.Windows.Forms.TextBox();
             this.txt_cantidad = new System.Windows.Forms.TextBox();
@@ -54,18 +53,10 @@ namespace Proyecto_Warescape
             this.dgv_ventas = new System.Windows.Forms.DataGridView();
             this.Borrar = new System.Windows.Forms.Button();
             this.lbl_n_de_boleta = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.btnmaximizar = new System.Windows.Forms.PictureBox();
-            this.btnRestaurar = new System.Windows.Forms.PictureBox();
-            this.BtnCerrar = new System.Windows.Forms.PictureBox();
             this.btn_control_caja = new System.Windows.Forms.Button();
             this.btn_estadisticas = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_lista)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ventas)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnmaximizar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BtnCerrar)).BeginInit();
             this.SuspendLayout();
             // 
             // txt_boleta
@@ -122,11 +113,11 @@ namespace Proyecto_Warescape
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F);
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(33, 141);
+            this.label3.Location = new System.Drawing.Point(21, 141);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 24);
+            this.label3.Size = new System.Drawing.Size(94, 24);
             this.label3.TabIndex = 16;
-            this.label3.Text = "Precio";
+            this.label3.Text = "Precio c/u";
             // 
             // label4
             // 
@@ -219,7 +210,7 @@ namespace Proyecto_Warescape
             this.cmb_libros.FormattingEnabled = true;
             this.cmb_libros.Location = new System.Drawing.Point(22, 236);
             this.cmb_libros.Name = "cmb_libros";
-            this.cmb_libros.Size = new System.Drawing.Size(114, 21);
+            this.cmb_libros.Size = new System.Drawing.Size(93, 21);
             this.cmb_libros.TabIndex = 48;
             this.cmb_libros.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmb_libros_KeyPress);
             // 
@@ -281,7 +272,7 @@ namespace Proyecto_Warescape
             this.dgv_ventas.Name = "dgv_ventas";
             this.dgv_ventas.ReadOnly = true;
             this.dgv_ventas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_ventas.Size = new System.Drawing.Size(884, 295);
+            this.dgv_ventas.Size = new System.Drawing.Size(836, 295);
             this.dgv_ventas.TabIndex = 53;
             this.dgv_ventas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_ventas_CellClick);
             // 
@@ -310,61 +301,6 @@ namespace Proyecto_Warescape
             this.lbl_n_de_boleta.TabIndex = 55;
             this.lbl_n_de_boleta.Visible = false;
             // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(944, 2);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(42, 30);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 59;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
-            // 
-            // btnmaximizar
-            // 
-            this.btnmaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnmaximizar.BackColor = System.Drawing.Color.Transparent;
-            this.btnmaximizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnmaximizar.Image = ((System.Drawing.Image)(resources.GetObject("btnmaximizar.Image")));
-            this.btnmaximizar.Location = new System.Drawing.Point(992, 2);
-            this.btnmaximizar.Name = "btnmaximizar";
-            this.btnmaximizar.Size = new System.Drawing.Size(42, 30);
-            this.btnmaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnmaximizar.TabIndex = 57;
-            this.btnmaximizar.TabStop = false;
-            this.btnmaximizar.Click += new System.EventHandler(this.btnmaximizar_Click);
-            // 
-            // btnRestaurar
-            // 
-            this.btnRestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRestaurar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRestaurar.Image = ((System.Drawing.Image)(resources.GetObject("btnRestaurar.Image")));
-            this.btnRestaurar.Location = new System.Drawing.Point(992, 2);
-            this.btnRestaurar.Name = "btnRestaurar";
-            this.btnRestaurar.Size = new System.Drawing.Size(42, 30);
-            this.btnRestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnRestaurar.TabIndex = 58;
-            this.btnRestaurar.TabStop = false;
-            this.btnRestaurar.Visible = false;
-            this.btnRestaurar.Click += new System.EventHandler(this.btnRestaurar_Click);
-            // 
-            // BtnCerrar
-            // 
-            this.BtnCerrar.BackColor = System.Drawing.Color.Transparent;
-            this.BtnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("BtnCerrar.Image")));
-            this.BtnCerrar.Location = new System.Drawing.Point(1040, 2);
-            this.BtnCerrar.Name = "BtnCerrar";
-            this.BtnCerrar.Size = new System.Drawing.Size(42, 30);
-            this.BtnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.BtnCerrar.TabIndex = 1;
-            this.BtnCerrar.TabStop = false;
-            this.BtnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
-            // 
             // btn_control_caja
             // 
             this.btn_control_caja.BackColor = System.Drawing.Color.Transparent;
@@ -373,9 +309,9 @@ namespace Proyecto_Warescape
             this.btn_control_caja.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_control_caja.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_control_caja.ForeColor = System.Drawing.Color.White;
-            this.btn_control_caja.Location = new System.Drawing.Point(902, 651);
+            this.btn_control_caja.Location = new System.Drawing.Point(854, 602);
             this.btn_control_caja.Name = "btn_control_caja";
-            this.btn_control_caja.Size = new System.Drawing.Size(171, 35);
+            this.btn_control_caja.Size = new System.Drawing.Size(219, 35);
             this.btn_control_caja.TabIndex = 61;
             this.btn_control_caja.Text = "Control de caja";
             this.btn_control_caja.UseVisualStyleBackColor = false;
@@ -389,7 +325,7 @@ namespace Proyecto_Warescape
             this.btn_estadisticas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_estadisticas.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_estadisticas.ForeColor = System.Drawing.Color.White;
-            this.btn_estadisticas.Location = new System.Drawing.Point(22, 17);
+            this.btn_estadisticas.Location = new System.Drawing.Point(854, 549);
             this.btn_estadisticas.Name = "btn_estadisticas";
             this.btn_estadisticas.Size = new System.Drawing.Size(219, 35);
             this.btn_estadisticas.TabIndex = 62;
@@ -406,9 +342,6 @@ namespace Proyecto_Warescape
             this.ClientSize = new System.Drawing.Size(1085, 698);
             this.Controls.Add(this.btn_estadisticas);
             this.Controls.Add(this.btn_control_caja);
-            this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.btnmaximizar);
-            this.Controls.Add(this.btnRestaurar);
             this.Controls.Add(this.lbl_n_de_boleta);
             this.Controls.Add(this.Borrar);
             this.Controls.Add(this.dgv_ventas);
@@ -427,7 +360,6 @@ namespace Proyecto_Warescape
             this.Controls.Add(this.txt_cantidad);
             this.Controls.Add(this.txt_precio);
             this.Controls.Add(this.txt_boleta);
-            this.Controls.Add(this.BtnCerrar);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "finanzas";
@@ -436,17 +368,12 @@ namespace Proyecto_Warescape
             this.Load += new System.EventHandler(this.finanzas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_lista)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ventas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnmaximizar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BtnCerrar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.PictureBox BtnCerrar;
         private System.Windows.Forms.TextBox txt_boleta;
         private System.Windows.Forms.TextBox txt_precio;
         private System.Windows.Forms.TextBox txt_cantidad;
@@ -471,9 +398,6 @@ namespace Proyecto_Warescape
         private System.Windows.Forms.DataGridView dgv_ventas;
         private System.Windows.Forms.Button Borrar;
         private System.Windows.Forms.Label lbl_n_de_boleta;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox btnmaximizar;
-        private System.Windows.Forms.PictureBox btnRestaurar;
         private System.Windows.Forms.Button btn_control_caja;
         private System.Windows.Forms.Button btn_estadisticas;
     }

@@ -171,10 +171,7 @@ namespace Proyecto_Warescape
             }
         }
 
-        private void txt_rut_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void txt_rut_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -238,9 +235,7 @@ namespace Proyecto_Warescape
 
         private void btnRestaurar_Click_1(object sender, EventArgs e)
         {
-            WindowState = FormWindowState.Normal;
-            btnRestaurar.Visible = false;
-            btnmaximizar.Visible = true;
+            ;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -250,9 +245,7 @@ namespace Proyecto_Warescape
 
         private void btnmaximizar_Click_1(object sender, EventArgs e)
         {
-            WindowState = FormWindowState.Maximized;
-            btnmaximizar.Visible = false;
-            btnRestaurar.Visible = true;
+           
 
         }
 

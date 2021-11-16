@@ -66,9 +66,9 @@ namespace Proyecto_Warescape
                     lbl_titulo_promedio.Text = "Promedio de ganancias por editorial";
                 }
                 con.Open();
-                MySqlCommand obtener_precio = new MySqlCommand("SELECT IFNULL(SUM(precio), 0) as precio, COUNT(precio) FROM generan g JOIN ventas v ON g.n_de_boleta = v.n_de_boleta" +
-                    " LEFT JOIN devoluciones d ON d.id_libro = g.id_libro where month(fecha_de_venta)='" + cmb_mes.Text + "' and year(fecha_de_venta)=" +
-                    "'" + cmb_año.Text + "' and (d.id_ed=" + editorial_seleccionada + " or " + editorial_seleccionada + " = -1);", con);
+                MySqlCommand obtener_precio = new MySqlCommand("SELECT IFNULL(SUM(g.precio), 0) as precio, IFNULL(sum(cantidad_vendida), 0)'Cantidad' FROM generan g JOIN ventas v ON g.n_de_boleta = v.n_de_boleta" +
+                    " JOIN libros l on l.id_libro=g.id_libro join lcc as lc on lc.id_libro = l.id_libro JOIN compras_y_consignaciones c on lc.n_de_operacion = c.n_de_operacion JOIN editoriales e on e.id_ed=c.id_ed where month(fecha_de_venta)='" + cmb_mes.Text + "' and year(fecha_de_venta)=" +
+                    "'" + cmb_año.Text + "' and (c.id_ed=" + editorial_seleccionada + " or " + editorial_seleccionada + " = -1);", con);
                 MySqlDataReader obtencion_del_precio = obtener_precio.ExecuteReader();
 
                 float precio = 0;
@@ -78,7 +78,9 @@ namespace Proyecto_Warescape
                 while (obtencion_del_precio.Read())
                 {
                     precio = float.Parse(obtencion_del_precio["precio"].ToString());
-                    cantidad = float.Parse(obtencion_del_precio["count(precio)"].ToString());
+                    MessageBox.Show(obtencion_del_precio["precio"].ToString());
+                    MessageBox.Show(obtencion_del_precio["Cantidad"].ToString());
+                    cantidad = float.Parse(obtencion_del_precio["Cantidad"].ToString());
                     promedio = precio / cantidad;
                     if (double.IsNaN(promedio))
                     {

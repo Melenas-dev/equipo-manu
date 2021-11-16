@@ -56,22 +56,26 @@ namespace Proyecto_Warescape
         private void button1_Click_1(object sender, EventArgs e)
         {
             AbrirFormInPanel(new VentanasPrincipal());
+            pnl_cerrar.BackColor = Color.DarkGray;
+
         }
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            AbrirFormInPanel(new finanzas()); 
-        
+            AbrirFormInPanel(new finanzas());
+            pnl_cerrar.BackColor = Color.DarkGray;
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             AbrirFormInPanel(new graficas());
+            pnl_cerrar.BackColor = Color.DarkGray;
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             AbrirFormInPanel(new marketing());
+            pnl_cerrar.BackColor = Color.DarkGray;
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
