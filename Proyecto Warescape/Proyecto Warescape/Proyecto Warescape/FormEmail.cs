@@ -244,7 +244,7 @@ namespace Proyecto_Warescape
 
         private void pnl_cambiar_pass_Paint_1(object sender, PaintEventArgs e)
         {
-            int a = 0;
+            
         }
 
         private void label3_Click(object sender, EventArgs e)

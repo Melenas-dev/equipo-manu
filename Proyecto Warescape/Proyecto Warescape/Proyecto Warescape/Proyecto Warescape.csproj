@@ -136,6 +136,7 @@
     <Compile Include="editoriales.Designer.cs">
       <DependentUpon>editoriales.cs</DependentUpon>
     </Compile>
+    <Compile Include="EditorialesClase.cs" />
     <Compile Include="Email.cs" />
     <Compile Include="estadisticas_mensuales.cs">
       <SubType>Form</SubType>

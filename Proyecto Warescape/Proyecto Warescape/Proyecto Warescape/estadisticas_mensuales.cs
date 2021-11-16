@@ -30,6 +30,19 @@ namespace Proyecto_Warescape
                 cmb_año.Items.Add(reader["year(fecha_de_venta)"]);
             }
             con.Close();
+
+            con.Open();
+            MySqlCommand obtener_editoriales = new MySqlCommand("select * from editoriales;", con);
+            MySqlDataReader reader2 = obtener_editoriales.ExecuteReader();
+            while (reader2.Read())
+            {
+                EditorialesClase ed = new EditorialesClase();
+                ed.nombre = reader2["nombre"].ToString();
+                ed.id_ed = int.Parse(reader2["id_ed"].ToString());
+
+                cmb_editoriales.Items.Add(ed);
+            }
+            con.Close();
         }
 
         private void lbl_libros_vendidos_Click(object sender, EventArgs e)
@@ -39,11 +52,23 @@ namespace Proyecto_Warescape
 
         private void btn_cargar_datos_Click(object sender, EventArgs e)
         {
-            if (cmb_mes.Text.Equals("1"))
+            if (!cmb_mes.Text.Equals("") || !cmb_año.Text.Equals(""))
             {
+                // LA TERNERA ANASHE
+                String editorial_seleccionada = cmb_editoriales.SelectedItem == null ? "-1" : (cmb_editoriales.SelectedItem as EditorialesClase).id_ed.ToString();
+                Console.WriteLine(editorial_seleccionada);
+                if (cmb_editoriales.Text.Equals(""))
+                {
+                    lbl_titulo_promedio.Text = "Promedio de ganancia mensual en total";
+                }
+                else
+                {
+                    lbl_titulo_promedio.Text = "Promedio de ganancias por editorial";
+                }
                 con.Open();
-                MySqlCommand obtener_precio = new MySqlCommand("select sum(precio), count(precio) from generan g join ventas v where month(fecha_de_venta)='" + cmb_mes.Text + "' and year(fecha_de_venta)=" +
-                    "'" + cmb_año.Text + "' ;", con);
+                MySqlCommand obtener_precio = new MySqlCommand("SELECT IFNULL(SUM(precio), 0) as precio, COUNT(precio) FROM generan g JOIN ventas v ON g.n_de_boleta = v.n_de_boleta" +
+                    " LEFT JOIN devoluciones d ON d.id_libro = g.id_libro where month(fecha_de_venta)='" + cmb_mes.Text + "' and year(fecha_de_venta)=" +
+                    "'" + cmb_año.Text + "' and (d.id_ed=" + editorial_seleccionada + " or " + editorial_seleccionada + " = -1);", con);
                 MySqlDataReader obtencion_del_precio = obtener_precio.ExecuteReader();
 
                 float precio = 0;
@@ -52,18 +77,28 @@ namespace Proyecto_Warescape
 
                 while (obtencion_del_precio.Read())
                 {
-                    precio = float.Parse(obtencion_del_precio["sum(precio)"].ToString());
+                    precio = float.Parse(obtencion_del_precio["precio"].ToString());
                     cantidad = float.Parse(obtencion_del_precio["count(precio)"].ToString());
                     promedio = precio / cantidad;
-                    MessageBox.Show((promedio).ToString());
+                    if (double.IsNaN(promedio))
+                    {
+                        lbl_promedio_total.Text = "0";
+                    }
+                    else
+                    {
+                        lbl_promedio_total.Text = promedio.ToString();
+                    }
                 }
 
                 /*
-                MySqlCommand obtener_editoriales = new MySqlCommand("select id_ed from editoriales where nombre='" + cmb_editoriales.Text + "';", con);
+                MySqlCommand obtener_editoriales = new MySqlCommand("select id_ed from editoriales where nombre='" + editorial_seleccionada + "';", con);
                 MySqlDataReader reader2 = obtener_editoriales.ExecuteReader();
                 */
                 con.Close();
-                lbl_promedio_total.Text = (1).ToString();
+            }
+            else
+            {
+                MessageBox.Show("Mes y año deben estar ingresados para continuar", "Error");
             }
         }
 
