@@ -196,6 +196,7 @@ namespace Proyecto_Warescape
             this.panel7.Size = new System.Drawing.Size(1082, 44);
             this.panel7.TabIndex = 0;
             this.panel7.Paint += new System.Windows.Forms.PaintEventHandler(this.panel7_Paint);
+            this.panel7.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel7_MouseDown);
             // 
             // btnminimizar
             // 
