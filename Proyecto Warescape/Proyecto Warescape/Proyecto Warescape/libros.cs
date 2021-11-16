@@ -61,6 +61,10 @@ namespace Proyecto_Warescape
             }
             con.Close();
 
+
+
+            actualizar_cmb_buscar();
+                        
         }
 
        
@@ -172,19 +176,19 @@ namespace Proyecto_Warescape
                         Ingreso.ExecuteNonQuery();
                         id_libro_valor = Ingreso.LastInsertedId.ToString();
                         con.Close();
-                        Services.LibrosService.agregar_lcc_compra(con, int.Parse(cmb_boleta.Text), int.Parse(lbl_id_de_libro.Text), int.Parse(txt_cantidad.Text), int.Parse(txt_valor_del_libro.Text));
+                        Services.LibrosService.agregar_lcc_compra(con, int.Parse(cmb_boleta.Text), int.Parse(id_libro_valor), int.Parse(txt_cantidad.Text), int.Parse(txt_valor_del_libro.Text));
 
                         }
                     if (cmb_tipo_de_operacion.Text.Equals("Consignacion"))
                     {
                         con.Open();
-                        string ingreso = "insert into libros(isbn, codigo, precio, stock, nombre, autor) values(" + int.Parse(txt_isbn.Text) + "," + int.Parse(txt_codigo.Text) + "," + decimal.Parse(txt_precio.Text) + "," + int.Parse(txt_cantidad.Text) + ",'" + txt_nombre.Text + "','" + txt_autor.Text + "');";
+                        string ingreso = "insert into libros(isbn, codigo, precio, stock, nombre, autor) values(" + float.Parse(txt_isbn.Text) + "," + int.Parse(txt_codigo.Text) + "," + decimal.Parse(txt_precio.Text) + "," + int.Parse(txt_cantidad.Text) + ",'" + txt_nombre.Text + "','" + txt_autor.Text + "');";
                         MySqlCommand Ingreso = new MySqlCommand(ingreso, con);
                         Ingreso.ExecuteNonQuery();
                         id_libro_valor = Ingreso.LastInsertedId.ToString();
                         con.Close();
-                        Services.LibrosService.agregar_lcc_consignacion(con, int.Parse(cmb_boleta.Text), int.Parse(lbl_id_de_libro.Text), int.Parse(txt_cantidad.Text), int.Parse(txt_valor_del_libro.Text)); ;
-                        }
+                            Services.LibrosService.agregar_lcc_consignacion(con, int.Parse(cmb_boleta.Text), int.Parse(id_libro_valor), int.Parse(txt_cantidad.Text), int.Parse(txt_valor_del_libro.Text));
+                    }
                     
                     int id_libro;
                     if (lbl_id_de_libro.Text.Equals(""))
@@ -210,6 +214,8 @@ namespace Proyecto_Warescape
                     }
 
                     actualizar_dgv_libros();
+                    cmb_buscar_libro.Items.Clear();
+                    actualizar_cmb_buscar();
                     txt_isbn.Text = "";
                     txt_codigo.Text = "";
                     txt_nombre.Text = "";
@@ -249,6 +255,7 @@ namespace Proyecto_Warescape
                 if (resul == DialogResult.Yes)
                 {
                     Services.LibrosService.eliminarLibro(con, int.Parse(lbl_id_de_libro.Text));
+                    actualizar_cmb_buscar();
                     actualizar_dgv_libros();
                     txt_isbn.Text = "";
                     txt_codigo.Text = "";
@@ -264,6 +271,7 @@ namespace Proyecto_Warescape
                     lbl_id_de_libro.Text = "";
                     dgv_generos.Rows.Clear();
                 }
+                con.Close();
             }
             con.Close();
 
@@ -309,7 +317,7 @@ namespace Proyecto_Warescape
 
                 }
 
-
+                    actualizar_cmb_buscar();
                     actualizar_dgv_libros();
                     txt_isbn.Text = "";
                     txt_codigo.Text = "";
@@ -381,6 +389,31 @@ namespace Proyecto_Warescape
             adaptador.Fill(tabla);
             dgv_libros.DataSource = tabla;
             
+        }
+
+        public void actualizar_cmb_buscar()
+        {
+            con.Close();
+            con.Open();
+            MySqlCommand Libros = new MySqlCommand("SELECT id_libro,nombre from libros;", con);
+            MySqlDataReader leer_libros = Libros.ExecuteReader();
+            AutoCompleteStringCollection text = new AutoCompleteStringCollection();
+            while (leer_libros.Read())
+            {
+
+                string id_libro = leer_libros["id_libro"].ToString();
+                string nombre = leer_libros["nombre"].ToString();
+
+                cmb_buscar_libro.Items.Add(nombre + "-" + id_libro);
+                text.Add(nombre + "-" + id_libro);
+
+            }
+            con.Close();
+            
+            cmb_buscar_libro.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            cmb_buscar_libro.AutoCompleteSource = AutoCompleteSource.CustomSource;
+
+            cmb_buscar_libro.AutoCompleteCustomSource = text;
         }
         public void solo_numeros(KeyPressEventArgs e)
         {
@@ -813,6 +846,26 @@ namespace Proyecto_Warescape
         private void label10_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_buscar_Click(object sender, EventArgs e)
+        {
+            if (!cmb_buscar_libro.Text.Trim().Equals(""))
+            {
+                con.Open();
+                int id_libro = int.Parse(cmb_buscar_libro.Text.Split('-').Last().Trim());
+                string buscar_libro = "SELECT l.*, e.nombre Editorial, ( SELECT g.descripcion FROM tienen t JOIN generos g ON g.id_genero = t.id_genero " +
+                    " WHERE t.id_libro = l.id_libro LIMIT 1 ) 'Primer genero del libro' FROM libros l JOIN lcc as lc on lc.id_libro = l.id_libro JOIN compras_y_consignaciones c on lc.n_de_operacion = c.n_de_operacion JOIN editoriales e on e.id_ed=c.id_ed where l.id_libro=" + id_libro + ";";
+                MySqlDataAdapter mostrar_libro = new MySqlDataAdapter(buscar_libro,con);
+                DataTable tabla = new DataTable();
+                mostrar_libro.Fill(tabla);
+                dgv_libros.DataSource = tabla;
+                con.Close();
+            }
+            else
+            {
+                MessageBox.Show("Ingrese un libro para buscar");
+            }
         }
     }
     

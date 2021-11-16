@@ -71,6 +71,9 @@ namespace Proyecto_Warescape
             this.button4 = new System.Windows.Forms.Button();
             this.label17 = new System.Windows.Forms.Label();
             this.btn_ingresar_consignacion = new System.Windows.Forms.Button();
+            this.btn_buscar = new System.Windows.Forms.Button();
+            this.lbl_buscar = new System.Windows.Forms.Label();
+            this.cmb_buscar_libro = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_generos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_libros)).BeginInit();
             this.SuspendLayout();
@@ -364,9 +367,9 @@ namespace Proyecto_Warescape
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(933, 653);
+            this.button2.Location = new System.Drawing.Point(921, 653);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(140, 35);
+            this.button2.Size = new System.Drawing.Size(152, 35);
             this.button2.TabIndex = 33;
             this.button2.Text = "Generos";
             this.button2.UseVisualStyleBackColor = false;
@@ -380,9 +383,9 @@ namespace Proyecto_Warescape
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(933, 612);
+            this.button3.Location = new System.Drawing.Point(921, 612);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(140, 35);
+            this.button3.Size = new System.Drawing.Size(152, 35);
             this.button3.TabIndex = 34;
             this.button3.Text = "Editoriales";
             this.button3.UseVisualStyleBackColor = false;
@@ -536,9 +539,9 @@ namespace Proyecto_Warescape
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(933, 571);
+            this.button4.Location = new System.Drawing.Point(921, 571);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(140, 35);
+            this.button4.Size = new System.Drawing.Size(152, 35);
             this.button4.TabIndex = 50;
             this.button4.Text = "Devoluciones";
             this.button4.UseVisualStyleBackColor = false;
@@ -573,6 +576,42 @@ namespace Proyecto_Warescape
             this.btn_ingresar_consignacion.UseVisualStyleBackColor = false;
             this.btn_ingresar_consignacion.Click += new System.EventHandler(this.btn_ingresar_consignacion_Click);
             // 
+            // btn_buscar
+            // 
+            this.btn_buscar.BackColor = System.Drawing.Color.Transparent;
+            this.btn_buscar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_buscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btn_buscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_buscar.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_buscar.ForeColor = System.Drawing.Color.White;
+            this.btn_buscar.Location = new System.Drawing.Point(921, 475);
+            this.btn_buscar.Name = "btn_buscar";
+            this.btn_buscar.Size = new System.Drawing.Size(152, 35);
+            this.btn_buscar.TabIndex = 54;
+            this.btn_buscar.Text = "Buscar";
+            this.btn_buscar.UseVisualStyleBackColor = false;
+            this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
+            // 
+            // lbl_buscar
+            // 
+            this.lbl_buscar.AutoSize = true;
+            this.lbl_buscar.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_buscar.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F);
+            this.lbl_buscar.ForeColor = System.Drawing.Color.White;
+            this.lbl_buscar.Location = new System.Drawing.Point(915, 395);
+            this.lbl_buscar.Name = "lbl_buscar";
+            this.lbl_buscar.Size = new System.Drawing.Size(161, 48);
+            this.lbl_buscar.TabIndex = 56;
+            this.lbl_buscar.Text = "Ingrese Libro para \r\nBuscar";
+            // 
+            // cmb_buscar_libro
+            // 
+            this.cmb_buscar_libro.FormattingEnabled = true;
+            this.cmb_buscar_libro.Location = new System.Drawing.Point(921, 448);
+            this.cmb_buscar_libro.Name = "cmb_buscar_libro";
+            this.cmb_buscar_libro.Size = new System.Drawing.Size(152, 21);
+            this.cmb_buscar_libro.TabIndex = 57;
+            // 
             // VentanasPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -580,6 +619,9 @@ namespace Proyecto_Warescape
             this.BackColor = System.Drawing.Color.DarkGray;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1085, 698);
+            this.Controls.Add(this.cmb_buscar_libro);
+            this.Controls.Add(this.lbl_buscar);
+            this.Controls.Add(this.btn_buscar);
             this.Controls.Add(this.btn_ingresar_consignacion);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.button4);
@@ -677,5 +719,8 @@ namespace Proyecto_Warescape
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Button btn_ingresar_consignacion;
+        private System.Windows.Forms.Button btn_buscar;
+        private System.Windows.Forms.Label lbl_buscar;
+        private System.Windows.Forms.ComboBox cmb_buscar_libro;
     }
 }

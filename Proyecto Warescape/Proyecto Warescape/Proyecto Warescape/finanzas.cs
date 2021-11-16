@@ -382,6 +382,7 @@ namespace Proyecto_Warescape
             DataTable tabla = new DataTable();
             adaptador.Fill(tabla);
             dgv_ventas.DataSource = tabla;
+            con.Close();
         }
 
         private void Borrar_Click(object sender, EventArgs e)
