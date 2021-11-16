@@ -33,10 +33,10 @@ namespace Proyecto_Warescape
             this.label1 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.BtnCerrar = new System.Windows.Forms.PictureBox();
             this.Nombre = new System.Windows.Forms.Label();
             this.btn_guardar_editorial = new System.Windows.Forms.Button();
             this.dgv_devoluciones = new System.Windows.Forms.DataGridView();
-            this.BtnCerrar = new System.Windows.Forms.PictureBox();
             this.cmb_libros = new System.Windows.Forms.ComboBox();
             this.txt_cantidad = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -46,9 +46,11 @@ namespace Proyecto_Warescape
             this.lbl_id_devoluciones = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.lbl_nombre = new System.Windows.Forms.Label();
+            this.lbl_cantidad = new System.Windows.Forms.Label();
+            this.lbl_id_libro = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_devoluciones)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnCerrar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_devoluciones)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -87,6 +89,20 @@ namespace Proyecto_Warescape
             this.panel1.Size = new System.Drawing.Size(693, 27);
             this.panel1.TabIndex = 37;
             // 
+            // BtnCerrar
+            // 
+            this.BtnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnCerrar.BackColor = System.Drawing.Color.Transparent;
+            this.BtnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("BtnCerrar.Image")));
+            this.BtnCerrar.Location = new System.Drawing.Point(650, 3);
+            this.BtnCerrar.Name = "BtnCerrar";
+            this.BtnCerrar.Size = new System.Drawing.Size(40, 27);
+            this.BtnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.BtnCerrar.TabIndex = 27;
+            this.BtnCerrar.TabStop = false;
+            this.BtnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
+            // 
             // Nombre
             // 
             this.Nombre.AutoSize = true;
@@ -123,20 +139,6 @@ namespace Proyecto_Warescape
             this.dgv_devoluciones.Size = new System.Drawing.Size(491, 339);
             this.dgv_devoluciones.TabIndex = 35;
             this.dgv_devoluciones.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_devoluciones_CellClick);
-            // 
-            // BtnCerrar
-            // 
-            this.BtnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnCerrar.BackColor = System.Drawing.Color.Transparent;
-            this.BtnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("BtnCerrar.Image")));
-            this.BtnCerrar.Location = new System.Drawing.Point(650, 3);
-            this.BtnCerrar.Name = "BtnCerrar";
-            this.BtnCerrar.Size = new System.Drawing.Size(40, 27);
-            this.BtnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.BtnCerrar.TabIndex = 27;
-            this.BtnCerrar.TabStop = false;
-            this.BtnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
             // 
             // cmb_libros
             // 
@@ -223,12 +225,34 @@ namespace Proyecto_Warescape
             this.lbl_nombre.Text = "label6";
             this.lbl_nombre.Visible = false;
             // 
+            // lbl_cantidad
+            // 
+            this.lbl_cantidad.AutoSize = true;
+            this.lbl_cantidad.Location = new System.Drawing.Point(256, 419);
+            this.lbl_cantidad.Name = "lbl_cantidad";
+            this.lbl_cantidad.Size = new System.Drawing.Size(35, 13);
+            this.lbl_cantidad.TabIndex = 51;
+            this.lbl_cantidad.Text = "label6";
+            this.lbl_cantidad.Visible = false;
+            // 
+            // lbl_id_libro
+            // 
+            this.lbl_id_libro.AutoSize = true;
+            this.lbl_id_libro.Location = new System.Drawing.Point(324, 419);
+            this.lbl_id_libro.Name = "lbl_id_libro";
+            this.lbl_id_libro.Size = new System.Drawing.Size(35, 13);
+            this.lbl_id_libro.TabIndex = 52;
+            this.lbl_id_libro.Text = "label6";
+            this.lbl_id_libro.Visible = false;
+            // 
             // devoluciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGray;
             this.ClientSize = new System.Drawing.Size(693, 450);
+            this.Controls.Add(this.lbl_id_libro);
+            this.Controls.Add(this.lbl_cantidad);
             this.Controls.Add(this.lbl_nombre);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.lbl_id_devoluciones);
@@ -250,8 +274,8 @@ namespace Proyecto_Warescape
             this.Text = "devoluciones";
             this.Load += new System.EventHandler(this.devoluciones_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_devoluciones)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnCerrar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_devoluciones)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -275,5 +299,7 @@ namespace Proyecto_Warescape
         private System.Windows.Forms.Label lbl_id_devoluciones;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lbl_nombre;
+        private System.Windows.Forms.Label lbl_cantidad;
+        private System.Windows.Forms.Label lbl_id_libro;
     }
 }

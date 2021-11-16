@@ -186,7 +186,7 @@ namespace Proyecto_Warescape
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Location = new System.Drawing.Point(559, 313);
+            this.button7.Location = new System.Drawing.Point(624, 318);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(124, 35);
             this.button7.TabIndex = 16;
@@ -202,7 +202,7 @@ namespace Proyecto_Warescape
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(396, 313);
+            this.button6.Location = new System.Drawing.Point(461, 318);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(157, 35);
             this.button6.TabIndex = 15;
@@ -626,11 +626,11 @@ namespace Proyecto_Warescape
             this.btn_ingresar_consignacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ingresar_consignacion.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_ingresar_consignacion.ForeColor = System.Drawing.Color.White;
-            this.btn_ingresar_consignacion.Location = new System.Drawing.Point(180, 313);
+            this.btn_ingresar_consignacion.Location = new System.Drawing.Point(168, 311);
             this.btn_ingresar_consignacion.Name = "btn_ingresar_consignacion";
-            this.btn_ingresar_consignacion.Size = new System.Drawing.Size(210, 35);
+            this.btn_ingresar_consignacion.Size = new System.Drawing.Size(287, 35);
             this.btn_ingresar_consignacion.TabIndex = 53;
-            this.btn_ingresar_consignacion.Text = "Ingresar consignacion";
+            this.btn_ingresar_consignacion.Text = "Ingresar consignacion o compra";
             this.btn_ingresar_consignacion.UseVisualStyleBackColor = false;
             this.btn_ingresar_consignacion.Click += new System.EventHandler(this.btn_ingresar_consignacion_Click);
             // 

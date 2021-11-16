@@ -106,7 +106,7 @@ namespace Proyecto_Warescape
         public void actualizar_devoluciones()
         {
             con.Open();
-            string devoluciones = "select l.nombre'Libro', e.nombre'Editorial', d.fecha'Fecha', d.cantidad'Cantidad', g.id_devoluciones'Nª de devolucion'   from libros l join devoluciones d on l.id_libro=d.id_libro join editoriales e on e.id_ed=d.id_ed;";
+            string devoluciones = "select l.nombre'Libro', e.nombre'Editorial', d.fecha'Fecha', d.cantidad'Cantidad', d.id_devoluciones'Nª de devolucion', d.id_libro   from libros l join devoluciones d on l.id_libro=d.id_libro join editoriales e on e.id_ed=d.id_ed;";
             MySqlCommand mostrar = new MySqlCommand(devoluciones, con);
             MySqlDataAdapter adaptador = new MySqlDataAdapter();
             adaptador.SelectCommand = mostrar;
@@ -127,6 +127,13 @@ namespace Proyecto_Warescape
                 DialogResult resul = MessageBox.Show("Seguro que quiere eliminar la devolucion "+lbl_nombre.Text+"?", "Eliminar Registro", MessageBoxButtons.YesNo);
                 if (resul == DialogResult.Yes)
                 {
+                    string eliminar_devolucion = "delete from devoluciones where id_devoluciones=" + int.Parse(lbl_id_devoluciones.Text) + ";";
+                    con.Open();
+                    MySqlCommand querry_eliminar = new MySqlCommand(eliminar_devolucion,con);
+                    querry_eliminar.ExecuteNonQuery();
+                    con.Close();
+                    Services.LibrosService.actualizar_stock(con, int.Parse(lbl_id_libro.Text), int.Parse(lbl_cantidad.Text));
+                    actualizar_devoluciones();
 
                 }
             }
@@ -135,10 +142,12 @@ namespace Proyecto_Warescape
         private void dgv_devoluciones_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int n = e.RowIndex;
-            if (n != -1 && n !=0) 
+            if (n != -1) 
             {
                 lbl_id_devoluciones.Text = dgv_devoluciones.Rows[n].Cells[4].Value.ToString(); 
                 lbl_nombre.Text = dgv_devoluciones.Rows[n].Cells[0].Value.ToString();
+                lbl_cantidad.Text= dgv_devoluciones.Rows[n].Cells[3].Value.ToString();
+                lbl_id_libro.Text = dgv_devoluciones.Rows[n].Cells[5].Value.ToString();
 
             }
         }

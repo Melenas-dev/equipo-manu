@@ -147,81 +147,10 @@ namespace Proyecto_Warescape
                     con.Close();
                 }
                 con.Open();
-                string b = "";
+                
                 if (!lbl_id_de_libro.Text.Equals(""))
                 {
-                    MySqlCommand comparar = new MySqlCommand("select id_libro from libros where id_libro=" + int.Parse(lbl_id_de_libro.Text) + ";", con);
-                    MySqlDataReader reader = comparar.ExecuteReader();
-                    string a;                   
-                    while (reader.Read())
-                    {
-                        a = reader["id_libro"].ToString();
-                        if (lbl_id_de_libro.Text.Equals(a))
-                        {
-                            b = "iguales";
-                        }
-                    }
-                }
-                con.Close();
-                if (b.Equals("iguales"))
-                {
-                    if (cmb_tipo_de_operacion.Text.Equals("Compra"))
-                    {
-                       
-                        con.Open();
-                        MySqlCommand ingresar_lcc = new MySqlCommand("insert into lcc(n_de_operacion, id_libro, cantidad_comprada, precio_comprado) value(" + int.Parse(cmb_boleta.Text) + ", " + int.Parse(lbl_id_de_libro.Text) + "," + int.Parse(txt_cantidad.Text) + "," + int.Parse(txt_valor_del_libro.Text) + ");", con);
-                        ingresar_lcc.ExecuteNonQuery();
-                        con.Close();
-                        con.Open();
-                        MySqlCommand comparar_stock = new MySqlCommand("select stock from libros where  id_libro= " + lbl_id_de_libro.Text + ";", con);
-                        MySqlDataReader reader_stock = comparar_stock.ExecuteReader();
-                        string f = "";
-                        while (reader_stock.Read())
-                        {
-                             f= reader_stock["stock"].ToString();                          
-                        }
-                        con.Close();
-                        con.Open();
-                        int stock_atualizar = int.Parse(f) + int.Parse(txt_cantidad.Text);
-                        MySqlCommand ingresar_stock = new MySqlCommand("UPDATE libros SET stock="+stock_atualizar+" where id_libro="+int.Parse(lbl_id_de_libro.Text)+"  ", con);
-                        ingresar_stock.ExecuteNonQuery();
-                        con.Close();
-                    }
-                    if (cmb_tipo_de_operacion.Text.Equals("Consignacion"))
-                    {
-                        
-                        con.Open();
-                        MySqlCommand ingresar_lcc = new MySqlCommand("insert into lcc(n_de_operacion, id_libro, cantidad_consignada, precio_consignado) value(" + int.Parse(cmb_boleta.Text) + ", " + int.Parse(lbl_id_de_libro.Text) + "," + int.Parse(txt_cantidad.Text) + "," + int.Parse(txt_valor_del_libro.Text) + ");", con);
-                        ingresar_lcc.ExecuteNonQuery();
-                        con.Close();
-                        con.Open();
-                        MySqlCommand comparar_stock = new MySqlCommand("select stock from libros where  id_libro= " + lbl_id_de_libro.Text + ";", con);
-                        MySqlDataReader reader_stock = comparar_stock.ExecuteReader();
-                        string f = "";
-                        while (reader_stock.Read())
-                        {
-                            f = reader_stock["stock"].ToString();
-                        }
-                        con.Close();
-                        con.Open();
-                        int stock_atualizar = int.Parse(f) + int.Parse(txt_cantidad.Text);
-                        MySqlCommand ingresar_stock = new MySqlCommand("UPDATE libros SET stock=" + stock_atualizar + " where id_libro=" + int.Parse(lbl_id_de_libro.Text) + "  ", con);
-                        ingresar_stock.ExecuteNonQuery();
-                        con.Close();
-                    }
-                    actualizar_dgv_libros();
-                    txt_isbn.Text = "";
-                    txt_codigo.Text = "";
-                    txt_nombre.Text = "";
-                    txt_precio.Text = "";
-                    txt_cantidad.Text = "";
-                    Cmb_genero.Text = "";
-                    txt_valor_del_libro.Text = "";
-                    cmb_boleta.Text = "";
-                    cmb_tipo_de_operacion.Text = "";
-                    cmb_editorial.Text = "";
-                    dgv_generos.Rows.Clear();
-
+                    MessageBox.Show("Tienes un libros seleccionado si quieres ingresar un libro dale al boton 'Actualizar' para que se deseleccione, en el caso de querer ingresar una consignacion o compra ingrese en el boton 'Ingresar consignacion o compra' ");
                 }
                 else
                 {
@@ -243,12 +172,9 @@ namespace Proyecto_Warescape
                         Ingreso.ExecuteNonQuery();
                         id_libro_valor = Ingreso.LastInsertedId.ToString();
                         con.Close();
-                        con.Open();
-                        MySqlCommand ingresar_lcc = new MySqlCommand("insert into lcc(n_de_operacion, id_libro, cantidad_comprada, precio_comprado) value(" + int.Parse(cmb_boleta.Text) + ", " + int.Parse(id_libro_valor) + "," + int.Parse(txt_cantidad.Text) + "," + int.Parse(txt_valor_del_libro.Text) + ")", con);
-                        ingresar_lcc.ExecuteNonQuery();
-                        con.Close();
+                        Services.LibrosService.agregar_lcc_compra(con, int.Parse(cmb_boleta.Text), int.Parse(lbl_id_de_libro.Text), int.Parse(txt_cantidad.Text), int.Parse(txt_valor_del_libro.Text));
 
-                    }
+                        }
                     if (cmb_tipo_de_operacion.Text.Equals("Consignacion"))
                     {
                         con.Open();
@@ -256,11 +182,8 @@ namespace Proyecto_Warescape
                         MySqlCommand Ingreso = new MySqlCommand(ingreso, con);
                         Ingreso.ExecuteNonQuery();
                         id_libro_valor = Ingreso.LastInsertedId.ToString();
-                        con.Close();     
-                        con.Open();
-                        MySqlCommand ingresar_lcc = new MySqlCommand("insert into lcc(n_de_operacion, id_libro, cantidad_consignada, precio_consignado) value(" + float.Parse(cmb_boleta.Text) + ", " + int.Parse(id_libro_valor) + "," + int.Parse(txt_cantidad.Text) + "," + int.Parse(txt_valor_del_libro.Text) + ");", con);
-                        ingresar_lcc.ExecuteNonQuery();
                         con.Close();
+                        Services.LibrosService.agregar_lcc_consignacion(con, int.Parse(cmb_boleta.Text), int.Parse(lbl_id_de_libro.Text), int.Parse(txt_cantidad.Text), int.Parse(txt_valor_del_libro.Text)); ;
                         }
                     
                     int id_libro;
@@ -291,6 +214,7 @@ namespace Proyecto_Warescape
                     txt_codigo.Text = "";
                     txt_nombre.Text = "";
                     txt_precio.Text = "";
+                    txt_autor.Text = "";
                     txt_cantidad.Text = "";
                     Cmb_genero.Text = "";
                     txt_valor_del_libro.Text = "";
@@ -785,11 +709,94 @@ namespace Proyecto_Warescape
 
         private void btn_ingresar_consignacion_Click(object sender, EventArgs e)
         {
+
             txt_precio.Text = txt_precio.Text.Replace(" ", string.Empty);
             txt_isbn.Text = txt_isbn.Text.Replace(" ", string.Empty);
             txt_codigo.Text = txt_codigo.Text.Replace(" ", string.Empty);
             txt_cantidad.Text = txt_cantidad.Text.Replace(" ", string.Empty);
             txt_valor_del_libro.Text = txt_valor_del_libro.Text.Replace(" ", string.Empty);
+            if (lbl_id_de_libro.Text.Equals("")) 
+            {
+                MessageBox.Show("Seleccione un libro antes de realizar una consignacion");
+                
+            }
+            else {
+                if (txt_isbn.Text.Equals("") || txt_codigo.Text.Equals("") || txt_nombre.Text.Equals("") || txt_precio.Text.Equals("") || cmb_editorial.Text.Equals("") || cmb_boleta.Text.Equals("") || cmb_tipo_de_operacion.Text.Equals("") || txt_valor_del_libro.Text.Equals("") || txt_autor.Text.Equals(""))
+                {
+                    MessageBox.Show("Ingresar todos los parametros");
+                }
+                else
+                {
+
+                    con.Open();
+                    MySqlCommand comparar_boleta = new MySqlCommand("select n_de_operacion from compras_y_consignaciones where n_de_operacion=" + int.Parse(cmb_boleta.Text) + ";", con);
+                    MySqlDataReader reader_boleta = comparar_boleta.ExecuteReader();
+                    string c = "";
+                    string d = "";
+                    while (reader_boleta.Read())
+                    {
+                        c = reader_boleta["n_de_operacion"].ToString();
+                        if (cmb_boleta.Text.Equals(c))
+                        {
+                            d = "i";
+                        }
+                    }
+                    con.Close();
+                    if (d.Equals("i"))
+                    {
+
+
+
+                    }
+                    else
+                    {
+
+                        con.Open();
+                        MySqlCommand ingresar_editorial = new MySqlCommand("select id_ed from editoriales where nombre='" + cmb_editorial.Text + "';", con);
+                        MySqlDataReader reador = ingresar_editorial.ExecuteReader();
+                        string valor2 = "";
+                        while (reador.Read())
+                        {
+                            valor2 = reador["id_ed"].ToString();
+
+                        }
+                        con.Close();
+
+                        con.Open();
+                        MySqlCommand ingresar_operacion = new MySqlCommand("insert into compras_y_consignaciones(n_de_operacion, fecha_de_operacion, id_ed) values(" + int.Parse(cmb_boleta.Text) + ",'" + dtp_fecha.Text + "'," + valor2 + ");", con);
+                        ingresar_operacion.ExecuteNonQuery();
+                        con.Close();
+
+
+                    }
+                    if (cmb_tipo_de_operacion.Text.Equals("Compra"))
+                    {
+                        Services.LibrosService.agregar_lcc_compra(con, int.Parse(cmb_boleta.Text), int.Parse(lbl_id_de_libro.Text), int.Parse(txt_cantidad.Text), int.Parse(txt_valor_del_libro.Text));
+                        Services.LibrosService.actualizar_stock(con, int.Parse(lbl_id_de_libro.Text), int.Parse(txt_cantidad.Text));
+
+                    }
+                    if (cmb_tipo_de_operacion.Text.Equals("Consignacion"))
+                    {
+                        Services.LibrosService.agregar_lcc_consignacion(con, int.Parse(cmb_boleta.Text), int.Parse(lbl_id_de_libro.Text), int.Parse(txt_cantidad.Text), int.Parse(txt_valor_del_libro.Text));
+                        Services.LibrosService.actualizar_stock(con, int.Parse(lbl_id_de_libro.Text), int.Parse(txt_cantidad.Text));
+
+                    }
+                    actualizar_dgv_libros();
+                    txt_isbn.Text = "";
+                    lbl_id_de_libro.Text = "";
+                    txt_codigo.Text = "";
+                    txt_nombre.Text = "";
+                    txt_precio.Text = "";
+                    txt_cantidad.Text = "";
+                    txt_autor.Text = "";
+                    Cmb_genero.Text = "";
+                    txt_valor_del_libro.Text = "";
+                    cmb_boleta.Text = "";
+                    cmb_tipo_de_operacion.Text = "";
+                    cmb_editorial.Text = "";
+                    dgv_generos.Rows.Clear();
+                }
+            }
         }
     }
     
