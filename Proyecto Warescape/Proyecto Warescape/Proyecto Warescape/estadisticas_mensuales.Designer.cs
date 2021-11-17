@@ -29,6 +29,7 @@ namespace Proyecto_Warescape
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(estadisticas_mensuales));
             this.lbl_titulo_promedio = new System.Windows.Forms.Label();
             this.lbl_promedio_total = new System.Windows.Forms.Label();
             this.btn_cargar_datos = new System.Windows.Forms.Button();
@@ -39,6 +40,8 @@ namespace Proyecto_Warescape
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.BtnCerrar = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.BtnCerrar)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_titulo_promedio
@@ -51,7 +54,6 @@ namespace Proyecto_Warescape
             this.lbl_titulo_promedio.Size = new System.Drawing.Size(327, 21);
             this.lbl_titulo_promedio.TabIndex = 1;
             this.lbl_titulo_promedio.Text = "Promedio de ganancia mensual en total:";
-            this.lbl_titulo_promedio.Click += new System.EventHandler(this.lbl_titulo_promedio_Click);
             // 
             // lbl_promedio_total
             // 
@@ -63,7 +65,6 @@ namespace Proyecto_Warescape
             this.lbl_promedio_total.Size = new System.Drawing.Size(19, 21);
             this.lbl_promedio_total.TabIndex = 3;
             this.lbl_promedio_total.Text = "0";
-            this.lbl_promedio_total.Click += new System.EventHandler(this.lbl_promedio_total_Click);
             // 
             // btn_cargar_datos
             // 
@@ -90,7 +91,6 @@ namespace Proyecto_Warescape
             this.label3.Size = new System.Drawing.Size(159, 21);
             this.label3.TabIndex = 5;
             this.label3.Text = "Seleccione un mes:";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // cmb_editoriales
             // 
@@ -101,7 +101,7 @@ namespace Proyecto_Warescape
             this.cmb_editoriales.Size = new System.Drawing.Size(121, 21);
             this.cmb_editoriales.TabIndex = 8;
             this.cmb_editoriales.ValueMember = "id_ed";
-            this.cmb_editoriales.SelectedIndexChanged += new System.EventHandler(this.cmb_editoriales_SelectedIndexChanged);
+            this.cmb_editoriales.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmb_editoriales_KeyPress);
             // 
             // cmb_mes
             // 
@@ -123,7 +123,7 @@ namespace Proyecto_Warescape
             this.cmb_mes.Name = "cmb_mes";
             this.cmb_mes.Size = new System.Drawing.Size(121, 21);
             this.cmb_mes.TabIndex = 9;
-            this.cmb_mes.SelectedIndexChanged += new System.EventHandler(this.cmb_mes_SelectedIndexChanged);
+            this.cmb_mes.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmb_mes_KeyPress);
             // 
             // cmb_año
             // 
@@ -132,7 +132,7 @@ namespace Proyecto_Warescape
             this.cmb_año.Name = "cmb_año";
             this.cmb_año.Size = new System.Drawing.Size(121, 21);
             this.cmb_año.TabIndex = 11;
-            this.cmb_año.SelectedIndexChanged += new System.EventHandler(this.cmb_año_SelectedIndexChanged);
+            this.cmb_año.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmb_año_KeyPress);
             // 
             // label4
             // 
@@ -144,7 +144,6 @@ namespace Proyecto_Warescape
             this.label4.Size = new System.Drawing.Size(156, 21);
             this.label4.TabIndex = 10;
             this.label4.Text = "Seleccione un año:";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label1
             // 
@@ -156,7 +155,6 @@ namespace Proyecto_Warescape
             this.label1.Size = new System.Drawing.Size(285, 21);
             this.label1.TabIndex = 12;
             this.label1.Text = "Seleccione una editorial (opcional):";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -167,7 +165,20 @@ namespace Proyecto_Warescape
             this.label2.Size = new System.Drawing.Size(310, 34);
             this.label2.TabIndex = 16;
             this.label2.Text = "Estadísticas Mensuales";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // BtnCerrar
+            // 
+            this.BtnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnCerrar.BackColor = System.Drawing.Color.Transparent;
+            this.BtnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("BtnCerrar.Image")));
+            this.BtnCerrar.Location = new System.Drawing.Point(387, 2);
+            this.BtnCerrar.Name = "BtnCerrar";
+            this.BtnCerrar.Size = new System.Drawing.Size(42, 27);
+            this.BtnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.BtnCerrar.TabIndex = 17;
+            this.BtnCerrar.TabStop = false;
+            this.BtnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
             // 
             // estadisticas_mensuales
             // 
@@ -175,6 +186,7 @@ namespace Proyecto_Warescape
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGray;
             this.ClientSize = new System.Drawing.Size(432, 297);
+            this.Controls.Add(this.BtnCerrar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cmb_año);
@@ -187,8 +199,10 @@ namespace Proyecto_Warescape
             this.Controls.Add(this.lbl_titulo_promedio);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "estadisticas_mensuales";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Estadisticas mensuales";
             this.Load += new System.EventHandler(this.estadisticas_mensuales_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.BtnCerrar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -205,5 +219,6 @@ namespace Proyecto_Warescape
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox BtnCerrar;
     }
 }

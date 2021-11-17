@@ -49,7 +49,7 @@ namespace Proyecto_Warescape
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F);
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(176, 29);
+            this.label1.Location = new System.Drawing.Point(187, 29);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(143, 24);
             this.label1.TabIndex = 31;
@@ -66,7 +66,7 @@ namespace Proyecto_Warescape
             this.button7.Location = new System.Drawing.Point(12, 179);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(162, 35);
-            this.button7.TabIndex = 26;
+            this.button7.TabIndex = 3;
             this.button7.Text = "Borrar";
             this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);
@@ -100,6 +100,7 @@ namespace Proyecto_Warescape
             this.Nombre.AutoSize = true;
             this.Nombre.BackColor = System.Drawing.Color.Transparent;
             this.Nombre.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F);
+            this.Nombre.ForeColor = System.Drawing.Color.White;
             this.Nombre.Location = new System.Drawing.Point(12, 55);
             this.Nombre.Name = "Nombre";
             this.Nombre.Size = new System.Drawing.Size(75, 24);
@@ -111,7 +112,7 @@ namespace Proyecto_Warescape
             this.txt_nombre.Location = new System.Drawing.Point(12, 82);
             this.txt_nombre.Name = "txt_nombre";
             this.txt_nombre.Size = new System.Drawing.Size(162, 20);
-            this.txt_nombre.TabIndex = 23;
+            this.txt_nombre.TabIndex = 1;
             // 
             // btn_guardar_editorial
             // 
@@ -124,20 +125,27 @@ namespace Proyecto_Warescape
             this.btn_guardar_editorial.Location = new System.Drawing.Point(12, 138);
             this.btn_guardar_editorial.Name = "btn_guardar_editorial";
             this.btn_guardar_editorial.Size = new System.Drawing.Size(163, 35);
-            this.btn_guardar_editorial.TabIndex = 25;
+            this.btn_guardar_editorial.TabIndex = 2;
             this.btn_guardar_editorial.Text = "Guardar";
             this.btn_guardar_editorial.UseVisualStyleBackColor = false;
             this.btn_guardar_editorial.Click += new System.EventHandler(this.btn_guardar_editorial_Click);
             // 
             // dgv_generos
             // 
+            this.dgv_generos.AllowUserToAddRows = false;
+            this.dgv_generos.AllowUserToDeleteRows = false;
+            this.dgv_generos.AllowUserToOrderColumns = true;
+            this.dgv_generos.AllowUserToResizeColumns = false;
+            this.dgv_generos.AllowUserToResizeRows = false;
             this.dgv_generos.BackgroundColor = System.Drawing.Color.LightGray;
             this.dgv_generos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_generos.Location = new System.Drawing.Point(180, 55);
+            this.dgv_generos.Location = new System.Drawing.Point(191, 65);
             this.dgv_generos.Name = "dgv_generos";
-            this.dgv_generos.Size = new System.Drawing.Size(491, 339);
-            this.dgv_generos.TabIndex = 27;
-            this.dgv_generos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_generos_CellClick);
+            this.dgv_generos.ReadOnly = true;
+            this.dgv_generos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_generos.Size = new System.Drawing.Size(463, 316);
+            this.dgv_generos.TabIndex = 32;
+            this.dgv_generos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_generos_CellClick_1);
             // 
             // agregargenero
             // 
@@ -145,15 +153,16 @@ namespace Proyecto_Warescape
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGray;
             this.ClientSize = new System.Drawing.Size(692, 420);
+            this.Controls.Add(this.dgv_generos);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.Nombre);
             this.Controls.Add(this.txt_nombre);
             this.Controls.Add(this.btn_guardar_editorial);
-            this.Controls.Add(this.dgv_generos);
-            this.ForeColor = System.Drawing.Color.White;
+            this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "agregargenero";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "agregargenero";

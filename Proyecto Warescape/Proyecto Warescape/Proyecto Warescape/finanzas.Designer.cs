@@ -37,12 +37,6 @@ namespace Proyecto_Warescape
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.dgv_lista = new System.Windows.Forms.DataGridView();
-            this.n_de_boleta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.libro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vienepor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_Agregar = new System.Windows.Forms.Button();
             this.fecha_venta = new System.Windows.Forms.DateTimePicker();
             this.cmb_libros = new System.Windows.Forms.ComboBox();
@@ -56,6 +50,12 @@ namespace Proyecto_Warescape
             this.btn_control_caja = new System.Windows.Forms.Button();
             this.btn_estadisticas = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
+            this.n_de_boleta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.libro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vienepor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_lista)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ventas)).BeginInit();
             this.SuspendLayout();
@@ -66,7 +66,6 @@ namespace Proyecto_Warescape
             this.txt_boleta.Name = "txt_boleta";
             this.txt_boleta.Size = new System.Drawing.Size(91, 20);
             this.txt_boleta.TabIndex = 9;
-            this.txt_boleta.TextChanged += new System.EventHandler(this.txt_boleta_TextChanged);
             this.txt_boleta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_boleta_KeyPress);
             // 
             // txt_precio
@@ -75,7 +74,6 @@ namespace Proyecto_Warescape
             this.txt_precio.Name = "txt_precio";
             this.txt_precio.Size = new System.Drawing.Size(91, 20);
             this.txt_precio.TabIndex = 10;
-            this.txt_precio.TextChanged += new System.EventHandler(this.txt_precio_TextChanged);
             this.txt_precio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_precio_KeyPress);
             // 
             // txt_cantidad
@@ -84,7 +82,6 @@ namespace Proyecto_Warescape
             this.txt_cantidad.Name = "txt_cantidad";
             this.txt_cantidad.Size = new System.Drawing.Size(119, 20);
             this.txt_cantidad.TabIndex = 12;
-            this.txt_cantidad.TextChanged += new System.EventHandler(this.txt_cantidad_TextChanged);
             this.txt_cantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_cantidad_KeyPress);
             // 
             // label1
@@ -98,7 +95,6 @@ namespace Proyecto_Warescape
             this.label1.Size = new System.Drawing.Size(114, 24);
             this.label1.TabIndex = 14;
             this.label1.Text = "N° de boleta";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -111,7 +107,6 @@ namespace Proyecto_Warescape
             this.label2.Size = new System.Drawing.Size(133, 24);
             this.label2.TabIndex = 15;
             this.label2.Text = "Fecha de venta";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -124,7 +119,6 @@ namespace Proyecto_Warescape
             this.label3.Size = new System.Drawing.Size(94, 24);
             this.label3.TabIndex = 16;
             this.label3.Text = "Precio c/u";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -137,7 +131,6 @@ namespace Proyecto_Warescape
             this.label4.Size = new System.Drawing.Size(171, 24);
             this.label4.TabIndex = 17;
             this.label4.Text = "Cantidad Comprada";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // dgv_lista
             // 
@@ -156,36 +149,6 @@ namespace Proyecto_Warescape
             this.dgv_lista.Size = new System.Drawing.Size(643, 173);
             this.dgv_lista.TabIndex = 18;
             this.dgv_lista.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_lista_CellDoubleClick);
-            // 
-            // n_de_boleta
-            // 
-            this.n_de_boleta.HeaderText = "n * de boleta";
-            this.n_de_boleta.Name = "n_de_boleta";
-            // 
-            // fecha
-            // 
-            this.fecha.HeaderText = "fecha de venta";
-            this.fecha.Name = "fecha";
-            // 
-            // precio
-            // 
-            this.precio.HeaderText = "precio";
-            this.precio.Name = "precio";
-            // 
-            // cantidad
-            // 
-            this.cantidad.HeaderText = "cantidad comprada";
-            this.cantidad.Name = "cantidad";
-            // 
-            // libro
-            // 
-            this.libro.HeaderText = "libro";
-            this.libro.Name = "libro";
-            // 
-            // vienepor
-            // 
-            this.vienepor.HeaderText = "Viene Por";
-            this.vienepor.Name = "vienepor";
             // 
             // btn_Agregar
             // 
@@ -211,7 +174,7 @@ namespace Proyecto_Warescape
             this.fecha_venta.Name = "fecha_venta";
             this.fecha_venta.Size = new System.Drawing.Size(99, 20);
             this.fecha_venta.TabIndex = 47;
-            this.fecha_venta.ValueChanged += new System.EventHandler(this.fecha_venta_ValueChanged);
+            this.fecha_venta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.fecha_venta_KeyPress);
             // 
             // cmb_libros
             // 
@@ -220,7 +183,6 @@ namespace Proyecto_Warescape
             this.cmb_libros.Name = "cmb_libros";
             this.cmb_libros.Size = new System.Drawing.Size(93, 21);
             this.cmb_libros.TabIndex = 48;
-            this.cmb_libros.SelectedIndexChanged += new System.EventHandler(this.cmb_libros_SelectedIndexChanged);
             this.cmb_libros.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmb_libros_KeyPress);
             // 
             // label5
@@ -234,7 +196,6 @@ namespace Proyecto_Warescape
             this.label5.Size = new System.Drawing.Size(46, 24);
             this.label5.TabIndex = 49;
             this.label5.Text = "libro";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // cmb_publicidad
             // 
@@ -243,7 +204,6 @@ namespace Proyecto_Warescape
             this.cmb_publicidad.Name = "cmb_publicidad";
             this.cmb_publicidad.Size = new System.Drawing.Size(121, 21);
             this.cmb_publicidad.TabIndex = 50;
-            this.cmb_publicidad.SelectedIndexChanged += new System.EventHandler(this.cmb_publicidad_SelectedIndexChanged);
             this.cmb_publicidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmb_publicidad_KeyPress);
             // 
             // label6
@@ -257,7 +217,6 @@ namespace Proyecto_Warescape
             this.label6.Size = new System.Drawing.Size(86, 24);
             this.label6.TabIndex = 51;
             this.label6.Text = "Viene por";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // Registrar_ventra
             // 
@@ -353,7 +312,36 @@ namespace Proyecto_Warescape
             this.label7.Size = new System.Drawing.Size(231, 43);
             this.label7.TabIndex = 63;
             this.label7.Text = "Contabilidad";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
+            // 
+            // n_de_boleta
+            // 
+            this.n_de_boleta.HeaderText = "N * de boleta";
+            this.n_de_boleta.Name = "n_de_boleta";
+            // 
+            // fecha
+            // 
+            this.fecha.HeaderText = "Fecha de venta";
+            this.fecha.Name = "fecha";
+            // 
+            // precio
+            // 
+            this.precio.HeaderText = "Precio";
+            this.precio.Name = "precio";
+            // 
+            // cantidad
+            // 
+            this.cantidad.HeaderText = "Cantidad comprada";
+            this.cantidad.Name = "cantidad";
+            // 
+            // libro
+            // 
+            this.libro.HeaderText = "Libro";
+            this.libro.Name = "libro";
+            // 
+            // vienepor
+            // 
+            this.vienepor.HeaderText = "Viene Por";
+            this.vienepor.Name = "vienepor";
             // 
             // finanzas
             // 
@@ -409,14 +397,8 @@ namespace Proyecto_Warescape
         private System.Windows.Forms.DateTimePicker fecha_venta;
         private System.Windows.Forms.ComboBox cmb_libros;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn n_de_boleta;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fecha;
-        private System.Windows.Forms.DataGridViewTextBoxColumn precio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cantidad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn libro;
         private System.Windows.Forms.ComboBox cmb_publicidad;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn vienepor;
         private System.Windows.Forms.Button Registrar_ventra;
         private System.Windows.Forms.DataGridView dgv_ventas;
         private System.Windows.Forms.Button Borrar;
@@ -424,5 +406,11 @@ namespace Proyecto_Warescape
         private System.Windows.Forms.Button btn_control_caja;
         private System.Windows.Forms.Button btn_estadisticas;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn n_de_boleta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fecha;
+        private System.Windows.Forms.DataGridViewTextBoxColumn precio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cantidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn libro;
+        private System.Windows.Forms.DataGridViewTextBoxColumn vienepor;
     }
 }

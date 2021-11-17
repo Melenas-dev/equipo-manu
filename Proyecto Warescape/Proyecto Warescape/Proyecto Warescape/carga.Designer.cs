@@ -45,7 +45,6 @@ namespace Proyecto_Warescape
             this.progreso.Name = "progreso";
             this.progreso.Size = new System.Drawing.Size(285, 18);
             this.progreso.TabIndex = 2;
-            this.progreso.Click += new System.EventHandler(this.progreso_Click);
             // 
             // label2
             // 
@@ -58,7 +57,6 @@ namespace Proyecto_Warescape
             this.label2.Size = new System.Drawing.Size(88, 21);
             this.label2.TabIndex = 3;
             this.label2.Text = "Cargando...";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // lblporcentaje
             // 
@@ -71,7 +69,6 @@ namespace Proyecto_Warescape
             this.lblporcentaje.Size = new System.Drawing.Size(22, 21);
             this.lblporcentaje.TabIndex = 4;
             this.lblporcentaje.Text = "%";
-            this.lblporcentaje.Click += new System.EventHandler(this.lblporcentaje_Click);
             // 
             // timer1
             // 
@@ -86,7 +83,6 @@ namespace Proyecto_Warescape
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // carga
             // 
@@ -99,6 +95,7 @@ namespace Proyecto_Warescape
             this.Controls.Add(this.label2);
             this.Controls.Add(this.progreso);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "carga";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "carga";

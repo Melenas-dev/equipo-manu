@@ -70,7 +70,7 @@ namespace Proyecto_Warescape
             this.cmb_mes.Name = "cmb_mes";
             this.cmb_mes.Size = new System.Drawing.Size(169, 21);
             this.cmb_mes.TabIndex = 1;
-            this.cmb_mes.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.cmb_mes.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmb_mes_KeyPress);
             // 
             // leabemes
             // 
@@ -82,17 +82,21 @@ namespace Proyecto_Warescape
             this.leabemes.Size = new System.Drawing.Size(44, 24);
             this.leabemes.TabIndex = 2;
             this.leabemes.Text = "Mes";
-            this.leabemes.Click += new System.EventHandler(this.leabemes_Click);
             // 
             // dgv_ventas
             // 
+            this.dgv_ventas.AllowUserToAddRows = false;
+            this.dgv_ventas.AllowUserToDeleteRows = false;
+            this.dgv_ventas.AllowUserToResizeColumns = false;
+            this.dgv_ventas.AllowUserToResizeRows = false;
             this.dgv_ventas.BackgroundColor = System.Drawing.Color.LightGray;
             this.dgv_ventas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_ventas.Location = new System.Drawing.Point(29, 182);
             this.dgv_ventas.Name = "dgv_ventas";
+            this.dgv_ventas.ReadOnly = true;
+            this.dgv_ventas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_ventas.Size = new System.Drawing.Size(708, 299);
             this.dgv_ventas.TabIndex = 3;
-            this.dgv_ventas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // label1
             // 
@@ -104,7 +108,6 @@ namespace Proyecto_Warescape
             this.label1.Size = new System.Drawing.Size(66, 24);
             this.label1.TabIndex = 4;
             this.label1.Text = "Monto:";
-            this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // lbl_monto
             // 
@@ -115,7 +118,6 @@ namespace Proyecto_Warescape
             this.lbl_monto.Name = "lbl_monto";
             this.lbl_monto.Size = new System.Drawing.Size(0, 24);
             this.lbl_monto.TabIndex = 5;
-            this.lbl_monto.Click += new System.EventHandler(this.label2_Click);
             // 
             // label2
             // 
@@ -127,7 +129,6 @@ namespace Proyecto_Warescape
             this.label2.Size = new System.Drawing.Size(41, 24);
             this.label2.TabIndex = 64;
             this.label2.Text = "Año";
-            this.label2.Click += new System.EventHandler(this.label2_Click_1);
             // 
             // btn_motrar
             // 
@@ -219,6 +220,7 @@ namespace Proyecto_Warescape
             this.cmb_año.Name = "cmb_año";
             this.cmb_año.Size = new System.Drawing.Size(169, 21);
             this.cmb_año.TabIndex = 71;
+            this.cmb_año.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmb_año_KeyPress);
             // 
             // control_de_caja
             // 
@@ -241,6 +243,7 @@ namespace Proyecto_Warescape
             this.Controls.Add(this.btnRestaurar);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "control_de_caja";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "+";

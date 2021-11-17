@@ -99,17 +99,6 @@ namespace Proyecto_Warescape
             }
         }
 
-        private void dgv_generos_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            int n = e.RowIndex;
-            if (n != -1)
-            {
-
-                txt_nombre.Text = this.dgv_generos.CurrentRow.Cells[0].Value.ToString();
-                
-            }
-        }
-
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
 
@@ -133,6 +122,22 @@ namespace Proyecto_Warescape
             {
                 ReleaseCapture();
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
+            }
+        }
+
+        private void dgv_generos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dgv_generos_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            int n = e.RowIndex;
+            if (n != -1)
+            {
+
+                txt_nombre.Text = this.dgv_generos.CurrentRow.Cells[0].Value.ToString();
+
             }
         }
     }

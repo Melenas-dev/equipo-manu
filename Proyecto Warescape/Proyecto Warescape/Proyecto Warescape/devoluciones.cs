@@ -57,46 +57,56 @@ namespace Proyecto_Warescape
             {
                 string id_libro = cmb_libros.Text.Split('-').Last().Trim();
                 int cantidad = int.Parse(txt_cantidad.Text.Replace(" ", string.Empty));
-                con.Open();
-                string comando2 = "SELECT l.stock, e.id_ed FROM libros l JOIN lcc as lc on lc.id_libro = l.id_libro JOIN compras_y_consignaciones c on lc.n_de_operacion = c.n_de_operacion JOIN editoriales e on e.id_ed=c.id_ed where l.id_libro=" + id_libro + ";";
-                MySqlCommand buscar_stock = new MySqlCommand(comando2,con);
-                MySqlDataReader leer_buscar_stock = buscar_stock.ExecuteReader();
-                int stock = 0;
-                int id_ed = 0;
-                while (leer_buscar_stock.Read())
+                if (cantidad == 0) 
                 {
-                    stock = int.Parse(leer_buscar_stock["stock"].ToString());
-                    id_ed = int.Parse(leer_buscar_stock["id_ed"].ToString());
+
+                    MessageBox.Show("No puedes ingresar una devolucion con cantidad 0");
+
                 }
-                con.Close();
-                if (stock <= 0) 
+                else 
                 {
-                    MessageBox.Show("No tienes stock de ese libro");
-                }
-                else
-                {
-                    if (int.Parse(txt_cantidad.Text)>stock)
+
+                    con.Open();
+                    string comando2 = "SELECT l.stock, e.id_ed FROM libros l JOIN lcc as lc on lc.id_libro = l.id_libro JOIN compras_y_consignaciones c on lc.n_de_operacion = c.n_de_operacion JOIN editoriales e on e.id_ed=c.id_ed where l.id_libro=" + id_libro + ";";
+                    MySqlCommand buscar_stock = new MySqlCommand(comando2,con);
+                    MySqlDataReader leer_buscar_stock = buscar_stock.ExecuteReader();
+                    int stock = 0;
+                    int id_ed = 0;
+                    while (leer_buscar_stock.Read())
                     {
-                        MessageBox.Show("No tienes tantos libros para devolver");
+                        stock = int.Parse(leer_buscar_stock["stock"].ToString());
+                        id_ed = int.Parse(leer_buscar_stock["id_ed"].ToString());
+                    }
+                    con.Close();
+                    if (stock <= 0) 
+                    {
+                        MessageBox.Show("No tienes stock de ese libro");
                     }
                     else
                     {
-                        con.Open();
-                        string ingresar_devolucion = "insert into devoluciones(id_libro,id_ed,fecha,cantidad) values("+id_libro+","+id_ed+ ",'"+dtp_fecha.Text+"',"+cantidad+");";
-                        MySqlCommand comando_ingresar_devolucion = new MySqlCommand(ingresar_devolucion,con);
-                        comando_ingresar_devolucion.ExecuteNonQuery();
-                        con.Close();
-                        int quitar = stock - int.Parse(txt_cantidad.Text);
-                        con.Open();
-                        string cambar_stock = "update libros set stock=" + quitar + " where id_libro=" + id_libro + ";";
-                        MySqlCommand cambio_stock = new MySqlCommand(cambar_stock,con);
-                        cambio_stock.ExecuteNonQuery();
-                        con.Close();
+                        if (int.Parse(txt_cantidad.Text)>stock)
+                        {
+                            MessageBox.Show("No tienes tantos libros para devolver");
+                        }
+                        else
+                        {
+                            con.Open();
+                            string ingresar_devolucion = "insert into devoluciones(id_libro,id_ed,fecha,cantidad) values("+id_libro+","+id_ed+ ",'"+dtp_fecha.Text+"',"+cantidad+");";
+                            MySqlCommand comando_ingresar_devolucion = new MySqlCommand(ingresar_devolucion,con);
+                            comando_ingresar_devolucion.ExecuteNonQuery();
+                            con.Close();
+                            int quitar = stock - int.Parse(txt_cantidad.Text);
+                            con.Open();
+                            string cambar_stock = "update libros set stock=" + quitar + " where id_libro=" + id_libro + ";";
+                            MySqlCommand cambio_stock = new MySqlCommand(cambar_stock,con);
+                            cambio_stock.ExecuteNonQuery();
+                            con.Close();
 
 
 
 
 
+                        }
                     }
                 }
             }
@@ -180,34 +190,9 @@ namespace Proyecto_Warescape
             }
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void dtp_fecha_KeyPress(object sender, KeyPressEventArgs e)
         {
-
-        }
-
-        private void txt_cantidad_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cmb_libros_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Nombre_Click(object sender, EventArgs e)
-        {
-
+            e.Handled = true;
         }
     }
 }

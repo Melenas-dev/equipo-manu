@@ -40,11 +40,6 @@ namespace Proyecto_Warescape
             }
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             
@@ -102,11 +97,6 @@ namespace Proyecto_Warescape
 
         }
 
-        private void Login_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -115,11 +105,6 @@ namespace Proyecto_Warescape
         private void ingreso_Enter(object sender, EventArgs e)
         {
             button1_Click(sender, e);
-        }
-
-        private void campo_contra_KeyPress(object sender, KeyPressEventArgs e)
-        {
-
         }
 
         private void campo_contra_KeyDown(object sender, KeyEventArgs e)
@@ -157,16 +142,6 @@ namespace Proyecto_Warescape
         {
             Form restaurar = new FormEmail();
             restaurar.Show();
-        }
-
-        private void campo_contra_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

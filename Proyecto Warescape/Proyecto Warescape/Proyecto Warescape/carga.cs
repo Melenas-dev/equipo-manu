@@ -37,34 +37,9 @@ namespace Proyecto_Warescape
             }
         }
 
-        private void progreso_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void carga_Load(object sender, EventArgs e)
         {
             timer1.Start();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblporcentaje_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

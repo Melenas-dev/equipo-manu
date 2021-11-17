@@ -54,7 +54,6 @@ namespace Proyecto_Warescape
             this.campo_contra.Size = new System.Drawing.Size(166, 31);
             this.campo_contra.TabIndex = 4;
             this.campo_contra.UseSystemPasswordChar = true;
-            this.campo_contra.TextChanged += new System.EventHandler(this.campo_contra_TextChanged);
             this.campo_contra.KeyDown += new System.Windows.Forms.KeyEventHandler(this.campo_contra_KeyDown);
             // 
             // campo_usuario
@@ -64,7 +63,6 @@ namespace Proyecto_Warescape
             this.campo_usuario.Name = "campo_usuario";
             this.campo_usuario.Size = new System.Drawing.Size(166, 31);
             this.campo_usuario.TabIndex = 1;
-            this.campo_usuario.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.campo_usuario.KeyDown += new System.Windows.Forms.KeyEventHandler(this.campo_contra_KeyDown);
             // 
             // ingreso
@@ -192,10 +190,10 @@ namespace Proyecto_Warescape
             this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
-            this.Load += new System.EventHandler(this.Login_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Window_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

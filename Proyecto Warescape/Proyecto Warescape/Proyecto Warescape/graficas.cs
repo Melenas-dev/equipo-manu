@@ -24,22 +24,6 @@ namespace Proyecto_Warescape
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void graficas_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnactualizar_Click(object sender, EventArgs e)
-        {
-            
-
-        }
-
         private void button3_Click(object sender, EventArgs e)
         {
             chartpublicidades.Series["Publicitado"].Points.Clear();
@@ -57,48 +41,14 @@ namespace Proyecto_Warescape
             }
 
             con.Close();
-                
-
-
-
-
-
 
         }
-
-        private void chartpublicidades_Click(object sender, EventArgs e)
-        {
-
-        }
+ 
 
         private void BtnCerrar_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void btnmaximizar_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void pictureBox4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnRestaurar_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

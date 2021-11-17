@@ -98,6 +98,10 @@ namespace Proyecto_Warescape
             // 
             // dgv_generos
             // 
+            this.dgv_generos.AllowUserToAddRows = false;
+            this.dgv_generos.AllowUserToDeleteRows = false;
+            this.dgv_generos.AllowUserToResizeColumns = false;
+            this.dgv_generos.AllowUserToResizeRows = false;
             this.dgv_generos.BackgroundColor = System.Drawing.Color.Gray;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.DimGray;
@@ -135,7 +139,6 @@ namespace Proyecto_Warescape
             this.dgv_generos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_generos.Size = new System.Drawing.Size(243, 149);
             this.dgv_generos.TabIndex = 23;
-            this.dgv_generos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_generos_CellContentClick);
             // 
             // nombre_genero
             // 
@@ -162,7 +165,6 @@ namespace Proyecto_Warescape
             this.label7.TabIndex = 20;
             this.label7.Text = "Editorial";
             this.label7.UseMnemonic = false;
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // cmb_editorial
             // 
@@ -171,7 +173,6 @@ namespace Proyecto_Warescape
             this.cmb_editorial.Name = "cmb_editorial";
             this.cmb_editorial.Size = new System.Drawing.Size(137, 21);
             this.cmb_editorial.TabIndex = 19;
-            this.cmb_editorial.SelectedIndexChanged += new System.EventHandler(this.cmb_editorial_SelectedIndexChanged);
             this.cmb_editorial.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmb_editorial_KeyPress);
             // 
             // Cmb_genero
@@ -184,7 +185,6 @@ namespace Proyecto_Warescape
             this.Cmb_genero.TabIndex = 18;
             this.Cmb_genero.Tag = "";
             this.Cmb_genero.ValueMember = "id_genero";
-            this.Cmb_genero.SelectedIndexChanged += new System.EventHandler(this.Cmb_genero_SelectedIndexChanged);
             this.Cmb_genero.SelectedValueChanged += new System.EventHandler(this.Cmb_genero_SelectedValueChanged);
             this.Cmb_genero.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Cmb_genero_KeyPress);
             // 
@@ -192,7 +192,6 @@ namespace Proyecto_Warescape
             // 
             this.dgv_libros.AllowUserToAddRows = false;
             this.dgv_libros.AllowUserToDeleteRows = false;
-            this.dgv_libros.AllowUserToOrderColumns = true;
             this.dgv_libros.AllowUserToResizeColumns = false;
             this.dgv_libros.AllowUserToResizeRows = false;
             this.dgv_libros.BackgroundColor = System.Drawing.Color.DimGray;
@@ -230,7 +229,6 @@ namespace Proyecto_Warescape
             this.dgv_libros.Size = new System.Drawing.Size(897, 327);
             this.dgv_libros.TabIndex = 17;
             this.dgv_libros.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_libros_CellClick);
-            this.dgv_libros.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_libros_CellContentClick);
             this.dgv_libros.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dgv_libros_KeyPress);
             // 
             // button7
@@ -287,7 +285,6 @@ namespace Proyecto_Warescape
             this.txt_nombre.Name = "txt_nombre";
             this.txt_nombre.Size = new System.Drawing.Size(134, 20);
             this.txt_nombre.TabIndex = 11;
-            this.txt_nombre.TextChanged += new System.EventHandler(this.txt_nombre_TextChanged);
             // 
             // txt_cantidad
             // 
@@ -295,7 +292,6 @@ namespace Proyecto_Warescape
             this.txt_cantidad.Name = "txt_cantidad";
             this.txt_cantidad.Size = new System.Drawing.Size(135, 20);
             this.txt_cantidad.TabIndex = 10;
-            this.txt_cantidad.TextChanged += new System.EventHandler(this.txt_cantidad_TextChanged);
             this.txt_cantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_stock_KeyPress);
             // 
             // txt_precio
@@ -320,7 +316,6 @@ namespace Proyecto_Warescape
             this.txt_isbn.Name = "txt_isbn";
             this.txt_isbn.Size = new System.Drawing.Size(137, 20);
             this.txt_isbn.TabIndex = 7;
-            this.txt_isbn.TextChanged += new System.EventHandler(this.txt_isbn_TextChanged);
             this.txt_isbn.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_isbn_KeyPress);
             // 
             // label6
@@ -408,7 +403,6 @@ namespace Proyecto_Warescape
             this.label8.Size = new System.Drawing.Size(53, 24);
             this.label8.TabIndex = 29;
             this.label8.Text = "Autor";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // txt_autor
             // 
@@ -416,7 +410,6 @@ namespace Proyecto_Warescape
             this.txt_autor.Name = "txt_autor";
             this.txt_autor.Size = new System.Drawing.Size(137, 20);
             this.txt_autor.TabIndex = 30;
-            this.txt_autor.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // button2
             // 
@@ -505,7 +498,6 @@ namespace Proyecto_Warescape
             this.label10.Size = new System.Drawing.Size(139, 24);
             this.label10.TabIndex = 41;
             this.label10.Text = "Nª de operacion";
-            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // cmb_boleta
             // 
@@ -514,7 +506,6 @@ namespace Proyecto_Warescape
             this.cmb_boleta.Name = "cmb_boleta";
             this.cmb_boleta.Size = new System.Drawing.Size(134, 21);
             this.cmb_boleta.TabIndex = 42;
-            this.cmb_boleta.SelectedIndexChanged += new System.EventHandler(this.cmb_boleta_SelectedIndexChanged);
             this.cmb_boleta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmb_boleta_KeyPress);
             // 
             // lbl_id_de_libro
@@ -547,6 +538,7 @@ namespace Proyecto_Warescape
             this.dtp_fecha.Name = "dtp_fecha";
             this.dtp_fecha.Size = new System.Drawing.Size(99, 20);
             this.dtp_fecha.TabIndex = 45;
+            this.dtp_fecha.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dtp_fecha_KeyPress);
             // 
             // label13
             // 
@@ -589,7 +581,6 @@ namespace Proyecto_Warescape
             this.label15.Size = new System.Drawing.Size(263, 44);
             this.label15.TabIndex = 48;
             this.label15.Text = "Ingresar Libros";
-            this.label15.Click += new System.EventHandler(this.label15_Click);
             // 
             // button4
             // 
@@ -618,7 +609,6 @@ namespace Proyecto_Warescape
             this.label17.Size = new System.Drawing.Size(412, 43);
             this.label17.TabIndex = 52;
             this.label17.Text = "  Compra o Consignación";
-            this.label17.Click += new System.EventHandler(this.label17_Click);
             // 
             // btn_ingresar_consignacion
             // 

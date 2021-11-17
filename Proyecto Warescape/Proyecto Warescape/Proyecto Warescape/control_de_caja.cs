@@ -18,52 +18,7 @@ namespace Proyecto_Warescape
         {
             InitializeComponent();
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void actulizarbtn_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnmaximizar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tb_año_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-
+  
         private void button7_Click(object sender, EventArgs e)
         {
             if (cmb_año.Text.Equals("") || cmb_mes.Text.Equals(""))
@@ -147,21 +102,7 @@ namespace Proyecto_Warescape
         {
             this.Close();
         }
-
-        private void mzButtonWindows1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label2_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void leabemes_Click(object sender, EventArgs e)
-        {
-
-        }
+  
 
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
@@ -178,6 +119,16 @@ namespace Proyecto_Warescape
                 ReleaseCapture();
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
+        }
+
+        private void cmb_año_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void cmb_mes_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
         }
     }
 }

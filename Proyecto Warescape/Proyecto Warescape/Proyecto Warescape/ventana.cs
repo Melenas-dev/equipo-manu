@@ -17,28 +17,12 @@ namespace Proyecto_Warescape
             InitializeComponent();
         }
 
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void pictureBox4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox5_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
             VentanasPrincipal ventana = new VentanasPrincipal();
             ventana.Show();
-            
-            
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -46,11 +30,6 @@ namespace Proyecto_Warescape
             this.Hide();
             finanzas finanzas = new finanzas();
             finanzas.Show();
-        }
-
-        private void ventana_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -78,10 +57,6 @@ namespace Proyecto_Warescape
             pnl_cerrar.BackColor = Color.DarkGray;
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
         private void AbrirFormInPanel(object formHijo)
         {
             if (this.panel1.Controls.Count > 0)
@@ -131,69 +106,15 @@ namespace Proyecto_Warescape
 
         }
 
-        private void panel7_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void BtnCerrar_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        }
-
-        private void btnmaximizar_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Maximized;
-            btnmaximizar.Visible = false;
-            btnRestaurar.Visible = true;
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnRestaurar_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Normal;
-            btnRestaurar.Visible = false; 
-            btnmaximizar.Visible = true;
-        }
-
-        private void pictureBox4_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button6_Click_1(object sender, EventArgs e)
-        {
-
         }
 
         private void pictureBox2_Click_1(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
             
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void panel7_MouseDown(object sender, MouseEventArgs e)

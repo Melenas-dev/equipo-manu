@@ -115,7 +115,6 @@ namespace Proyecto_Warescape
             this.Nombre.Size = new System.Drawing.Size(50, 24);
             this.Nombre.TabIndex = 36;
             this.Nombre.Text = "Libro";
-            this.Nombre.Click += new System.EventHandler(this.Nombre_Click);
             // 
             // btn_guardar_editorial
             // 
@@ -135,10 +134,16 @@ namespace Proyecto_Warescape
             // 
             // dgv_devoluciones
             // 
+            this.dgv_devoluciones.AllowUserToAddRows = false;
+            this.dgv_devoluciones.AllowUserToDeleteRows = false;
+            this.dgv_devoluciones.AllowUserToResizeColumns = false;
+            this.dgv_devoluciones.AllowUserToResizeRows = false;
             this.dgv_devoluciones.BackgroundColor = System.Drawing.Color.LightGray;
             this.dgv_devoluciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_devoluciones.Location = new System.Drawing.Point(180, 57);
             this.dgv_devoluciones.Name = "dgv_devoluciones";
+            this.dgv_devoluciones.ReadOnly = true;
+            this.dgv_devoluciones.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_devoluciones.Size = new System.Drawing.Size(491, 339);
             this.dgv_devoluciones.TabIndex = 35;
             this.dgv_devoluciones.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_devoluciones_CellClick);
@@ -150,7 +155,6 @@ namespace Proyecto_Warescape
             this.cmb_libros.Name = "cmb_libros";
             this.cmb_libros.Size = new System.Drawing.Size(158, 21);
             this.cmb_libros.TabIndex = 39;
-            this.cmb_libros.SelectedIndexChanged += new System.EventHandler(this.cmb_libros_SelectedIndexChanged);
             // 
             // txt_cantidad
             // 
@@ -158,7 +162,6 @@ namespace Proyecto_Warescape
             this.txt_cantidad.Name = "txt_cantidad";
             this.txt_cantidad.Size = new System.Drawing.Size(158, 20);
             this.txt_cantidad.TabIndex = 40;
-            this.txt_cantidad.TextChanged += new System.EventHandler(this.txt_cantidad_TextChanged);
             // 
             // label2
             // 
@@ -171,7 +174,6 @@ namespace Proyecto_Warescape
             this.label2.Size = new System.Drawing.Size(82, 24);
             this.label2.TabIndex = 41;
             this.label2.Text = "Cantidad";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -183,7 +185,6 @@ namespace Proyecto_Warescape
             this.label3.Size = new System.Drawing.Size(121, 48);
             this.label3.TabIndex = 42;
             this.label3.Text = "Ingresar Libro\r\nPara Devolver\r\n";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // dtp_fecha
             // 
@@ -193,6 +194,7 @@ namespace Proyecto_Warescape
             this.dtp_fecha.Name = "dtp_fecha";
             this.dtp_fecha.Size = new System.Drawing.Size(99, 20);
             this.dtp_fecha.TabIndex = 46;
+            this.dtp_fecha.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dtp_fecha_KeyPress);
             // 
             // label4
             // 
@@ -205,7 +207,6 @@ namespace Proyecto_Warescape
             this.label4.Size = new System.Drawing.Size(59, 24);
             this.label4.TabIndex = 47;
             this.label4.Text = "Fecha";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // lbl_id_devoluciones
             // 
@@ -279,6 +280,7 @@ namespace Proyecto_Warescape
             this.Controls.Add(this.btn_guardar_editorial);
             this.Controls.Add(this.dgv_devoluciones);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "devoluciones";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "devoluciones";

@@ -26,11 +26,7 @@ namespace Proyecto_Warescape
 
         }
 
-        private void PanelContenedor_Paint(object sender, PaintEventArgs e)
-
-        {
-
-        }
+        
 
         private void button5_Click(object sender, EventArgs e)
         {
@@ -107,7 +103,7 @@ namespace Proyecto_Warescape
                 else
                 {
 
-                    string editar = "UPDATE publicidad set rut=" + long.Parse(txt_rut.Text) + ", monto=" + long.Parse(txt_monto.Text) + ",nombre='" + txt_nombre.Text.Trim() + "' where id_publicidad =" + int.Parse(lbl_id_publicidad.Text) + ";";
+                    string editar = "UPDATE publicidad set rut=" + long.Parse(txt_rut.Text) + ", monto=" + float.Parse(txt_monto.Text) + ",nombre='" + txt_nombre.Text.Trim() + "' where id_publicidad =" + int.Parse(lbl_id_publicidad.Text) + ";";
                     MySqlCommand comando = new MySqlCommand(editar, con);
                     comando.ExecuteNonQuery();
                     mostrar_publicidades();
@@ -198,71 +194,29 @@ namespace Proyecto_Warescape
             solo_numeros(e);
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void BtnCerrar_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void btnmaximizar_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void btnRestaurar_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void BtnCerrar_Click_1(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void txt_nombre_TextChanged(object sender, EventArgs e)
-        {
+        
 
-        }
-
-        private void txt_monto_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnRestaurar_Click_1(object sender, EventArgs e)
-        {
-            ;
-        }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
         }
 
-        private void btnmaximizar_Click_1(object sender, EventArgs e)
-        {
-           
-
-        }
-
-        private void txt_nombre_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            
-        }
+        
         public void solo_letras(KeyPressEventArgs e)
         {
             if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
@@ -274,19 +228,12 @@ namespace Proyecto_Warescape
 
         }
 
-        private void label4_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
+            lbl_id_publicidad.Text = "";
+            txt_monto.Text = "";
+            txt_nombre.Text = "";
+            txt_rut.Text = "";
         }
     }
 }

@@ -158,16 +158,6 @@ namespace Proyecto_Warescape
             }
         }
 
-        private void dgv_editoriales_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void Nombre_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void panel1_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)

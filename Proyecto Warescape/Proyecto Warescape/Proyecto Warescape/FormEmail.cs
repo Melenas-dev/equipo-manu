@@ -23,10 +23,6 @@ namespace Proyecto_Warescape
             txt_pass2.PasswordChar = '*';
         }
         
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void btn_enviar_Click(object sender, EventArgs e)
         {
@@ -61,11 +57,6 @@ namespace Proyecto_Warescape
             } while (result == DialogResult.Yes);
             MessageBox.Show("Proceso terminado.");
             
-
-        }
-
-        private void txt_pass_TextChanged(object sender, EventArgs e)
-        {
 
         }
 
@@ -159,11 +150,6 @@ namespace Proyecto_Warescape
             MessageBox.Show("Proceso terminado.");
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click_1(object sender, EventArgs e)
         {
             DialogResult result = DialogResult.No;
@@ -232,35 +218,14 @@ namespace Proyecto_Warescape
             MessageBox.Show("Proceso terminado.");
         }
 
-        private void pnl_cambiar_pass_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+        
 
         private void BtnCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void pnl_cambiar_pass_Paint_1(object sender, PaintEventArgs e)
-        {
-            
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txt_pass1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
@@ -277,11 +242,6 @@ namespace Proyecto_Warescape
                 ReleaseCapture();
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
-        }
-
-        private void FormEmail_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

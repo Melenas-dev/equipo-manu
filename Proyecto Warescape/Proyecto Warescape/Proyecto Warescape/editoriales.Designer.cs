@@ -62,7 +62,6 @@ namespace Proyecto_Warescape
             this.dgv_editoriales.Size = new System.Drawing.Size(491, 339);
             this.dgv_editoriales.TabIndex = 5;
             this.dgv_editoriales.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_editoriales_CellClick);
-            this.dgv_editoriales.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_editoriales_CellContentClick);
             // 
             // btn_guardar_editorial
             // 
@@ -98,7 +97,6 @@ namespace Proyecto_Warescape
             this.Nombre.Size = new System.Drawing.Size(75, 24);
             this.Nombre.TabIndex = 19;
             this.Nombre.Text = "Nombre";
-            this.Nombre.Click += new System.EventHandler(this.Nombre_Click);
             // 
             // label2
             // 
@@ -181,6 +179,7 @@ namespace Proyecto_Warescape
             this.Controls.Add(this.dgv_editoriales);
             this.Controls.Add(this.txt_rut);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "editoriales";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Editoriales";

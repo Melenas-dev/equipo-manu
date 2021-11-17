@@ -79,29 +79,6 @@ namespace Proyecto_Warescape
             Application.Exit();
         }
 
-        private void pictureBox1_Click_1(object sender, EventArgs e)
-        {
-            
-
-
-        }
-
-        private void btnMinimizar_Click(object sender, EventArgs e)
-        {
-            
-
-        }
-
-      
-
-        private void btnRestaurar_Click(object sender, EventArgs e)
-        {
-            
-
-        }
-
-      
-        
         private void ingresar_libro(object sender, EventArgs e)
         {
             txt_precio.Text = txt_precio.Text.Replace(" ", string.Empty);
@@ -235,12 +212,6 @@ namespace Proyecto_Warescape
 
         }
 
-      
-
-       
-
-      
-
         private void button7_Click(object sender, EventArgs e)
         {
                       
@@ -299,7 +270,7 @@ namespace Proyecto_Warescape
                     MessageBox.Show("Selecione un libro para editar");
                 }
                 else { 
-                MySqlCommand editar_libro = new MySqlCommand("update libros SET isbn=" + long.Parse(txt_isbn.Text) + ", codigo=" + long.Parse(txt_codigo.Text) + ", precio=" + long.Parse(txt_precio.Text) + ", nombre='" + txt_nombre.Text + "', autor='" + txt_autor.Text + "' Where id_libro=" + int.Parse(lbl_id_de_libro.Text) + ";", con);
+                MySqlCommand editar_libro = new MySqlCommand("update libros SET isbn=" + long.Parse(txt_isbn.Text) + ", codigo=" + long.Parse(txt_codigo.Text) + ", precio=" + float.Parse(txt_precio.Text) + ", nombre='" + txt_nombre.Text + "', autor='" + txt_autor.Text + "' Where id_libro=" + int.Parse(lbl_id_de_libro.Text) + ";", con);
                 editar_libro.ExecuteNonQuery();
 
                 Services.LibrosService.eliminarGenerosDelLibro(con, int.Parse(lbl_id_de_libro.Text));
@@ -512,19 +483,6 @@ namespace Proyecto_Warescape
 
             }
 
-           
-
-            
-        }
-
-        private void txt_isbn_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dgv_libros_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -549,54 +507,14 @@ namespace Proyecto_Warescape
             dgv_generos.Rows.Add(Cmb_genero.Text, ((Cmb_genero.SelectedItem as Generos).id_genero).ToString());
         }
 
-        private void dgv_generos_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void Cmb_genero_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txt_devoluciones_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void PanelContenedor_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void BtnCerrar_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void btnmaximizar_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void btnRestaurar_Click_1(object sender, EventArgs e)
-        {
-            
-        }
-
         private void txt_devoluciones_KeyPress(object sender, KeyPressEventArgs e)
         {
             solo_numeros(e);
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -626,16 +544,6 @@ namespace Proyecto_Warescape
         {
             
             solo_numeros(e);
-        }
-
-        private void txt_cantidad_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cmb_editorial_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -710,19 +618,9 @@ namespace Proyecto_Warescape
             dgv_generos.Rows.Add(Cmb_genero.Text, ((Cmb_genero.SelectedItem as Generos).id_genero).ToString());
         }
 
-        private void label15_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void pictureBox1_Click_2(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
-        }
-
-        private void txt_nombre_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void cmb_editorial_KeyPress(object sender, KeyPressEventArgs e)
@@ -828,26 +726,6 @@ namespace Proyecto_Warescape
             }
         }
 
-        private void mzButtonWindows1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label17_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btn_buscar_Click(object sender, EventArgs e)
         {
             if (!cmb_buscar_libro.Text.Trim().Equals(""))
@@ -868,9 +746,9 @@ namespace Proyecto_Warescape
             }
         }
 
-        private void cmb_boleta_SelectedIndexChanged(object sender, EventArgs e)
+        private void dtp_fecha_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            e.Handled = true;
         }
     }
     

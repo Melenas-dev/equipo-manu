@@ -59,7 +59,6 @@ namespace Proyecto_Warescape
             this.chartpublicidades.Size = new System.Drawing.Size(630, 635);
             this.chartpublicidades.TabIndex = 0;
             this.chartpublicidades.Text = "chart1";
-            this.chartpublicidades.Click += new System.EventHandler(this.chartpublicidades_Click);
             // 
             // btnconveniencia
             // 
@@ -86,7 +85,6 @@ namespace Proyecto_Warescape
             this.label7.Size = new System.Drawing.Size(158, 43);
             this.label7.TabIndex = 64;
             this.label7.Text = "Gráficas";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // graficas
             // 
@@ -100,7 +98,6 @@ namespace Proyecto_Warescape
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "graficas";
             this.Text = "lab";
-            this.Load += new System.EventHandler(this.graficas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.chartpublicidades)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using System.Text.RegularExpressions;
-using System.Linq;
 
 namespace Proyecto_Warescape
 {
@@ -23,11 +22,6 @@ namespace Proyecto_Warescape
             InitializeComponent();
         }
 
-        private void label13_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void panelfinanzas_Paint(object sender, PaintEventArgs e)
         {
             this.Hide();
@@ -39,26 +33,6 @@ namespace Proyecto_Warescape
         private void BtnCerrar_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        }
-
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -101,16 +75,6 @@ namespace Proyecto_Warescape
 
             }
             con.Close();
-
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
 
         }
 
@@ -434,22 +398,12 @@ namespace Proyecto_Warescape
             }
         }
 
-        private void btnmaximizar_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void button1_Click_2(object sender, EventArgs e)
         {
             Form caja = new control_de_caja();
             caja.Show();
         }
 
-        private void btnRestaurar_Click(object sender, EventArgs e)
-        {
-    
-
-        }
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
@@ -470,69 +424,14 @@ namespace Proyecto_Warescape
             e.Handled = true;
         }
 
-        private void cmb_publicidad_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void cmb_publicidad_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = true;
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void fecha_venta_KeyPress(object sender, KeyPressEventArgs e)
         {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cmb_libros_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void fecha_venta_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txt_cantidad_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txt_precio_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txt_boleta_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
+            e.Handled = true;
         }
     }
     }

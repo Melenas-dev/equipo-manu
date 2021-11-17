@@ -23,12 +23,14 @@ namespace Proyecto_Warescape
 
         private void estadisticas_mensuales_Load(object sender, EventArgs e)
         {
-            string[] coleccion_fechas = LibrosService.Obtener_fechas_ventas(con);
-
-            for (int i = 0; i < coleccion_fechas.Length; i++)
+            con.Open();
+            MySqlCommand obtener_año = new MySqlCommand("select year(fecha_de_venta) from ventas group by year(fecha_de_venta);", con);
+            MySqlDataReader reader = obtener_año.ExecuteReader();
+            while (reader.Read())
             {
-                cmb_año.Items.Add(coleccion_fechas[i]);
+                cmb_año.Items.Add(reader["year(fecha_de_venta)"].ToString()); 
             }
+            con.Close();
 
             con.Open();
             MySqlCommand obtener_editoriales = new MySqlCommand("select * from editoriales;", con);
@@ -42,6 +44,7 @@ namespace Proyecto_Warescape
                 cmb_editoriales.Items.Add(ed);
             }
             con.Close();
+            
         }
 
         private void lbl_libros_vendidos_Click(object sender, EventArgs e)
@@ -54,8 +57,7 @@ namespace Proyecto_Warescape
             if (!cmb_mes.Text.Equals("") || !cmb_año.Text.Equals(""))
             {
                 // LA TERNERA ANASHE
-                String editorial_seleccionada = cmb_editoriales.SelectedItem == null ? "-1" : (cmb_editoriales.SelectedItem as EditorialesClase).id_ed.ToString();
-                Console.WriteLine(editorial_seleccionada);
+                String editorial_seleccionada = cmb_editoriales.SelectedItem == null ? "-1" : (cmb_editoriales.SelectedItem as EditorialesClase).id_ed.ToString();             
                 if (cmb_editoriales.Text.Equals(""))
                 {
                     lbl_titulo_promedio.Text = "Promedio de ganancia mensual en total";
@@ -76,9 +78,7 @@ namespace Proyecto_Warescape
 
                 while (obtencion_del_precio.Read())
                 {
-                    precio = float.Parse(obtencion_del_precio["precio"].ToString());
-                    MessageBox.Show(obtencion_del_precio["precio"].ToString());
-                    MessageBox.Show(obtencion_del_precio["Cantidad"].ToString());
+                    precio = float.Parse(obtencion_del_precio["precio"].ToString());          
                     cantidad = float.Parse(obtencion_del_precio["Cantidad"].ToString());
                     promedio = precio / cantidad;
                     if (double.IsNaN(promedio))
@@ -103,54 +103,25 @@ namespace Proyecto_Warescape
             }
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
 
+        private void BtnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
-        private void lbl_mes_Click(object sender, EventArgs e)
+        private void cmb_año_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            e.Handled = true;
         }
 
-        private void cmb_mes_SelectedIndexChanged(object sender, EventArgs e)
+        private void cmb_mes_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            e.Handled = true;
         }
 
-        private void cmb_editoriales_SelectedIndexChanged(object sender, EventArgs e)
+        private void cmb_editoriales_KeyPress(object sender, KeyPressEventArgs e)
         {
-
-        }
-
-        private void cmb_año_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lbl_promedio_total_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lbl_titulo_promedio_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
+            e.Handled = true;
         }
     }
 }
