@@ -246,7 +246,7 @@ namespace Proyecto_Warescape
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "control_de_caja";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "+";
+            this.Text = "Control de caja";
             this.Load += new System.EventHandler(this.control_de_caja_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.control_de_caja_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ventas)).EndInit();

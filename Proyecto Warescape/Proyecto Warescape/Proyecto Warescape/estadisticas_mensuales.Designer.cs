@@ -202,6 +202,7 @@ namespace Proyecto_Warescape
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Estadisticas mensuales";
             this.Load += new System.EventHandler(this.estadisticas_mensuales_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.estadisticas_mensuales_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.BtnCerrar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

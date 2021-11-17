@@ -194,6 +194,12 @@
     <Compile Include="ventana.Designer.cs">
       <DependentUpon>ventana.cs</DependentUpon>
     </Compile>
+    <Compile Include="ventana_empleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ventana_empleado.Designer.cs">
+      <DependentUpon>ventana_empleado.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="agregargenero.resx">
       <DependentUpon>agregargenero.cs</DependentUpon>
     </EmbeddedResource>

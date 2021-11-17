@@ -165,7 +165,7 @@ namespace Proyecto_Warescape
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "agregargenero";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "agregargenero";
+            this.Text = "Generos";
             this.Load += new System.EventHandler(this.agregargenero_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.agregargenero_MouseDown);
             this.panel1.ResumeLayout(false);

@@ -283,7 +283,7 @@ namespace Proyecto_Warescape
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "devoluciones";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "devoluciones";
+            this.Text = "Devoluciones";
             this.Load += new System.EventHandler(this.devoluciones_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.devoluciones_MouseDown);
             this.panel1.ResumeLayout(false);

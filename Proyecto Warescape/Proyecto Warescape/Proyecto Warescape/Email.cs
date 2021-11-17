@@ -20,34 +20,46 @@ namespace Proyecto_Warescape
             // va a devolver un numero minimo y un maximo.
             int num = r.Next(100000, 1000000);
             //
-            MailMessage msg = new MailMessage();
-            msg.To.Add(receptor);
-            msg.Subject = "Correo de verificacion // Warescape";
-            msg.SubjectEncoding = Encoding.UTF8;
-            msg.Body = "El codigo de verificacion es " + num + " por favor ingreselo";
-            msg.BodyEncoding = Encoding.UTF8;
-            msg.IsBodyHtml = true;
-            msg.From = new MailAddress(emisor);
-            // Aca se le da permiso a C# para uso de terceros.
-            SmtpClient client = new SmtpClient();
-            // 
 
-            // Se "inicializan" las credenciales del correo para que C# pueda entrar a el msimo sion dificultades.
-            client.Credentials = new NetworkCredential(emisor, password);
-            //
-            client.Port = 587;
-            client.EnableSsl = true;
-            client.Host = "smtp.gmail.com";
-            try
+            MailMessage msg = new MailMessage();
+
+            if (receptor.Equals(""))
             {
-                client.Send(msg);
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("No se envio el correo correctamente, por favor verifique.");
+                MessageBox.Show("Debe ingresar un correo valido", "Error");
                 num = 0;
+                return num;
             }
-            return num;
+            else
+            {
+                msg.To.Add(receptor);
+                msg.Subject = "Correo de verificacion // Warescape";
+                msg.SubjectEncoding = Encoding.UTF8;
+                msg.Body = "El codigo de verificacion es " + num + " por favor ingreselo";
+                msg.BodyEncoding = Encoding.UTF8;
+                msg.IsBodyHtml = true;
+                msg.From = new MailAddress(emisor);
+                // Aca se le da permiso a C# para uso de terceros.
+                SmtpClient client = new SmtpClient();
+                // 
+
+                // Se "inicializan" las credenciales del correo para que C# pueda entrar a el msimo sion dificultades.
+                client.Credentials = new NetworkCredential(emisor, password);
+                //
+                client.Port = 587;
+                client.EnableSsl = true;
+                client.Host = "smtp.gmail.com";
+
+                try
+                {
+                    client.Send(msg);
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("No se envio el correo correctamente, por favor verifique.");
+                    num = 0;
+                }
+                return num;
+            }
         }
     }
 }

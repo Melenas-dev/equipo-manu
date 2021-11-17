@@ -305,7 +305,7 @@ namespace Proyecto_Warescape
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ventana";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ventanas";
+            this.Text = "Libreria 33";
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Ventana_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnl_cerrar.ResumeLayout(false);
