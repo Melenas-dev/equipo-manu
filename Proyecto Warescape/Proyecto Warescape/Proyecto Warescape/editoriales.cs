@@ -34,8 +34,11 @@ namespace Proyecto_Warescape
             }
             else
             {
+                long rut = long.Parse(txt_rut.Text.Replace(" ", string.Empty));
+
+
                 con.Open();
-                MySqlCommand comparar = new MySqlCommand("select rut from editoriales where  rut= " + int.Parse(txt_rut.Text) + ";", con);
+                MySqlCommand comparar = new MySqlCommand("select rut from editoriales where  rut= " + rut + ";", con); 
                 MySqlDataReader reader = comparar.ExecuteReader();
                 string a;
                 string b = "";
@@ -57,7 +60,7 @@ namespace Proyecto_Warescape
                 else
                 {
                     con.Open();
-                    MySqlCommand ingresar = new MySqlCommand("insert into editoriales(nombre,rut) values('" + txt_nombre.Text + "'," + int.Parse(txt_rut.Text) + ");", con);
+                    MySqlCommand ingresar = new MySqlCommand("insert into editoriales(nombre,rut) values('" + txt_nombre.Text.Trim() + "'," + rut + ");", con);
                     ingresar.ExecuteNonQuery();
                     actualizar_editoriales();
                     con.Close();
@@ -87,7 +90,7 @@ namespace Proyecto_Warescape
             if (n != -1)
             {
 
-                txt_nombre.Text = this.dgv_editoriales.CurrentRow.Cells[0].Value.ToString();
+                txt_nombre.Text = this.dgv_editoriales.CurrentRow.Cells[0].Value.ToString().Trim();
                 txt_rut.Text = this.dgv_editoriales.CurrentRow.Cells[1].Value.ToString();
             }
     }
@@ -99,7 +102,7 @@ namespace Proyecto_Warescape
                 if (resul == DialogResult.Yes)
                 {
                     con.Open();
-                    MySqlCommand borrar = new MySqlCommand("DELETE from editoriales where rut=" + int.Parse(txt_rut.Text) + "", con);
+                    MySqlCommand borrar = new MySqlCommand("DELETE from editoriales where rut=" + long.Parse(txt_rut.Text) + "", con);
                     borrar.ExecuteNonQuery();
                     actualizar_editoriales();
                     con.Close();

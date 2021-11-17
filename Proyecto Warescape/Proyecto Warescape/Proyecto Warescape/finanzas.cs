@@ -171,7 +171,7 @@ namespace Proyecto_Warescape
                     
                     int n_de_boleta = int.Parse(dgv_lista.Rows[i].Cells[0].Value.ToString().Trim());
                     string fecha = dgv_lista.Rows[i].Cells[1].Value.ToString();
-                    float precio = int.Parse(dgv_lista.Rows[i].Cells[2].Value.ToString().Trim());
+                    long precio = int.Parse(dgv_lista.Rows[i].Cells[2].Value.ToString().Trim());
                     int cantidad_vendida = int.Parse(dgv_lista.Rows[i].Cells[3].Value.ToString().Trim());
                     string libro = dgv_lista.Rows[i].Cells[4].Value.ToString().Trim();
                     string viene="";
@@ -217,20 +217,30 @@ namespace Proyecto_Warescape
 
                         con.Open();
 
-                        string ingresar_generan = "INSERT INTO generan values(" + n_de_boleta + ","+int.Parse(id_libro)+","+cantidad_vendida+","+precio+")";
-                        MySqlCommand query_genera = new MySqlCommand(ingresar_generan, con);
-                        query_genera.ExecuteNonQuery();
-                        con.Close();
-                        con.Open();
-                        if (!viene.Equals(""))
+                        try
                         {
-                            string insertar_publicidad = "INSERT INTO se_registran values(" + int.Parse(id_publi) + "," + n_de_boleta + ");";
-                            MySqlCommand query_se_registran = new MySqlCommand(insertar_publicidad, con);
-                            query_se_registran.ExecuteNonQuery();
-                            
+                            string ingresar_generan = "INSERT INTO generan values(" + n_de_boleta + "," + int.Parse(id_libro) + "," + cantidad_vendida + "," + precio + ")";
+                            MySqlCommand query_genera = new MySqlCommand(ingresar_generan, con);
+                            query_genera.ExecuteNonQuery();
+                            con.Close();
+                            con.Open();
+                            if (!viene.Equals(""))
+                            {
+                                string insertar_publicidad = "INSERT INTO se_registran values(" + int.Parse(id_publi) + "," + n_de_boleta + ");";
+                                MySqlCommand query_se_registran = new MySqlCommand(insertar_publicidad, con);
+                                query_se_registran.ExecuteNonQuery();
 
-                            
-                        }con.Close();
+
+
+                            }
+                            con.Close();
+                        }
+                        catch (Exception)
+                        {
+                            MessageBox.Show("No se puede ingresar datos duplicados");
+                            break;
+                        }
+
                         con.Open();
                         string extraer_monto = "SELECT monto from ventas where  n_de_boleta=" + n_de_boleta.ToString() + "; ";
                         MySqlCommand query_extraer = new MySqlCommand(extraer_monto, con);
@@ -246,7 +256,7 @@ namespace Proyecto_Warescape
                         con.Close();
                         con.Open();
                         precio = precio * cantidad_vendida;
-                        float cuenta = precio + float.Parse(b);
+                        long cuenta = precio + long.Parse(b);
                         string monto_cambiar = "UPDATE ventas set monto =" + cuenta + " where n_de_boleta =" + n_de_boleta + ";";
 
                         MySqlCommand cambiar_monto = new MySqlCommand(monto_cambiar, con);
@@ -258,7 +268,7 @@ namespace Proyecto_Warescape
                     else
                     {
                         con.Open();
-                        float monto = precio * cantidad_vendida;
+                        long monto = precio * cantidad_vendida;
                         string ingresar_venta = "INSERT INTO ventas values("+n_de_boleta+ ",'" + fecha + "'," + monto+");";
                         MySqlCommand query_ingersar_venta = new MySqlCommand(ingresar_venta, con);
                         query_ingersar_venta.ExecuteNonQuery();
@@ -393,7 +403,7 @@ namespace Proyecto_Warescape
                     DialogResult resul = MessageBox.Show("Seguro que quiere eliminar la venta?", "Eliminar Registro", MessageBoxButtons.YesNo);
                     if (resul == DialogResult.Yes)
                     {
-                        float n_de_boleta = float.Parse(lbl_n_de_boleta.Text);
+                        long n_de_boleta = long.Parse(lbl_n_de_boleta.Text);
                         string borrar_venta = "DELETE From ventas where n_de_boleta="+n_de_boleta+";";
                         con.Open();
                         MySqlCommand borrar = new MySqlCommand(borrar_venta,con);
@@ -417,7 +427,7 @@ namespace Proyecto_Warescape
                 if (dgv_ventas.CurrentRow.Cells[0].Value.ToString() != "")
                 {
 
-                    float a = float.Parse(dgv_ventas.CurrentRow.Cells[0].Value.ToString());
+                    long a = long.Parse(dgv_ventas.CurrentRow.Cells[0].Value.ToString());
                     lbl_n_de_boleta.Text = (Convert.ToInt32(a)).ToString();
                 }
 

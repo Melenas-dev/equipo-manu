@@ -75,5 +75,21 @@ namespace Proyecto_Warescape.Services
             ingresar_stock.ExecuteNonQuery();
             con.Close();
         }
+
+        public static string[] Obtener_fechas_ventas(MySqlConnection con)
+        {
+            con.Open();
+            MySqlCommand obtener_año = new MySqlCommand("select year(fecha_de_venta) from ventas group by year(fecha_de_venta);", con);
+            MySqlDataReader reader = obtener_año.ExecuteReader();
+
+            string[] coleccion_fechas = { };
+
+            while (reader.Read())
+            {
+                coleccion_fechas.Append(reader["year(fecha_de_venta)"]).ToString();
+            }
+            con.Close();
+            return coleccion_fechas;
+        }
     }
 }

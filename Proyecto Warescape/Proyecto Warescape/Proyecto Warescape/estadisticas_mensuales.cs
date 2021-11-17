@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using Proyecto_Warescape.Services;
 
 namespace Proyecto_Warescape
 {
@@ -22,14 +23,12 @@ namespace Proyecto_Warescape
 
         private void estadisticas_mensuales_Load(object sender, EventArgs e)
         {
-            con.Open();
-            MySqlCommand obtener_año = new MySqlCommand("select year(fecha_de_venta) from ventas group by year(fecha_de_venta);", con);
-            MySqlDataReader reader = obtener_año.ExecuteReader();
-            while (reader.Read())
+            string[] coleccion_fechas = LibrosService.Obtener_fechas_ventas(con);
+
+            for (int i = 0; i < coleccion_fechas.Length; i++)
             {
-                cmb_año.Items.Add(reader["year(fecha_de_venta)"]);
+                cmb_año.Items.Add(coleccion_fechas[i]);
             }
-            con.Close();
 
             con.Open();
             MySqlCommand obtener_editoriales = new MySqlCommand("select * from editoriales;", con);

@@ -35,7 +35,6 @@ namespace Proyecto_Warescape
             this.dgv_ventas = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.lbl_monto = new System.Windows.Forms.Label();
-            this.tb_año = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btn_motrar = new System.Windows.Forms.Button();
             this.btnRestaurar = new System.Windows.Forms.PictureBox();
@@ -43,6 +42,7 @@ namespace Proyecto_Warescape
             this.btnmaximizar = new System.Windows.Forms.PictureBox();
             this.btnminimizar = new System.Windows.Forms.PictureBox();
             this.label17 = new System.Windows.Forms.Label();
+            this.cmb_año = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ventas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnCerrar)).BeginInit();
@@ -116,15 +116,6 @@ namespace Proyecto_Warescape
             this.lbl_monto.Size = new System.Drawing.Size(0, 24);
             this.lbl_monto.TabIndex = 5;
             this.lbl_monto.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // tb_año
-            // 
-            this.tb_año.Location = new System.Drawing.Point(241, 138);
-            this.tb_año.Name = "tb_año";
-            this.tb_año.Size = new System.Drawing.Size(152, 20);
-            this.tb_año.TabIndex = 63;
-            this.tb_año.TextChanged += new System.EventHandler(this.tb_año_TextChanged);
-            this.tb_año.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_año_KeyPress);
             // 
             // label2
             // 
@@ -221,19 +212,27 @@ namespace Proyecto_Warescape
             this.label17.TabIndex = 70;
             this.label17.Text = "Control de Caja";
             // 
+            // cmb_año
+            // 
+            this.cmb_año.FormattingEnabled = true;
+            this.cmb_año.Location = new System.Drawing.Point(241, 138);
+            this.cmb_año.Name = "cmb_año";
+            this.cmb_año.Size = new System.Drawing.Size(169, 21);
+            this.cmb_año.TabIndex = 71;
+            // 
             // control_de_caja
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGray;
             this.ClientSize = new System.Drawing.Size(770, 550);
+            this.Controls.Add(this.cmb_año);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.btnminimizar);
             this.Controls.Add(this.btnmaximizar);
             this.Controls.Add(this.BtnCerrar);
             this.Controls.Add(this.btn_motrar);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.tb_año);
             this.Controls.Add(this.lbl_monto);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgv_ventas);
@@ -246,6 +245,7 @@ namespace Proyecto_Warescape
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "+";
             this.Load += new System.EventHandler(this.control_de_caja_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.control_de_caja_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ventas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnCerrar)).EndInit();
@@ -262,7 +262,6 @@ namespace Proyecto_Warescape
         private System.Windows.Forms.DataGridView dgv_ventas;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbl_monto;
-        private System.Windows.Forms.TextBox tb_año;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btn_motrar;
         private System.Windows.Forms.PictureBox btnRestaurar;
@@ -270,5 +269,6 @@ namespace Proyecto_Warescape
         private System.Windows.Forms.PictureBox btnmaximizar;
         private System.Windows.Forms.PictureBox btnminimizar;
         private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.ComboBox cmb_año;
     }
 }

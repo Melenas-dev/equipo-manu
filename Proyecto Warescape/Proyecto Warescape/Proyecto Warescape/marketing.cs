@@ -53,13 +53,18 @@ namespace Proyecto_Warescape
             }
             else
             {
-                string ingreso_publicidad = "insert into publicidad(rut, monto, nombre) values(" + int.Parse(txt_rut.Text) + ", " + int.Parse(txt_monto.Text.Trim()) + ",'" + txt_nombre.Text.Trim() + "');";
-                MySqlCommand Ingreso = new MySqlCommand(ingreso_publicidad, con);
-                Ingreso.ExecuteNonQuery();
-                con.Close();
-                mostrar_publicidades();
-
-
+                if (lbl_id_publicidad.Text.Equals(""))
+                {
+                    string ingreso_publicidad = "insert into publicidad(rut, monto, nombre) values(" + long.Parse(txt_rut.Text) + ", " + int.Parse(txt_monto.Text.Trim()) + ",'" + txt_nombre.Text.Trim() + "');";
+                    MySqlCommand Ingreso = new MySqlCommand(ingreso_publicidad, con);
+                    Ingreso.ExecuteNonQuery();
+                    con.Close();
+                    mostrar_publicidades();
+                }
+                else
+                {
+                    MessageBox.Show("No debe haber ningun libro seleccionado para ingresar.", "Error");
+                }
             }
 
 
@@ -84,29 +89,34 @@ namespace Proyecto_Warescape
 
             txt_monto.Text = txt_monto.Text.Replace(" ", string.Empty);
             txt_rut.Text = txt_rut.Text.Replace(" ", string.Empty);
-            
+
 
             if (txt_rut.Text.Equals("") || lbl_id_publicidad.Text.Equals("") || txt_monto.Text.Equals("") || txt_nombre.Text.Equals(""))
             {
                 MessageBox.Show("Ingresar todos los parametros");
-                
-            }
-            if (txt_nombre.Text.Trim().Equals(""))
-            {
-                MessageBox.Show("Verificar espacios");
+
             }
             else
             {
 
-                string editar = "UPDATE publicidad set rut=" + int.Parse(txt_rut.Text) + ", monto=" + float.Parse(txt_monto.Text) + ",nombre='" + txt_nombre.Text.Trim() + "' where id_publicidad =" + int.Parse(lbl_id_publicidad.Text) + ";";
-                MySqlCommand comando = new MySqlCommand(editar, con);
-                comando.ExecuteNonQuery();
-                mostrar_publicidades();
-                lbl_id_publicidad.Text = "";
-                txt_rut.Text = "";
-                txt_nombre.Text = "";
-                txt_monto.Text = "";
 
+                if (txt_nombre.Text.Trim().Equals(""))
+                {
+                    MessageBox.Show("Verificar espacios");
+                }
+                else
+                {
+
+                    string editar = "UPDATE publicidad set rut=" + long.Parse(txt_rut.Text) + ", monto=" + long.Parse(txt_monto.Text) + ",nombre='" + txt_nombre.Text.Trim() + "' where id_publicidad =" + int.Parse(lbl_id_publicidad.Text) + ";";
+                    MySqlCommand comando = new MySqlCommand(editar, con);
+                    comando.ExecuteNonQuery();
+                    mostrar_publicidades();
+                    lbl_id_publicidad.Text = "";
+                    txt_rut.Text = "";
+                    txt_nombre.Text = "";
+                    txt_monto.Text = "";
+
+                }
             }
             con.Close();
 

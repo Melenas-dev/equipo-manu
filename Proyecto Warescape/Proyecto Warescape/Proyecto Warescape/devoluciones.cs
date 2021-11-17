@@ -23,7 +23,6 @@ namespace Proyecto_Warescape
         {
             con.Close();
 
-
             MySqlCommand comando = new MySqlCommand("SELECT nombre,id_libro from libros", con);
             con.Open();
             MySqlDataReader registro = comando.ExecuteReader();
@@ -56,8 +55,8 @@ namespace Proyecto_Warescape
             }
             else
             {
-                string id_libro = cmb_libros.Text.Split('-').Last();
-                int cantidad = int.Parse(txt_cantidad.Text);
+                string id_libro = cmb_libros.Text.Split('-').Last().Trim();
+                int cantidad = int.Parse(txt_cantidad.Text.Replace(" ", string.Empty));
                 con.Open();
                 string comando2 = "SELECT l.stock, e.id_ed FROM libros l JOIN lcc as lc on lc.id_libro = l.id_libro JOIN compras_y_consignaciones c on lc.n_de_operacion = c.n_de_operacion JOIN editoriales e on e.id_ed=c.id_ed where l.id_libro=" + id_libro + ";";
                 MySqlCommand buscar_stock = new MySqlCommand(comando2,con);

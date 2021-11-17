@@ -52,16 +52,17 @@ namespace Proyecto_Warescape
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(49, 39);
+            this.label2.Location = new System.Drawing.Point(56, 110);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(124, 21);
+            this.label2.Size = new System.Drawing.Size(323, 84);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Ingrese un gmail";
+            this.label2.Text = "Ingrese un gmail al que pueda acceder\r\n\r\nSe le enviara un correo con el codigo\r\nd" +
+    "e verificacion para restablecer su contraseña\r\n";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // txt_receptor
             // 
-            this.txt_receptor.Location = new System.Drawing.Point(27, 84);
+            this.txt_receptor.Location = new System.Drawing.Point(60, 230);
             this.txt_receptor.Name = "txt_receptor";
             this.txt_receptor.Size = new System.Drawing.Size(192, 20);
             this.txt_receptor.TabIndex = 4;
@@ -147,7 +148,7 @@ namespace Proyecto_Warescape
             // 
             // btn_enviar
             // 
-            this.btn_enviar.Location = new System.Drawing.Point(239, 84);
+            this.btn_enviar.Location = new System.Drawing.Point(272, 230);
             this.btn_enviar.Name = "btn_enviar";
             this.btn_enviar.Size = new System.Drawing.Size(75, 23);
             this.btn_enviar.TabIndex = 8;
@@ -158,7 +159,6 @@ namespace Proyecto_Warescape
             // pnl_cambiar_pass
             // 
             this.pnl_cambiar_pass.BackColor = System.Drawing.Color.DarkGray;
-            this.pnl_cambiar_pass.Controls.Add(this.BtnCerrar);
             this.pnl_cambiar_pass.Controls.Add(this.btn_Guardar);
             this.pnl_cambiar_pass.Controls.Add(this.label1);
             this.pnl_cambiar_pass.Controls.Add(this.txt_pass2);
@@ -166,9 +166,9 @@ namespace Proyecto_Warescape
             this.pnl_cambiar_pass.Controls.Add(this.label4);
             this.pnl_cambiar_pass.Controls.Add(this.cmb_usuario);
             this.pnl_cambiar_pass.Controls.Add(this.txt_pass1);
-            this.pnl_cambiar_pass.Location = new System.Drawing.Point(0, -2);
+            this.pnl_cambiar_pass.Location = new System.Drawing.Point(12, 52);
             this.pnl_cambiar_pass.Name = "pnl_cambiar_pass";
-            this.pnl_cambiar_pass.Size = new System.Drawing.Size(415, 299);
+            this.pnl_cambiar_pass.Size = new System.Drawing.Size(400, 298);
             this.pnl_cambiar_pass.TabIndex = 9;
             this.pnl_cambiar_pass.Visible = false;
             this.pnl_cambiar_pass.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_cambiar_pass_Paint_1);
@@ -179,7 +179,7 @@ namespace Proyecto_Warescape
             this.BtnCerrar.BackColor = System.Drawing.Color.Transparent;
             this.BtnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("BtnCerrar.Image")));
-            this.BtnCerrar.Location = new System.Drawing.Point(363, 0);
+            this.BtnCerrar.Location = new System.Drawing.Point(358, 3);
             this.BtnCerrar.Name = "BtnCerrar";
             this.BtnCerrar.Size = new System.Drawing.Size(46, 43);
             this.BtnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -192,7 +192,8 @@ namespace Proyecto_Warescape
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGray;
-            this.ClientSize = new System.Drawing.Size(414, 296);
+            this.ClientSize = new System.Drawing.Size(431, 374);
+            this.Controls.Add(this.BtnCerrar);
             this.Controls.Add(this.pnl_cambiar_pass);
             this.Controls.Add(this.btn_enviar);
             this.Controls.Add(this.txt_receptor);
@@ -201,6 +202,8 @@ namespace Proyecto_Warescape
             this.Name = "FormEmail";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormEmail";
+            this.Load += new System.EventHandler(this.FormEmail_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FormEmail_MouseDown);
             this.pnl_cambiar_pass.ResumeLayout(false);
             this.pnl_cambiar_pass.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BtnCerrar)).EndInit();

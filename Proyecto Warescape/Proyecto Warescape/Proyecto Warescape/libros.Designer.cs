@@ -455,6 +455,7 @@ namespace Proyecto_Warescape
             this.cmb_boleta.Name = "cmb_boleta";
             this.cmb_boleta.Size = new System.Drawing.Size(134, 21);
             this.cmb_boleta.TabIndex = 42;
+            this.cmb_boleta.SelectedIndexChanged += new System.EventHandler(this.cmb_boleta_SelectedIndexChanged);
             this.cmb_boleta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmb_boleta_KeyPress);
             // 
             // lbl_id_de_libro
