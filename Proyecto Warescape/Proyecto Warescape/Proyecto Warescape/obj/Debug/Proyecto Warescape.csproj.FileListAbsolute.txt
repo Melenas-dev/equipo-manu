@@ -380,3 +380,4 @@ C:\Users\Franc\OneDrive\Documentos\GitHub\Warescape\Proyecto Warescape\Proyecto 
 C:\Users\Franc\OneDrive\Documentos\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.devoluciones.resources
 C:\Users\Franc\OneDrive\Documentos\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.estadisticas_mensuales.resources
 C:\Users\loloc\OneDrive\Documentos\GitHub\equipo-manu\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.devoluciones.resources
+C:\Users\manue\Documents\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.ventana_empleado.resources

@@ -37,6 +37,12 @@ namespace Proyecto_Warescape
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.dgv_lista = new System.Windows.Forms.DataGridView();
+            this.n_de_boleta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.libro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vienepor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_Agregar = new System.Windows.Forms.Button();
             this.fecha_venta = new System.Windows.Forms.DateTimePicker();
             this.cmb_libros = new System.Windows.Forms.ComboBox();
@@ -50,12 +56,6 @@ namespace Proyecto_Warescape
             this.btn_control_caja = new System.Windows.Forms.Button();
             this.btn_estadisticas = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.n_de_boleta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.libro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vienepor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_lista)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ventas)).BeginInit();
             this.SuspendLayout();
@@ -65,7 +65,7 @@ namespace Proyecto_Warescape
             this.txt_boleta.Location = new System.Drawing.Point(58, 133);
             this.txt_boleta.Name = "txt_boleta";
             this.txt_boleta.Size = new System.Drawing.Size(91, 20);
-            this.txt_boleta.TabIndex = 9;
+            this.txt_boleta.TabIndex = 1;
             this.txt_boleta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_boleta_KeyPress);
             // 
             // txt_precio
@@ -73,7 +73,7 @@ namespace Proyecto_Warescape
             this.txt_precio.Location = new System.Drawing.Point(57, 192);
             this.txt_precio.Name = "txt_precio";
             this.txt_precio.Size = new System.Drawing.Size(91, 20);
-            this.txt_precio.TabIndex = 10;
+            this.txt_precio.TabIndex = 2;
             this.txt_precio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_precio_KeyPress);
             // 
             // txt_cantidad
@@ -81,7 +81,7 @@ namespace Proyecto_Warescape
             this.txt_cantidad.Location = new System.Drawing.Point(191, 192);
             this.txt_cantidad.Name = "txt_cantidad";
             this.txt_cantidad.Size = new System.Drawing.Size(119, 20);
-            this.txt_cantidad.TabIndex = 12;
+            this.txt_cantidad.TabIndex = 3;
             this.txt_cantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_cantidad_KeyPress);
             // 
             // label1
@@ -150,169 +150,6 @@ namespace Proyecto_Warescape
             this.dgv_lista.TabIndex = 18;
             this.dgv_lista.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_lista_CellDoubleClick);
             // 
-            // btn_Agregar
-            // 
-            this.btn_Agregar.BackColor = System.Drawing.Color.Transparent;
-            this.btn_Agregar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_Agregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.btn_Agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Agregar.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Agregar.ForeColor = System.Drawing.Color.White;
-            this.btn_Agregar.Location = new System.Drawing.Point(109, 306);
-            this.btn_Agregar.Name = "btn_Agregar";
-            this.btn_Agregar.Size = new System.Drawing.Size(124, 35);
-            this.btn_Agregar.TabIndex = 19;
-            this.btn_Agregar.Text = "Agregar";
-            this.btn_Agregar.UseVisualStyleBackColor = false;
-            this.btn_Agregar.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // fecha_venta
-            // 
-            this.fecha_venta.CustomFormat = "yyyy-MM-dd";
-            this.fecha_venta.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.fecha_venta.Location = new System.Drawing.Point(193, 133);
-            this.fecha_venta.Name = "fecha_venta";
-            this.fecha_venta.Size = new System.Drawing.Size(99, 20);
-            this.fecha_venta.TabIndex = 47;
-            this.fecha_venta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.fecha_venta_KeyPress);
-            // 
-            // cmb_libros
-            // 
-            this.cmb_libros.FormattingEnabled = true;
-            this.cmb_libros.Location = new System.Drawing.Point(56, 252);
-            this.cmb_libros.Name = "cmb_libros";
-            this.cmb_libros.Size = new System.Drawing.Size(93, 21);
-            this.cmb_libros.TabIndex = 48;
-            this.cmb_libros.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmb_libros_KeyPress);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F);
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(54, 225);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(46, 24);
-            this.label5.TabIndex = 49;
-            this.label5.Text = "libro";
-            // 
-            // cmb_publicidad
-            // 
-            this.cmb_publicidad.FormattingEnabled = true;
-            this.cmb_publicidad.Location = new System.Drawing.Point(191, 252);
-            this.cmb_publicidad.Name = "cmb_publicidad";
-            this.cmb_publicidad.Size = new System.Drawing.Size(121, 21);
-            this.cmb_publicidad.TabIndex = 50;
-            this.cmb_publicidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmb_publicidad_KeyPress);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F);
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(189, 225);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(86, 24);
-            this.label6.TabIndex = 51;
-            this.label6.Text = "Viene por";
-            // 
-            // Registrar_ventra
-            // 
-            this.Registrar_ventra.BackColor = System.Drawing.Color.Transparent;
-            this.Registrar_ventra.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.Registrar_ventra.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.Registrar_ventra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Registrar_ventra.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Registrar_ventra.ForeColor = System.Drawing.Color.White;
-            this.Registrar_ventra.Location = new System.Drawing.Point(555, 306);
-            this.Registrar_ventra.Name = "Registrar_ventra";
-            this.Registrar_ventra.Size = new System.Drawing.Size(171, 35);
-            this.Registrar_ventra.TabIndex = 52;
-            this.Registrar_ventra.Text = "Registrar ventra";
-            this.Registrar_ventra.UseVisualStyleBackColor = false;
-            this.Registrar_ventra.Click += new System.EventHandler(this.Registrar_ventra_Click);
-            // 
-            // dgv_ventas
-            // 
-            this.dgv_ventas.BackgroundColor = System.Drawing.Color.LightGray;
-            this.dgv_ventas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_ventas.Location = new System.Drawing.Point(12, 368);
-            this.dgv_ventas.Name = "dgv_ventas";
-            this.dgv_ventas.ReadOnly = true;
-            this.dgv_ventas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_ventas.Size = new System.Drawing.Size(823, 318);
-            this.dgv_ventas.TabIndex = 53;
-            this.dgv_ventas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_ventas_CellClick);
-            // 
-            // Borrar
-            // 
-            this.Borrar.BackColor = System.Drawing.Color.Transparent;
-            this.Borrar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.Borrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.Borrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Borrar.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Borrar.ForeColor = System.Drawing.Color.White;
-            this.Borrar.Location = new System.Drawing.Point(767, 306);
-            this.Borrar.Name = "Borrar";
-            this.Borrar.Size = new System.Drawing.Size(136, 35);
-            this.Borrar.TabIndex = 54;
-            this.Borrar.Text = "Borrar venta";
-            this.Borrar.UseVisualStyleBackColor = false;
-            this.Borrar.Click += new System.EventHandler(this.Borrar_Click);
-            // 
-            // lbl_n_de_boleta
-            // 
-            this.lbl_n_de_boleta.AutoSize = true;
-            this.lbl_n_de_boleta.Location = new System.Drawing.Point(37, 29);
-            this.lbl_n_de_boleta.Name = "lbl_n_de_boleta";
-            this.lbl_n_de_boleta.Size = new System.Drawing.Size(0, 13);
-            this.lbl_n_de_boleta.TabIndex = 55;
-            this.lbl_n_de_boleta.Visible = false;
-            // 
-            // btn_control_caja
-            // 
-            this.btn_control_caja.BackColor = System.Drawing.Color.Transparent;
-            this.btn_control_caja.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_control_caja.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.btn_control_caja.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_control_caja.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_control_caja.ForeColor = System.Drawing.Color.White;
-            this.btn_control_caja.Location = new System.Drawing.Point(854, 651);
-            this.btn_control_caja.Name = "btn_control_caja";
-            this.btn_control_caja.Size = new System.Drawing.Size(219, 35);
-            this.btn_control_caja.TabIndex = 61;
-            this.btn_control_caja.Text = "Control de caja";
-            this.btn_control_caja.UseVisualStyleBackColor = false;
-            this.btn_control_caja.Click += new System.EventHandler(this.button1_Click_2);
-            // 
-            // btn_estadisticas
-            // 
-            this.btn_estadisticas.BackColor = System.Drawing.Color.Transparent;
-            this.btn_estadisticas.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_estadisticas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.btn_estadisticas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_estadisticas.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_estadisticas.ForeColor = System.Drawing.Color.White;
-            this.btn_estadisticas.Location = new System.Drawing.Point(854, 601);
-            this.btn_estadisticas.Name = "btn_estadisticas";
-            this.btn_estadisticas.Size = new System.Drawing.Size(219, 35);
-            this.btn_estadisticas.TabIndex = 62;
-            this.btn_estadisticas.Text = "Estadisticas mensuales";
-            this.btn_estadisticas.UseVisualStyleBackColor = false;
-            this.btn_estadisticas.Click += new System.EventHandler(this.btn_estadisticas_Click);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Franklin Gothic Medium", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(419, 29);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(231, 43);
-            this.label7.TabIndex = 63;
-            this.label7.Text = "Contabilidad";
-            // 
             // n_de_boleta
             // 
             this.n_de_boleta.HeaderText = "N * de boleta";
@@ -342,6 +179,169 @@ namespace Proyecto_Warescape
             // 
             this.vienepor.HeaderText = "Viene Por";
             this.vienepor.Name = "vienepor";
+            // 
+            // btn_Agregar
+            // 
+            this.btn_Agregar.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Agregar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_Agregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btn_Agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Agregar.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Agregar.ForeColor = System.Drawing.Color.White;
+            this.btn_Agregar.Location = new System.Drawing.Point(109, 306);
+            this.btn_Agregar.Name = "btn_Agregar";
+            this.btn_Agregar.Size = new System.Drawing.Size(124, 35);
+            this.btn_Agregar.TabIndex = 6;
+            this.btn_Agregar.Text = "Agregar";
+            this.btn_Agregar.UseVisualStyleBackColor = false;
+            this.btn_Agregar.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // fecha_venta
+            // 
+            this.fecha_venta.CustomFormat = "yyyy-MM-dd";
+            this.fecha_venta.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.fecha_venta.Location = new System.Drawing.Point(193, 133);
+            this.fecha_venta.Name = "fecha_venta";
+            this.fecha_venta.Size = new System.Drawing.Size(99, 20);
+            this.fecha_venta.TabIndex = 47;
+            this.fecha_venta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.fecha_venta_KeyPress);
+            // 
+            // cmb_libros
+            // 
+            this.cmb_libros.FormattingEnabled = true;
+            this.cmb_libros.Location = new System.Drawing.Point(56, 252);
+            this.cmb_libros.Name = "cmb_libros";
+            this.cmb_libros.Size = new System.Drawing.Size(93, 21);
+            this.cmb_libros.TabIndex = 4;
+            this.cmb_libros.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmb_libros_KeyPress);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F);
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(54, 225);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(46, 24);
+            this.label5.TabIndex = 49;
+            this.label5.Text = "libro";
+            // 
+            // cmb_publicidad
+            // 
+            this.cmb_publicidad.FormattingEnabled = true;
+            this.cmb_publicidad.Location = new System.Drawing.Point(191, 252);
+            this.cmb_publicidad.Name = "cmb_publicidad";
+            this.cmb_publicidad.Size = new System.Drawing.Size(121, 21);
+            this.cmb_publicidad.TabIndex = 5;
+            this.cmb_publicidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmb_publicidad_KeyPress);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F);
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(189, 225);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(86, 24);
+            this.label6.TabIndex = 51;
+            this.label6.Text = "Viene por";
+            // 
+            // Registrar_ventra
+            // 
+            this.Registrar_ventra.BackColor = System.Drawing.Color.Transparent;
+            this.Registrar_ventra.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.Registrar_ventra.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.Registrar_ventra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Registrar_ventra.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Registrar_ventra.ForeColor = System.Drawing.Color.White;
+            this.Registrar_ventra.Location = new System.Drawing.Point(555, 306);
+            this.Registrar_ventra.Name = "Registrar_ventra";
+            this.Registrar_ventra.Size = new System.Drawing.Size(171, 35);
+            this.Registrar_ventra.TabIndex = 7;
+            this.Registrar_ventra.Text = "Registrar ventra";
+            this.Registrar_ventra.UseVisualStyleBackColor = false;
+            this.Registrar_ventra.Click += new System.EventHandler(this.Registrar_ventra_Click);
+            // 
+            // dgv_ventas
+            // 
+            this.dgv_ventas.BackgroundColor = System.Drawing.Color.LightGray;
+            this.dgv_ventas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_ventas.Location = new System.Drawing.Point(12, 368);
+            this.dgv_ventas.Name = "dgv_ventas";
+            this.dgv_ventas.ReadOnly = true;
+            this.dgv_ventas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_ventas.Size = new System.Drawing.Size(823, 318);
+            this.dgv_ventas.TabIndex = 53;
+            this.dgv_ventas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_ventas_CellClick);
+            // 
+            // Borrar
+            // 
+            this.Borrar.BackColor = System.Drawing.Color.Transparent;
+            this.Borrar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.Borrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.Borrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Borrar.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Borrar.ForeColor = System.Drawing.Color.White;
+            this.Borrar.Location = new System.Drawing.Point(767, 306);
+            this.Borrar.Name = "Borrar";
+            this.Borrar.Size = new System.Drawing.Size(136, 35);
+            this.Borrar.TabIndex = 8;
+            this.Borrar.Text = "Borrar venta";
+            this.Borrar.UseVisualStyleBackColor = false;
+            this.Borrar.Click += new System.EventHandler(this.Borrar_Click);
+            // 
+            // lbl_n_de_boleta
+            // 
+            this.lbl_n_de_boleta.AutoSize = true;
+            this.lbl_n_de_boleta.Location = new System.Drawing.Point(37, 29);
+            this.lbl_n_de_boleta.Name = "lbl_n_de_boleta";
+            this.lbl_n_de_boleta.Size = new System.Drawing.Size(0, 13);
+            this.lbl_n_de_boleta.TabIndex = 55;
+            this.lbl_n_de_boleta.Visible = false;
+            // 
+            // btn_control_caja
+            // 
+            this.btn_control_caja.BackColor = System.Drawing.Color.Transparent;
+            this.btn_control_caja.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_control_caja.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btn_control_caja.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_control_caja.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_control_caja.ForeColor = System.Drawing.Color.White;
+            this.btn_control_caja.Location = new System.Drawing.Point(854, 651);
+            this.btn_control_caja.Name = "btn_control_caja";
+            this.btn_control_caja.Size = new System.Drawing.Size(219, 35);
+            this.btn_control_caja.TabIndex = 10;
+            this.btn_control_caja.Text = "Control de caja";
+            this.btn_control_caja.UseVisualStyleBackColor = false;
+            this.btn_control_caja.Click += new System.EventHandler(this.button1_Click_2);
+            // 
+            // btn_estadisticas
+            // 
+            this.btn_estadisticas.BackColor = System.Drawing.Color.Transparent;
+            this.btn_estadisticas.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_estadisticas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btn_estadisticas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_estadisticas.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_estadisticas.ForeColor = System.Drawing.Color.White;
+            this.btn_estadisticas.Location = new System.Drawing.Point(854, 601);
+            this.btn_estadisticas.Name = "btn_estadisticas";
+            this.btn_estadisticas.Size = new System.Drawing.Size(219, 35);
+            this.btn_estadisticas.TabIndex = 9;
+            this.btn_estadisticas.Text = "Estadisticas mensuales";
+            this.btn_estadisticas.UseVisualStyleBackColor = false;
+            this.btn_estadisticas.Click += new System.EventHandler(this.btn_estadisticas_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Franklin Gothic Medium", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(419, 29);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(231, 43);
+            this.label7.TabIndex = 63;
+            this.label7.Text = "Contabilidad";
             // 
             // finanzas
             // 

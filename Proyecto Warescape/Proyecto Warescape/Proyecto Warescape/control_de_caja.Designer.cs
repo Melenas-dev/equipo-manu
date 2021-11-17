@@ -141,7 +141,7 @@ namespace Proyecto_Warescape
             this.btn_motrar.Location = new System.Drawing.Point(613, 124);
             this.btn_motrar.Name = "btn_motrar";
             this.btn_motrar.Size = new System.Drawing.Size(124, 35);
-            this.btn_motrar.TabIndex = 65;
+            this.btn_motrar.TabIndex = 3;
             this.btn_motrar.Text = "Mostrar";
             this.btn_motrar.UseVisualStyleBackColor = false;
             this.btn_motrar.Click += new System.EventHandler(this.button7_Click);
@@ -219,7 +219,7 @@ namespace Proyecto_Warescape
             this.cmb_año.Location = new System.Drawing.Point(241, 138);
             this.cmb_año.Name = "cmb_año";
             this.cmb_año.Size = new System.Drawing.Size(169, 21);
-            this.cmb_año.TabIndex = 71;
+            this.cmb_año.TabIndex = 2;
             this.cmb_año.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmb_año_KeyPress);
             // 
             // control_de_caja

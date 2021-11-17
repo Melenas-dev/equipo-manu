@@ -249,6 +249,9 @@
     <EmbeddedResource Include="ventana.resx">
       <DependentUpon>ventana.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ventana_empleado.resx">
+      <DependentUpon>ventana_empleado.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

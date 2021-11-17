@@ -352,7 +352,7 @@ namespace Proyecto_Warescape
         }
         public void actualizar_dgv_libros()
         {
-            MySqlCommand mostrar = new MySqlCommand("SELECT l.*, e.nombre Editorial, ( SELECT g.descripcion FROM tienen t JOIN generos g ON g.id_genero = t.id_genero " +
+            MySqlCommand mostrar = new MySqlCommand("SELECT l.id_libro'ID Libro', l.isbn'ISBN', l.codigo'Codigo', l.precio'Precio', l.stock'Stock', l.nombre'Nombre', l.autor'Autor', e.nombre Editorial, ( SELECT g.descripcion FROM tienen t JOIN generos g ON g.id_genero = t.id_genero " +
                 " WHERE t.id_libro = l.id_libro LIMIT 1 ) 'Primer genero del libro' FROM libros l JOIN lcc as lc on lc.id_libro = l.id_libro JOIN compras_y_consignaciones c on lc.n_de_operacion = c.n_de_operacion JOIN editoriales e on e.id_ed=c.id_ed", con);
             MySqlDataAdapter adaptador = new MySqlDataAdapter();
             adaptador.SelectCommand = mostrar;

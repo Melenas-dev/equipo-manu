@@ -34,7 +34,6 @@ namespace Proyecto_Warescape
             this.campo_usuario = new System.Windows.Forms.TextBox();
             this.ingreso = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.btn_restaurar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -92,16 +91,6 @@ namespace Proyecto_Warescape
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(348, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // btn_restaurar
             // 
@@ -182,7 +171,6 @@ namespace Proyecto_Warescape
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_restaurar);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.campo_usuario);
             this.Controls.Add(this.ingreso);
@@ -209,7 +197,6 @@ namespace Proyecto_Warescape
         private System.Windows.Forms.TextBox campo_usuario;
         private System.Windows.Forms.Button ingreso;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btn_restaurar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;

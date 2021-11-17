@@ -125,5 +125,10 @@ namespace Proyecto_Warescape
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
         }
+
+        private void ventana_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

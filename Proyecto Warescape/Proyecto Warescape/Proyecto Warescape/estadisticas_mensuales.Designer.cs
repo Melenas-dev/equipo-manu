@@ -99,7 +99,7 @@ namespace Proyecto_Warescape
             this.cmb_editoriales.Location = new System.Drawing.Point(299, 152);
             this.cmb_editoriales.Name = "cmb_editoriales";
             this.cmb_editoriales.Size = new System.Drawing.Size(121, 21);
-            this.cmb_editoriales.TabIndex = 8;
+            this.cmb_editoriales.TabIndex = 3;
             this.cmb_editoriales.ValueMember = "id_ed";
             this.cmb_editoriales.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmb_editoriales_KeyPress);
             // 
@@ -122,7 +122,7 @@ namespace Proyecto_Warescape
             this.cmb_mes.Location = new System.Drawing.Point(299, 120);
             this.cmb_mes.Name = "cmb_mes";
             this.cmb_mes.Size = new System.Drawing.Size(121, 21);
-            this.cmb_mes.TabIndex = 9;
+            this.cmb_mes.TabIndex = 2;
             this.cmb_mes.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmb_mes_KeyPress);
             // 
             // cmb_año
@@ -131,7 +131,7 @@ namespace Proyecto_Warescape
             this.cmb_año.Location = new System.Drawing.Point(299, 86);
             this.cmb_año.Name = "cmb_año";
             this.cmb_año.Size = new System.Drawing.Size(121, 21);
-            this.cmb_año.TabIndex = 11;
+            this.cmb_año.TabIndex = 1;
             this.cmb_año.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmb_año_KeyPress);
             // 
             // label4

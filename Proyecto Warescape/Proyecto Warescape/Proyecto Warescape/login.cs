@@ -85,10 +85,18 @@ namespace Proyecto_Warescape
             if (contra_hasheada.Equals(contrasena))
             {
 
-                this.Hide();
-                ventana v1 = new ventana();
-                v1.Show();
-                
+                if (campo_usuario.Text.Equals("Empleado"))
+                {
+                    this.Hide();
+                    Form v1 = new ventana_empleado();
+                    v1.Show();
+                }
+                else
+                {
+                    this.Hide();
+                    ventana v1 = new ventana();
+                    v1.Show();
+                }
             }
             else
             {
@@ -130,12 +138,6 @@ namespace Proyecto_Warescape
                 ReleaseCapture();
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            campo_contra.Text = "warescape";
-            campo_usuario.Text = "admin" ;
         }
 
         private void btn_restaurar_Click(object sender, EventArgs e)

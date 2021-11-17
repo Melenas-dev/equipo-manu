@@ -172,7 +172,7 @@ namespace Proyecto_Warescape
             this.cmb_editorial.Location = new System.Drawing.Point(38, 278);
             this.cmb_editorial.Name = "cmb_editorial";
             this.cmb_editorial.Size = new System.Drawing.Size(137, 21);
-            this.cmb_editorial.TabIndex = 19;
+            this.cmb_editorial.TabIndex = 6;
             this.cmb_editorial.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmb_editorial_KeyPress);
             // 
             // Cmb_genero
@@ -182,7 +182,7 @@ namespace Proyecto_Warescape
             this.Cmb_genero.Location = new System.Drawing.Point(186, 278);
             this.Cmb_genero.Name = "Cmb_genero";
             this.Cmb_genero.Size = new System.Drawing.Size(137, 21);
-            this.Cmb_genero.TabIndex = 18;
+            this.Cmb_genero.TabIndex = 7;
             this.Cmb_genero.Tag = "";
             this.Cmb_genero.ValueMember = "id_genero";
             this.Cmb_genero.SelectedValueChanged += new System.EventHandler(this.Cmb_genero_SelectedValueChanged);
@@ -242,7 +242,7 @@ namespace Proyecto_Warescape
             this.button7.Location = new System.Drawing.Point(622, 306);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(124, 35);
-            this.button7.TabIndex = 16;
+            this.button7.TabIndex = 14;
             this.button7.Text = "Borrar";
             this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);
@@ -274,7 +274,7 @@ namespace Proyecto_Warescape
             this.button5.Location = new System.Drawing.Point(106, 306);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(139, 35);
-            this.button5.TabIndex = 14;
+            this.button5.TabIndex = 12;
             this.button5.Text = "Ingresar libro";
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.ingresar_libro);
@@ -284,14 +284,14 @@ namespace Proyecto_Warescape
             this.txt_nombre.Location = new System.Drawing.Point(37, 164);
             this.txt_nombre.Name = "txt_nombre";
             this.txt_nombre.Size = new System.Drawing.Size(134, 20);
-            this.txt_nombre.TabIndex = 11;
+            this.txt_nombre.TabIndex = 2;
             // 
             // txt_cantidad
             // 
             this.txt_cantidad.Location = new System.Drawing.Point(565, 163);
             this.txt_cantidad.Name = "txt_cantidad";
             this.txt_cantidad.Size = new System.Drawing.Size(135, 20);
-            this.txt_cantidad.TabIndex = 10;
+            this.txt_cantidad.TabIndex = 11;
             this.txt_cantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_stock_KeyPress);
             // 
             // txt_precio
@@ -299,7 +299,7 @@ namespace Proyecto_Warescape
             this.txt_precio.Location = new System.Drawing.Point(186, 221);
             this.txt_precio.Name = "txt_precio";
             this.txt_precio.Size = new System.Drawing.Size(137, 20);
-            this.txt_precio.TabIndex = 9;
+            this.txt_precio.TabIndex = 5;
             this.txt_precio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_precio_KeyPress);
             // 
             // txt_codigo
@@ -307,7 +307,7 @@ namespace Proyecto_Warescape
             this.txt_codigo.Location = new System.Drawing.Point(37, 221);
             this.txt_codigo.Name = "txt_codigo";
             this.txt_codigo.Size = new System.Drawing.Size(137, 20);
-            this.txt_codigo.TabIndex = 8;
+            this.txt_codigo.TabIndex = 4;
             this.txt_codigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_codigo_KeyPress);
             // 
             // txt_isbn
@@ -315,7 +315,7 @@ namespace Proyecto_Warescape
             this.txt_isbn.Location = new System.Drawing.Point(186, 109);
             this.txt_isbn.Name = "txt_isbn";
             this.txt_isbn.Size = new System.Drawing.Size(137, 20);
-            this.txt_isbn.TabIndex = 7;
+            this.txt_isbn.TabIndex = 1;
             this.txt_isbn.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_isbn_KeyPress);
             // 
             // label6
@@ -409,7 +409,7 @@ namespace Proyecto_Warescape
             this.txt_autor.Location = new System.Drawing.Point(186, 164);
             this.txt_autor.Name = "txt_autor";
             this.txt_autor.Size = new System.Drawing.Size(137, 20);
-            this.txt_autor.TabIndex = 30;
+            this.txt_autor.TabIndex = 3;
             // 
             // button2
             // 
@@ -422,7 +422,7 @@ namespace Proyecto_Warescape
             this.button2.Location = new System.Drawing.Point(921, 653);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(152, 35);
-            this.button2.TabIndex = 33;
+            this.button2.TabIndex = 20;
             this.button2.Text = "Generos";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click_1);
@@ -438,7 +438,7 @@ namespace Proyecto_Warescape
             this.button3.Location = new System.Drawing.Point(921, 612);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(152, 35);
-            this.button3.TabIndex = 34;
+            this.button3.TabIndex = 19;
             this.button3.Text = "Editoriales";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
@@ -448,7 +448,7 @@ namespace Proyecto_Warescape
             this.txt_valor_del_libro.Location = new System.Drawing.Point(400, 163);
             this.txt_valor_del_libro.Name = "txt_valor_del_libro";
             this.txt_valor_del_libro.Size = new System.Drawing.Size(135, 20);
-            this.txt_valor_del_libro.TabIndex = 36;
+            this.txt_valor_del_libro.TabIndex = 10;
             this.txt_valor_del_libro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_valor_del_libro_KeyPress);
             // 
             // cmb_tipo_de_operacion
@@ -460,7 +460,7 @@ namespace Proyecto_Warescape
             this.cmb_tipo_de_operacion.Location = new System.Drawing.Point(565, 109);
             this.cmb_tipo_de_operacion.Name = "cmb_tipo_de_operacion";
             this.cmb_tipo_de_operacion.Size = new System.Drawing.Size(137, 21);
-            this.cmb_tipo_de_operacion.TabIndex = 37;
+            this.cmb_tipo_de_operacion.TabIndex = 9;
             this.cmb_tipo_de_operacion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmb_tipo_de_operacion_KeyPress);
             // 
             // label11
@@ -505,7 +505,7 @@ namespace Proyecto_Warescape
             this.cmb_boleta.Location = new System.Drawing.Point(400, 110);
             this.cmb_boleta.Name = "cmb_boleta";
             this.cmb_boleta.Size = new System.Drawing.Size(134, 21);
-            this.cmb_boleta.TabIndex = 42;
+            this.cmb_boleta.TabIndex = 8;
             this.cmb_boleta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmb_boleta_KeyPress);
             // 
             // lbl_id_de_libro
@@ -593,7 +593,7 @@ namespace Proyecto_Warescape
             this.button4.Location = new System.Drawing.Point(921, 571);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(152, 35);
-            this.button4.TabIndex = 50;
+            this.button4.TabIndex = 18;
             this.button4.Text = "Devoluciones";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click_1);
@@ -621,7 +621,7 @@ namespace Proyecto_Warescape
             this.btn_ingresar_consignacion.Location = new System.Drawing.Point(413, 238);
             this.btn_ingresar_consignacion.Name = "btn_ingresar_consignacion";
             this.btn_ingresar_consignacion.Size = new System.Drawing.Size(287, 35);
-            this.btn_ingresar_consignacion.TabIndex = 53;
+            this.btn_ingresar_consignacion.TabIndex = 13;
             this.btn_ingresar_consignacion.Text = "Ingresar consignacion o compra";
             this.btn_ingresar_consignacion.UseVisualStyleBackColor = false;
             this.btn_ingresar_consignacion.Click += new System.EventHandler(this.btn_ingresar_consignacion_Click);
@@ -637,7 +637,7 @@ namespace Proyecto_Warescape
             this.btn_buscar.Location = new System.Drawing.Point(921, 475);
             this.btn_buscar.Name = "btn_buscar";
             this.btn_buscar.Size = new System.Drawing.Size(152, 35);
-            this.btn_buscar.TabIndex = 54;
+            this.btn_buscar.TabIndex = 17;
             this.btn_buscar.Text = "Buscar";
             this.btn_buscar.UseVisualStyleBackColor = false;
             this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
@@ -660,7 +660,7 @@ namespace Proyecto_Warescape
             this.cmb_buscar_libro.Location = new System.Drawing.Point(921, 448);
             this.cmb_buscar_libro.Name = "cmb_buscar_libro";
             this.cmb_buscar_libro.Size = new System.Drawing.Size(152, 21);
-            this.cmb_buscar_libro.TabIndex = 57;
+            this.cmb_buscar_libro.TabIndex = 16;
             // 
             // VentanasPrincipal
             // 
