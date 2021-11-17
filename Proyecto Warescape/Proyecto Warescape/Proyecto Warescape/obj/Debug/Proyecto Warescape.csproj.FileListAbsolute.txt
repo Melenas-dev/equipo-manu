@@ -379,3 +379,4 @@ C:\Users\ezequ\OneDrive\Documentos\were\Proyecto Warescape\Proyecto Warescape\Pr
 C:\Users\Franc\OneDrive\Documentos\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\bin\Debug\BWCMM.dll
 C:\Users\Franc\OneDrive\Documentos\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.devoluciones.resources
 C:\Users\Franc\OneDrive\Documentos\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.estadisticas_mensuales.resources
+C:\Users\loloc\OneDrive\Documentos\GitHub\equipo-manu\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.devoluciones.resources
