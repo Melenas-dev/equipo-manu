@@ -16,7 +16,7 @@ namespace Proyecto_Warescape
 
     {
 
-        MySqlConnection con = new MySqlConnection("Server=localhost; Database=warescapesrl; Uid=root; Pwd=;");
+        MySqlConnection con = new MySqlConnection("Server=localhost; Database=warescapesrl; Uid=Admin; Pwd=warescape;");
 
 
         public graficas()

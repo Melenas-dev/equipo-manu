@@ -13,7 +13,7 @@ namespace Proyecto_Warescape
 {
     public partial class editoriales : Form
     {
-        MySqlConnection con = new MySqlConnection("Server=localhost; Database=warescapesrl; Uid=root; Pwd=;");
+        MySqlConnection con = new MySqlConnection("Server=localhost; Database=warescapesrl; Uid=Admin; Pwd=warescape;");
         public editoriales()
         {
             InitializeComponent();

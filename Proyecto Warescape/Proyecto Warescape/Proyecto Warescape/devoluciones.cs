@@ -13,7 +13,7 @@ namespace Proyecto_Warescape
 {
     public partial class devoluciones : Form
     {
-        MySqlConnection con = new MySqlConnection("Server=localhost; Database=warescapesrl; Uid=root; Pwd=;");
+        MySqlConnection con = new MySqlConnection("Server=localhost; Database=warescapesrl; Uid=Admin; Pwd=warescape;");
         public devoluciones()
         {
             InitializeComponent();
@@ -115,7 +115,7 @@ namespace Proyecto_Warescape
         public void actualizar_devoluciones()
         {
             con.Open();
-            string devoluciones = "select l.nombre'Libro', e.nombre'Editorial', d.fecha'Fecha', d.cantidad'Cantidad', d.id_devoluciones'Nª de devolucion', d.id_libro   from libros l join devoluciones d on l.id_libro=d.id_libro join editoriales e on e.id_ed=d.id_ed;";
+            string devoluciones = "select l.nombre'Libro', e.nombre'Editorial', d.fecha'Fecha', d.cantidad'Cantidad', d.id_devoluciones'N de devolucion', d.id_libro   from libros l join devoluciones d on l.id_libro=d.id_libro join editoriales e on e.id_ed=d.id_ed;";
             MySqlCommand mostrar = new MySqlCommand(devoluciones, con);
             MySqlDataAdapter adaptador = new MySqlDataAdapter();
             adaptador.SelectCommand = mostrar;

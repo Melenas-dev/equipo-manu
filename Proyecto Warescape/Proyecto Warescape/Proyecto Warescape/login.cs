@@ -14,7 +14,7 @@ namespace Proyecto_Warescape
     public partial class Login : Form
     {
 
-        MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=warescapesrl; Uid=root; Pwd=;");
+        MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=warescapesrl; Uid=Admin; Pwd=warescape;");
 
         
 

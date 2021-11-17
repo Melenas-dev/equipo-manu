@@ -34,7 +34,6 @@ namespace Proyecto_Warescape
             this.txt_receptor = new System.Windows.Forms.TextBox();
             this.btn_enviar = new System.Windows.Forms.Button();
             this.BtnCerrar = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.lbl_gmail = new System.Windows.Forms.Label();
             this.pnl_cambiar_pass = new System.Windows.Forms.Panel();
             this.btn_Guardar = new System.Windows.Forms.Button();
@@ -91,15 +90,6 @@ namespace Proyecto_Warescape
             this.BtnCerrar.TabIndex = 27;
             this.BtnCerrar.TabStop = false;
             this.BtnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(0, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 13);
-            this.label5.TabIndex = 28;
-            this.label5.Text = "label5";
             // 
             // lbl_gmail
             // 
@@ -214,7 +204,6 @@ namespace Proyecto_Warescape
             this.ClientSize = new System.Drawing.Size(466, 374);
             this.Controls.Add(this.pnl_cambiar_pass);
             this.Controls.Add(this.lbl_gmail);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.BtnCerrar);
             this.Controls.Add(this.btn_enviar);
             this.Controls.Add(this.txt_receptor);
@@ -239,7 +228,6 @@ namespace Proyecto_Warescape
         private System.Windows.Forms.TextBox txt_receptor;
         private System.Windows.Forms.Button btn_enviar;
         private System.Windows.Forms.PictureBox BtnCerrar;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lbl_gmail;
         private System.Windows.Forms.Panel pnl_cambiar_pass;
         private System.Windows.Forms.Button btn_Guardar;

@@ -14,7 +14,7 @@ namespace Proyecto_Warescape
 {
     public partial class finanzas : Form
     {
-        MySqlConnection con = new MySqlConnection("Server=localhost; Database=warescapesrl; Uid=root; Pwd=;");
+        MySqlConnection con = new MySqlConnection("Server=localhost; Database=warescapesrl; Uid=Admin; Pwd=warescape;");
 
 
         public finanzas()
