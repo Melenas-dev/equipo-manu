@@ -16,7 +16,7 @@ namespace Proyecto_Warescape
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new carga());
+            Application.Run(new FormCarga());
         }
     }
 }

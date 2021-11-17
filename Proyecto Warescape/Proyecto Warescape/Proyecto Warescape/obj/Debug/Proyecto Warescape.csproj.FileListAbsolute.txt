@@ -198,20 +198,14 @@ C:\Users\manue\Documents\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\
 C:\Users\manue\Documents\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\manue\Documents\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\manue\Documents\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto Warescape.csproj.AssemblyReference.cache
-C:\Users\manue\Documents\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.carga.resources
-C:\Users\manue\Documents\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.finanzas.resources
 C:\Users\manue\Documents\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.Login.resources
-C:\Users\manue\Documents\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.marketing.resources
 C:\Users\manue\Documents\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.Properties.Resources.resources
 C:\Users\manue\Documents\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.VentanasPrincipal.resources
-C:\Users\manue\Documents\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.ventana.resources
 C:\Users\manue\Documents\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto Warescape.csproj.GenerateResource.cache
 C:\Users\manue\Documents\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto Warescape.csproj.CoreCompileInputs.cache
 C:\Users\manue\Documents\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto Warescape.csproj.CopyComplete
 C:\Users\manue\Documents\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto Warescape.exe
 C:\Users\manue\Documents\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto Warescape.pdb
-C:\Users\manue\Documents\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.editoriales.resources
-C:\Users\manue\Documents\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.agregargenero.resources
 C:\Users\Juan\Documents\equipo-manu\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.agregargenero.resources
 C:\Users\Juan\Documents\equipo-manu\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.editoriales.resources
 C:\Users\Juan\Documents\equipo-manu\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.FormEmail.resources
@@ -324,7 +318,6 @@ C:\Users\ezequ\OneDrive\Documentos\GitHub\Warescape\Proyecto Warescape\Proyecto 
 C:\Users\ezequ\OneDrive\Documentos\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto Warescape.csproj.CoreCompileInputs.cache
 C:\Users\ezequ\OneDrive\Documentos\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto Warescape.exe
 C:\Users\ezequ\OneDrive\Documentos\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto Warescape.pdb
-C:\Users\manue\Documents\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.control_de_caja.resources
 C:\Users\Franc\OneDrive\Documentos\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.control_de_caja.resources
 C:\Users\Franc\OneDrive\Documentos\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.graficas.resources
 C:\Users\Juan\Documents\equipo-manu\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.control_de_caja.resources
@@ -371,13 +364,20 @@ C:\Users\ezequ\OneDrive\Documentos\were\Proyecto Warescape\Proyecto Warescape\Pr
 C:\Users\ezequ\OneDrive\Documentos\were\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto Warescape.csproj.CoreCompileInputs.cache
 C:\Users\ezequ\OneDrive\Documentos\were\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto Warescape.exe
 C:\Users\ezequ\OneDrive\Documentos\were\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto Warescape.pdb
-C:\Users\manue\Documents\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.estadisticas_mensuales.resources
-C:\Users\manue\Documents\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.graficas.resources
-C:\Users\manue\Documents\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.devoluciones.resources
 C:\Users\Juan\Documents\equipo-manu\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.devoluciones.resources
 C:\Users\ezequ\OneDrive\Documentos\were\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.devoluciones.resources
 C:\Users\Franc\OneDrive\Documentos\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\bin\Debug\BWCMM.dll
 C:\Users\Franc\OneDrive\Documentos\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.devoluciones.resources
 C:\Users\Franc\OneDrive\Documentos\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.estadisticas_mensuales.resources
 C:\Users\loloc\OneDrive\Documentos\GitHub\equipo-manu\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.devoluciones.resources
-C:\Users\manue\Documents\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.ventana_empleado.resources
+C:\Users\manue\Documents\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.Formcarga.resources
+C:\Users\manue\Documents\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.Formcontrol_de_caja.resources
+C:\Users\manue\Documents\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.Formdevoluciones.resources
+C:\Users\manue\Documents\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.Formeditoriales.resources
+C:\Users\manue\Documents\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.Formestadisticas_mensuales.resources
+C:\Users\manue\Documents\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.Formfinanzas.resources
+C:\Users\manue\Documents\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.Formgraficas.resources
+C:\Users\manue\Documents\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.Formmarketing.resources
+C:\Users\manue\Documents\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.Formventana.resources
+C:\Users\manue\Documents\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.Formventana_empleado.resources
+C:\Users\manue\Documents\GitHub\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.FormAgregar_genero.resources

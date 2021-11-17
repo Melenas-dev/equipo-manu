@@ -109,49 +109,49 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="agregargenero.cs">
+    <Compile Include="FormAgregar_genero.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="agregargenero.Designer.cs">
-      <DependentUpon>agregargenero.cs</DependentUpon>
+    <Compile Include="FormAgregar_genero.Designer.cs">
+      <DependentUpon>FormAgregar_genero.cs</DependentUpon>
     </Compile>
-    <Compile Include="carga.cs">
+    <Compile Include="FormCarga.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="carga.Designer.cs">
-      <DependentUpon>carga.cs</DependentUpon>
+    <Compile Include="FormCarga.Designer.cs">
+      <DependentUpon>FormCarga.cs</DependentUpon>
     </Compile>
-    <Compile Include="control_de_caja.cs">
+    <Compile Include="FormControl_de_caja.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="control_de_caja.Designer.cs">
-      <DependentUpon>control_de_caja.cs</DependentUpon>
+    <Compile Include="FormControl_de_caja.Designer.cs">
+      <DependentUpon>FormControl_de_caja.cs</DependentUpon>
     </Compile>
-    <Compile Include="devoluciones.cs">
+    <Compile Include="FormDevoluciones.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="devoluciones.Designer.cs">
-      <DependentUpon>devoluciones.cs</DependentUpon>
+    <Compile Include="FormDevoluciones.Designer.cs">
+      <DependentUpon>FormDevoluciones.cs</DependentUpon>
     </Compile>
-    <Compile Include="editoriales.cs">
+    <Compile Include="FormEditoriales.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="editoriales.Designer.cs">
-      <DependentUpon>editoriales.cs</DependentUpon>
+    <Compile Include="FormEditoriales.Designer.cs">
+      <DependentUpon>FormEditoriales.cs</DependentUpon>
     </Compile>
     <Compile Include="EditorialesClase.cs" />
     <Compile Include="Email.cs" />
-    <Compile Include="estadisticas_mensuales.cs">
+    <Compile Include="FormEstadisticas_mensuales.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="estadisticas_mensuales.Designer.cs">
-      <DependentUpon>estadisticas_mensuales.cs</DependentUpon>
+    <Compile Include="FormEstadisticas_mensuales.Designer.cs">
+      <DependentUpon>FormEstadisticas_mensuales.cs</DependentUpon>
     </Compile>
-    <Compile Include="finanzas.cs">
+    <Compile Include="FormFinanzas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="finanzas.Designer.cs">
-      <DependentUpon>finanzas.cs</DependentUpon>
+    <Compile Include="FormFinanzas.Designer.cs">
+      <DependentUpon>FormFinanzas.cs</DependentUpon>
     </Compile>
     <Compile Include="FormEmail.cs">
       <SubType>Form</SubType>
@@ -160,78 +160,78 @@
       <DependentUpon>FormEmail.cs</DependentUpon>
     </Compile>
     <Compile Include="Generos.cs" />
-    <Compile Include="graficas.cs">
+    <Compile Include="FormGraficas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="graficas.Designer.cs">
-      <DependentUpon>graficas.cs</DependentUpon>
+    <Compile Include="FormGraficas.Designer.cs">
+      <DependentUpon>FormGraficas.cs</DependentUpon>
     </Compile>
-    <Compile Include="login.cs">
+    <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="login.Designer.cs">
-      <DependentUpon>login.cs</DependentUpon>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="marketing.cs">
+    <Compile Include="FormMarketing.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="marketing.Designer.cs">
-      <DependentUpon>marketing.cs</DependentUpon>
+    <Compile Include="FormMarketing.Designer.cs">
+      <DependentUpon>FormMarketing.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="libros.cs">
+    <Compile Include="FormLibros.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="libros.Designer.cs">
-      <DependentUpon>libros.cs</DependentUpon>
+    <Compile Include="FormLibros.Designer.cs">
+      <DependentUpon>FormLibros.cs</DependentUpon>
     </Compile>
     <Compile Include="Services\LibrosService.cs" />
     <Compile Include="Services\Metodos.cs" />
-    <Compile Include="ventana.cs">
+    <Compile Include="FormVentana.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ventana.Designer.cs">
-      <DependentUpon>ventana.cs</DependentUpon>
+    <Compile Include="FormVentana.Designer.cs">
+      <DependentUpon>FormVentana.cs</DependentUpon>
     </Compile>
-    <Compile Include="ventana_empleado.cs">
+    <Compile Include="FormVentana_empleado.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ventana_empleado.Designer.cs">
-      <DependentUpon>ventana_empleado.cs</DependentUpon>
+    <Compile Include="FormVentana_empleado.Designer.cs">
+      <DependentUpon>FormVentana_empleado.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="agregargenero.resx">
-      <DependentUpon>agregargenero.cs</DependentUpon>
+    <EmbeddedResource Include="FormAgregar_genero.resx">
+      <DependentUpon>FormAgregar_genero.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="carga.resx">
-      <DependentUpon>carga.cs</DependentUpon>
+    <EmbeddedResource Include="FormCarga.resx">
+      <DependentUpon>FormCarga.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="control_de_caja.resx">
-      <DependentUpon>control_de_caja.cs</DependentUpon>
+    <EmbeddedResource Include="FormControl_de_caja.resx">
+      <DependentUpon>FormControl_de_caja.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="devoluciones.resx">
-      <DependentUpon>devoluciones.cs</DependentUpon>
+    <EmbeddedResource Include="FormDevoluciones.resx">
+      <DependentUpon>FormDevoluciones.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="editoriales.resx">
-      <DependentUpon>editoriales.cs</DependentUpon>
+    <EmbeddedResource Include="FormEditoriales.resx">
+      <DependentUpon>FormEditoriales.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="estadisticas_mensuales.resx">
-      <DependentUpon>estadisticas_mensuales.cs</DependentUpon>
+    <EmbeddedResource Include="FormEstadisticas_mensuales.resx">
+      <DependentUpon>FormEstadisticas_mensuales.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="finanzas.resx">
-      <DependentUpon>finanzas.cs</DependentUpon>
+    <EmbeddedResource Include="FormFinanzas.resx">
+      <DependentUpon>FormFinanzas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormEmail.resx">
       <DependentUpon>FormEmail.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="graficas.resx">
-      <DependentUpon>graficas.cs</DependentUpon>
+    <EmbeddedResource Include="FormGraficas.resx">
+      <DependentUpon>FormGraficas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="login.resx">
-      <DependentUpon>login.cs</DependentUpon>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="marketing.resx">
-      <DependentUpon>marketing.cs</DependentUpon>
+    <EmbeddedResource Include="FormMarketing.resx">
+      <DependentUpon>FormMarketing.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -243,14 +243,14 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="libros.resx">
-      <DependentUpon>libros.cs</DependentUpon>
+    <EmbeddedResource Include="FormLibros.resx">
+      <DependentUpon>FormLibros.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ventana.resx">
-      <DependentUpon>ventana.cs</DependentUpon>
+    <EmbeddedResource Include="FormVentana.resx">
+      <DependentUpon>FormVentana.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ventana_empleado.resx">
-      <DependentUpon>ventana_empleado.cs</DependentUpon>
+    <EmbeddedResource Include="FormVentana_empleado.resx">
+      <DependentUpon>FormVentana_empleado.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
