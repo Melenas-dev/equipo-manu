@@ -14,25 +14,24 @@ namespace Proyecto_Warescape
     public partial class Login : Form
     {
 
-        MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=warescapesrl; Uid=Admin; Pwd=warescape;");
-
-        
+        MySqlConnection con = new MySqlConnection("Server=localhost; Database=warescapesrl; Uid=root; Pwd=;");
 
         string contrasena;
         
         public Login()
         {
             InitializeComponent();
-            //crear_conexion();
+            //crear_con();
         }
 
-        private void crear_conexion()
+        // no se esta usando esto
+        private void crear_con()
         {
             try
             {
-                conexion.Open();
+                con.Open();
                 MessageBox.Show("Conectado bro");
-                conexion.Close();
+                con.Close();
             }
             catch (Exception)
             {
@@ -40,69 +39,77 @@ namespace Proyecto_Warescape
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btn_ingresar_Click(object sender, EventArgs e)
         {
-            
-            if (campo_usuario.Equals(""))
+
+            if (campo_usuario == null || campo_usuario.Equals(""))
             {
                 MessageBox.Show("Ingrese un nombre de usuario correcto");
                 return;
             }
-            
-            if (campo_contra.Equals(""))
+            else if (campo_contra == null || campo_contra.Equals(""))
             {
                 MessageBox.Show("Ingrese una contraseña correcta");
                 return;
             }
-
-            conexion.Open();
-            MySqlCommand comando = new MySqlCommand("Select * from usuario where usuario = '" + campo_usuario.Text + "'", conexion);
-
-            MySqlDataReader reader = comando.ExecuteReader();
-
-            while(reader.Read())
+            else 
             {
-                contrasena = reader["contrasena"].ToString();
-            }
-            conexion.Close();
-            conexion.Open();
-            MySqlCommand hasheo = new MySqlCommand("Select SHA1 ('" + campo_contra.Text + "') hasheo", conexion);
-
-
-
-            MySqlDataReader reader_hasheo = hasheo.ExecuteReader();
-
-            string contra_hasheada = "";
-
-            while (reader_hasheo.Read())
-            {
-                contra_hasheada = reader_hasheo["hasheo"].ToString();
-            }
-
-            
-            conexion.Close();
-
-            if (contra_hasheada.Equals(contrasena))
-            {
-
-                if (campo_usuario.Text.Equals("Empleado"))
+                try
                 {
-                    this.Hide();
-                    Form v1 = new FormVentana_empleado();
-                    v1.Show();
-                }
-                else
-                {
-                    this.Hide();
-                    FormVentana v1 = new FormVentana();
-                    v1.Show();
-                }
-            }
-            else
-            {
-                MessageBox.Show("Contraseña incorrecta");
-            }
+                    con.Open();
+                    MySqlCommand consultaUsuario = new MySqlCommand("Select * from usuario where usuario = '" + campo_usuario.Text + "'", con);
 
+                    MySqlDataReader reader = consultaUsuario.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        contrasena = reader["contrasena"].ToString();
+                    }
+                    con.Close();
+                    con.Open();
+                    MySqlCommand hasheo = new MySqlCommand("Select SHA1 ('" + campo_contra.Text + "') hasheo", con);
+
+
+
+                    MySqlDataReader reader_hasheo = hasheo.ExecuteReader();
+
+                    string contra_hasheada = "";
+
+                    // validamos que de resultado el query, que no se parte
+                    while (reader_hasheo.Read())
+                    {
+                        contra_hasheada = reader_hasheo["hasheo"].ToString();
+                    }
+
+
+                    con.Close();
+
+                    if (contra_hasheada.Equals(contrasena))
+                    {
+
+                        if (campo_usuario.Text.Equals("Empleado"))
+                        {
+                            this.Hide();
+                            Form v1 = new FormVentana_empleado();
+                            v1.Show();
+                        }
+                        else
+                        {
+                            this.Hide();
+                            FormVentana v1 = new FormVentana();
+                            v1.Show();
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Contraseña incorrecta");
+                    }
+                } catch (Exception ex)
+                {
+                    MessageBox.Show("Error 500: " + ex.Message);
+                    throw;
+                }
+            }
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -112,14 +119,14 @@ namespace Proyecto_Warescape
 
         private void ingreso_Enter(object sender, EventArgs e)
         {
-            button1_Click(sender, e);
+            btn_ingresar_Click(sender, e);
         }
 
         private void campo_contra_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                button1_Click(sender, e);
+                btn_ingresar_Click(sender, e);
             }
         }
 

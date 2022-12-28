@@ -78,7 +78,7 @@ namespace Proyecto_Warescape
             this.ingreso.TabIndex = 0;
             this.ingreso.Text = "Ingresar";
             this.ingreso.UseVisualStyleBackColor = false;
-            this.ingreso.Click += new System.EventHandler(this.button1_Click);
+            this.ingreso.Click += new System.EventHandler(this.btn_ingresar_Click);
             // 
             // pictureBox1
             // 
