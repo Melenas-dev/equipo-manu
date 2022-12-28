@@ -1,300 +1,341 @@
--- MySQL dump 10.13  Distrib 5.7.31, for Win64 (x86_64)
+-- phpMyAdmin SQL Dump
+-- version 5.0.2
+-- https://www.phpmyadmin.net/
 --
--- Host: localhost    Database: warescapesrl
--- ------------------------------------------------------
--- Server version	5.7.31
+-- Servidor: 127.0.0.1:3306
+-- Tiempo de generación: 17-11-2021 a las 22:29:01
+-- Versión del servidor: 5.7.31
+-- Versión de PHP: 7.3.21
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
-/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
-/*!40103 SET TIME_ZONE='+00:00' */;
-/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
-/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
-/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
-/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+/*!40101 SET NAMES utf8mb4 */;
 
 --
--- Table structure for table `editoriales`
+-- Base de datos: `warescapesrl`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `compras_y_consignaciones`
+--
+
+DROP TABLE IF EXISTS `compras_y_consignaciones`;
+CREATE TABLE IF NOT EXISTS `compras_y_consignaciones` (
+  `n_de_operacion` bigint(20) NOT NULL,
+  `fecha_de_operacion` date DEFAULT NULL,
+  `monto` decimal(22,2) DEFAULT NULL,
+  `id_ed` int(11) NOT NULL,
+  PRIMARY KEY (`n_de_operacion`,`id_ed`),
+  KEY `id_ed` (`id_ed`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `compras_y_consignaciones`
+--
+
+INSERT INTO `compras_y_consignaciones` (`n_de_operacion`, `fecha_de_operacion`, `monto`, `id_ed`) VALUES
+(232, '2021-11-15', NULL, 58),
+(2321, '2021-11-14', NULL, 58),
+(2323, '2021-11-16', NULL, 60),
+(3232, '2021-11-15', NULL, 58),
+(23213, '2021-11-15', NULL, 58),
+(123211, '2021-11-16', NULL, 59),
+(2111111, '2021-11-16', NULL, 63),
+(2121212, '2021-11-16', NULL, 59),
+(23222222, '2021-11-16', NULL, 60),
+(232323232, '2021-11-16', NULL, 63);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `devoluciones`
+--
+
+DROP TABLE IF EXISTS `devoluciones`;
+CREATE TABLE IF NOT EXISTS `devoluciones` (
+  `id_libro` int(11) NOT NULL,
+  `id_ed` int(11) NOT NULL,
+  `fecha` date DEFAULT NULL,
+  `cantidad` int(11) NOT NULL,
+  `id_devoluciones` int(11) NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`id_devoluciones`,`id_ed`,`id_libro`),
+  KEY `devoluciones_FK` (`id_ed`),
+  KEY `devoluciones_FK_1` (`id_libro`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `editoriales`
 --
 
 DROP TABLE IF EXISTS `editoriales`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `editoriales` (
-  `rut` int(30) NOT NULL,
-  `nombre` varchar(40) DEFAULT NULL,
-  PRIMARY KEY (`rut`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
+CREATE TABLE IF NOT EXISTS `editoriales` (
+  `id_ed` int(11) NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(50) DEFAULT NULL,
+  `rut` bigint(20) DEFAULT NULL,
+  PRIMARY KEY (`id_ed`)
+) ENGINE=InnoDB AUTO_INCREMENT=68 DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `editoriales`
+-- Volcado de datos para la tabla `editoriales`
 --
 
-LOCK TABLES `editoriales` WRITE;
-/*!40000 ALTER TABLE `editoriales` DISABLE KEYS */;
-INSERT INTO `editoriales` VALUES (1,'America Latina'),(2,'Oceano '),(3,'Santillana'),(4,'Gussi'),(5,'Escaramuza'),(6,'Fin de Siglo');
-/*!40000 ALTER TABLE `editoriales` ENABLE KEYS */;
-UNLOCK TABLES;
+INSERT INTO `editoriales` (`id_ed`, `nombre`, `rut`) VALUES
+(58, 'America Latina', 1),
+(59, 'Oceano', 2),
+(60, 'Santillana', 3),
+(62, 'Escaramusa', 5),
+(63, 'Fin de siglo', 6),
+(64, 'Gussi', 231),
+(65, 'asdasd ', 123123),
+(66, '213123 ', 21312),
+(67, 'qweqwe qeqe', 16735073679533625);
+
+-- --------------------------------------------------------
 
 --
--- Table structure for table `generan`
+-- Estructura de tabla para la tabla `generan`
 --
 
 DROP TABLE IF EXISTS `generan`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `generan` (
-  `n_de_boleta` int(20) DEFAULT NULL,
-  `isbn` int(20) DEFAULT NULL,
-  `precio` int(5) DEFAULT NULL,
-  `cantidad_comprada` int(5) DEFAULT NULL,
-  UNIQUE KEY `generan_un` (`n_de_boleta`),
-  CONSTRAINT `generan_FK_1` FOREIGN KEY (`n_de_boleta`) REFERENCES `ventas` (`n_de_boleta`) ON DELETE CASCADE ON UPDATE CASCADE
+CREATE TABLE IF NOT EXISTS `generan` (
+  `n_de_boleta` bigint(20) NOT NULL,
+  `id_libro` int(11) NOT NULL,
+  `cantidad_vendida` int(11) DEFAULT NULL,
+  `precio` decimal(22,2) DEFAULT NULL,
+  PRIMARY KEY (`n_de_boleta`,`id_libro`),
+  KEY `generan_ibfk_2` (`id_libro`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
+
+-- --------------------------------------------------------
 
 --
--- Dumping data for table `generan`
---
-
-LOCK TABLES `generan` WRITE;
-/*!40000 ALTER TABLE `generan` DISABLE KEYS */;
-/*!40000 ALTER TABLE `generan` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `generos`
+-- Estructura de tabla para la tabla `generos`
 --
 
 DROP TABLE IF EXISTS `generos`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `generos` (
-  `id_genero` int(5) NOT NULL AUTO_INCREMENT,
-  `descripcion` varchar(30) DEFAULT NULL,
+CREATE TABLE IF NOT EXISTS `generos` (
+  `id_genero` int(11) NOT NULL AUTO_INCREMENT,
+  `descripcion` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id_genero`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `generos`
+-- Volcado de datos para la tabla `generos`
 --
 
-LOCK TABLES `generos` WRITE;
-/*!40000 ALTER TABLE `generos` DISABLE KEYS */;
-INSERT INTO `generos` VALUES (1,'Novelas Historicas'),(2,'Novelas Ficcion'),(3,'Novelas juvenil'),(4,'Historia Nacional'),(5,'Historia universal'),(6,'Clasicos'),(7,'Filosofia'),(8,'Educacion'),(9,'Literatura'),(10,'Infantil'),(11,'Autoayuda'),(12,'Psicologia'),(13,'Cocina'),(14,'Arte'),(15,'Feminismo');
-/*!40000 ALTER TABLE `generos` ENABLE KEYS */;
-UNLOCK TABLES;
+INSERT INTO `generos` (`id_genero`, `descripcion`) VALUES
+(5, 'Historia'),
+(6, 'Historia nacional'),
+(7, 'Novela'),
+(13, 'Accion');
+
+-- --------------------------------------------------------
 
 --
--- Table structure for table `libros`
+-- Estructura de tabla para la tabla `lcc`
+--
+
+DROP TABLE IF EXISTS `lcc`;
+CREATE TABLE IF NOT EXISTS `lcc` (
+  `n_de_operacion` bigint(20) NOT NULL,
+  `id_libro` int(11) NOT NULL,
+  `cantidad_consignada` int(11) DEFAULT NULL,
+  `cantidad_comprada` int(11) DEFAULT NULL,
+  `precio_comprado` decimal(22,2) DEFAULT NULL,
+  `precio_consignado` decimal(22,2) DEFAULT NULL,
+  PRIMARY KEY (`n_de_operacion`,`id_libro`),
+  KEY `lcc_ibfk_1` (`id_libro`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `libros`
 --
 
 DROP TABLE IF EXISTS `libros`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `libros` (
-  `isbn` int(20) NOT NULL,
-  `codigo` int(20) DEFAULT NULL,
-  `precio` int(5) DEFAULT NULL,
-  `stock` int(10) DEFAULT NULL,
-  `nombre` varchar(40) DEFAULT NULL,
-  `devoluciones` int(5) DEFAULT NULL,
-  PRIMARY KEY (`isbn`)
+CREATE TABLE IF NOT EXISTS `libros` (
+  `id_libro` int(11) NOT NULL AUTO_INCREMENT,
+  `isbn` bigint(20) DEFAULT NULL,
+  `codigo` bigint(20) DEFAULT NULL,
+  `precio` decimal(22,2) DEFAULT NULL,
+  `stock` int(11) DEFAULT NULL,
+  `nombre` varchar(50) DEFAULT NULL,
+  `autor` varchar(40) DEFAULT NULL,
+  PRIMARY KEY (`id_libro`)
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `libros`
+--
+
+INSERT INTO `libros` (`id_libro`, `isbn`, `codigo`, `precio`, `stock`, `nombre`, `autor`) VALUES
+(7, 23131, 23232323, '32323.00', 2323, '2323', '2323'),
+(8, 2213, 2313, '12131.00', 231, 'Mnuael', 'Piter');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `publicidad`
+--
+
+DROP TABLE IF EXISTS `publicidad`;
+CREATE TABLE IF NOT EXISTS `publicidad` (
+  `id_publicidad` int(11) NOT NULL AUTO_INCREMENT,
+  `monto` decimal(22,2) DEFAULT NULL,
+  `rut` bigint(20) DEFAULT NULL,
+  `nombre` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`id_publicidad`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `publicidad`
+--
+
+INSERT INTO `publicidad` (`id_publicidad`, `monto`, `rut`, `nombre`) VALUES
+(5, '200.00', 123, '1313');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `se_registran`
+--
+
+DROP TABLE IF EXISTS `se_registran`;
+CREATE TABLE IF NOT EXISTS `se_registran` (
+  `id_publicidad` int(11) NOT NULL,
+  `n_de_boleta` bigint(20) NOT NULL,
+  PRIMARY KEY (`id_publicidad`,`n_de_boleta`),
+  KEY `se_registran_ibfk_2` (`n_de_boleta`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `libros`
+-- Volcado de datos para la tabla `se_registran`
 --
 
-LOCK TABLES `libros` WRITE;
-/*!40000 ALTER TABLE `libros` DISABLE KEYS */;
-INSERT INTO `libros` VALUES (124,12452,100,10,'pepe y la via ',0),(232,2,20,10,'pepe y la via ',0);
-/*!40000 ALTER TABLE `libros` ENABLE KEYS */;
-UNLOCK TABLES;
+INSERT INTO `se_registran` (`id_publicidad`, `n_de_boleta`) VALUES
+(5, 232),
+(5, 23232),
+(5, 123123);
+
+-- --------------------------------------------------------
 
 --
--- Table structure for table `poseen`
---
-
-DROP TABLE IF EXISTS `poseen`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `poseen` (
-  `rut` int(30) DEFAULT NULL,
-  `n_de_operacion` int(10) DEFAULT NULL,
-  UNIQUE KEY `poseen_un_1` (`n_de_operacion`),
-  CONSTRAINT `poseen_FK` FOREIGN KEY (`n_de_operacion`) REFERENCES `ventas_y_consignaciones` (`n_de_operacion`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `poseen`
---
-
-LOCK TABLES `poseen` WRITE;
-/*!40000 ALTER TABLE `poseen` DISABLE KEYS */;
-/*!40000 ALTER TABLE `poseen` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `publicidades`
---
-
-DROP TABLE IF EXISTS `publicidades`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `publicidades` (
-  `rut` int(30) NOT NULL,
-  `id` int(8) DEFAULT NULL,
-  `alcance_de_personas` int(6) DEFAULT NULL,
-  `nombre` varchar(30) DEFAULT NULL,
-  PRIMARY KEY (`rut`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `publicidades`
---
-
-LOCK TABLES `publicidades` WRITE;
-/*!40000 ALTER TABLE `publicidades` DISABLE KEYS */;
-/*!40000 ALTER TABLE `publicidades` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `tienen`
+-- Estructura de tabla para la tabla `tienen`
 --
 
 DROP TABLE IF EXISTS `tienen`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `tienen` (
-  `isbn` int(20) DEFAULT NULL,
-  `id_genero` int(5) DEFAULT NULL,
-  UNIQUE KEY `tienen_un` (`isbn`),
-  CONSTRAINT `tienen_FK` FOREIGN KEY (`isbn`) REFERENCES `libros` (`isbn`) ON DELETE CASCADE ON UPDATE CASCADE
+CREATE TABLE IF NOT EXISTS `tienen` (
+  `id_libro` int(11) NOT NULL,
+  `id_genero` int(11) NOT NULL,
+  PRIMARY KEY (`id_libro`,`id_genero`),
+  KEY `id_genero` (`id_genero`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
+
+-- --------------------------------------------------------
 
 --
--- Dumping data for table `tienen`
+-- Estructura de tabla para la tabla `usuario`
 --
 
-LOCK TABLES `tienen` WRITE;
-/*!40000 ALTER TABLE `tienen` DISABLE KEYS */;
-INSERT INTO `tienen` VALUES (124,11);
-/*!40000 ALTER TABLE `tienen` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `usuarios`
---
-
-DROP TABLE IF EXISTS `usuarios`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `usuarios` (
-  `usuarios` varchar(20) DEFAULT NULL,
-  `contrasena` varchar(100) DEFAULT NULL
+DROP TABLE IF EXISTS `usuario`;
+CREATE TABLE IF NOT EXISTS `usuario` (
+  `usuario` varchar(50) DEFAULT NULL,
+  `contrasena` varchar(500) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `usuarios`
+-- Volcado de datos para la tabla `usuario`
 --
 
-LOCK TABLES `usuarios` WRITE;
-/*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
-INSERT INTO `usuarios` VALUES ('admin','9cf627fc399bd5a314e3c483553ef22af498e806'),('gerente','6cc73ded5ce275177c0b19bae885a25457ec9b21'),('empleado','f9f011a553550aef31a8ee2690e1d1b5f261c9ff');
-/*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
-UNLOCK TABLES;
+INSERT INTO `usuario` (`usuario`, `contrasena`) VALUES
+('admin', '9cf627fc399bd5a314e3c483553ef22af498e806'),
+('Gerente', 'f10e2821bbbea527ea02200352313bc059445190'),
+('Empleado', '8cb2237d0679ca88db6464eac60da96345513964');
+
+-- --------------------------------------------------------
 
 --
--- Table structure for table `vende_o_consigna`
---
-
-DROP TABLE IF EXISTS `vende_o_consigna`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `vende_o_consigna` (
-  `rut` int(30) DEFAULT NULL,
-  `isbn` int(20) DEFAULT NULL,
-  UNIQUE KEY `vende_o_consigna_un_1` (`isbn`),
-  CONSTRAINT `vende_o_consigna_FK` FOREIGN KEY (`isbn`) REFERENCES `libros` (`isbn`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `vende_o_consigna`
---
-
-LOCK TABLES `vende_o_consigna` WRITE;
-/*!40000 ALTER TABLE `vende_o_consigna` DISABLE KEYS */;
-INSERT INTO `vende_o_consigna` VALUES (1,124);
-/*!40000 ALTER TABLE `vende_o_consigna` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `ventas`
+-- Estructura de tabla para la tabla `ventas`
 --
 
 DROP TABLE IF EXISTS `ventas`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `ventas` (
-  `n_de_boleta` int(20) NOT NULL,
+CREATE TABLE IF NOT EXISTS `ventas` (
+  `n_de_boleta` bigint(20) NOT NULL,
   `fecha_de_venta` date DEFAULT NULL,
-  `monto` int(20) DEFAULT NULL,
+  `monto` decimal(22,2) DEFAULT NULL,
   PRIMARY KEY (`n_de_boleta`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `ventas`
+-- Volcado de datos para la tabla `ventas`
 --
 
-LOCK TABLES `ventas` WRITE;
-/*!40000 ALTER TABLE `ventas` DISABLE KEYS */;
-/*!40000 ALTER TABLE `ventas` ENABLE KEYS */;
-UNLOCK TABLES;
+INSERT INTO `ventas` (`n_de_boleta`, `fecha_de_venta`, `monto`) VALUES
+(122, '2021-11-14', '123.00'),
+(232, '2021-11-15', '230.00'),
+(3333, '2021-11-16', '4666.00'),
+(21211, '2021-11-15', '1212.00'),
+(23232, '2021-11-15', '232.00'),
+(123123, '2021-11-16', '6003.00'),
+(12312311, '2021-11-14', '2131.00');
 
 --
--- Table structure for table `ventas_y_consignaciones`
+-- Restricciones para tablas volcadas
 --
 
-DROP TABLE IF EXISTS `ventas_y_consignaciones`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `ventas_y_consignaciones` (
-  `n_de_operacion` int(10) NOT NULL,
-  `cantidad_consignada` int(10) DEFAULT NULL,
-  `fecha_de_operacion` date DEFAULT NULL,
-  `cantidad_comprada` int(10) DEFAULT NULL,
-  PRIMARY KEY (`n_de_operacion`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
+--
+-- Filtros para la tabla `compras_y_consignaciones`
+--
+ALTER TABLE `compras_y_consignaciones`
+  ADD CONSTRAINT `compras_y_consignaciones_ibfk_1` FOREIGN KEY (`id_ed`) REFERENCES `editoriales` (`id_ed`);
 
 --
--- Dumping data for table `ventas_y_consignaciones`
+-- Filtros para la tabla `devoluciones`
 --
+ALTER TABLE `devoluciones`
+  ADD CONSTRAINT `devoluciones_FK` FOREIGN KEY (`id_ed`) REFERENCES `editoriales` (`id_ed`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `devoluciones_FK_1` FOREIGN KEY (`id_libro`) REFERENCES `libros` (`id_libro`) ON DELETE CASCADE ON UPDATE CASCADE;
 
-LOCK TABLES `ventas_y_consignaciones` WRITE;
-/*!40000 ALTER TABLE `ventas_y_consignaciones` DISABLE KEYS */;
-/*!40000 ALTER TABLE `ventas_y_consignaciones` ENABLE KEYS */;
-UNLOCK TABLES;
-/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+--
+-- Filtros para la tabla `generan`
+--
+ALTER TABLE `generan`
+  ADD CONSTRAINT `generan_ibfk_1` FOREIGN KEY (`n_de_boleta`) REFERENCES `ventas` (`n_de_boleta`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `generan_ibfk_2` FOREIGN KEY (`id_libro`) REFERENCES `libros` (`id_libro`) ON DELETE CASCADE ON UPDATE CASCADE;
 
-/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
-/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
-/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+--
+-- Filtros para la tabla `lcc`
+--
+ALTER TABLE `lcc`
+  ADD CONSTRAINT `lcc_ibfk_1` FOREIGN KEY (`id_libro`) REFERENCES `libros` (`id_libro`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `lcc_ibfk_2` FOREIGN KEY (`n_de_operacion`) REFERENCES `compras_y_consignaciones` (`n_de_operacion`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `se_registran`
+--
+ALTER TABLE `se_registran`
+  ADD CONSTRAINT `se_registran_ibfk_1` FOREIGN KEY (`id_publicidad`) REFERENCES `publicidad` (`id_publicidad`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `se_registran_ibfk_2` FOREIGN KEY (`n_de_boleta`) REFERENCES `ventas` (`n_de_boleta`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `tienen`
+--
+ALTER TABLE `tienen`
+  ADD CONSTRAINT `tienen_ibfk_1` FOREIGN KEY (`id_libro`) REFERENCES `libros` (`id_libro`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `tienen_ibfk_2` FOREIGN KEY (`id_genero`) REFERENCES `generos` (`id_genero`) ON DELETE CASCADE ON UPDATE CASCADE;
+COMMIT;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
-
--- Dump completed on 2021-10-06 23:32:25
