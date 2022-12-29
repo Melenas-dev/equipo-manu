@@ -423,3 +423,45 @@ C:\Users\juana\Documents\Coding\Warescape\Proyecto Warescape\Proyecto Warescape\
 C:\Users\juana\Documents\Coding\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto Warescape.csproj.CopyComplete
 C:\Users\juana\Documents\Coding\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto Warescape.exe
 C:\Users\juana\Documents\Coding\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto Warescape.pdb
+C:\Users\juana\Documents\Coding\Libreria\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\bin\Debug\Proyecto Warescape.exe.config
+C:\Users\juana\Documents\Coding\Libreria\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\bin\Debug\Proyecto Warescape.exe
+C:\Users\juana\Documents\Coding\Libreria\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\bin\Debug\Proyecto Warescape.pdb
+C:\Users\juana\Documents\Coding\Libreria\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\juana\Documents\Coding\Libreria\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\juana\Documents\Coding\Libreria\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\bin\Debug\MySql.Data.dll
+C:\Users\juana\Documents\Coding\Libreria\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\bin\Debug\System.Buffers.dll
+C:\Users\juana\Documents\Coding\Libreria\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\bin\Debug\System.Memory.dll
+C:\Users\juana\Documents\Coding\Libreria\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\juana\Documents\Coding\Libreria\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\juana\Documents\Coding\Libreria\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\juana\Documents\Coding\Libreria\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\bin\Debug\ZstdNet.dll
+C:\Users\juana\Documents\Coding\Libreria\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\bin\Debug\Google.Protobuf.xml
+C:\Users\juana\Documents\Coding\Libreria\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\juana\Documents\Coding\Libreria\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\juana\Documents\Coding\Libreria\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\juana\Documents\Coding\Libreria\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\bin\Debug\MySql.Data.xml
+C:\Users\juana\Documents\Coding\Libreria\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\bin\Debug\System.Memory.xml
+C:\Users\juana\Documents\Coding\Libreria\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\juana\Documents\Coding\Libreria\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\juana\Documents\Coding\Libreria\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto Warescape.csproj.AssemblyReference.cache
+C:\Users\juana\Documents\Coding\Libreria\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto Warescape.csproj.SuggestedBindingRedirects.cache
+C:\Users\juana\Documents\Coding\Libreria\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.FormAgregar_genero.resources
+C:\Users\juana\Documents\Coding\Libreria\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.FormCarga.resources
+C:\Users\juana\Documents\Coding\Libreria\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.FormControl_de_caja.resources
+C:\Users\juana\Documents\Coding\Libreria\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.FormDevoluciones.resources
+C:\Users\juana\Documents\Coding\Libreria\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.FormEditoriales.resources
+C:\Users\juana\Documents\Coding\Libreria\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.FormEstadisticas_mensuales.resources
+C:\Users\juana\Documents\Coding\Libreria\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.FormFinanzas.resources
+C:\Users\juana\Documents\Coding\Libreria\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.FormEmail.resources
+C:\Users\juana\Documents\Coding\Libreria\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.FormGraficas.resources
+C:\Users\juana\Documents\Coding\Libreria\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.Login.resources
+C:\Users\juana\Documents\Coding\Libreria\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.FormMarketing.resources
+C:\Users\juana\Documents\Coding\Libreria\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.Properties.Resources.resources
+C:\Users\juana\Documents\Coding\Libreria\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.VentanasPrincipal.resources
+C:\Users\juana\Documents\Coding\Libreria\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.FormVentana.resources
+C:\Users\juana\Documents\Coding\Libreria\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto_Warescape.FormVentana_empleado.resources
+C:\Users\juana\Documents\Coding\Libreria\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto Warescape.csproj.GenerateResource.cache
+C:\Users\juana\Documents\Coding\Libreria\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto Warescape.csproj.CoreCompileInputs.cache
+C:\Users\juana\Documents\Coding\Libreria\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto Warescape.csproj.CopyComplete
+C:\Users\juana\Documents\Coding\Libreria\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto Warescape.exe
+C:\Users\juana\Documents\Coding\Libreria\Warescape\Proyecto Warescape\Proyecto Warescape\Proyecto Warescape\obj\Debug\Proyecto Warescape.pdb
